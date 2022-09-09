@@ -1,0 +1,126 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : decoder_3_to_8_en.vf
+// /___/   /\     Timestamp : 09/09/2022 18:35:42
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/decoder_3_to_8_en.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/decoder_3_to_8_en.sch
+//Design Name: decoder_3_to_8_en
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module decoder_3_to_8_en(en, 
+                         x0, 
+                         x1, 
+                         x2, 
+                         Y0, 
+                         Y1, 
+                         Y2, 
+                         Y3, 
+                         Y4, 
+                         Y5, 
+                         Y6, 
+                         Y7);
+
+    input en;
+    input x0;
+    input x1;
+    input x2;
+   output Y0;
+   output Y1;
+   output Y2;
+   output Y3;
+   output Y4;
+   output Y5;
+   output Y6;
+   output Y7;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_9;
+   wire XLXN_14;
+   wire XLXN_17;
+   wire XLXN_30;
+   wire XLXN_43;
+   wire XLXN_89;
+   
+   INV  XLXI_1 (.I(x0), 
+               .O(XLXN_3));
+   INV  XLXI_2 (.I(x1), 
+               .O(XLXN_5));
+   INV  XLXI_3 (.I(x2), 
+               .O(XLXN_6));
+   INV  XLXI_5 (.I(x2), 
+               .O(XLXN_1));
+   INV  XLXI_6 (.I(x1), 
+               .O(XLXN_2));
+   INV  XLXI_7 (.I(x2), 
+               .O(XLXN_7));
+   INV  XLXI_8 (.I(x0), 
+               .O(XLXN_9));
+   INV  XLXI_21 (.I(x2), 
+                .O(XLXN_89));
+   INV  XLXI_26 (.I(x1), 
+                .O(XLXN_14));
+   INV  XLXI_27 (.I(x0), 
+                .O(XLXN_30));
+   INV  XLXI_30 (.I(x1), 
+                .O(XLXN_17));
+   INV  XLXI_35 (.I(x0), 
+                .O(XLXN_43));
+   AND4  XLXI_45 (.I0(en), 
+                 .I1(XLXN_3), 
+                 .I2(XLXN_5), 
+                 .I3(XLXN_6), 
+                 .O(Y0));
+   AND4  XLXI_49 (.I0(en), 
+                 .I1(x0), 
+                 .I2(XLXN_2), 
+                 .I3(XLXN_1), 
+                 .O(Y1));
+   AND4  XLXI_53 (.I0(en), 
+                 .I1(XLXN_9), 
+                 .I2(x1), 
+                 .I3(XLXN_7), 
+                 .O(Y2));
+   AND4  XLXI_56 (.I0(en), 
+                 .I1(x0), 
+                 .I2(x1), 
+                 .I3(XLXN_89), 
+                 .O(Y3));
+   AND4  XLXI_60 (.I0(en), 
+                 .I1(XLXN_30), 
+                 .I2(XLXN_14), 
+                 .I3(x2), 
+                 .O(Y4));
+   AND4  XLXI_63 (.I0(en), 
+                 .I1(x0), 
+                 .I2(XLXN_17), 
+                 .I3(x2), 
+                 .O(Y5));
+   AND4  XLXI_66 (.I0(en), 
+                 .I1(XLXN_43), 
+                 .I2(x1), 
+                 .I3(x2), 
+                 .O(Y6));
+   AND4  XLXI_68 (.I0(en), 
+                 .I1(x0), 
+                 .I2(x1), 
+                 .I3(x2), 
+                 .O(Y7));
+endmodule

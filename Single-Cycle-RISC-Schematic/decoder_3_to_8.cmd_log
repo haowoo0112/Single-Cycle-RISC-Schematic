@@ -1,3 +1,0 @@
-xst -intstyle ise -ifn "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/decoder_3_to_8.xst" -ofn "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/decoder_3_to_8.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-3 decoder_3_to_8.ngc decoder_3_to_8.ngd  
-map -intstyle ise -p xc6vlx75t-ff484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o decoder_3_to_8_map.ncd decoder_3_to_8.ngd decoder_3_to_8.pcf 
