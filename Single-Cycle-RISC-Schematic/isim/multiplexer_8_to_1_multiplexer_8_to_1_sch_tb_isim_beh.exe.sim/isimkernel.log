@@ -1,0 +1,29 @@
+Command line:
+   multiplexer_8_to_1_multiplexer_8_to_1_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51432
+
+Fri Sep 09 21:10:07 2022
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 5154.21 Meg
+
+ Total Signals          : 112
+ Total Nets             : 45
+ Total Signal Drivers   : 30
+ Total Blocks           : 24
+ Total Primitive Blocks : 22
+ Total Processes        : 32
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 136
+Total Line Count : 96
+
+ Total Simulation Time: 0.328125 sec
+
+ Current Memory Usage: 5468.78 Meg
+
+Fri Sep 09 21:10:47 2022
+

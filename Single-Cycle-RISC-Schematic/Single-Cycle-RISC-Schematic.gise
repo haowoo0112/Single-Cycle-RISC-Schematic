@@ -25,63 +25,70 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="decoder_3_to_8.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="decoder_3_to_8_decoder_3_to_8_sch_tb_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="decoder_3_to_8_en.vf"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="decoder_3_to_8_en_decoder_3_to_8_en_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="decoder_3_to_8_en_decoder_3_to_8_en_sch_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="decoder_3_to_8_en_decoder_3_to_8_en_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="decoder_3_to_8_en_decoder_3_to_8_en_sch_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="decoder_3_to_8_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="multiplexer_8_to_1.vf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="multiplexer_8_to_1_multiplexer_8_to_1_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="multiplexer_8_to_1_multiplexer_8_to_1_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="multiplexer_8_to_1_multiplexer_8_to_1_sch_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="multiplexer_8_to_1_multiplexer_8_to_1_sch_tb_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1662725718" xil_pn:in_ck="739456011733775942" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1662725718">
+    <transform xil_pn:end_ts="1662728936" xil_pn:in_ck="3755451712935772707" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1662728936">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="tb_decoder_3_to_8.v"/>
       <outfile xil_pn:name="tb_decoder_3_to_8_en.v"/>
+      <outfile xil_pn:name="tb_multiplexer_8_to_1.v"/>
     </transform>
-    <transform xil_pn:end_ts="1662725718" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3126579586145369831" xil_pn:start_ts="1662725718">
+    <transform xil_pn:end_ts="1662728994" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="724685676232052393" xil_pn:start_ts="1662728994">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1662725722" xil_pn:in_ck="-3886066556347259924" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3321414335358158089" xil_pn:start_ts="1662725718">
+    <transform xil_pn:end_ts="1662729000" xil_pn:in_ck="633810153478576892" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="872980621046511161" xil_pn:start_ts="1662728994">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="decoder_3_to_8.vf"/>
       <outfile xil_pn:name="decoder_3_to_8_en.vf"/>
+      <outfile xil_pn:name="multiplexer_8_to_1.vf"/>
     </transform>
     <transform xil_pn:end_ts="1662719743" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="4854707273120910560" xil_pn:start_ts="1662719743">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1662725723" xil_pn:in_ck="-8783433955561748210" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1662725722">
+    <transform xil_pn:end_ts="1662729000" xil_pn:in_ck="-2228808199591978503" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1662729000">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="decoder_3_to_8.vf"/>
       <outfile xil_pn:name="decoder_3_to_8_en.vf"/>
+      <outfile xil_pn:name="multiplexer_8_to_1.vf"/>
       <outfile xil_pn:name="tb_decoder_3_to_8.v"/>
       <outfile xil_pn:name="tb_decoder_3_to_8_en.v"/>
+      <outfile xil_pn:name="tb_multiplexer_8_to_1.v"/>
     </transform>
-    <transform xil_pn:end_ts="1662725727" xil_pn:in_ck="-8783433955561748210" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5836026211023991331" xil_pn:start_ts="1662725723">
+    <transform xil_pn:end_ts="1662729004" xil_pn:in_ck="-2228808199591978503" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-712445053514387871" xil_pn:start_ts="1662729000">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="decoder_3_to_8_en_decoder_3_to_8_en_sch_tb_beh.prj"/>
-      <outfile xil_pn:name="decoder_3_to_8_en_decoder_3_to_8_en_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="multiplexer_8_to_1_multiplexer_8_to_1_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="multiplexer_8_to_1_multiplexer_8_to_1_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1662725728" xil_pn:in_ck="4257602787056211624" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3082032740900146336" xil_pn:start_ts="1662725727">
+    <transform xil_pn:end_ts="1662729004" xil_pn:in_ck="2485752208455508816" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2668774864843911964" xil_pn:start_ts="1662729004">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="decoder_3_to_8_en_decoder_3_to_8_en_sch_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="multiplexer_8_to_1_multiplexer_8_to_1_sch_tb_isim_beh.wdb"/>
     </transform>
   </transforms>
 
