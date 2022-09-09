@@ -1,1 +1,2 @@
-sch2hdl,-intstyle,ise,-family,virtex6,-verilog,C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_16_bit.vf,-w,C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_16_bit.sch
+sch2hdl,-intstyle,ise,-family,virtex6,-verilog,C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1.vf,-w,C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1.sch
+sch2hdl,-intstyle,ise,-family,virtex6,-verilog,C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1_16_bit.vf,-w,C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1_16_bit.sch
