@@ -1,22 +1,22 @@
-Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1_multiplexer_8_to_1_sch_tb_isim_beh.exe -prj C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1_multiplexer_8_to_1_sch_tb_beh.prj work.multiplexer_8_to_1_multiplexer_8_to_1_sch_tb work.glbl 
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_16_bit_D_flip_flop_16_bit_sch_tb_isim_beh.exe -prj C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_16_bit_D_flip_flop_16_bit_sch_tb_beh.prj work.D_flip_flop_16_bit_D_flip_flop_16_bit_sch_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_multiplexer_8_to_1.v" into library work
+Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_1_bit.vf" into library work
+Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_16_bit.vf" into library work
+Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_D_flip_flop_16_bit.v" into library work
 Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module AND4
+Compiling module M2_1_HXILINX_D_flip_flop_16_bit
 Compiling module INV
-Compiling module OR8_HXILINX_multiplexer_8_to_1
-Compiling module multiplexer_8_to_1
-Compiling module multiplexer_8_to_1_multiplexer_8...
+Compiling module D_flip_flop_1_bit_MUSER_D_flip_f...
+Compiling module D_flip_flop_16_bit
+Compiling module D_flip_flop_16_bit_D_flip_flop_1...
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 Compiled 6 Verilog Units
-Built simulation executable C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1_multiplexer_8_to_1_sch_tb_isim_beh.exe
-Fuse Memory Usage: 28564 KB
-Fuse CPU Usage: 812 ms
+Built simulation executable C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_16_bit_D_flip_flop_16_bit_sch_tb_isim_beh.exe
+Fuse Memory Usage: 28308 KB
+Fuse CPU Usage: 859 ms
