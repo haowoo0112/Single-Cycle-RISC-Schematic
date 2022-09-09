@@ -1,0 +1,29 @@
+Command line:
+   decoder_3_to_8_decoder_3_to_8_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52361
+
+Fri Sep 09 13:38:10 2022
+
+
+ Elaboration Time: 0.171875 sec
+
+ Current Memory Usage: 5154.15 Meg
+
+ Total Signals          : 100
+ Total Nets             : 36
+ Total Signal Drivers   : 28
+ Total Blocks           : 23
+ Total Primitive Blocks : 21
+ Total Processes        : 30
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 119
+Total Line Count : 48
+
+ Total Simulation Time: 0.59375 sec
+
+ Current Memory Usage: 4996.87 Meg
+
+Fri Sep 09 13:39:43 2022
+
