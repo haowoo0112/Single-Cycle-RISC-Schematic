@@ -1,0 +1,6 @@
+verilog work "full_adder.vf"
+verilog work "adder_16_bit.vf"
+verilog work "two_comple_adder_16bit.vf"
+verilog work "comple_adder_16bit_CC.vf"
+verilog work "tb_comple_adder_16bit_CC.v"
+verilog work "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family virtex6 -refsym two_comple_adder_16bit C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/two_comple_adder_16bit.sch C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/two_comple_adder_16bit.sym 

@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : adder_16_bit.vf
-// /___/   /\     Timestamp : 09/10/2022 16:07:36
+// /___/   /\     Timestamp : 09/11/2022 00:31:51
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -58,12 +58,14 @@ module adder_16_bit(A,
                     B, 
                     Cin, 
                     Cout, 
+                    Cout_1, 
                     S);
 
     input [15:0] A;
     input [15:0] B;
     input Cin;
    output Cout;
+   output Cout_1;
    output [15:0] S;
    
    wire XLXN_238;
@@ -80,8 +82,9 @@ module adder_16_bit(A,
    wire XLXN_249;
    wire XLXN_250;
    wire XLXN_251;
-   wire XLXN_252;
+   wire Cout_1_DUMMY;
    
+   assign Cout_1 = Cout_1_DUMMY;
    full_adder_MUSER_adder_16_bit  XLXI_1 (.A(A[0]), 
                                          .B(B[0]), 
                                          .Cin(Cin), 
@@ -155,11 +158,11 @@ module adder_16_bit(A,
    full_adder_MUSER_adder_16_bit  XLXI_22 (.A(A[14]), 
                                           .B(B[14]), 
                                           .Cin(XLXN_251), 
-                                          .Cout(XLXN_252), 
+                                          .Cout(Cout_1_DUMMY), 
                                           .S(S[14]));
    full_adder_MUSER_adder_16_bit  XLXI_23 (.A(A[15]), 
                                           .B(B[15]), 
-                                          .Cin(XLXN_252), 
+                                          .Cin(Cout_1_DUMMY), 
                                           .Cout(Cout), 
                                           .S(S[15]));
 endmodule

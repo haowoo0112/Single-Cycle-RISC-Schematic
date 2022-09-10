@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : two_comple_adder_16bit.vf
-// /___/   /\     Timestamp : 09/10/2022 21:38:29
+// /___/   /\     Timestamp : 09/11/2022 00:31:56
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -58,12 +58,14 @@ module adder_16_bit_MUSER_two_comple_adder_16bit(A,
                                                  B, 
                                                  Cin, 
                                                  Cout, 
+                                                 Cout_1, 
                                                  S);
 
     input [15:0] A;
     input [15:0] B;
     input Cin;
    output Cout;
+   output Cout_1;
    output [15:0] S;
    
    wire XLXN_238;
@@ -80,8 +82,9 @@ module adder_16_bit_MUSER_two_comple_adder_16bit(A,
    wire XLXN_249;
    wire XLXN_250;
    wire XLXN_251;
-   wire XLXN_252;
+   wire Cout_1_DUMMY;
    
+   assign Cout_1 = Cout_1_DUMMY;
    full_adder_MUSER_two_comple_adder_16bit  XLXI_1 (.A(A[0]), 
                                                    .B(B[0]), 
                                                    .Cin(Cin), 
@@ -155,11 +158,11 @@ module adder_16_bit_MUSER_two_comple_adder_16bit(A,
    full_adder_MUSER_two_comple_adder_16bit  XLXI_22 (.A(A[14]), 
                                                     .B(B[14]), 
                                                     .Cin(XLXN_251), 
-                                                    .Cout(XLXN_252), 
+                                                    .Cout(Cout_1_DUMMY), 
                                                     .S(S[14]));
    full_adder_MUSER_two_comple_adder_16bit  XLXI_23 (.A(A[15]), 
                                                     .B(B[15]), 
-                                                    .Cin(XLXN_252), 
+                                                    .Cin(Cout_1_DUMMY), 
                                                     .Cout(Cout), 
                                                     .S(S[15]));
 endmodule
@@ -169,12 +172,14 @@ module two_comple_adder_16bit(A,
                               B, 
                               S, 
                               Cout, 
+                              Cout_1, 
                               Y);
 
     input [15:0] A;
     input [15:0] B;
     input S;
    output Cout;
+   output Cout_1;
    output [15:0] Y;
    
    wire [15:0] BxorS;
@@ -203,11 +208,6 @@ module two_comple_adder_16bit(A,
    XOR2  XLXI_8 (.I0(S), 
                 .I1(B[8]), 
                 .O(BxorS[8]));
-   adder_16_bit_MUSER_two_comple_adder_16bit  XLXI_9 (.A(A[15:0]), 
-                                                     .B(BxorS[15:0]), 
-                                                     .Cin(S), 
-                                                     .Cout(Cout), 
-                                                     .S(Y[15:0]));
    XOR2  XLXI_21 (.I0(S), 
                  .I1(B[7]), 
                  .O(BxorS[7]));
@@ -232,4 +232,10 @@ module two_comple_adder_16bit(A,
    XOR2  XLXI_28 (.I0(S), 
                  .I1(B[0]), 
                  .O(BxorS[0]));
+   adder_16_bit_MUSER_two_comple_adder_16bit  XLXI_29 (.A(A[15:0]), 
+                                                      .B(BxorS[15:0]), 
+                                                      .Cin(S), 
+                                                      .Cout(Cout), 
+                                                      .Cout_1(Cout_1), 
+                                                      .S(Y[15:0]));
 endmodule
