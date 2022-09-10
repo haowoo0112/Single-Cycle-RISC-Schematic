@@ -1,0 +1,23 @@
+MODULE register_file_16_bit
+	SUBMODULE decoder_3_to_8_en
+		INSTANCE XLXI_1
+	SUBMODULE D_flip_flop_16_bit
+		INSTANCE XLXI_13
+	SUBMODULE D_flip_flop_16_bit
+		INSTANCE XLXI_14
+	SUBMODULE D_flip_flop_16_bit
+		INSTANCE XLXI_15
+	SUBMODULE D_flip_flop_16_bit
+		INSTANCE XLXI_16
+	SUBMODULE D_flip_flop_16_bit
+		INSTANCE XLXI_17
+	SUBMODULE D_flip_flop_16_bit
+		INSTANCE XLXI_18
+	SUBMODULE D_flip_flop_16_bit
+		INSTANCE XLXI_19
+	SUBMODULE D_flip_flop_16_bit
+		INSTANCE XLXI_2
+	SUBMODULE multiplexer_8_to_1_16_bit
+		INSTANCE XLXI_10
+	SUBMODULE multiplexer_8_to_1_16_bit
+		INSTANCE XLXI_21
