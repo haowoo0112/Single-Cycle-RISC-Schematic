@@ -1,0 +1,180 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : RAM_256x16.vf
+// /___/   /\     Timestamp : 09/11/2022 21:41:22
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RAM_256x16.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RAM_256x16.sch
+//Design Name: RAM_256x16
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module RAM_256x16(Addr, 
+                  clk, 
+                  D, 
+                  Write_En, 
+                  O);
+
+    input [7:0] Addr;
+    input clk;
+    input [15:0] D;
+    input Write_En;
+   output [15:0] O;
+   
+   
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_67 (.A(Addr[7:0]), 
+                      .D(D[15]), 
+                      .WCLK(clk), 
+                      .WE(Write_En), 
+                      .O(O[15]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_97 (.A(Addr[7:0]), 
+                      .D(D[14]), 
+                      .WCLK(clk), 
+                      .WE(Write_En), 
+                      .O(O[14]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_98 (.A(Addr[7:0]), 
+                      .D(D[13]), 
+                      .WCLK(clk), 
+                      .WE(Write_En), 
+                      .O(O[13]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_99 (.A(Addr[7:0]), 
+                      .D(D[12]), 
+                      .WCLK(clk), 
+                      .WE(Write_En), 
+                      .O(O[12]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_100 (.A(Addr[7:0]), 
+                       .D(D[11]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[11]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_101 (.A(Addr[7:0]), 
+                       .D(D[10]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[10]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_102 (.A(Addr[7:0]), 
+                       .D(D[9]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[9]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_103 (.A(Addr[7:0]), 
+                       .D(D[8]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[8]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_112 (.A(Addr[7:0]), 
+                       .D(D[7]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[7]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_113 (.A(Addr[7:0]), 
+                       .D(D[6]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[6]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_114 (.A(Addr[7:0]), 
+                       .D(D[5]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[5]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_115 (.A(Addr[7:0]), 
+                       .D(D[4]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[4]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_116 (.A(Addr[7:0]), 
+                       .D(D[3]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[3]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_117 (.A(Addr[7:0]), 
+                       .D(D[2]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[2]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_118 (.A(Addr[7:0]), 
+                       .D(D[1]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[1]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_119 (.A(Addr[7:0]), 
+                       .D(D[0]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[0]));
+endmodule

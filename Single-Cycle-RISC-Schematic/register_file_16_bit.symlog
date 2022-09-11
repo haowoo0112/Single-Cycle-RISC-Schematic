@@ -1,0 +1,4 @@
+select figure at -81 -480 8
+select all in -81 -480 734 58 -enclosed
+select figure at 706 -86 8
+select figure at 688 -163 8

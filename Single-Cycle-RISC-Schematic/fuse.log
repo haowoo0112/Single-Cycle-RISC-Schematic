@@ -1,33 +1,20 @@
-Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/register_file_16_bit_register_file_16_bit_sch_tb_isim_beh.exe -prj C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/register_file_16_bit_register_file_16_bit_sch_tb_beh.prj work.register_file_16_bit_register_file_16_bit_sch_tb work.glbl 
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RAM_256x16_RAM_256x16_sch_tb_isim_beh.exe -prj C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RAM_256x16_RAM_256x16_sch_tb_beh.prj work.RAM_256x16_RAM_256x16_sch_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_1_bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1_16_bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_16_bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/decoder_3_to_8_en.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/register_file_16_bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_register_file_16_bit.v" into library work
+Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RAM_256x16.vf" into library work
+Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_RAM_256x16.v" into library work
 Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module INV
-Compiling module AND4
-Compiling module decoder_3_to_8_en_MUSER_register...
-Compiling module M2_1_HXILINX_register_file_16_bi...
-Compiling module D_flip_flop_1_bit_MUSER_register...
-Compiling module D_flip_flop_16_bit_MUSER_registe...
-Compiling module OR8_HXILINX_register_file_16_bit
-Compiling module multiplexer_8_to_1_MUSER_registe...
-Compiling module multiplexer_8_to_1_16_bit_MUSER_...
-Compiling module register_file_16_bit
-Compiling module register_file_16_bit_register_fi...
+Compiling module RAM256X1S
+Compiling module RAM_256x16
+Compiling module RAM_256x16_RAM_256x16_sch_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 12 Verilog Units
-Built simulation executable C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/register_file_16_bit_register_file_16_bit_sch_tb_isim_beh.exe
-Fuse Memory Usage: 29144 KB
-Fuse CPU Usage: 1156 ms
+Compiled 4 Verilog Units
+Built simulation executable C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RAM_256x16_RAM_256x16_sch_tb_isim_beh.exe
+Fuse Memory Usage: 27724 KB
+Fuse CPU Usage: 781 ms
