@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : D_flip_flop_16_bit.vf
-// /___/   /\     Timestamp : 09/09/2022 22:49:26
+// /___/   /\     Timestamp : 09/11/2022 10:49:45
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -44,10 +44,12 @@ endmodule
 
 module D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit(clk, 
                                                   D, 
+                                                  LOAD, 
                                                   Q);
 
     input clk;
     input D;
+    input LOAD;
    output Q;
    
    wire XLXN_3;
@@ -56,11 +58,12 @@ module D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit(clk,
    wire XLXN_7;
    wire XLXN_8;
    wire XLXN_11;
+   wire XLXN_15;
    wire Q_DUMMY;
    
    assign Q = Q_DUMMY;
    (* HU_SET = "XLXI_1_0" *) 
-   M2_1_HXILINX_D_flip_flop_16_bit  XLXI_1 (.D0(D), 
+   M2_1_HXILINX_D_flip_flop_16_bit  XLXI_1 (.D0(XLXN_15), 
                                            .D1(XLXN_5), 
                                            .S0(clk), 
                                            .O(XLXN_3));
@@ -79,64 +82,87 @@ module D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit(clk,
                .O(XLXN_6));
    INV  XLXI_7 (.I(XLXN_7), 
                .O(Q_DUMMY));
+   (* HU_SET = "XLXI_8_2" *) 
+   M2_1_HXILINX_D_flip_flop_16_bit  XLXI_8 (.D0(Q_DUMMY), 
+                                           .D1(D), 
+                                           .S0(LOAD), 
+                                           .O(XLXN_15));
 endmodule
 `timescale 1ns / 1ps
 
 module D_flip_flop_16_bit(clk, 
                           D, 
+                          LOAD, 
                           Q);
 
     input clk;
     input [15:0] D;
+    input LOAD;
    output [15:0] Q;
    
    
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_22 (.clk(clk), 
                                                        .D(D[15]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[15]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_23 (.clk(clk), 
                                                        .D(D[14]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[14]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_24 (.clk(clk), 
                                                        .D(D[13]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[13]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_25 (.clk(clk), 
                                                        .D(D[12]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[12]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_26 (.clk(clk), 
                                                        .D(D[11]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[11]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_27 (.clk(clk), 
                                                        .D(D[10]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[10]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_28 (.clk(clk), 
                                                        .D(D[9]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[9]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_29 (.clk(clk), 
                                                        .D(D[8]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[8]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_30 (.clk(clk), 
                                                        .D(D[0]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[0]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_31 (.clk(clk), 
                                                        .D(D[1]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[1]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_32 (.clk(clk), 
                                                        .D(D[2]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[2]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_33 (.clk(clk), 
                                                        .D(D[3]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[3]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_34 (.clk(clk), 
                                                        .D(D[4]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[4]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_35 (.clk(clk), 
                                                        .D(D[5]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[5]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_36 (.clk(clk), 
                                                        .D(D[6]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[6]));
    D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_37 (.clk(clk), 
                                                        .D(D[7]), 
+                                                       .LOAD(LOAD), 
                                                        .Q(Q[7]));
 endmodule

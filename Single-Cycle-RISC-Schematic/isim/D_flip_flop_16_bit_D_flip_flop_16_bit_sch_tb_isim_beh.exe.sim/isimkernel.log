@@ -2,28 +2,28 @@ Command line:
    D_flip_flop_16_bit_D_flip_flop_16_bit_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  60401
+     -socket  49732
 
-Fri Sep 09 22:49:34 2022
+Sun Sep 11 10:50:04 2022
 
 
  Elaboration Time: 0.09375 sec
 
- Current Memory Usage: 5153.64 Meg
+ Current Memory Usage: 5153.6 Meg
 
- Total Signals          : 433
- Total Nets             : 158
- Total Signal Drivers   : 135
- Total Blocks           : 131
- Total Primitive Blocks : 113
- Total Processes        : 170
- Total Traceable Variables  : 53
- Total Scalar Nets and Variables : 319
-Total Line Count : 199
+ Total Signals          : 514
+ Total Nets             : 175
+ Total Signal Drivers   : 152
+ Total Blocks           : 147
+ Total Primitive Blocks : 129
+ Total Processes        : 203
+ Total Traceable Variables  : 70
+ Total Scalar Nets and Variables : 353
+Total Line Count : 284
 
- Total Simulation Time: 0.1875 sec
+ Total Simulation Time: 0.25 sec
 
- Current Memory Usage: 4996.35 Meg
+ Current Memory Usage: 5468.18 Meg
 
-Fri Sep 09 22:51:54 2022
+Sun Sep 11 10:50:42 2022
 

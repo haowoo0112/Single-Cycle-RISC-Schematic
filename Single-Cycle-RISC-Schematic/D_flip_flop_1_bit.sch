@@ -6,9 +6,7 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="D" />
         <signal name="XLXN_3" />
-        <signal name="XLXN_4" />
         <signal name="XLXN_5" />
         <signal name="XLXN_6" />
         <signal name="XLXN_7" />
@@ -16,9 +14,14 @@
         <signal name="clk" />
         <signal name="XLXN_11" />
         <signal name="Q" />
-        <port polarity="Input" name="D" />
+        <signal name="D" />
+        <signal name="LOAD" />
+        <signal name="XLXN_14" />
+        <signal name="XLXN_15" />
         <port polarity="Input" name="clk" />
         <port polarity="Output" name="Q" />
+        <port polarity="Input" name="D" />
+        <port polarity="Input" name="LOAD" />
         <blockdef name="m2_1">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="96" y1="-64" y2="-192" x1="96" />
@@ -42,7 +45,7 @@
             <circle r="16" cx="144" cy="-32" />
         </blockdef>
         <block symbolname="m2_1" name="XLXI_1">
-            <blockpin signalname="D" name="D0" />
+            <blockpin signalname="XLXN_15" name="D0" />
             <blockpin signalname="XLXN_5" name="D1" />
             <blockpin signalname="clk" name="S0" />
             <blockpin signalname="XLXN_3" name="O" />
@@ -73,13 +76,15 @@
             <blockpin signalname="XLXN_7" name="I" />
             <blockpin signalname="Q" name="O" />
         </block>
+        <block symbolname="m2_1" name="XLXI_8">
+            <blockpin signalname="Q" name="D0" />
+            <blockpin signalname="D" name="D1" />
+            <blockpin signalname="LOAD" name="S0" />
+            <blockpin signalname="XLXN_15" name="O" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
         <instance x="784" y="1408" name="XLXI_1" orien="R0" />
-        <branch name="D">
-            <wire x2="784" y1="1248" y2="1248" x1="752" />
-        </branch>
-        <iomarker fontsize="28" x="752" y="1248" name="D" orien="R180" />
         <branch name="XLXN_3">
             <wire x2="1136" y1="1280" y2="1280" x1="1104" />
         </branch>
@@ -116,6 +121,10 @@
             <wire x2="1488" y1="1408" y2="1424" x1="1488" />
         </branch>
         <branch name="Q">
+            <wire x2="512" y1="752" y2="896" x1="512" />
+            <wire x2="560" y1="896" y2="896" x1="512" />
+            <wire x2="1136" y1="752" y2="752" x1="512" />
+            <wire x2="1136" y1="752" y2="1040" x1="1136" />
             <wire x2="1136" y1="1040" y2="1344" x1="1136" />
             <wire x2="1232" y1="1344" y2="1344" x1="1136" />
             <wire x2="1632" y1="1040" y2="1040" x1="1136" />
@@ -126,5 +135,21 @@
         </branch>
         <iomarker fontsize="28" x="688" y="1424" name="clk" orien="R180" />
         <iomarker fontsize="28" x="2176" y="1152" name="Q" orien="R0" />
+        <instance x="560" y="1056" name="XLXI_8" orien="R0" />
+        <branch name="D">
+            <wire x2="560" y1="960" y2="960" x1="528" />
+        </branch>
+        <iomarker fontsize="28" x="528" y="960" name="D" orien="R180" />
+        <branch name="LOAD">
+            <wire x2="560" y1="1024" y2="1024" x1="528" />
+        </branch>
+        <iomarker fontsize="28" x="528" y="1024" name="LOAD" orien="R180" />
+        <branch name="XLXN_15">
+            <wire x2="704" y1="1136" y2="1248" x1="704" />
+            <wire x2="784" y1="1248" y2="1248" x1="704" />
+            <wire x2="960" y1="1136" y2="1136" x1="704" />
+            <wire x2="960" y1="928" y2="928" x1="880" />
+            <wire x2="960" y1="928" y2="1136" x1="960" />
+        </branch>
     </sheet>
 </drawing>

@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : D_flip_flop_1_bit.vf
-// /___/   /\     Timestamp : 09/09/2022 22:35:17
+// /___/   /\     Timestamp : 09/11/2022 10:34:56
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -44,10 +44,12 @@ endmodule
 
 module D_flip_flop_1_bit(clk, 
                          D, 
+                         LOAD, 
                          Q);
 
     input clk;
     input D;
+    input LOAD;
    output Q;
    
    wire XLXN_3;
@@ -56,11 +58,12 @@ module D_flip_flop_1_bit(clk,
    wire XLXN_7;
    wire XLXN_8;
    wire XLXN_11;
+   wire XLXN_15;
    wire Q_DUMMY;
    
    assign Q = Q_DUMMY;
    (* HU_SET = "XLXI_1_0" *) 
-   M2_1_HXILINX_D_flip_flop_1_bit  XLXI_1 (.D0(D), 
+   M2_1_HXILINX_D_flip_flop_1_bit  XLXI_1 (.D0(XLXN_15), 
                                           .D1(XLXN_5), 
                                           .S0(clk), 
                                           .O(XLXN_3));
@@ -79,4 +82,9 @@ module D_flip_flop_1_bit(clk,
                .O(XLXN_6));
    INV  XLXI_7 (.I(XLXN_7), 
                .O(Q_DUMMY));
+   (* HU_SET = "XLXI_8_2" *) 
+   M2_1_HXILINX_D_flip_flop_1_bit  XLXI_8 (.D0(Q_DUMMY), 
+                                          .D1(D), 
+                                          .S0(LOAD), 
+                                          .O(XLXN_15));
 endmodule
