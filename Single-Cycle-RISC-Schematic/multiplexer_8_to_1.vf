@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : multiplexer_8_to_1.vf
-// /___/   /\     Timestamp : 09/10/2022 01:46:38
+// /___/   /\     Timestamp : 09/23/2022 16:49:13
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1.sch
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1.sch
 //Design Name: multiplexer_8_to_1
 //Device: virtex6
 //Purpose:
@@ -150,7 +150,7 @@ module multiplexer_8_to_1(I0,
                  .I2(S1), 
                  .I3(S2), 
                  .O(XLXN_78));
-   (* HU_SET = "XLXI_38_0" *) 
+   (* HU_SET = "XLXI_38_6" *) 
    OR8_HXILINX_multiplexer_8_to_1  XLXI_38 (.I0(XLXN_78), 
                                            .I1(XLXN_88), 
                                            .I2(XLXN_62), 

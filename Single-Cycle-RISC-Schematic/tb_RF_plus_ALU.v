@@ -42,8 +42,9 @@ module RF_plus_ALU_RF_plus_ALU_sch_tb();
 		.V(V)
    );
 // Initialize Inputs
-   `ifdef auto_init
-       initial begin
+	always
+		#5 clk = ~clk;
+	initial begin
 		Read_Addr_A = 0;
 		Read_Addr_B = 0;
 		Write_Data = 0;
@@ -53,6 +54,32 @@ module RF_plus_ALU_RF_plus_ALU_sch_tb();
 		ALU_Operator = 0;
 		Src_ALU_B = 0;
 		imm5 = 0;
+		#10;
 		
-   `endif
+		Write_En = 1;
+		Write_Addr = 3'd0;
+		Write_Data = 16'h12;
+		#10;
+		Write_En = 1;
+		Write_Addr = 3'd1;
+		Write_Data = 16'h34;
+		#10;
+		Write_En = 1;
+		Write_Addr = 3'd2;
+		Write_Data = 16'h56;
+		#10;
+		
+		Read_Addr_A = 3'd2;
+		Read_Addr_B = 3'd1;
+		ALU_Operator = 0;
+		Src_ALU_B = 0;
+		imm5 = 5'd0;
+		#10;
+		Read_Addr_A = 3'd2;
+		Read_Addr_B = 3'd1;
+		ALU_Operator = 0;
+		Src_ALU_B = 1;
+		imm5 = 5'd1;
+		#10;
+   end
 endmodule

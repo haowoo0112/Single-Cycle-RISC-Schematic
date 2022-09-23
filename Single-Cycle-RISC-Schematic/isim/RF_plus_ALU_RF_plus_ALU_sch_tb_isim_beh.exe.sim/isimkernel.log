@@ -1,0 +1,29 @@
+Command line:
+   RF_plus_ALU_RF_plus_ALU_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49292
+
+Fri Sep 23 16:49:32 2022
+
+
+ Elaboration Time: 0.171875 sec
+
+ Current Memory Usage: 5183.26 Meg
+
+ Total Signals          : 8348
+ Total Nets             : 2099
+ Total Signal Drivers   : 2051
+ Total Blocks           : 2118
+ Total Primitive Blocks : 1908
+ Total Processes        : 2438
+ Total Traceable Variables  : 411
+ Total Scalar Nets and Variables : 2597
+Total Line Count : 2145
+
+ Total Simulation Time: 1.0625 sec
+
+ Current Memory Usage: 4711.4 Meg
+
+Fri Sep 23 16:53:40 2022
+
