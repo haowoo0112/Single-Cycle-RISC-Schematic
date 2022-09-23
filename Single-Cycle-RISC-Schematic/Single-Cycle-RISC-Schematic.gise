@@ -94,6 +94,9 @@
     <transform xil_pn:end_ts="1663909138" xil_pn:in_ck="2203501625194391531" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1663909138">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="tb_D_flip_flop_16_bit.v"/>
       <outfile xil_pn:name="tb_D_flip_flop_1_bit.v"/>
       <outfile xil_pn:name="tb_RAM_256x16.v"/>
@@ -116,6 +119,8 @@
     <transform xil_pn:end_ts="1663909150" xil_pn:in_ck="-5017544495658757347" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4103565652752794709" xil_pn:start_ts="1663909148">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="D_flip_flop_16_bit.vf"/>
       <outfile xil_pn:name="D_flip_flop_1_bit.vf"/>
       <outfile xil_pn:name="RAM_256x16.vf"/>
@@ -129,10 +134,12 @@
     <transform xil_pn:end_ts="1662733362" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="4854707273120910560" xil_pn:start_ts="1662733362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1663909150" xil_pn:in_ck="7775699233330993060" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1663909150">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="D_flip_flop_16_bit.vf"/>
       <outfile xil_pn:name="D_flip_flop_1_bit.vf"/>
       <outfile xil_pn:name="RAM_256x16.vf"/>
@@ -165,6 +172,9 @@
     <transform xil_pn:end_ts="1663909153" xil_pn:in_ck="7775699233330993060" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6433668060426691815" xil_pn:start_ts="1663909150">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
@@ -175,6 +185,9 @@
     <transform xil_pn:end_ts="1663909153" xil_pn:in_ck="3508900023896414810" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="742319278783482204" xil_pn:start_ts="1663909153">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="multiplexer_2_to_1_16_bit_multiplexer_2_to_1_16_bit_sch_tb_isim_beh.wdb"/>
