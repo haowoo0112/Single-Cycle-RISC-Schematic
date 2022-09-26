@@ -1,0 +1,29 @@
+Command line:
+   PC_circuit_PC_circuit_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51386
+
+Mon Sep 26 12:42:17 2022
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5157.69 Meg
+
+ Total Signals          : 1180
+ Total Nets             : 359
+ Total Signal Drivers   : 304
+ Total Blocks           : 347
+ Total Primitive Blocks : 292
+ Total Processes        : 308
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 478
+Total Line Count : 63
+
+ Total Simulation Time: 0.359375 sec
+
+ Current Memory Usage: 4685.83 Meg
+
+Mon Sep 26 13:03:23 2022
+

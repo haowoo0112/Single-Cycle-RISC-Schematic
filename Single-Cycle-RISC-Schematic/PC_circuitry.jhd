@@ -5,3 +5,5 @@ MODULE PC_circuitry
 		INSTANCE XLXI_7
 	SUBMODULE two_comple_adder_16bit
 		INSTANCE XLXI_11
+	SUBMODULE sign_extend_8_16
+		INSTANCE XLXI_19
