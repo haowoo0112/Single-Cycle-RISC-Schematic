@@ -164,6 +164,10 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="92"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="92"/>
     </file>
+    <file xil_pn:name="PC_circuitry.sch" xil_pn:type="FILE_SCHEMATIC">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="96"/>
+    </file>
   </files>
 
   <properties>

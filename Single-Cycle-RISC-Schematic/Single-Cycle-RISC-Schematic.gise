@@ -120,6 +120,9 @@
     <transform xil_pn:end_ts="1663922965" xil_pn:in_ck="-5017544495658757347" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="696562635321875465" xil_pn:start_ts="1663922946">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="D_flip_flop_16_bit.vf"/>
       <outfile xil_pn:name="D_flip_flop_1_bit.vf"/>
       <outfile xil_pn:name="RAM_256x16.vf"/>
@@ -142,6 +145,7 @@
     <transform xil_pn:end_ts="1663922965" xil_pn:in_ck="5253892700121580639" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1663922965">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="D_flip_flop_16_bit.vf"/>
       <outfile xil_pn:name="D_flip_flop_1_bit.vf"/>
       <outfile xil_pn:name="RAM_256x16.vf"/>
@@ -176,6 +180,9 @@
     <transform xil_pn:end_ts="1663922970" xil_pn:in_ck="5253892700121580639" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2616439067169057409" xil_pn:start_ts="1663922965">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="RF_plus_ALU_RF_plus_ALU_sch_tb_beh.prj"/>
       <outfile xil_pn:name="RF_plus_ALU_RF_plus_ALU_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -186,6 +193,9 @@
     <transform xil_pn:end_ts="1663922970" xil_pn:in_ck="3204702318622488338" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6954050436620108604" xil_pn:start_ts="1663922970">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="RF_plus_ALU_RF_plus_ALU_sch_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
