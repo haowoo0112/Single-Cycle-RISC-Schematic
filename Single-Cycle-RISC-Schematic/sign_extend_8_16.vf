@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : sign_extend_8_16.vf
+// /___/   /\     Timestamp : 09/26/2022 10:46:43
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/sign_extend_8_16.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/sign_extend_8_16.sch
+//Design Name: sign_extend_8_16
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module sign_extend_8_16(imm, 
+                        Q);
+
+    input [7:0] imm;
+   output [15:0] Q;
+   
+   
+   BUF  XLXI_1_0 (.I(imm[7]), 
+                 .O(Q[7]));
+   BUF  XLXI_1_1 (.I(imm[6]), 
+                 .O(Q[6]));
+   BUF  XLXI_1_2 (.I(imm[5]), 
+                 .O(Q[5]));
+   BUF  XLXI_1_3 (.I(imm[4]), 
+                 .O(Q[4]));
+   BUF  XLXI_1_4 (.I(imm[3]), 
+                 .O(Q[3]));
+   BUF  XLXI_1_5 (.I(imm[2]), 
+                 .O(Q[2]));
+   BUF  XLXI_1_6 (.I(imm[1]), 
+                 .O(Q[1]));
+   BUF  XLXI_1_7 (.I(imm[0]), 
+                 .O(Q[0]));
+   BUF  XLXI_2 (.I(imm[7]), 
+               .O(Q[8]));
+   BUF  XLXI_3 (.I(imm[7]), 
+               .O(Q[9]));
+   BUF  XLXI_4 (.I(imm[7]), 
+               .O(Q[10]));
+   BUF  XLXI_5 (.I(imm[7]), 
+               .O(Q[11]));
+   BUF  XLXI_6 (.I(imm[7]), 
+               .O(Q[12]));
+   BUF  XLXI_7 (.I(imm[7]), 
+               .O(Q[13]));
+   BUF  XLXI_8 (.I(imm[7]), 
+               .O(Q[14]));
+   BUF  XLXI_9 (.I(imm[7]), 
+               .O(Q[15]));
+endmodule

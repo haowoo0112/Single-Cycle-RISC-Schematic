@@ -36,9 +36,7 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RAM_256x16_RAM_256x16_sch_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAM_256x16_RAM_256x16_sch_tb_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="RF_plus_ALU.vf"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RF_plus_ALU_RF_plus_ALU_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RF_plus_ALU_RF_plus_ALU_sch_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="RF_plus_ALU_RF_plus_ALU_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RF_plus_ALU_RF_plus_ALU_sch_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="adder_16_bit.vf"/>
@@ -81,6 +79,11 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="register_file_16_bit.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="register_file_16_bit_register_file_16_bit_sch_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="register_file_16_bit_register_file_16_bit_sch_tb_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="sign_extend_8_16.vf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sign_extend_8_16_sign_extend_8_16_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="sign_extend_8_16_sign_extend_8_16_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="sign_extend_8_16_sign_extend_8_16_sch_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sign_extend_8_16_sign_extend_8_16_sch_tb_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="two_comple_adder_16bit.vf"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_isim_beh.exe"/>
@@ -94,7 +97,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1663922943" xil_pn:in_ck="-4323394374453041216" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1663922943">
+    <transform xil_pn:end_ts="1664160398" xil_pn:in_ck="-685984054595819538" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1664160398">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="tb_D_flip_flop_16_bit.v"/>
@@ -111,18 +114,16 @@
       <outfile xil_pn:name="tb_multiplexer_8_to_1.v"/>
       <outfile xil_pn:name="tb_multiplexer_8_to_1_16_bit.v"/>
       <outfile xil_pn:name="tb_register_file_16_bit.v"/>
+      <outfile xil_pn:name="tb_sign_extend_8_16.v"/>
       <outfile xil_pn:name="tb_two_comple_adder_16bit.v"/>
     </transform>
-    <transform xil_pn:end_ts="1663922946" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6401814377601419385" xil_pn:start_ts="1663922946">
+    <transform xil_pn:end_ts="1664160403" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5964394209996074645" xil_pn:start_ts="1664160403">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1663922965" xil_pn:in_ck="-5017544495658757347" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="696562635321875465" xil_pn:start_ts="1663922946">
+    <transform xil_pn:end_ts="1664160404" xil_pn:in_ck="530519435509741850" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5513215443735487611" xil_pn:start_ts="1664160403">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="D_flip_flop_16_bit.vf"/>
       <outfile xil_pn:name="D_flip_flop_1_bit.vf"/>
       <outfile xil_pn:name="RAM_256x16.vf"/>
@@ -136,16 +137,16 @@
       <outfile xil_pn:name="multiplexer_8_to_1.vf"/>
       <outfile xil_pn:name="multiplexer_8_to_1_16_bit.vf"/>
       <outfile xil_pn:name="register_file_16_bit.vf"/>
+      <outfile xil_pn:name="sign_extend_8_16.vf"/>
       <outfile xil_pn:name="two_comple_adder_16bit.vf"/>
     </transform>
     <transform xil_pn:end_ts="1663922965" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="3909927840778366971" xil_pn:start_ts="1663922965">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1663922965" xil_pn:in_ck="5253892700121580639" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1663922965">
+    <transform xil_pn:end_ts="1664160405" xil_pn:in_ck="-53737357329190548" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1664160404">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="D_flip_flop_16_bit.vf"/>
       <outfile xil_pn:name="D_flip_flop_1_bit.vf"/>
       <outfile xil_pn:name="RAM_256x16.vf"/>
@@ -160,6 +161,7 @@
       <outfile xil_pn:name="multiplexer_8_to_1.vf"/>
       <outfile xil_pn:name="multiplexer_8_to_1_16_bit.vf"/>
       <outfile xil_pn:name="register_file_16_bit.vf"/>
+      <outfile xil_pn:name="sign_extend_8_16.vf"/>
       <outfile xil_pn:name="tb_D_flip_flop_16_bit.v"/>
       <outfile xil_pn:name="tb_D_flip_flop_1_bit.v"/>
       <outfile xil_pn:name="tb_RAM_256x16.v"/>
@@ -174,31 +176,26 @@
       <outfile xil_pn:name="tb_multiplexer_8_to_1.v"/>
       <outfile xil_pn:name="tb_multiplexer_8_to_1_16_bit.v"/>
       <outfile xil_pn:name="tb_register_file_16_bit.v"/>
+      <outfile xil_pn:name="tb_sign_extend_8_16.v"/>
       <outfile xil_pn:name="tb_two_comple_adder_16bit.v"/>
       <outfile xil_pn:name="two_comple_adder_16bit.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1663922970" xil_pn:in_ck="5253892700121580639" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2616439067169057409" xil_pn:start_ts="1663922965">
+    <transform xil_pn:end_ts="1664160408" xil_pn:in_ck="-53737357329190548" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1245032238866699547" xil_pn:start_ts="1664160405">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="RF_plus_ALU_RF_plus_ALU_sch_tb_beh.prj"/>
-      <outfile xil_pn:name="RF_plus_ALU_RF_plus_ALU_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="sign_extend_8_16_sign_extend_8_16_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="sign_extend_8_16_sign_extend_8_16_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1663922970" xil_pn:in_ck="3204702318622488338" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6954050436620108604" xil_pn:start_ts="1663922970">
+    <transform xil_pn:end_ts="1664160408" xil_pn:in_ck="-4895018614399280772" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="393350879386891048" xil_pn:start_ts="1664160408">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="RF_plus_ALU_RF_plus_ALU_sch_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="sign_extend_8_16_sign_extend_8_16_sch_tb_isim_beh.wdb"/>
     </transform>
   </transforms>
 
