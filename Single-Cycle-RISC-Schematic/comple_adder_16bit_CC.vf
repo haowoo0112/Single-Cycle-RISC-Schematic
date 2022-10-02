@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : comple_adder_16bit_CC.vf
-// /___/   /\     Timestamp : 09/23/2022 16:49:19
+// /___/   /\     Timestamp : 09/29/2022 19:05:33
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/comple_adder_16bit_CC.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/comple_adder_16bit_CC.sch
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/comple_adder_16bit_CC.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/comple_adder_16bit_CC.sch
 //Design Name: comple_adder_16bit_CC
 //Device: virtex6
 //Purpose:
@@ -298,7 +298,7 @@ module comple_adder_16bit_CC(A,
                                                               .Cout_1(XLXN_25), 
                                                               
          .Y(Y_DUMMY[15:0]));
-   (* HU_SET = "XLXI_2_18" *) 
+   (* HU_SET = "XLXI_2_5" *) 
    NOR16_HXILINX_comple_adder_16bit_CC  XLXI_2 (.I0(Y_DUMMY[0]), 
                                                .I1(Y_DUMMY[1]), 
                                                .I2(Y_DUMMY[2]), 

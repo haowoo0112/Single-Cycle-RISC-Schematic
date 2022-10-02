@@ -1,0 +1,574 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.51 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.52 secs
+ 
+--> Reading design: RF_plus_ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "RF_plus_ALU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "RF_plus_ALU"
+Output Format                      : NGC
+Target Device                      : xc6vlx75t-3-ff484
+
+---- Source Options
+Top Module Name                    : RF_plus_ALU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\full_adder.vf" into library work
+Parsing module <full_adder>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\multiplexer_8_to_1.vf" into library work
+Parsing module <OR8_HXILINX_multiplexer_8_to_1>.
+Parsing module <multiplexer_8_to_1>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\D_flip_flop_1_bit.vf" into library work
+Parsing module <M2_1_HXILINX_D_flip_flop_1_bit>.
+Parsing module <D_flip_flop_1_bit>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\adder_16_bit.vf" into library work
+Parsing module <full_adder_MUSER_adder_16_bit>.
+Parsing module <adder_16_bit>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\two_comple_adder_16bit.vf" into library work
+Parsing module <full_adder_MUSER_two_comple_adder_16bit>.
+Parsing module <adder_16_bit_MUSER_two_comple_adder_16bit>.
+Parsing module <two_comple_adder_16bit>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\multiplexer_8_to_1_16_bit.vf" into library work
+Parsing module <OR8_HXILINX_multiplexer_8_to_1_16_bit>.
+Parsing module <multiplexer_8_to_1_MUSER_multiplexer_8_to_1_16_bit>.
+Parsing module <multiplexer_8_to_1_16_bit>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\multiplexer_2_to_1.vf" into library work
+Parsing module <multiplexer_2_to_1>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\D_flip_flop_16_bit.vf" into library work
+Parsing module <M2_1_HXILINX_D_flip_flop_16_bit>.
+Parsing module <D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit>.
+Parsing module <D_flip_flop_16_bit>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\decoder_3_to_8_en.vf" into library work
+Parsing module <decoder_3_to_8_en>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\register_file_16_bit.vf" into library work
+Parsing module <OR8_HXILINX_register_file_16_bit>.
+Parsing module <M2_1_HXILINX_register_file_16_bit>.
+Parsing module <multiplexer_8_to_1_MUSER_register_file_16_bit>.
+Parsing module <multiplexer_8_to_1_16_bit_MUSER_register_file_16_bit>.
+Parsing module <D_flip_flop_1_bit_MUSER_register_file_16_bit>.
+Parsing module <D_flip_flop_16_bit_MUSER_register_file_16_bit>.
+Parsing module <decoder_3_to_8_en_MUSER_register_file_16_bit>.
+Parsing module <register_file_16_bit>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\multiplexer_2_to_1_16_bit.vf" into library work
+Parsing module <multiplexer_2_to_1_MUSER_multiplexer_2_to_1_16_bit>.
+Parsing module <multiplexer_2_to_1_16_bit>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\comple_adder_16bit_CC.vf" into library work
+Parsing module <NOR16_HXILINX_comple_adder_16bit_CC>.
+Parsing module <full_adder_MUSER_comple_adder_16bit_CC>.
+Parsing module <adder_16_bit_MUSER_comple_adder_16bit_CC>.
+Parsing module <two_comple_adder_16bit_MUSER_comple_adder_16bit_CC>.
+Parsing module <comple_adder_16bit_CC>.
+Analyzing Verilog file "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf" into library work
+Parsing module <NOR16_HXILINX_RF_plus_ALU>.
+Parsing module <OR8_HXILINX_RF_plus_ALU>.
+Parsing module <M2_1_HXILINX_RF_plus_ALU>.
+Parsing module <full_adder_MUSER_RF_plus_ALU>.
+Parsing module <adder_16_bit_MUSER_RF_plus_ALU>.
+Parsing module <two_comple_adder_16bit_MUSER_RF_plus_ALU>.
+Parsing module <comple_adder_16bit_CC_MUSER_RF_plus_ALU>.
+Parsing module <multiplexer_2_to_1_MUSER_RF_plus_ALU>.
+Parsing module <multiplexer_2_to_1_16_bit_MUSER_RF_plus_ALU>.
+Parsing module <multiplexer_8_to_1_MUSER_RF_plus_ALU>.
+Parsing module <multiplexer_8_to_1_16_bit_MUSER_RF_plus_ALU>.
+Parsing module <D_flip_flop_1_bit_MUSER_RF_plus_ALU>.
+Parsing module <D_flip_flop_16_bit_MUSER_RF_plus_ALU>.
+Parsing module <decoder_3_to_8_en_MUSER_RF_plus_ALU>.
+Parsing module <register_file_16_bit_MUSER_RF_plus_ALU>.
+Parsing module <RF_plus_ALU>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <RF_plus_ALU>.
+
+Elaborating module <register_file_16_bit_MUSER_RF_plus_ALU>.
+
+Elaborating module <decoder_3_to_8_en_MUSER_RF_plus_ALU>.
+
+Elaborating module <INV>.
+
+Elaborating module <AND4>.
+
+Elaborating module <D_flip_flop_16_bit_MUSER_RF_plus_ALU>.
+
+Elaborating module <D_flip_flop_1_bit_MUSER_RF_plus_ALU>.
+
+Elaborating module <M2_1_HXILINX_RF_plus_ALU>.
+
+Elaborating module <multiplexer_8_to_1_16_bit_MUSER_RF_plus_ALU>.
+
+Elaborating module <multiplexer_8_to_1_MUSER_RF_plus_ALU>.
+
+Elaborating module <OR8_HXILINX_RF_plus_ALU>.
+
+Elaborating module <multiplexer_2_to_1_16_bit_MUSER_RF_plus_ALU>.
+
+Elaborating module <multiplexer_2_to_1_MUSER_RF_plus_ALU>.
+
+Elaborating module <AND2>.
+
+Elaborating module <OR2>.
+
+Elaborating module <BUF>.
+
+Elaborating module <GND>.
+
+Elaborating module <comple_adder_16bit_CC_MUSER_RF_plus_ALU>.
+
+Elaborating module <two_comple_adder_16bit_MUSER_RF_plus_ALU>.
+
+Elaborating module <XOR2>.
+
+Elaborating module <adder_16_bit_MUSER_RF_plus_ALU>.
+
+Elaborating module <full_adder_MUSER_RF_plus_ALU>.
+
+Elaborating module <NOR16_HXILINX_RF_plus_ALU>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <RF_plus_ALU> synthesized.
+
+Synthesizing Unit <register_file_16_bit_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <register_file_16_bit_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <decoder_3_to_8_en_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <decoder_3_to_8_en_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <D_flip_flop_16_bit_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <D_flip_flop_16_bit_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <D_flip_flop_1_bit_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Set property "HU_SET = XLXI_1_9" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_2_10" for instance <XLXI_2>.
+    Set property "HU_SET = XLXI_8_11" for instance <XLXI_8>.
+    Summary:
+	no macro.
+Unit <D_flip_flop_1_bit_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <M2_1_HXILINX_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <M2_1_HXILINX_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <multiplexer_8_to_1_16_bit_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <multiplexer_8_to_1_16_bit_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <multiplexer_8_to_1_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Set property "HU_SET = XLXI_38_8" for instance <XLXI_38>.
+    Summary:
+	no macro.
+Unit <multiplexer_8_to_1_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <OR8_HXILINX_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <OR8_HXILINX_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <multiplexer_2_to_1_16_bit_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <multiplexer_2_to_1_16_bit_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <multiplexer_2_to_1_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <multiplexer_2_to_1_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <comple_adder_16bit_CC_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Set property "HU_SET = XLXI_2_7" for instance <XLXI_2>.
+    Summary:
+	no macro.
+Unit <comple_adder_16bit_CC_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <two_comple_adder_16bit_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <two_comple_adder_16bit_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <adder_16_bit_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <adder_16_bit_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <full_adder_MUSER_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <full_adder_MUSER_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <NOR16_HXILINX_RF_plus_ALU>.
+    Related source file is "C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <NOR16_HXILINX_RF_plus_ALU> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 384
+ 1-bit 2-to-1 multiplexer                              : 384
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit XLXI_2 : the following signal(s) form a combinatorial loop: D_flip_flop_1_bit_MUSER_RF_plus_ALU/XLXN_6, D_flip_flop_1_bit_MUSER_RF_plus_ALU/XLXN_7, O, D_flip_flop_1_bit_MUSER_RF_plus_ALU/Q_DUMMY, D1.
+WARNING:Xst:2170 - Unit XLXI_1 : the following signal(s) form a combinatorial loop: D1, O, D_flip_flop_1_bit_MUSER_RF_plus_ALU/XLXN_8, D_flip_flop_1_bit_MUSER_RF_plus_ALU/XLXN_3, D_flip_flop_1_bit_MUSER_RF_plus_ALU/XLXN_5.
+
+Optimizing unit <RF_plus_ALU> ...
+
+Optimizing unit <register_file_16_bit_MUSER_RF_plus_ALU> ...
+
+Optimizing unit <decoder_3_to_8_en_MUSER_RF_plus_ALU> ...
+
+Optimizing unit <multiplexer_8_to_1_MUSER_RF_plus_ALU> ...
+
+Optimizing unit <two_comple_adder_16bit_MUSER_RF_plus_ALU> ...
+
+Optimizing unit <adder_16_bit_MUSER_RF_plus_ALU> ...
+
+Optimizing unit <multiplexer_2_to_1_16_bit_MUSER_RF_plus_ALU> ...
+
+Optimizing unit <XLXI_2> ...
+
+Optimizing unit <XLXI_8> ...
+
+Optimizing unit <XLXI_1> ...
+
+Optimizing unit <D_flip_flop_1_bit_MUSER_RF_plus_ALU> ...
+
+Optimizing unit <OR8_HXILINX_RF_plus_ALU> ...
+
+Optimizing unit <NOR16_HXILINX_RF_plus_ALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block RF_plus_ALU, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : RF_plus_ALU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1963
+#      AND2                        : 64
+#      AND4                        : 264
+#      BUF                         : 49
+#      GND                         : 1
+#      INV                         : 1052
+#      LUT3                        : 416
+#      LUT6                        : 35
+#      OR2                         : 32
+#      XOR2                        : 50
+# IO Buffers                       : 86
+#      IBUF                        : 34
+#      OBUF                        : 52
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx75tff484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                 1503  out of  46560     3%  
+    Number used as Logic:              1503  out of  46560     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1503
+   Number with an unused Flip Flop:    1503  out of   1503   100%  
+   Number with an unused LUT:             0  out of   1503     0%  
+   Number of fully used LUT-FF pairs:     0  out of   1503     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          86
+ Number of bonded IOBs:                  86  out of    240    35%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 29.819ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 106738 / 52
+-------------------------------------------------------------------------
+Delay:               29.819ns (Levels of Logic = 53)
+  Source:            Write_Addr<1> (PAD)
+  Destination:       C (PAD)
+
+  Data Path: Write_Addr<1> to C
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.003   0.312  Write_Addr_1_IBUF (Write_Addr_1_IBUF)
+     INV:I->O              1   0.368   0.481  XLXI_1/XLXI_1/XLXI_30 (XLXI_1/XLXI_1/XLXN_17)
+     AND4:I2->O           16   0.166   0.502  XLXI_1/XLXI_1/XLXI_63 (XLXI_1/XLXN_33)
+     begin scope: 'XLXI_1/XLXI_14/XLXI_30/XLXI_8:S0'
+     LUT3:I0->O            1   0.053   0.357  Mmux_O11 (O)
+     end scope: 'XLXI_1/XLXI_14/XLXI_30/XLXI_8:O'
+     begin scope: 'XLXI_1/XLXI_14/XLXI_30/XLXI_1:D0'
+     LUT3:I1->O            1   0.053   0.279  Mmux_O11 (O)
+     end scope: 'XLXI_1/XLXI_14/XLXI_30/XLXI_1:O'
+     INV:I->O              2   0.368   0.361  XLXI_1/XLXI_14/XLXI_30/XLXI_3 (XLXI_1/XLXI_14/XLXI_30/XLXN_8)
+     begin scope: 'XLXI_1/XLXI_14/XLXI_30/XLXI_2:D0'
+     LUT3:I1->O            1   0.053   0.279  Mmux_O11 (O)
+     end scope: 'XLXI_1/XLXI_14/XLXI_30/XLXI_2:O'
+     INV:I->O              4   0.368   0.608  XLXI_1/XLXI_14/XLXI_30/XLXI_7 (XLXI_1/I5<0>)
+     AND4:I0->O            1   0.053   0.433  XLXI_1/XLXI_21/XLXI_16/XLXI_26 (XLXI_1/XLXI_21/XLXI_16/XLXN_62)
+     begin scope: 'XLXI_1/XLXI_21/XLXI_16/XLXI_38:I2'
+     LUT3:I0->O            1   0.053   0.296  O_SW0 (N01)
+     LUT6:I5->O            2   0.053   0.598  O (O)
+     end scope: 'XLXI_1/XLXI_21/XLXI_16/XLXI_38:O'
+     AND2:I0->O            1   0.053   0.592  XLXI_2/XLXI_20/XLXI_1 (XLXI_2/XLXI_20/XLXN_7)
+     OR2:I1->O             1   0.055   0.592  XLXI_2/XLXI_20/XLXI_4 (XLXN_3<0>)
+     XOR2:I1->O            2   0.055   0.598  XLXI_34/XLXI_1/XLXI_28 (XLXI_34/XLXI_1/BxorS<0>)
+     XOR2:I0->O            2   0.053   0.598  XLXI_34/XLXI_1/XLXI_29/XLXI_1/XLXI_6 (XLXI_34/XLXI_1/XLXI_29/XLXI_1/XLXN_2)
+     AND2:I0->O            1   0.053   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_1/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_1/XLXN_9)
+     OR2:I1->O             2   0.055   0.597  XLXI_34/XLXI_1/XLXI_29/XLXI_1/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_238)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_2/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_2/XLXN_9)
+     OR2:I1->O             2   0.055   0.597  XLXI_34/XLXI_1/XLXI_29/XLXI_2/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_239)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_8/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_8/XLXN_9)
+     OR2:I1->O             2   0.055   0.597  XLXI_34/XLXI_1/XLXI_29/XLXI_8/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_240)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_9/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_9/XLXN_9)
+     OR2:I1->O             2   0.055   0.597  XLXI_34/XLXI_1/XLXI_29/XLXI_9/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_241)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_12/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_12/XLXN_9)
+     OR2:I1->O             2   0.055   0.597  XLXI_34/XLXI_1/XLXI_29/XLXI_12/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_242)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_13/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_13/XLXN_9)
+     OR2:I1->O             2   0.055   0.597  XLXI_34/XLXI_1/XLXI_29/XLXI_13/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_243)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_14/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_14/XLXN_9)
+     OR2:I1->O             2   0.055   0.597  XLXI_34/XLXI_1/XLXI_29/XLXI_14/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_244)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_15/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_15/XLXN_9)
+     OR2:I1->O             2   0.055   0.597  XLXI_34/XLXI_1/XLXI_29/XLXI_15/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_245)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_16/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_16/XLXN_9)
+     OR2:I1->O             2   0.055   0.597  XLXI_34/XLXI_1/XLXI_29/XLXI_16/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_246)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_17/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_17/XLXN_9)
+     OR2:I1->O             2   0.055   0.597  XLXI_34/XLXI_1/XLXI_29/XLXI_17/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_247)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_18/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_18/XLXN_9)
+     OR2:I1->O             2   0.055   0.596  XLXI_34/XLXI_1/XLXI_29/XLXI_18/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_248)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_19/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_19/XLXN_9)
+     OR2:I1->O             2   0.055   0.596  XLXI_34/XLXI_1/XLXI_29/XLXI_19/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_249)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_20/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_20/XLXN_9)
+     OR2:I1->O             2   0.055   0.596  XLXI_34/XLXI_1/XLXI_29/XLXI_20/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_250)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_21/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_21/XLXN_9)
+     OR2:I1->O             2   0.055   0.596  XLXI_34/XLXI_1/XLXI_29/XLXI_21/XLXI_5 (XLXI_34/XLXI_1/XLXI_29/XLXN_251)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_22/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_22/XLXN_9)
+     OR2:I1->O             3   0.055   0.602  XLXI_34/XLXI_1/XLXI_29/XLXI_22/XLXI_5 (XLXI_34/XLXN_25)
+     AND2:I1->O            1   0.055   0.592  XLXI_34/XLXI_1/XLXI_29/XLXI_23/XLXI_3 (XLXI_34/XLXI_1/XLXI_29/XLXI_23/XLXN_9)
+     OR2:I1->O             2   0.055   0.597  XLXI_34/XLXI_1/XLXI_29/XLXI_23/XLXI_5 (XLXI_34/XLXN_33)
+     XOR2:I1->O            1   0.055   0.279  XLXI_34/XLXI_4 (V_OBUF)
+     OBUF:I->O                 0.003          V_OBUF (V)
+    ----------------------------------------
+    Total                     29.819ns (3.623ns logic, 26.196ns route)
+                                       (12.2% logic, 87.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 22.23 secs
+ 
+--> 
+
+Total memory usage is 4518760 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

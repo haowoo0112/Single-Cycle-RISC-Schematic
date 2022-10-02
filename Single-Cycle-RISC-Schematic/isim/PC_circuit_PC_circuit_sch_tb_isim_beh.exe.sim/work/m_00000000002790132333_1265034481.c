@@ -21,11 +21,11 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.vf";
+static const char *ng0 = "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.vf";
 
 
 
-static void Cont_444_0(char *t0)
+static void Cont_461_0(char *t0)
 {
     char t3[8];
     char *t1;
@@ -53,15 +53,15 @@ static void Cont_444_0(char *t0)
     unsigned int t24;
     char *t25;
 
-LAB0:    t1 = (t0 + 4928U);
+LAB0:    t1 = (t0 + 6848U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(444, ng0);
-    t2 = (t0 + 3768U);
+LAB2:    xsi_set_current_line(461, ng0);
+    t2 = (t0 + 5688U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
     t2 = (t3 + 4);
@@ -76,7 +76,7 @@ LAB2:    xsi_set_current_line(444, ng0);
     *((unsigned int *)t3) = (t10 & 65535U);
     t11 = *((unsigned int *)t2);
     *((unsigned int *)t2) = (t11 & 65535U);
-    t12 = (t0 + 5328);
+    t12 = (t0 + 7248);
     t13 = (t12 + 56U);
     t14 = *((char **)t13);
     t15 = (t14 + 56U);
@@ -95,16 +95,16 @@ LAB2:    xsi_set_current_line(444, ng0);
     t24 = *((unsigned int *)t22);
     *((unsigned int *)t22) = (t24 | t18);
     xsi_driver_vfirst_trans(t12, 0, 15);
-    t25 = (t0 + 5248);
+    t25 = (t0 + 7168);
     *((int *)t25) = 1;
 
 LAB1:    return;
 }
 
 
-extern void work_m_00000000003419982679_1265034481_init()
+extern void work_m_00000000002790132333_1265034481_init()
 {
-	static char *pe[] = {(void *)Cont_444_0};
-	xsi_register_didat("work_m_00000000003419982679_1265034481", "isim/PC_circuit_PC_circuit_sch_tb_isim_beh.exe.sim/work/m_00000000003419982679_1265034481.didat");
+	static char *pe[] = {(void *)Cont_461_0};
+	xsi_register_didat("work_m_00000000002790132333_1265034481", "isim/PC_circuit_PC_circuit_sch_tb_isim_beh.exe.sim/work/m_00000000002790132333_1265034481.didat");
 	xsi_register_executes(pe);
 }

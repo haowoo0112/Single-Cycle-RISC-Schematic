@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : PC_circuit.vf
-// /___/   /\     Timestamp : 09/26/2022 12:41:43
+// /___/   /\     Timestamp : 10/02/2022 21:18:06
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.sch
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.sch
 //Design Name: PC_circuit
 //Device: virtex6
 //Purpose:
@@ -417,20 +417,30 @@ module PC_circuit(BRANCH,
                   clk, 
                   clr, 
                   disp8, 
+                  flag_label_PC, 
+                  flag_Rd_PC, 
+                  flag_Rm_PC, 
                   JMP, 
                   label11, 
+                  Rd, 
+                  Rm, 
                   Q);
 
     input BRANCH;
     input clk;
     input clr;
     input [7:0] disp8;
+    input flag_label_PC;
+    input flag_Rd_PC;
+    input flag_Rm_PC;
     input JMP;
     input [10:0] label11;
+    input [15:0] Rd;
+    input [15:0] Rm;
    output [15:0] Q;
    
    wire [15:0] I0;
-   wire [15:0] I1;
+   wire [15:0] label_PC;
    wire [15:0] XLXN_4;
    wire XLXN_5;
    wire [15:0] XLXN_12;
@@ -439,10 +449,17 @@ module PC_circuit(BRANCH,
    wire [15:0] XLXN_22;
    wire XLXN_45;
    wire [1:15] XLXN_46;
+   wire [15:0] XLXN_51;
+   wire [15:0] XLXN_52;
+   wire [15:0] XLXN_53;
+   wire [15:0] XLXN_62;
+   wire [15:0] XLXN_70;
+   wire [15:0] XLXN_71;
+   wire [15:0] XLXN_72;
    wire [15:0] Q_DUMMY;
    
    assign Q[15:0] = Q_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_0" *) 
+   (* HU_SET = "XLXI_1_1" *) 
    FD16CE_HXILINX_PC_circuit  XLXI_1 (.C(clk), 
                                      .CE(XLXN_5), 
                                      .CLR(clr), 
@@ -450,7 +467,7 @@ module PC_circuit(BRANCH,
                                      .Q(Q_DUMMY[15:0]));
    VCC  XLXI_2 (.P(XLXN_5));
    multiplexer_2_to_1_16_bit_MUSER_PC_circuit  XLXI_7 (.I0(XLXN_12[15:0]), 
-                                                      .I1(I1[15:0]), 
+                                                      .I1(XLXN_62[15:0]), 
                                                       .S(JMP), 
                                                       .Y(XLXN_15[15:0]));
    two_comple_adder_16bit_MUSER_PC_circuit  XLXI_11 (.A(Q_DUMMY[15:0]), 
@@ -515,35 +532,159 @@ module PC_circuit(BRANCH,
    GND  XLXI_23_14 (.G(XLXN_46[2]));
    GND  XLXI_23_15 (.G(XLXN_46[1]));
    BUF  XLXI_24_11 (.I(Q_DUMMY[11]), 
-                   .O(I1[11]));
+                   .O(label_PC[11]));
    BUF  XLXI_24_12 (.I(Q_DUMMY[12]), 
-                   .O(I1[12]));
+                   .O(label_PC[12]));
    BUF  XLXI_24_13 (.I(Q_DUMMY[13]), 
-                   .O(I1[13]));
+                   .O(label_PC[13]));
    BUF  XLXI_24_14 (.I(Q_DUMMY[14]), 
-                   .O(I1[14]));
+                   .O(label_PC[14]));
    BUF  XLXI_24_15 (.I(Q_DUMMY[15]), 
-                   .O(I1[15]));
+                   .O(label_PC[15]));
    BUF  XLXI_25_0 (.I(label11[0]), 
-                  .O(I1[0]));
+                  .O(label_PC[0]));
    BUF  XLXI_25_1 (.I(label11[1]), 
-                  .O(I1[1]));
+                  .O(label_PC[1]));
    BUF  XLXI_25_2 (.I(label11[2]), 
-                  .O(I1[2]));
+                  .O(label_PC[2]));
    BUF  XLXI_25_3 (.I(label11[3]), 
-                  .O(I1[3]));
+                  .O(label_PC[3]));
    BUF  XLXI_25_4 (.I(label11[4]), 
-                  .O(I1[4]));
+                  .O(label_PC[4]));
    BUF  XLXI_25_5 (.I(label11[5]), 
-                  .O(I1[5]));
+                  .O(label_PC[5]));
    BUF  XLXI_25_6 (.I(label11[6]), 
-                  .O(I1[6]));
+                  .O(label_PC[6]));
    BUF  XLXI_25_7 (.I(label11[7]), 
-                  .O(I1[7]));
+                  .O(label_PC[7]));
    BUF  XLXI_25_8 (.I(label11[8]), 
-                  .O(I1[8]));
+                  .O(label_PC[8]));
    BUF  XLXI_25_9 (.I(label11[9]), 
-                  .O(I1[9]));
+                  .O(label_PC[9]));
    BUF  XLXI_25_10 (.I(label11[10]), 
-                   .O(I1[10]));
+                   .O(label_PC[10]));
+   multiplexer_2_to_1_16_bit_MUSER_PC_circuit  XLXI_29 (.I0(XLXN_70[15:0]), 
+                                                       .I1(Rd[15:0]), 
+                                                       .S(flag_Rd_PC), 
+                                                       .Y(XLXN_51[15:0]));
+   multiplexer_2_to_1_16_bit_MUSER_PC_circuit  XLXI_30 (.I0(XLXN_71[15:0]), 
+                                                       .I1(label_PC[15:0]), 
+                                                       .S(flag_label_PC), 
+                                                       .Y(XLXN_52[15:0]));
+   multiplexer_2_to_1_16_bit_MUSER_PC_circuit  XLXI_33 (.I0(XLXN_72[15:0]), 
+                                                       .I1(Rm[15:0]), 
+                                                       .S(flag_Rm_PC), 
+                                                       .Y(XLXN_53[15:0]));
+   OR3  XLXI_34_0 (.I0(XLXN_53[0]), 
+                  .I1(XLXN_52[0]), 
+                  .I2(XLXN_51[0]), 
+                  .O(XLXN_62[0]));
+   OR3  XLXI_34_1 (.I0(XLXN_53[1]), 
+                  .I1(XLXN_52[1]), 
+                  .I2(XLXN_51[1]), 
+                  .O(XLXN_62[1]));
+   OR3  XLXI_34_2 (.I0(XLXN_53[2]), 
+                  .I1(XLXN_52[2]), 
+                  .I2(XLXN_51[2]), 
+                  .O(XLXN_62[2]));
+   OR3  XLXI_34_3 (.I0(XLXN_53[3]), 
+                  .I1(XLXN_52[3]), 
+                  .I2(XLXN_51[3]), 
+                  .O(XLXN_62[3]));
+   OR3  XLXI_34_4 (.I0(XLXN_53[4]), 
+                  .I1(XLXN_52[4]), 
+                  .I2(XLXN_51[4]), 
+                  .O(XLXN_62[4]));
+   OR3  XLXI_34_5 (.I0(XLXN_53[5]), 
+                  .I1(XLXN_52[5]), 
+                  .I2(XLXN_51[5]), 
+                  .O(XLXN_62[5]));
+   OR3  XLXI_34_6 (.I0(XLXN_53[6]), 
+                  .I1(XLXN_52[6]), 
+                  .I2(XLXN_51[6]), 
+                  .O(XLXN_62[6]));
+   OR3  XLXI_34_7 (.I0(XLXN_53[7]), 
+                  .I1(XLXN_52[7]), 
+                  .I2(XLXN_51[7]), 
+                  .O(XLXN_62[7]));
+   OR3  XLXI_34_8 (.I0(XLXN_53[8]), 
+                  .I1(XLXN_52[8]), 
+                  .I2(XLXN_51[8]), 
+                  .O(XLXN_62[8]));
+   OR3  XLXI_34_9 (.I0(XLXN_53[9]), 
+                  .I1(XLXN_52[9]), 
+                  .I2(XLXN_51[9]), 
+                  .O(XLXN_62[9]));
+   OR3  XLXI_34_10 (.I0(XLXN_53[10]), 
+                   .I1(XLXN_52[10]), 
+                   .I2(XLXN_51[10]), 
+                   .O(XLXN_62[10]));
+   OR3  XLXI_34_11 (.I0(XLXN_53[11]), 
+                   .I1(XLXN_52[11]), 
+                   .I2(XLXN_51[11]), 
+                   .O(XLXN_62[11]));
+   OR3  XLXI_34_12 (.I0(XLXN_53[12]), 
+                   .I1(XLXN_52[12]), 
+                   .I2(XLXN_51[12]), 
+                   .O(XLXN_62[12]));
+   OR3  XLXI_34_13 (.I0(XLXN_53[13]), 
+                   .I1(XLXN_52[13]), 
+                   .I2(XLXN_51[13]), 
+                   .O(XLXN_62[13]));
+   OR3  XLXI_34_14 (.I0(XLXN_53[14]), 
+                   .I1(XLXN_52[14]), 
+                   .I2(XLXN_51[14]), 
+                   .O(XLXN_62[14]));
+   OR3  XLXI_34_15 (.I0(XLXN_53[15]), 
+                   .I1(XLXN_52[15]), 
+                   .I2(XLXN_51[15]), 
+                   .O(XLXN_62[15]));
+   GND  XLXI_41_0 (.G(XLXN_71[0]));
+   GND  XLXI_41_1 (.G(XLXN_71[1]));
+   GND  XLXI_41_2 (.G(XLXN_71[2]));
+   GND  XLXI_41_3 (.G(XLXN_71[3]));
+   GND  XLXI_41_4 (.G(XLXN_71[4]));
+   GND  XLXI_41_5 (.G(XLXN_71[5]));
+   GND  XLXI_41_6 (.G(XLXN_71[6]));
+   GND  XLXI_41_7 (.G(XLXN_71[7]));
+   GND  XLXI_41_8 (.G(XLXN_71[8]));
+   GND  XLXI_41_9 (.G(XLXN_71[9]));
+   GND  XLXI_41_10 (.G(XLXN_71[10]));
+   GND  XLXI_41_11 (.G(XLXN_71[11]));
+   GND  XLXI_41_12 (.G(XLXN_71[12]));
+   GND  XLXI_41_13 (.G(XLXN_71[13]));
+   GND  XLXI_41_14 (.G(XLXN_71[14]));
+   GND  XLXI_41_15 (.G(XLXN_71[15]));
+   GND  XLXI_42_0 (.G(XLXN_72[0]));
+   GND  XLXI_42_1 (.G(XLXN_72[1]));
+   GND  XLXI_42_2 (.G(XLXN_72[2]));
+   GND  XLXI_42_3 (.G(XLXN_72[3]));
+   GND  XLXI_42_4 (.G(XLXN_72[4]));
+   GND  XLXI_42_5 (.G(XLXN_72[5]));
+   GND  XLXI_42_6 (.G(XLXN_72[6]));
+   GND  XLXI_42_7 (.G(XLXN_72[7]));
+   GND  XLXI_42_8 (.G(XLXN_72[8]));
+   GND  XLXI_42_9 (.G(XLXN_72[9]));
+   GND  XLXI_42_10 (.G(XLXN_72[10]));
+   GND  XLXI_42_11 (.G(XLXN_72[11]));
+   GND  XLXI_42_12 (.G(XLXN_72[12]));
+   GND  XLXI_42_13 (.G(XLXN_72[13]));
+   GND  XLXI_42_14 (.G(XLXN_72[14]));
+   GND  XLXI_42_15 (.G(XLXN_72[15]));
+   GND  XLXI_43_0 (.G(XLXN_70[0]));
+   GND  XLXI_43_1 (.G(XLXN_70[1]));
+   GND  XLXI_43_2 (.G(XLXN_70[2]));
+   GND  XLXI_43_3 (.G(XLXN_70[3]));
+   GND  XLXI_43_4 (.G(XLXN_70[4]));
+   GND  XLXI_43_5 (.G(XLXN_70[5]));
+   GND  XLXI_43_6 (.G(XLXN_70[6]));
+   GND  XLXI_43_7 (.G(XLXN_70[7]));
+   GND  XLXI_43_8 (.G(XLXN_70[8]));
+   GND  XLXI_43_9 (.G(XLXN_70[9]));
+   GND  XLXI_43_10 (.G(XLXN_70[10]));
+   GND  XLXI_43_11 (.G(XLXN_70[11]));
+   GND  XLXI_43_12 (.G(XLXN_70[12]));
+   GND  XLXI_43_13 (.G(XLXN_70[13]));
+   GND  XLXI_43_14 (.G(XLXN_70[14]));
+   GND  XLXI_43_15 (.G(XLXN_70[15]));
 endmodule

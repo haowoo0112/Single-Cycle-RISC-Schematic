@@ -2,28 +2,28 @@ Command line:
    PC_circuit_PC_circuit_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  51386
+     -socket  63758
 
-Mon Sep 26 12:42:17 2022
+Sun Oct 02 21:18:37 2022
 
 
- Elaboration Time: 0.03125 sec
+ Elaboration Time: 0.15625 sec
 
- Current Memory Usage: 5157.69 Meg
+ Current Memory Usage: 5166.83 Meg
 
- Total Signals          : 1180
- Total Nets             : 359
- Total Signal Drivers   : 304
- Total Blocks           : 347
- Total Primitive Blocks : 292
- Total Processes        : 308
- Total Traceable Variables  : 25
- Total Scalar Nets and Variables : 478
-Total Line Count : 63
+ Total Signals          : 2180
+ Total Nets             : 650
+ Total Signal Drivers   : 565
+ Total Blocks           : 654
+ Total Primitive Blocks : 548
+ Total Processes        : 569
+ Total Traceable Variables  : 30
+ Total Scalar Nets and Variables : 804
+Total Line Count : 147
 
- Total Simulation Time: 0.359375 sec
+ Total Simulation Time: 0.265625 sec
 
- Current Memory Usage: 4685.83 Meg
+ Current Memory Usage: 5009.54 Meg
 
-Mon Sep 26 13:03:23 2022
+Sun Oct 02 21:19:50 2022
 
