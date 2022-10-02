@@ -1,0 +1,74 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : multiplexer_2_to_1_3bit.vf
+// /___/   /\     Timestamp : 10/02/2022 21:47:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1_3bit.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1_3bit.sch
+//Design Name: multiplexer_2_to_1_3bit
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module multiplexer_2_to_1_MUSER_multiplexer_2_to_1_3bit(I0, 
+                                                        I1, 
+                                                        S, 
+                                                        Y);
+
+    input I0;
+    input I1;
+    input S;
+   output Y;
+   
+   wire XLXN_1;
+   wire XLXN_6;
+   wire XLXN_7;
+   
+   AND2  XLXI_1 (.I0(I0), 
+                .I1(XLXN_1), 
+                .O(XLXN_7));
+   AND2  XLXI_2 (.I0(I1), 
+                .I1(S), 
+                .O(XLXN_6));
+   INV  XLXI_3 (.I(S), 
+               .O(XLXN_1));
+   OR2  XLXI_4 (.I0(XLXN_6), 
+               .I1(XLXN_7), 
+               .O(Y));
+endmodule
+`timescale 1ns / 1ps
+
+module multiplexer_2_to_1_3bit(I0, 
+                               I1, 
+                               S, 
+                               Y);
+
+    input [2:0] I0;
+    input [2:0] I1;
+    input S;
+   output [2:0] Y;
+   
+   
+   multiplexer_2_to_1_MUSER_multiplexer_2_to_1_3bit  XLXI_1 (.I0(I0[2]), 
+                                                            .I1(I1[2]), 
+                                                            .S(S), 
+                                                            .Y(Y[2]));
+   multiplexer_2_to_1_MUSER_multiplexer_2_to_1_3bit  XLXI_2 (.I0(I0[1]), 
+                                                            .I1(I1[1]), 
+                                                            .S(S), 
+                                                            .Y(Y[1]));
+   multiplexer_2_to_1_MUSER_multiplexer_2_to_1_3bit  XLXI_3 (.I0(I0[0]), 
+                                                            .I1(I1[0]), 
+                                                            .S(S), 
+                                                            .Y(Y[0]));
+endmodule

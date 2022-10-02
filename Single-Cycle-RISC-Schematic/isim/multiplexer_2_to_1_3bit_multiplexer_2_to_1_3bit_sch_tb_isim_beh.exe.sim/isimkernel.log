@@ -1,0 +1,29 @@
+Command line:
+   multiplexer_2_to_1_3bit_multiplexer_2_to_1_3bit_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  63906
+
+Sun Oct 02 21:47:53 2022
+
+
+ Elaboration Time: 0.125 sec
+
+ Current Memory Usage: 5154.25 Meg
+
+ Total Signals          : 72
+ Total Nets             : 32
+ Total Signal Drivers   : 20
+ Total Blocks           : 18
+ Total Primitive Blocks : 13
+ Total Processes        : 22
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 119
+Total Line Count : 36
+
+ Total Simulation Time: 0.203125 sec
+
+ Current Memory Usage: 5468.82 Meg
+
+Sun Oct 02 21:48:25 2022
+
