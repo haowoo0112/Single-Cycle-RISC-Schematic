@@ -9,3 +9,13 @@ MODULE Datapath_Module
 		INSTANCE XLXI_4
 	SUBMODULE multiplexer_2_to_1_16_bit
 		INSTANCE XLXI_20
+	SUBMODULE multiplexer_2_to_1_16_bit
+		INSTANCE XLXI_51
+	SUBMODULE multiplexer_2_to_1_16_bit
+		INSTANCE XLXI_52
+	SUBMODULE multiplexer_2_to_1_3bit
+		INSTANCE XLXI_46
+	SUBMODULE multiplexer_2_to_1
+		INSTANCE XLXI_53
+	SUBMODULE D_flip_flop_1_bit
+		INSTANCE XLXI_55
