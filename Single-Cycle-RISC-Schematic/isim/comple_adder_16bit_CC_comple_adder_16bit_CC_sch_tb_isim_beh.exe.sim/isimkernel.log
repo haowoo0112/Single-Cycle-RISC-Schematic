@@ -2,28 +2,28 @@ Command line:
    comple_adder_16bit_CC_comple_adder_16bit_CC_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  54699
+     -socket  52955
 
-Sun Sep 11 00:52:12 2022
+Mon Oct 03 12:09:47 2022
 
 
- Elaboration Time: 0.09375 sec
+ Elaboration Time: 0.046875 sec
 
- Current Memory Usage: 5153.61 Meg
+ Current Memory Usage: 5154.07 Meg
 
- Total Signals          : 494
- Total Nets             : 162
- Total Signal Drivers   : 109
- Total Blocks           : 120
- Total Primitive Blocks : 100
- Total Processes        : 111
- Total Traceable Variables  : 21
- Total Scalar Nets and Variables : 275
-Total Line Count : 62
+ Total Signals          : 524
+ Total Nets             : 170
+ Total Signal Drivers   : 117
+ Total Blocks           : 126
+ Total Primitive Blocks : 105
+ Total Processes        : 119
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 286
+Total Line Count : 75
 
- Total Simulation Time: 0.09375 sec
+ Total Simulation Time: 0.65625 sec
 
- Current Memory Usage: 5153.61 Meg
+ Current Memory Usage: 4682.22 Meg
 
-Sun Sep 11 00:52:35 2022
+Mon Oct 03 12:14:17 2022
 

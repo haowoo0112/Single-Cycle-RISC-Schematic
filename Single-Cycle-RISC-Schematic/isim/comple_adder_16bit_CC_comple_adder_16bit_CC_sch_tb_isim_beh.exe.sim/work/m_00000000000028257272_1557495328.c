@@ -21,11 +21,11 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/comple_adder_16bit_CC.vf";
+static const char *ng0 = "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/comple_adder_16bit_CC.vf";
 
 
 
-static void Cont_114_0(char *t0)
+static void Cont_174_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -51,7 +51,7 @@ LAB0:    t1 = (t0 + 5408U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(114, ng0);
+LAB2:    xsi_set_current_line(174, ng0);
     t2 = (t0 + 4248U);
     t3 = *((char **)t2);
     t2 = (t0 + 5808);
@@ -82,7 +82,7 @@ LAB1:    return;
 
 extern void work_m_00000000000028257272_1557495328_init()
 {
-	static char *pe[] = {(void *)Cont_114_0};
+	static char *pe[] = {(void *)Cont_174_0};
 	xsi_register_didat("work_m_00000000000028257272_1557495328", "isim/comple_adder_16bit_CC_comple_adder_16bit_CC_sch_tb_isim_beh.exe.sim/work/m_00000000000028257272_1557495328.didat");
 	xsi_register_executes(pe);
 }

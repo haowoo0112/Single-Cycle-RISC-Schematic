@@ -1,6 +1,7 @@
 verilog isim_temp "full_adder.vf"
+verilog isim_temp "XOR16_1.vf"
 verilog isim_temp "adder_16_bit.vf"
 verilog isim_temp "two_comple_adder_16bit.vf"
 verilog isim_temp "comple_adder_16bit_CC.vf"
 verilog isim_temp "tb_comple_adder_16bit_CC.v"
-verilog isim_temp "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : RF_plus_ALU.vf
-// /___/   /\     Timestamp : 09/29/2022 19:05:51
+// /___/   /\     Timestamp : 10/03/2022 12:09:41
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RF_plus_ALU.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RF_plus_ALU.sch
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RF_plus_ALU.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RF_plus_ALU.sch
 //Design Name: RF_plus_ALU
 //Device: virtex6
 //Purpose:
@@ -85,6 +85,66 @@ module M2_1_HXILINX_RF_plus_ALU (O, D0, D1, S0);
       endcase
    end
     
+endmodule
+`timescale 1ns / 1ps
+
+module XOR16_1_MUSER_RF_plus_ALU(A, 
+                                 B, 
+                                 Y);
+
+    input [15:0] A;
+    input B;
+   output [15:0] Y;
+   
+   
+   XOR2  XLXI_1 (.I0(B), 
+                .I1(A[15]), 
+                .O(Y[15]));
+   XOR2  XLXI_2 (.I0(B), 
+                .I1(A[14]), 
+                .O(Y[14]));
+   XOR2  XLXI_3 (.I0(B), 
+                .I1(A[13]), 
+                .O(Y[13]));
+   XOR2  XLXI_4 (.I0(B), 
+                .I1(A[12]), 
+                .O(Y[12]));
+   XOR2  XLXI_5 (.I0(B), 
+                .I1(A[11]), 
+                .O(Y[11]));
+   XOR2  XLXI_6 (.I0(B), 
+                .I1(A[10]), 
+                .O(Y[10]));
+   XOR2  XLXI_7 (.I0(B), 
+                .I1(A[9]), 
+                .O(Y[9]));
+   XOR2  XLXI_8 (.I0(B), 
+                .I1(A[8]), 
+                .O(Y[8]));
+   XOR2  XLXI_19 (.I0(B), 
+                 .I1(A[7]), 
+                 .O(Y[7]));
+   XOR2  XLXI_20 (.I0(B), 
+                 .I1(A[6]), 
+                 .O(Y[6]));
+   XOR2  XLXI_21 (.I0(B), 
+                 .I1(A[5]), 
+                 .O(Y[5]));
+   XOR2  XLXI_22 (.I0(B), 
+                 .I1(A[4]), 
+                 .O(Y[4]));
+   XOR2  XLXI_23 (.I0(B), 
+                 .I1(A[3]), 
+                 .O(Y[3]));
+   XOR2  XLXI_24 (.I0(B), 
+                 .I1(A[2]), 
+                 .O(Y[2]));
+   XOR2  XLXI_25 (.I0(B), 
+                 .I1(A[1]), 
+                 .O(Y[1]));
+   XOR2  XLXI_26 (.I0(B), 
+                 .I1(A[0]), 
+                 .O(Y[0]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -237,81 +297,62 @@ endmodule
 `timescale 1ns / 1ps
 
 module two_comple_adder_16bit_MUSER_RF_plus_ALU(A, 
+                                                ADC, 
                                                 B, 
-                                                S, 
+                                                C, 
+                                                SBB, 
+                                                SUB, 
                                                 Cout, 
                                                 Cout_1, 
                                                 Y);
 
     input [15:0] A;
+    input ADC;
     input [15:0] B;
-    input S;
+    input C;
+    input SBB;
+    input SUB;
    output Cout;
    output Cout_1;
    output [15:0] Y;
    
-   wire [15:0] BxorS;
+   wire XLXN_2;
+   wire [15:0] XLXN_5;
+   wire XLXN_6;
+   wire XLXN_8;
+   wire XLXN_11;
    
-   XOR2  XLXI_1 (.I0(S), 
-                .I1(B[15]), 
-                .O(BxorS[15]));
-   XOR2  XLXI_2 (.I0(S), 
-                .I1(B[14]), 
-                .O(BxorS[14]));
-   XOR2  XLXI_3 (.I0(S), 
-                .I1(B[13]), 
-                .O(BxorS[13]));
-   XOR2  XLXI_4 (.I0(S), 
-                .I1(B[12]), 
-                .O(BxorS[12]));
-   XOR2  XLXI_5 (.I0(S), 
-                .I1(B[11]), 
-                .O(BxorS[11]));
-   XOR2  XLXI_6 (.I0(S), 
-                .I1(B[10]), 
-                .O(BxorS[10]));
-   XOR2  XLXI_7 (.I0(S), 
-                .I1(B[9]), 
-                .O(BxorS[9]));
-   XOR2  XLXI_8 (.I0(S), 
-                .I1(B[8]), 
-                .O(BxorS[8]));
-   XOR2  XLXI_21 (.I0(S), 
-                 .I1(B[7]), 
-                 .O(BxorS[7]));
-   XOR2  XLXI_22 (.I0(S), 
-                 .I1(B[6]), 
-                 .O(BxorS[6]));
-   XOR2  XLXI_23 (.I0(S), 
-                 .I1(B[5]), 
-                 .O(BxorS[5]));
-   XOR2  XLXI_24 (.I0(S), 
-                 .I1(B[4]), 
-                 .O(BxorS[4]));
-   XOR2  XLXI_25 (.I0(S), 
-                 .I1(B[3]), 
-                 .O(BxorS[3]));
-   XOR2  XLXI_26 (.I0(S), 
-                 .I1(B[2]), 
-                 .O(BxorS[2]));
-   XOR2  XLXI_27 (.I0(S), 
-                 .I1(B[1]), 
-                 .O(BxorS[1]));
-   XOR2  XLXI_28 (.I0(S), 
-                 .I1(B[0]), 
-                 .O(BxorS[0]));
    adder_16_bit_MUSER_RF_plus_ALU  XLXI_29 (.A(A[15:0]), 
-                                           .B(BxorS[15:0]), 
-                                           .Cin(S), 
+                                           .B(XLXN_5[15:0]), 
+                                           .Cin(XLXN_6), 
                                            .Cout(Cout), 
                                            .Cout_1(Cout_1), 
                                            .S(Y[15:0]));
+   XOR16_1_MUSER_RF_plus_ALU  XLXI_30 (.A(B[15:0]), 
+                                      .B(XLXN_2), 
+                                      .Y(XLXN_5[15:0]));
+   OR3  XLXI_32 (.I0(XLXN_11), 
+                .I1(XLXN_8), 
+                .I2(SUB), 
+                .O(XLXN_6));
+   AND2  XLXI_33 (.I0(C), 
+                 .I1(SBB), 
+                 .O(XLXN_8));
+   AND2  XLXI_34 (.I0(C), 
+                 .I1(ADC), 
+                 .O(XLXN_11));
+   OR2  XLXI_35 (.I0(SUB), 
+                .I1(SBB), 
+                .O(XLXN_2));
 endmodule
 `timescale 1ns / 1ps
 
 module comple_adder_16bit_CC_MUSER_RF_plus_ALU(A, 
+                                               ADC, 
                                                B, 
-                                               S, 
+                                               Pre_C, 
+                                               SBB, 
+                                               SUB, 
                                                C, 
                                                N, 
                                                V, 
@@ -319,8 +360,11 @@ module comple_adder_16bit_CC_MUSER_RF_plus_ALU(A,
                                                Z);
 
     input [15:0] A;
+    input ADC;
     input [15:0] B;
-    input S;
+    input Pre_C;
+    input SBB;
+    input SUB;
    output C;
    output N;
    output V;
@@ -332,13 +376,7 @@ module comple_adder_16bit_CC_MUSER_RF_plus_ALU(A,
    wire [15:0] Y_DUMMY;
    
    assign Y[15:0] = Y_DUMMY[15:0];
-   two_comple_adder_16bit_MUSER_RF_plus_ALU  XLXI_1 (.A(A[15:0]), 
-                                                    .B(B[15:0]), 
-                                                    .S(S), 
-                                                    .Cout(XLXN_33), 
-                                                    .Cout_1(XLXN_25), 
-                                                    .Y(Y_DUMMY[15:0]));
-   (* HU_SET = "XLXI_2_7" *) 
+   (* HU_SET = "XLXI_2_1" *) 
    NOR16_HXILINX_RF_plus_ALU  XLXI_2 (.I0(Y_DUMMY[0]), 
                                      .I1(Y_DUMMY[1]), 
                                      .I2(Y_DUMMY[2]), 
@@ -359,11 +397,20 @@ module comple_adder_16bit_CC_MUSER_RF_plus_ALU(A,
    XOR2  XLXI_4 (.I0(XLXN_25), 
                 .I1(XLXN_33), 
                 .O(V));
-   XOR2  XLXI_5 (.I0(S), 
+   XOR2  XLXI_5 (.I0(Pre_C), 
                 .I1(XLXN_33), 
                 .O(C));
    BUF  XLXI_6 (.I(Y_DUMMY[15]), 
                .O(N));
+   two_comple_adder_16bit_MUSER_RF_plus_ALU  XLXI_7 (.A(A[15:0]), 
+                                                    .ADC(ADC), 
+                                                    .B(B[15:0]), 
+                                                    .C(Pre_C), 
+                                                    .SBB(SBB), 
+                                                    .SUB(SUB), 
+                                                    .Cout(XLXN_33), 
+                                                    .Cout_1(XLXN_25), 
+                                                    .Y(Y_DUMMY[15:0]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -584,7 +631,7 @@ module multiplexer_8_to_1_MUSER_RF_plus_ALU(I0,
                  .I2(S1), 
                  .I3(S2), 
                  .O(XLXN_78));
-   (* HU_SET = "XLXI_38_8" *) 
+   (* HU_SET = "XLXI_38_2" *) 
    OR8_HXILINX_RF_plus_ALU  XLXI_38 (.I0(XLXN_78), 
                                     .I1(XLXN_88), 
                                     .I2(XLXN_62), 
@@ -839,12 +886,12 @@ module D_flip_flop_1_bit_MUSER_RF_plus_ALU(clk,
    wire Q_DUMMY;
    
    assign Q = Q_DUMMY;
-   (* HU_SET = "XLXI_1_9" *) 
+   (* HU_SET = "XLXI_1_3" *) 
    M2_1_HXILINX_RF_plus_ALU  XLXI_1 (.D0(XLXN_15), 
                                     .D1(XLXN_5), 
                                     .S0(clk), 
                                     .O(XLXN_3));
-   (* HU_SET = "XLXI_2_10" *) 
+   (* HU_SET = "XLXI_2_4" *) 
    M2_1_HXILINX_RF_plus_ALU  XLXI_2 (.D0(XLXN_8), 
                                     .D1(XLXN_6), 
                                     .S0(XLXN_11), 
@@ -859,7 +906,7 @@ module D_flip_flop_1_bit_MUSER_RF_plus_ALU(clk,
                .O(XLXN_6));
    INV  XLXI_7 (.I(XLXN_7), 
                .O(Q_DUMMY));
-   (* HU_SET = "XLXI_8_11" *) 
+   (* HU_SET = "XLXI_8_5" *) 
    M2_1_HXILINX_RF_plus_ALU  XLXI_8 (.D0(Q_DUMMY), 
                                     .D1(D), 
                                     .S0(LOAD), 

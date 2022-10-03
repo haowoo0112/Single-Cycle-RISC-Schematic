@@ -1,4 +1,4 @@
-// Verilog test fixture created from schematic C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\comple_adder_16bit_CC.sch - Sun Sep 11 00:28:11 2022
+// Verilog test fixture created from schematic C:\Users\ib701\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\comple_adder_16bit_CC.sch - Mon Oct 03 12:01:55 2022
 
 `timescale 1ns / 1ps
 
@@ -7,13 +7,17 @@ module comple_adder_16bit_CC_comple_adder_16bit_CC_sch_tb();
 // Inputs
    reg [15:0] A;
    reg [15:0] B;
-   reg S;
+   reg Pre_C;
+   reg ADC;
+   reg SUB;
+   reg SBB;
 
 // Output
    wire Z;
-   wire C;
    wire V;
    wire [15:0] Y;
+   wire C;
+   wire N;
 
 // Bidirs
 
@@ -21,58 +25,81 @@ module comple_adder_16bit_CC_comple_adder_16bit_CC_sch_tb();
    comple_adder_16bit_CC UUT (
 		.A(A), 
 		.B(B), 
-		.S(S), 
+		.Pre_C(Pre_C), 
 		.Z(Z), 
-		.C(C), 
 		.V(V), 
-		.Y(Y)
+		.Y(Y), 
+		.C(C), 
+		.N(N), 
+		.ADC(ADC), 
+		.SUB(SUB), 
+		.SBB(SBB)
    );
 // Initialize Inputs
 	initial begin
-		A = 16'h1F00;
-		B = 16'hFF00;
-		S = 0;
-		#5;
-		A = 16'h0100;
-		B = 16'hFF00;
-		S = 0;
-		#5;
-		A = 16'h4000;
-		B = 16'h4000;
-		S = 0;
-		#5;
-		A = 16'hA000;
-		B = 16'hA000;
-		S = 0;
-		#5;
-		A = 16'h0000;
-		B = 16'h0100;
-		S = 0;
-		#5;
+		A = 0;
+		B = 0;
+		Pre_C = 0;
+		ADC = 0;
+		SUB = 0;
+		SBB = 0;
+		#10;
 		
-		A = 16'h1F00;
-		B = 16'hFF00;
-		S = 1;
-		#5;
-		A = 16'h0100;
-		B = 16'hFF00;
-		S = 1;
-		#5;
-		A = 16'hFF00;
-		B = 16'h0100;
-		S = 1;
-		#5;
-		A = 16'h2200;
-		B = 16'h0000;
-		S = 1;
-		#5;
-		A = 16'h4000;
-		B = 16'h4000;
-		S = 1;
-		#5;
-		A = 16'h4000;
-		B = 16'hC000;
-		S = 1;
-		#5;
+		A = 16'h1234;
+		B = 16'h2345;
+		Pre_C = 0;
+		ADC = 0;
+		SUB = 0;
+		SBB = 0;
+		#10;
+		
+		A = 16'h1234;
+		B = 16'h2345;
+		Pre_C = 0;
+		ADC = 1'b1;
+		SUB = 0;
+		SBB = 0;
+		#10;
+		
+		A = 16'h1234;
+		B = 16'h2345;
+		Pre_C = 1'b1;
+		ADC = 1'b1;
+		SUB = 0;
+		SBB = 0;
+		#10;
+		
+		A = 16'h1234;
+		B = 16'h2345;
+		Pre_C = 0;
+		ADC = 1'b0;
+		SUB = 1'b1;
+		SBB = 0;
+		#10;
+		
+		A = 16'h1234;
+		B = 16'h2345;
+		Pre_C = 1'b1;
+		ADC = 1'b0;
+		SUB = 1'b1;
+		SBB = 0;
+		#10;
+		
+		A = 16'h1234;
+		B = 16'h2345;
+		Pre_C = 1'b0;
+		ADC = 1'b0;
+		SUB = 1'b0;
+		SBB = 1'b1;
+		#10;
+		
+		A = 16'h1234;
+		B = 16'h2345;
+		Pre_C = 1'b1;
+		ADC = 1'b0;
+		SUB = 1'b0;
+		SBB = 1'b1;
+		#10;
+		$finish;
    end
 endmodule

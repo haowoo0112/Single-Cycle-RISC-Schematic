@@ -71,12 +71,13 @@
         <signal name="XLXN_249" />
         <signal name="XLXN_250" />
         <signal name="XLXN_251" />
-        <signal name="XLXN_252" />
+        <signal name="Cout_1" />
         <signal name="Cout" />
         <signal name="Cin" />
         <port polarity="Input" name="A(15:0)" />
         <port polarity="Input" name="B(15:0)" />
         <port polarity="Output" name="S(15:0)" />
+        <port polarity="Output" name="Cout_1" />
         <port polarity="Output" name="Cout" />
         <port polarity="Input" name="Cin" />
         <blockdef name="full_adder">
@@ -190,13 +191,13 @@
             <blockpin signalname="A(14)" name="A" />
             <blockpin signalname="B(14)" name="B" />
             <blockpin signalname="XLXN_251" name="Cin" />
-            <blockpin signalname="XLXN_252" name="Cout" />
+            <blockpin signalname="Cout_1" name="Cout" />
             <blockpin signalname="S(14)" name="S" />
         </block>
         <block symbolname="full_adder" name="XLXI_23">
             <blockpin signalname="A(15)" name="A" />
             <blockpin signalname="B(15)" name="B" />
-            <blockpin signalname="XLXN_252" name="Cin" />
+            <blockpin signalname="Cout_1" name="Cin" />
             <blockpin signalname="Cout" name="Cout" />
             <blockpin signalname="S(15)" name="S" />
         </block>
@@ -799,10 +800,12 @@
             <wire x2="1632" y1="1888" y2="1952" x1="1632" />
             <wire x2="1792" y1="1952" y2="1952" x1="1632" />
         </branch>
-        <branch name="XLXN_252">
+        <branch name="Cout_1">
             <wire x2="2256" y1="1888" y2="1888" x1="2112" />
             <wire x2="2256" y1="1888" y2="1952" x1="2256" />
             <wire x2="2416" y1="1952" y2="1952" x1="2256" />
+            <wire x2="2256" y1="1952" y2="2048" x1="2256" />
+            <wire x2="2352" y1="2048" y2="2048" x1="2256" />
         </branch>
         <branch name="Cout">
             <wire x2="2768" y1="1888" y2="1888" x1="2736" />
@@ -812,5 +815,6 @@
             <wire x2="528" y1="672" y2="672" x1="496" />
         </branch>
         <iomarker fontsize="28" x="496" y="672" name="Cin" orien="R180" />
+        <iomarker fontsize="28" x="2352" y="2048" name="Cout_1" orien="R0" />
     </sheet>
 </drawing>
