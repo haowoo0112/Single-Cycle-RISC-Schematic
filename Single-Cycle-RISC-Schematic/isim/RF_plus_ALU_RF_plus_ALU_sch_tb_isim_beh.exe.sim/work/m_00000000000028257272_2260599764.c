@@ -25,7 +25,7 @@ static const char *ng0 = "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Sin
 
 
 
-static void Cont_155_0(char *t0)
+static void Cont_215_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -51,7 +51,7 @@ LAB0:    t1 = (t0 + 5408U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(155, ng0);
+LAB2:    xsi_set_current_line(215, ng0);
     t2 = (t0 + 4248U);
     t3 = *((char **)t2);
     t2 = (t0 + 5808);
@@ -82,7 +82,7 @@ LAB1:    return;
 
 extern void work_m_00000000000028257272_2260599764_init()
 {
-	static char *pe[] = {(void *)Cont_155_0};
+	static char *pe[] = {(void *)Cont_215_0};
 	xsi_register_didat("work_m_00000000000028257272_2260599764", "isim/RF_plus_ALU_RF_plus_ALU_sch_tb_isim_beh.exe.sim/work/m_00000000000028257272_2260599764.didat");
 	xsi_register_executes(pe);
 }

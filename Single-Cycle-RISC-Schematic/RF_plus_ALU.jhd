@@ -4,4 +4,4 @@ MODULE RF_plus_ALU
 	SUBMODULE multiplexer_2_to_1_16_bit
 		INSTANCE XLXI_2
 	SUBMODULE comple_adder_16bit_CC
-		INSTANCE XLXI_34
+		INSTANCE XLXI_37

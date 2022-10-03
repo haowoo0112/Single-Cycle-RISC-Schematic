@@ -1,4 +1,4 @@
-// Verilog test fixture created from schematic C:\Users\ib701\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.sch - Fri Sep 23 16:37:02 2022
+// Verilog test fixture created from schematic C:\Users\ib701\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.sch - Mon Oct 03 15:27:20 2022
 
 `timescale 1ns / 1ps
 
@@ -11,9 +11,12 @@ module RF_plus_ALU_RF_plus_ALU_sch_tb();
    reg [2:0] Write_Addr;
    reg Write_En;
    reg clk;
-   reg ALU_Operator;
+   reg Pre_C;
    reg Src_ALU_B;
    reg [4:0] imm5;
+   reg ADC;
+   reg SUB;
+   reg SBB;
 
 // Output
    wire [15:0] Y;
@@ -21,6 +24,8 @@ module RF_plus_ALU_RF_plus_ALU_sch_tb();
    wire N;
    wire C;
    wire V;
+   wire [15:0] OutA;
+   wire [15:0] OutB;
 
 // Bidirs
 
@@ -36,14 +41,19 @@ module RF_plus_ALU_RF_plus_ALU_sch_tb();
 		.Write_Addr(Write_Addr), 
 		.Write_En(Write_En), 
 		.clk(clk), 
-		.ALU_Operator(ALU_Operator), 
+		.Pre_C(Pre_C), 
 		.Src_ALU_B(Src_ALU_B), 
 		.imm5(imm5), 
-		.V(V)
+		.V(V), 
+		.OutA(OutA), 
+		.OutB(OutB), 
+		.ADC(ADC), 
+		.SUB(SUB), 
+		.SBB(SBB)
    );
-// Initialize Inputs
 	always
 		#5 clk = ~clk;
+// Initialize Inputs
 	initial begin
 		Read_Addr_A = 0;
 		Read_Addr_B = 0;
@@ -51,35 +61,68 @@ module RF_plus_ALU_RF_plus_ALU_sch_tb();
 		Write_Addr = 0;
 		Write_En = 0;
 		clk = 0;
-		ALU_Operator = 0;
+		Pre_C = 0;
 		Src_ALU_B = 0;
 		imm5 = 0;
+		ADC = 0;
+		SUB = 0;
+		SBB = 0;
 		#10;
 		
-		Write_En = 1;
+		Write_Data = 16'h1234;
 		Write_Addr = 3'd0;
-		Write_Data = 16'h12;
-		#10;
-		Write_En = 1;
-		Write_Addr = 3'd1;
-		Write_Data = 16'h34;
-		#10;
-		Write_En = 1;
-		Write_Addr = 3'd2;
-		Write_Data = 16'h56;
+		Write_En = 1'b1;
 		#10;
 		
-		Read_Addr_A = 3'd2;
-		Read_Addr_B = 3'd1;
-		ALU_Operator = 0;
-		Src_ALU_B = 0;
-		imm5 = 5'd0;
+		Write_Data = 16'h2345;
+		Write_Addr = 3'd1;
+		Write_En = 1'b1;
 		#10;
-		Read_Addr_A = 3'd2;
+		
+		Read_Addr_A = 3'd0;
 		Read_Addr_B = 3'd1;
-		ALU_Operator = 0;
-		Src_ALU_B = 1;
-		imm5 = 5'd1;
+		
+		Pre_C = 0;
+		ADC = 0;
+		SUB = 0;
+		SBB = 0;
 		#10;
+		
+		Pre_C = 0;
+		ADC = 1'b1;
+		SUB = 0;
+		SBB = 0;
+		#10;
+		
+		Pre_C = 1'b1;
+		ADC = 1'b1;
+		SUB = 0;
+		SBB = 0;
+		#10;
+		
+		Pre_C = 0;
+		ADC = 1'b0;
+		SUB = 1'b1;
+		SBB = 0;
+		#10;
+		
+		Pre_C = 1'b1;
+		ADC = 1'b0;
+		SUB = 1'b1;
+		SBB = 0;
+		#10;
+		
+		Pre_C = 1'b0;
+		ADC = 1'b0;
+		SUB = 1'b0;
+		SBB = 1'b1;
+		#10;
+		
+		Pre_C = 1'b1;
+		ADC = 1'b0;
+		SUB = 1'b0;
+		SBB = 1'b1;
+		#10;
+		$finish;
    end
 endmodule

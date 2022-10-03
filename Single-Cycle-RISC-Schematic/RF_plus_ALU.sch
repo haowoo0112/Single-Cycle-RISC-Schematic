@@ -20,7 +20,7 @@
         <signal name="Write_Addr(2:0)" />
         <signal name="Write_En" />
         <signal name="clk" />
-        <signal name="ALU_Operator" />
+        <signal name="Pre_C" />
         <signal name="Src_ALU_B" />
         <signal name="XLXN_45(5:15)" />
         <signal name="imm5(4:0)" />
@@ -29,6 +29,9 @@
         <signal name="XLXN_47(15:0)" />
         <signal name="OutA(15:0)" />
         <signal name="OutB(15:0)" />
+        <signal name="ADC" />
+        <signal name="SUB" />
+        <signal name="SBB" />
         <port polarity="Output" name="Y(15:0)" />
         <port polarity="Output" name="Z" />
         <port polarity="Output" name="N" />
@@ -39,12 +42,15 @@
         <port polarity="Input" name="Write_Addr(2:0)" />
         <port polarity="Input" name="Write_En" />
         <port polarity="Input" name="clk" />
-        <port polarity="Input" name="ALU_Operator" />
+        <port polarity="Input" name="Pre_C" />
         <port polarity="Input" name="Src_ALU_B" />
         <port polarity="Input" name="imm5(4:0)" />
         <port polarity="Output" name="V" />
         <port polarity="Output" name="OutA(15:0)" />
         <port polarity="Output" name="OutB(15:0)" />
+        <port polarity="Input" name="ADC" />
+        <port polarity="Input" name="SUB" />
+        <port polarity="Input" name="SBB" />
         <blockdef name="register_file_16_bit">
             <timestamp>2022-9-12T2:42:50</timestamp>
             <rect width="352" x="64" y="-384" height="384" />
@@ -75,19 +81,22 @@
             <rect width="64" x="320" y="-172" height="24" />
         </blockdef>
         <blockdef name="comple_adder_16bit_CC">
-            <timestamp>2022-9-23T8:33:47</timestamp>
-            <rect width="256" x="64" y="-320" height="320" />
+            <timestamp>2022-10-3T4:17:23</timestamp>
+            <rect width="256" x="64" y="-384" height="384" />
+            <line x2="0" y1="-352" y2="-352" x1="64" />
+            <rect width="64" x="0" y="-364" height="24" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <rect width="64" x="0" y="-300" height="24" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
-            <rect width="64" x="0" y="-236" height="24" />
-            <line x2="384" y1="-96" y2="-96" x1="320" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="384" y1="-32" y2="-32" x1="320" />
-            <line x2="384" y1="-288" y2="-288" x1="320" />
-            <rect width="64" x="320" y="-300" height="24" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="384" y1="-224" y2="-224" x1="320" />
+            <line x2="384" y1="-288" y2="-288" x1="320" />
+            <line x2="384" y1="-352" y2="-352" x1="320" />
+            <rect width="64" x="320" y="-364" height="24" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
         </blockdef>
         <blockdef name="gnd">
             <timestamp>2000-1-1T10:10:10</timestamp>
@@ -133,16 +142,6 @@
             <blockpin signalname="imm5(4:0)" name="I" />
             <blockpin signalname="imm(4:0)" name="O" />
         </block>
-        <block symbolname="comple_adder_16bit_CC" name="XLXI_34">
-            <blockpin signalname="XLXN_46(15:0)" name="A(15:0)" />
-            <blockpin signalname="XLXN_3(15:0)" name="B(15:0)" />
-            <blockpin signalname="C" name="C" />
-            <blockpin signalname="N" name="N" />
-            <blockpin signalname="ALU_Operator" name="S" />
-            <blockpin signalname="V" name="V" />
-            <blockpin signalname="Y(15:0)" name="Y(15:0)" />
-            <blockpin signalname="Z" name="Z" />
-        </block>
         <block symbolname="buf" name="XLXI_35(15:0)">
             <blockpin signalname="XLXN_47(15:0)" name="I" />
             <blockpin signalname="OutB(15:0)" name="O" />
@@ -150,6 +149,19 @@
         <block symbolname="buf" name="XLXI_36(15:0)">
             <blockpin signalname="XLXN_46(15:0)" name="I" />
             <blockpin signalname="OutA(15:0)" name="O" />
+        </block>
+        <block symbolname="comple_adder_16bit_CC" name="XLXI_37">
+            <blockpin signalname="XLXN_46(15:0)" name="A(15:0)" />
+            <blockpin signalname="XLXN_3(15:0)" name="B(15:0)" />
+            <blockpin signalname="Pre_C" name="Pre_C" />
+            <blockpin signalname="ADC" name="ADC" />
+            <blockpin signalname="SUB" name="SUB" />
+            <blockpin signalname="SBB" name="SBB" />
+            <blockpin signalname="N" name="N" />
+            <blockpin signalname="Z" name="Z" />
+            <blockpin signalname="Y(15:0)" name="Y(15:0)" />
+            <blockpin signalname="C" name="C" />
+            <blockpin signalname="V" name="V" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -219,10 +231,10 @@
         <iomarker fontsize="28" x="2464" y="1024" name="Z" orien="R0" />
         <iomarker fontsize="28" x="2464" y="1088" name="N" orien="R0" />
         <iomarker fontsize="28" x="2464" y="1152" name="C" orien="R0" />
-        <branch name="ALU_Operator">
+        <branch name="Pre_C">
             <wire x2="1952" y1="1088" y2="1088" x1="1920" />
         </branch>
-        <iomarker fontsize="28" x="1920" y="1088" name="ALU_Operator" orien="R180" />
+        <iomarker fontsize="28" x="1920" y="1088" name="Pre_C" orien="R180" />
         <branch name="Src_ALU_B">
             <wire x2="1312" y1="1152" y2="1152" x1="1280" />
         </branch>
@@ -237,8 +249,6 @@
             <wire x2="832" y1="1392" y2="1392" x1="800" />
         </branch>
         <iomarker fontsize="28" x="800" y="1392" name="imm5(4:0)" orien="R180" />
-        <instance x="1952" y="1248" name="XLXI_34" orien="R0">
-        </instance>
         <branch name="V">
             <wire x2="2464" y1="1216" y2="1216" x1="2336" />
         </branch>
@@ -267,5 +277,19 @@
         </branch>
         <iomarker fontsize="28" x="1648" y="656" name="OutA(15:0)" orien="R0" />
         <iomarker fontsize="28" x="1648" y="752" name="OutB(15:0)" orien="R0" />
+        <instance x="1952" y="1312" name="XLXI_37" orien="R0">
+        </instance>
+        <branch name="ADC">
+            <wire x2="1952" y1="1152" y2="1152" x1="1920" />
+        </branch>
+        <iomarker fontsize="28" x="1920" y="1152" name="ADC" orien="R180" />
+        <branch name="SUB">
+            <wire x2="1952" y1="1216" y2="1216" x1="1920" />
+        </branch>
+        <iomarker fontsize="28" x="1920" y="1216" name="SUB" orien="R180" />
+        <branch name="SBB">
+            <wire x2="1952" y1="1280" y2="1280" x1="1920" />
+        </branch>
+        <iomarker fontsize="28" x="1920" y="1280" name="SBB" orien="R180" />
     </sheet>
 </drawing>

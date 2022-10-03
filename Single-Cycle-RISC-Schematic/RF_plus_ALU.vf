@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : RF_plus_ALU.vf
-// /___/   /\     Timestamp : 10/03/2022 12:09:41
+// /___/   /\     Timestamp : 10/03/2022 15:34:00
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -376,7 +376,7 @@ module comple_adder_16bit_CC_MUSER_RF_plus_ALU(A,
    wire [15:0] Y_DUMMY;
    
    assign Y[15:0] = Y_DUMMY[15:0];
-   (* HU_SET = "XLXI_2_1" *) 
+   (* HU_SET = "XLXI_2_0" *) 
    NOR16_HXILINX_RF_plus_ALU  XLXI_2 (.I0(Y_DUMMY[0]), 
                                      .I1(Y_DUMMY[1]), 
                                      .I2(Y_DUMMY[2]), 
@@ -631,7 +631,7 @@ module multiplexer_8_to_1_MUSER_RF_plus_ALU(I0,
                  .I2(S1), 
                  .I3(S2), 
                  .O(XLXN_78));
-   (* HU_SET = "XLXI_38_2" *) 
+   (* HU_SET = "XLXI_38_1" *) 
    OR8_HXILINX_RF_plus_ALU  XLXI_38 (.I0(XLXN_78), 
                                     .I1(XLXN_88), 
                                     .I2(XLXN_62), 
@@ -886,12 +886,12 @@ module D_flip_flop_1_bit_MUSER_RF_plus_ALU(clk,
    wire Q_DUMMY;
    
    assign Q = Q_DUMMY;
-   (* HU_SET = "XLXI_1_3" *) 
+   (* HU_SET = "XLXI_1_2" *) 
    M2_1_HXILINX_RF_plus_ALU  XLXI_1 (.D0(XLXN_15), 
                                     .D1(XLXN_5), 
                                     .S0(clk), 
                                     .O(XLXN_3));
-   (* HU_SET = "XLXI_2_4" *) 
+   (* HU_SET = "XLXI_2_3" *) 
    M2_1_HXILINX_RF_plus_ALU  XLXI_2 (.D0(XLXN_8), 
                                     .D1(XLXN_6), 
                                     .S0(XLXN_11), 
@@ -906,7 +906,7 @@ module D_flip_flop_1_bit_MUSER_RF_plus_ALU(clk,
                .O(XLXN_6));
    INV  XLXI_7 (.I(XLXN_7), 
                .O(Q_DUMMY));
-   (* HU_SET = "XLXI_8_5" *) 
+   (* HU_SET = "XLXI_8_4" *) 
    M2_1_HXILINX_RF_plus_ALU  XLXI_8 (.D0(Q_DUMMY), 
                                     .D1(D), 
                                     .S0(LOAD), 
@@ -1204,12 +1204,15 @@ module register_file_16_bit_MUSER_RF_plus_ALU(clk,
 endmodule
 `timescale 1ns / 1ps
 
-module RF_plus_ALU(ALU_Operator, 
+module RF_plus_ALU(ADC, 
                    clk, 
                    imm5, 
+                   Pre_C, 
                    Read_Addr_A, 
                    Read_Addr_B, 
+                   SBB, 
                    Src_ALU_B, 
+                   SUB, 
                    Write_Addr, 
                    Write_Data, 
                    Write_En, 
@@ -1221,12 +1224,15 @@ module RF_plus_ALU(ALU_Operator,
                    Y, 
                    Z);
 
-    input ALU_Operator;
+    input ADC;
     input clk;
     input [4:0] imm5;
+    input Pre_C;
     input [2:0] Read_Addr_A;
     input [2:0] Read_Addr_B;
+    input SBB;
     input Src_ALU_B;
+    input SUB;
     input [2:0] Write_Addr;
     input [15:0] Write_Data;
     input Write_En;
@@ -1302,14 +1308,6 @@ module RF_plus_ALU(ALU_Operator,
                   .O(imm[1]));
    BUF  XLXI_33_4 (.I(imm5[0]), 
                   .O(imm[0]));
-   comple_adder_16bit_CC_MUSER_RF_plus_ALU  XLXI_34 (.A(XLXN_46[15:0]), 
-                                                    .B(XLXN_3[15:0]), 
-                                                    .S(ALU_Operator), 
-                                                    .C(C), 
-                                                    .N(N), 
-                                                    .V(V), 
-                                                    .Y(Y[15:0]), 
-                                                    .Z(Z));
    BUF  XLXI_35_0 (.I(XLXN_47[0]), 
                   .O(OutB[0]));
    BUF  XLXI_35_1 (.I(XLXN_47[1]), 
@@ -1374,4 +1372,15 @@ module RF_plus_ALU(ALU_Operator,
                    .O(OutA[14]));
    BUF  XLXI_36_15 (.I(XLXN_46[15]), 
                    .O(OutA[15]));
+   comple_adder_16bit_CC_MUSER_RF_plus_ALU  XLXI_37 (.A(XLXN_46[15:0]), 
+                                                    .ADC(ADC), 
+                                                    .B(XLXN_3[15:0]), 
+                                                    .Pre_C(Pre_C), 
+                                                    .SBB(SBB), 
+                                                    .SUB(SUB), 
+                                                    .C(C), 
+                                                    .N(N), 
+                                                    .V(V), 
+                                                    .Y(Y[15:0]), 
+                                                    .Z(Z));
 endmodule
