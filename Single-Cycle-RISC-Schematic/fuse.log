@@ -1,23 +1,19 @@
-Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1_3bit_multiplexer_2_to_1_3bit_sch_tb_isim_beh.exe -prj C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1_3bit_multiplexer_2_to_1_3bit_sch_tb_beh.prj work.multiplexer_2_to_1_3bit_multiplexer_2_to_1_3bit_sch_tb work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/XOR16_1_XOR16_1_sch_tb_isim_beh.exe -prj C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/XOR16_1_XOR16_1_sch_tb_beh.prj XOR16_1_XOR16_1_sch_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1_3bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_multiplexer_2_to_1_3bit.v" into library work
-Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/XOR16_1.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_XOR16_1.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module AND2
-Compiling module INV
-Compiling module OR2
-Compiling module multiplexer_2_to_1_MUSER_multipl...
-Compiling module multiplexer_2_to_1_3bit
-Compiling module multiplexer_2_to_1_3bit_multiple...
+Compiling module XOR2
+Compiling module XOR16_1
+Compiling module XOR16_1_XOR16_1_sch_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 7 Verilog Units
-Built simulation executable C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1_3bit_multiplexer_2_to_1_3bit_sch_tb_isim_beh.exe
-Fuse Memory Usage: 28228 KB
-Fuse CPU Usage: 999 ms
+Compiled 4 Verilog Units
+Built simulation executable C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/XOR16_1_XOR16_1_sch_tb_isim_beh.exe
+Fuse Memory Usage: 28120 KB
+Fuse CPU Usage: 374 ms

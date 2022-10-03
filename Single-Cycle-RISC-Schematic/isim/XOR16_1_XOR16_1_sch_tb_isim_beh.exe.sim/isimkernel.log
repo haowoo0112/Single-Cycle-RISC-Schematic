@@ -1,0 +1,29 @@
+Command line:
+   XOR16_1_XOR16_1_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52554
+
+Mon Oct 03 10:01:10 2022
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 5154.09 Meg
+
+ Total Signals          : 65
+ Total Nets             : 46
+ Total Signal Drivers   : 23
+ Total Blocks           : 19
+ Total Primitive Blocks : 17
+ Total Processes        : 25
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 143
+Total Line Count : 25
+
+ Total Simulation Time: 0.15625 sec
+
+ Current Memory Usage: 4996.8 Meg
+
+Mon Oct 03 10:02:11 2022
+
