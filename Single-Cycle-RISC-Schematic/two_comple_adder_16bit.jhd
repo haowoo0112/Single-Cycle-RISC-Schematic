@@ -1,3 +1,5 @@
 MODULE two_comple_adder_16bit
 	SUBMODULE adder_16_bit
 		INSTANCE XLXI_29
+	SUBMODULE XOR16_1
+		INSTANCE XLXI_30

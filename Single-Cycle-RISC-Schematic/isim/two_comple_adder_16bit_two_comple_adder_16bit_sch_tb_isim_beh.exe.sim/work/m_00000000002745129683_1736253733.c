@@ -25,7 +25,7 @@
 
 
 
-extern void work_m_00000000003186083089_2709206797_init()
+extern void work_m_00000000002745129683_1736253733_init()
 {
-	xsi_register_didat("work_m_00000000003186083089_2709206797", "isim/two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_isim_beh.exe.sim/work/m_00000000003186083089_2709206797.didat");
+	xsi_register_didat("work_m_00000000002745129683_1736253733", "isim/two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_isim_beh.exe.sim/work/m_00000000002745129683_1736253733.didat");
 }
