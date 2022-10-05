@@ -12,4 +12,4 @@ MODULE PC_circuit
 	SUBMODULE multiplexer_2_to_1_16_bit
 		INSTANCE XLXI_7
 	SUBMODULE two_comple_adder_16bit
-		INSTANCE XLXI_11
+		INSTANCE XLXI_44

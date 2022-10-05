@@ -109,19 +109,6 @@
             <line x2="384" y1="-160" y2="-160" x1="320" />
             <rect width="64" x="320" y="-172" height="24" />
         </blockdef>
-        <blockdef name="two_comple_adder_16bit">
-            <timestamp>2022-9-12T2:42:50</timestamp>
-            <rect width="256" x="64" y="-192" height="192" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <rect width="64" x="0" y="-172" height="24" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-108" height="24" />
-            <line x2="384" y1="-96" y2="-96" x1="320" />
-            <line x2="384" y1="-32" y2="-32" x1="320" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
-            <rect width="64" x="320" y="-172" height="24" />
-        </blockdef>
         <blockdef name="or3">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="48" y1="-64" y2="-64" x1="0" />
@@ -135,6 +122,19 @@
             <line x2="48" y1="-80" y2="-80" x1="112" />
             <arc ex="112" ey="-176" sx="192" sy="-128" r="88" cx="116" cy="-88" />
             <line x2="48" y1="-176" y2="-176" x1="112" />
+        </blockdef>
+        <blockdef name="two_comple_adder_16bit">
+            <timestamp>2022-10-5T4:37:20</timestamp>
+            <rect width="256" x="64" y="-192" height="192" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <rect width="64" x="0" y="-172" height="24" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="0" y="-108" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+            <rect width="64" x="320" y="-172" height="24" />
         </blockdef>
         <block symbolname="fd16ce" name="XLXI_1">
             <blockpin signalname="clk" name="C" />
@@ -172,14 +172,6 @@
             <blockpin signalname="XLXN_62(15:0)" name="I1(15:0)" />
             <blockpin signalname="JMP" name="S" />
             <blockpin signalname="XLXN_15(15:0)" name="Y(15:0)" />
-        </block>
-        <block symbolname="two_comple_adder_16bit" name="XLXI_11">
-            <blockpin signalname="Q(15:0)" name="A(15:0)" />
-            <blockpin signalname="XLXN_22(15:0)" name="B(15:0)" />
-            <blockpin name="Cout" />
-            <blockpin name="Cout_1" />
-            <blockpin signalname="XLXN_20" name="S" />
-            <blockpin signalname="XLXN_12(15:0)" name="Y(15:0)" />
         </block>
         <block symbolname="multiplexer_2_to_1_16_bit" name="XLXI_12">
             <blockpin signalname="I0(15:0)" name="I0(15:0)" />
@@ -227,6 +219,14 @@
         </block>
         <block symbolname="gnd" name="XLXI_43(15:0)">
             <blockpin signalname="XLXN_70(15:0)" name="G" />
+        </block>
+        <block symbolname="two_comple_adder_16bit" name="XLXI_44">
+            <blockpin signalname="Q(15:0)" name="A(15:0)" />
+            <blockpin signalname="XLXN_22(15:0)" name="B(15:0)" />
+            <blockpin signalname="XLXN_20" name="C" />
+            <blockpin name="Cout" />
+            <blockpin name="Cout_1" />
+            <blockpin signalname="XLXN_12(15:0)" name="Y(15:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -297,8 +297,6 @@
         <branch name="XLXN_12(15:0)">
             <wire x2="2192" y1="1152" y2="1152" x1="1968" />
         </branch>
-        <instance x="1584" y="1312" name="XLXI_11" orien="R0">
-        </instance>
         <branch name="XLXN_22(15:0)">
             <wire x2="1568" y1="1184" y2="1184" x1="1328" />
             <wire x2="1568" y1="1184" y2="1216" x1="1568" />
@@ -404,5 +402,7 @@
             <wire x2="1440" y1="592" y2="592" x1="1408" />
         </branch>
         <iomarker fontsize="28" x="1408" y="592" name="Rm(15:0)" orien="R180" />
+        <instance x="1584" y="1312" name="XLXI_44" orien="R0">
+        </instance>
     </sheet>
 </drawing>

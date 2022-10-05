@@ -80,24 +80,6 @@
             <line x2="384" y1="-160" y2="-160" x1="320" />
             <rect width="64" x="320" y="-172" height="24" />
         </blockdef>
-        <blockdef name="comple_adder_16bit_CC">
-            <timestamp>2022-10-3T4:17:23</timestamp>
-            <rect width="256" x="64" y="-384" height="384" />
-            <line x2="0" y1="-352" y2="-352" x1="64" />
-            <rect width="64" x="0" y="-364" height="24" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <rect width="64" x="0" y="-300" height="24" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="384" y1="-224" y2="-224" x1="320" />
-            <line x2="384" y1="-288" y2="-288" x1="320" />
-            <line x2="384" y1="-352" y2="-352" x1="320" />
-            <rect width="64" x="320" y="-364" height="24" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
-            <line x2="384" y1="-96" y2="-96" x1="320" />
-        </blockdef>
         <blockdef name="gnd">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-64" y2="-96" x1="64" />
@@ -114,6 +96,24 @@
             <line x2="128" y1="0" y2="-32" x1="64" />
             <line x2="64" y1="-32" y2="-64" x1="128" />
             <line x2="64" y1="-64" y2="0" x1="64" />
+        </blockdef>
+        <blockdef name="ALU_CC">
+            <timestamp>2022-10-5T4:20:58</timestamp>
+            <rect width="256" x="64" y="-384" height="384" />
+            <line x2="0" y1="-352" y2="-352" x1="64" />
+            <rect width="64" x="0" y="-364" height="24" />
+            <line x2="0" y1="-288" y2="-288" x1="64" />
+            <rect width="64" x="0" y="-300" height="24" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-224" y2="-224" x1="320" />
+            <line x2="384" y1="-288" y2="-288" x1="320" />
+            <line x2="384" y1="-352" y2="-352" x1="320" />
+            <rect width="64" x="320" y="-364" height="24" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
         </blockdef>
         <block symbolname="register_file_16_bit" name="XLXI_1">
             <blockpin signalname="clk" name="clk" />
@@ -150,7 +150,7 @@
             <blockpin signalname="XLXN_46(15:0)" name="I" />
             <blockpin signalname="OutA(15:0)" name="O" />
         </block>
-        <block symbolname="comple_adder_16bit_CC" name="XLXI_37">
+        <block symbolname="ALU_CC" name="XLXI_38">
             <blockpin signalname="XLXN_46(15:0)" name="A(15:0)" />
             <blockpin signalname="XLXN_3(15:0)" name="B(15:0)" />
             <blockpin signalname="Pre_C" name="Pre_C" />
@@ -277,8 +277,6 @@
         </branch>
         <iomarker fontsize="28" x="1648" y="656" name="OutA(15:0)" orien="R0" />
         <iomarker fontsize="28" x="1648" y="752" name="OutB(15:0)" orien="R0" />
-        <instance x="1952" y="1312" name="XLXI_37" orien="R0">
-        </instance>
         <branch name="ADC">
             <wire x2="1952" y1="1152" y2="1152" x1="1920" />
         </branch>
@@ -291,5 +289,7 @@
             <wire x2="1952" y1="1280" y2="1280" x1="1920" />
         </branch>
         <iomarker fontsize="28" x="1920" y="1280" name="SBB" orien="R180" />
+        <instance x="1952" y="1312" name="XLXI_38" orien="R0">
+        </instance>
     </sheet>
 </drawing>

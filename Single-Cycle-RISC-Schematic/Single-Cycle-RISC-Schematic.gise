@@ -22,10 +22,16 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Single-Cycle-RISC-Schematic.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ALU.vf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU_ALU_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_ALU_sch_tb_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ALU_CC.vf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_CC_ALU_CC_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU_CC_ALU_CC_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ALU_CC_ALU_CC_sch_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_CC_ALU_CC_sch_tb_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="AND16_1.vf"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="AND16_1_AND16_1_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="AND16_1_AND16_1_sch_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="AND16_1_AND16_1_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="AND16_1_AND16_1_sch_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="D_flip_flop_16_bit.vf">
       <branch xil_pn:name="Implementation"/>
@@ -179,7 +185,9 @@
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
@@ -192,15 +200,15 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1664785123" xil_pn:in_ck="3628967128551429216" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1664785123">
+    <transform xil_pn:end_ts="1664944447" xil_pn:in_ck="-1982933751318397024" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1664944447">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="tb_ALU.v"/>
+      <outfile xil_pn:name="tb_ALU_CC.v"/>
       <outfile xil_pn:name="tb_AND16_1.v"/>
       <outfile xil_pn:name="tb_D_flip_flop_16_bit.v"/>
       <outfile xil_pn:name="tb_D_flip_flop_1_bit.v"/>
+      <outfile xil_pn:name="tb_Datapath_Module.v"/>
       <outfile xil_pn:name="tb_PC_circuit.v"/>
       <outfile xil_pn:name="tb_RAM_256x16.v"/>
       <outfile xil_pn:name="tb_RF_plus_ALU.v"/>
@@ -219,19 +227,18 @@
       <outfile xil_pn:name="tb_sign_extend_8_16.v"/>
       <outfile xil_pn:name="tb_two_comple_adder_16bit.v"/>
     </transform>
-    <transform xil_pn:end_ts="1664785130" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8089945812246984171" xil_pn:start_ts="1664785129">
+    <transform xil_pn:end_ts="1664944450" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7202848430823219909" xil_pn:start_ts="1664944450">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1664785131" xil_pn:in_ck="-8291635221225096876" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="6234288633759694501" xil_pn:start_ts="1664785130">
+    <transform xil_pn:end_ts="1664944505" xil_pn:in_ck="914566439687348853" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5246723899791418293" xil_pn:start_ts="1664944503">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="ALU.vf"/>
+      <outfile xil_pn:name="ALU_CC.vf"/>
       <outfile xil_pn:name="AND16_1.vf"/>
       <outfile xil_pn:name="D_flip_flop_16_bit.vf"/>
       <outfile xil_pn:name="D_flip_flop_1_bit.vf"/>
-      <outfile xil_pn:name="PC_circuit.vf"/>
       <outfile xil_pn:name="RF_plus_ALU.vf"/>
       <outfile xil_pn:name="XOR16_1.vf"/>
       <outfile xil_pn:name="adder_16_bit.vf"/>
@@ -251,14 +258,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1664785131" xil_pn:in_ck="-5480654462410912492" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1664785131">
+    <transform xil_pn:end_ts="1664944505" xil_pn:in_ck="5525179732090959234" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1664944505">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="ALU.vf"/>
+      <outfile xil_pn:name="ALU_CC.vf"/>
       <outfile xil_pn:name="AND16_1.vf"/>
       <outfile xil_pn:name="D_flip_flop_16_bit.vf"/>
       <outfile xil_pn:name="D_flip_flop_1_bit.vf"/>
-      <outfile xil_pn:name="PC_circuit.vf"/>
       <outfile xil_pn:name="RAM_256x16.vf"/>
       <outfile xil_pn:name="RF_plus_ALU.vf"/>
       <outfile xil_pn:name="XOR16_1.vf"/>
@@ -274,9 +281,12 @@
       <outfile xil_pn:name="multiplexer_8_to_1_16_bit.vf"/>
       <outfile xil_pn:name="register_file_16_bit.vf"/>
       <outfile xil_pn:name="sign_extend_8_16.vf"/>
+      <outfile xil_pn:name="tb_ALU.v"/>
+      <outfile xil_pn:name="tb_ALU_CC.v"/>
       <outfile xil_pn:name="tb_AND16_1.v"/>
       <outfile xil_pn:name="tb_D_flip_flop_16_bit.v"/>
       <outfile xil_pn:name="tb_D_flip_flop_1_bit.v"/>
+      <outfile xil_pn:name="tb_Datapath_Module.v"/>
       <outfile xil_pn:name="tb_PC_circuit.v"/>
       <outfile xil_pn:name="tb_RAM_256x16.v"/>
       <outfile xil_pn:name="tb_RF_plus_ALU.v"/>
@@ -296,26 +306,22 @@
       <outfile xil_pn:name="tb_two_comple_adder_16bit.v"/>
       <outfile xil_pn:name="two_comple_adder_16bit.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1664785134" xil_pn:in_ck="-5480654462410912492" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5473813737274172231" xil_pn:start_ts="1664785131">
+    <transform xil_pn:end_ts="1664944507" xil_pn:in_ck="5525179732090959234" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-8547416376704323451" xil_pn:start_ts="1664944505">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="AND16_1_AND16_1_sch_tb_beh.prj"/>
-      <outfile xil_pn:name="AND16_1_AND16_1_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1664785134" xil_pn:in_ck="37681532731386968" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6973390782611476860" xil_pn:start_ts="1664785134">
+    <transform xil_pn:end_ts="1664944508" xil_pn:in_ck="5094379071451774748" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5329217245267048120" xil_pn:start_ts="1664944507">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="AND16_1_AND16_1_sch_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1664449514" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1664449512">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -330,9 +336,9 @@
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="D_flip_flop_16_bit.vf"/>
       <outfile xil_pn:name="D_flip_flop_1_bit.vf"/>
-      <outfile xil_pn:name="PC_circuit.vf"/>
       <outfile xil_pn:name="RF_plus_ALU.vf"/>
       <outfile xil_pn:name="adder_16_bit.vf"/>
       <outfile xil_pn:name="comple_adder_16bit_CC.vf"/>
@@ -379,20 +385,9 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="RF_plus_ALU.jhd"/>
-      <outfile xil_pn:name="RF_plus_ALU.lso"/>
-      <outfile xil_pn:name="RF_plus_ALU.ngc"/>
-      <outfile xil_pn:name="RF_plus_ALU.ngr"/>
-      <outfile xil_pn:name="RF_plus_ALU.prj"/>
-      <outfile xil_pn:name="RF_plus_ALU.stx"/>
-      <outfile xil_pn:name="RF_plus_ALU.syr"/>
-      <outfile xil_pn:name="RF_plus_ALU.xst"/>
-      <outfile xil_pn:name="RF_plus_ALU_RF_plus_ALU_sch_tb_stx_beh.prj"/>
-      <outfile xil_pn:name="RF_plus_ALU_xst.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1664449581" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5858226451250823810" xil_pn:start_ts="1664449581">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -402,51 +397,40 @@
     </transform>
     <transform xil_pn:end_ts="1664449598" xil_pn:in_ck="-4097946989635660734" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-5242130974547129787" xil_pn:start_ts="1664449581">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="RF_plus_ALU.bld"/>
-      <outfile xil_pn:name="RF_plus_ALU.ngd"/>
-      <outfile xil_pn:name="RF_plus_ALU_ngdbuild.xrpt"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1664449690" xil_pn:in_ck="-4097946989635660733" xil_pn:name="TRANEXT_map_virtex6" xil_pn:prop_ck="-8064276643144408623" xil_pn:start_ts="1664449633">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="RF_plus_ALU.pcf"/>
-      <outfile xil_pn:name="RF_plus_ALU_map.map"/>
-      <outfile xil_pn:name="RF_plus_ALU_map.mrp"/>
-      <outfile xil_pn:name="RF_plus_ALU_map.ncd"/>
-      <outfile xil_pn:name="RF_plus_ALU_map.ngm"/>
-      <outfile xil_pn:name="RF_plus_ALU_map.xrpt"/>
-      <outfile xil_pn:name="RF_plus_ALU_summary.xml"/>
-      <outfile xil_pn:name="RF_plus_ALU_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1664449745" xil_pn:in_ck="8674557376883182812" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="8969472336045954842" xil_pn:start_ts="1664449690">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="RF_plus_ALU.ncd"/>
-      <outfile xil_pn:name="RF_plus_ALU.pad"/>
-      <outfile xil_pn:name="RF_plus_ALU.par"/>
-      <outfile xil_pn:name="RF_plus_ALU.ptwx"/>
-      <outfile xil_pn:name="RF_plus_ALU.unroutes"/>
-      <outfile xil_pn:name="RF_plus_ALU.xpi"/>
-      <outfile xil_pn:name="RF_plus_ALU_pad.csv"/>
-      <outfile xil_pn:name="RF_plus_ALU_pad.txt"/>
-      <outfile xil_pn:name="RF_plus_ALU_par.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1664449745" xil_pn:in_ck="-4097946989635660865" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1664449725">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="RF_plus_ALU.twr"/>
-      <outfile xil_pn:name="RF_plus_ALU.twx"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 

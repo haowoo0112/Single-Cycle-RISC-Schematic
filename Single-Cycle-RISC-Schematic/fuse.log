@@ -1,19 +1,28 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/AND16_1_AND16_1_sch_tb_isim_beh.exe -prj C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/AND16_1_AND16_1_sch_tb_beh.prj AND16_1_AND16_1_sch_tb work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_isim_beh.exe -prj C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_beh.prj work.two_comple_adder_16bit_two_comple_adder_16bit_sch_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/AND16_1.vf" into library work
-Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_AND16_1.v" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/full_adder.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/XOR16_1.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/adder_16_bit.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/two_comple_adder_16bit.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_two_comple_adder_16bit.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling module AND2
-Compiling module AND16_1
-Compiling module AND16_1_AND16_1_sch_tb
+Compiling module OR2
+Compiling module XOR2
+Compiling module full_adder_MUSER_two_comple_adde...
+Compiling module adder_16_bit_MUSER_two_comple_ad...
+Compiling module XOR16_1_MUSER_two_comple_adder_1...
+Compiling module two_comple_adder_16bit
+Compiling module two_comple_adder_16bit_two_compl...
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 4 Verilog Units
-Built simulation executable C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/AND16_1_AND16_1_sch_tb_isim_beh.exe
-Fuse Memory Usage: 28096 KB
-Fuse CPU Usage: 312 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 9 Verilog Units
+Built simulation executable C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/two_comple_adder_16bit_two_comple_adder_16bit_sch_tb_isim_beh.exe
+Fuse Memory Usage: 28332 KB
+Fuse CPU Usage: 405 ms

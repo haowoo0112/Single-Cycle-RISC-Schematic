@@ -46,22 +46,6 @@
         <port polarity="Input" name="ADC" />
         <port polarity="Input" name="SUB" />
         <port polarity="Input" name="SBB" />
-        <blockdef name="two_comple_adder_16bit">
-            <timestamp>2022-10-3T2:50:59</timestamp>
-            <rect width="256" x="64" y="-384" height="384" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <rect width="64" x="0" y="-300" height="24" />
-            <line x2="0" y1="-352" y2="-352" x1="64" />
-            <rect width="64" x="0" y="-364" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="384" y1="-352" y2="-352" x1="320" />
-            <rect width="64" x="320" y="-364" height="24" />
-            <line x2="384" y1="-288" y2="-288" x1="320" />
-            <line x2="384" y1="-224" y2="-224" x1="320" />
-        </blockdef>
         <blockdef name="nor16">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="48" y1="-448" y2="-448" x1="0" />
@@ -110,6 +94,22 @@
             <line x2="64" y1="-32" y2="-64" x1="128" />
             <line x2="64" y1="-64" y2="0" x1="64" />
         </blockdef>
+        <blockdef name="ALU">
+            <timestamp>2022-10-5T4:12:46</timestamp>
+            <rect width="256" x="64" y="-384" height="384" />
+            <line x2="0" y1="-352" y2="-352" x1="64" />
+            <rect width="64" x="0" y="-364" height="24" />
+            <line x2="0" y1="-288" y2="-288" x1="64" />
+            <rect width="64" x="0" y="-300" height="24" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-352" y2="-352" x1="320" />
+            <rect width="64" x="320" y="-364" height="24" />
+            <line x2="384" y1="-288" y2="-288" x1="320" />
+            <line x2="384" y1="-224" y2="-224" x1="320" />
+        </blockdef>
         <block symbolname="nor16" name="XLXI_2">
             <blockpin signalname="Y(0)" name="I0" />
             <blockpin signalname="Y(1)" name="I1" />
@@ -143,13 +143,13 @@
             <blockpin signalname="Y(15)" name="I" />
             <blockpin signalname="N" name="O" />
         </block>
-        <block symbolname="two_comple_adder_16bit" name="XLXI_7">
-            <blockpin signalname="B(15:0)" name="B(15:0)" />
+        <block symbolname="ALU" name="XLXI_8">
             <blockpin signalname="A(15:0)" name="A(15:0)" />
-            <blockpin signalname="SBB" name="SBB" />
-            <blockpin signalname="SUB" name="SUB" />
+            <blockpin signalname="B(15:0)" name="B(15:0)" />
             <blockpin signalname="Pre_C" name="C" />
             <blockpin signalname="ADC" name="ADC" />
+            <blockpin signalname="SUB" name="SUB" />
+            <blockpin signalname="SBB" name="SBB" />
             <blockpin signalname="Y(15:0)" name="Y(15:0)" />
             <blockpin signalname="XLXN_33" name="Cout" />
             <blockpin signalname="XLXN_25" name="Cout_1" />
@@ -165,8 +165,7 @@
         </branch>
         <iomarker fontsize="28" x="1376" y="976" name="B(15:0)" orien="R180" />
         <branch name="Pre_C">
-            <wire x2="1392" y1="1040" y2="1040" x1="1376" />
-            <wire x2="1408" y1="1040" y2="1040" x1="1392" />
+            <wire x2="1408" y1="1040" y2="1040" x1="1376" />
         </branch>
         <branch name="Y(15:0)">
             <wire x2="2000" y1="912" y2="912" x1="1792" />
@@ -275,8 +274,6 @@
             <wire x2="1936" y1="432" y2="432" x1="1888" />
         </branch>
         <iomarker fontsize="28" x="1936" y="432" name="N" orien="R0" />
-        <instance x="1408" y="1264" name="XLXI_7" orien="R0">
-        </instance>
         <branch name="ADC">
             <wire x2="1408" y1="1104" y2="1104" x1="1376" />
         </branch>
@@ -290,5 +287,7 @@
         </branch>
         <iomarker fontsize="28" x="1376" y="1232" name="SBB" orien="R180" />
         <iomarker fontsize="28" x="1376" y="1040" name="Pre_C" orien="R180" />
+        <instance x="1408" y="1264" name="XLXI_8" orien="R0">
+        </instance>
     </sheet>
 </drawing>
