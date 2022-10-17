@@ -1,0 +1,705 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : PC_circuit.vf
+// /___/   /\     Timestamp : 10/17/2022 16:11:17
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.sch
+//Design Name: PC_circuit
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FD16CE_HXILINX_PC_circuit(Q, C, CE, CLR, D);
+
+   
+   output [15:0]      Q;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input  [15:0]      D;
+   
+   reg    [15:0]      Q;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 16'b0000_0000_0000_0000;
+	else if (CE)
+          Q <= D;
+     end
+   
+   
+endmodule
+`timescale 1ns / 1ps
+
+module XOR16_1_MUSER_PC_circuit(A, 
+                                B, 
+                                Y);
+
+    input [15:0] A;
+    input B;
+   output [15:0] Y;
+   
+   
+   XOR2  XLXI_1 (.I0(B), 
+                .I1(A[15]), 
+                .O(Y[15]));
+   XOR2  XLXI_2 (.I0(B), 
+                .I1(A[14]), 
+                .O(Y[14]));
+   XOR2  XLXI_3 (.I0(B), 
+                .I1(A[13]), 
+                .O(Y[13]));
+   XOR2  XLXI_4 (.I0(B), 
+                .I1(A[12]), 
+                .O(Y[12]));
+   XOR2  XLXI_5 (.I0(B), 
+                .I1(A[11]), 
+                .O(Y[11]));
+   XOR2  XLXI_6 (.I0(B), 
+                .I1(A[10]), 
+                .O(Y[10]));
+   XOR2  XLXI_7 (.I0(B), 
+                .I1(A[9]), 
+                .O(Y[9]));
+   XOR2  XLXI_8 (.I0(B), 
+                .I1(A[8]), 
+                .O(Y[8]));
+   XOR2  XLXI_19 (.I0(B), 
+                 .I1(A[7]), 
+                 .O(Y[7]));
+   XOR2  XLXI_20 (.I0(B), 
+                 .I1(A[6]), 
+                 .O(Y[6]));
+   XOR2  XLXI_21 (.I0(B), 
+                 .I1(A[5]), 
+                 .O(Y[5]));
+   XOR2  XLXI_22 (.I0(B), 
+                 .I1(A[4]), 
+                 .O(Y[4]));
+   XOR2  XLXI_23 (.I0(B), 
+                 .I1(A[3]), 
+                 .O(Y[3]));
+   XOR2  XLXI_24 (.I0(B), 
+                 .I1(A[2]), 
+                 .O(Y[2]));
+   XOR2  XLXI_25 (.I0(B), 
+                 .I1(A[1]), 
+                 .O(Y[1]));
+   XOR2  XLXI_26 (.I0(B), 
+                 .I1(A[0]), 
+                 .O(Y[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module full_adder_MUSER_PC_circuit(A, 
+                                   B, 
+                                   Cin, 
+                                   Cout, 
+                                   S);
+
+    input A;
+    input B;
+    input Cin;
+   output Cout;
+   output S;
+   
+   wire XLXN_2;
+   wire XLXN_9;
+   wire XLXN_10;
+   
+   AND2  XLXI_3 (.I0(XLXN_2), 
+                .I1(Cin), 
+                .O(XLXN_9));
+   AND2  XLXI_4 (.I0(A), 
+                .I1(B), 
+                .O(XLXN_10));
+   OR2  XLXI_5 (.I0(XLXN_10), 
+               .I1(XLXN_9), 
+               .O(Cout));
+   XOR2  XLXI_6 (.I0(B), 
+                .I1(A), 
+                .O(XLXN_2));
+   XOR2  XLXI_7 (.I0(Cin), 
+                .I1(XLXN_2), 
+                .O(S));
+endmodule
+`timescale 1ns / 1ps
+
+module adder_16_bit_MUSER_PC_circuit(A, 
+                                     B, 
+                                     Cin, 
+                                     Cout, 
+                                     Cout_1, 
+                                     S);
+
+    input [15:0] A;
+    input [15:0] B;
+    input Cin;
+   output Cout;
+   output Cout_1;
+   output [15:0] S;
+   
+   wire XLXN_238;
+   wire XLXN_239;
+   wire XLXN_240;
+   wire XLXN_241;
+   wire XLXN_242;
+   wire XLXN_243;
+   wire XLXN_244;
+   wire XLXN_245;
+   wire XLXN_246;
+   wire XLXN_247;
+   wire XLXN_248;
+   wire XLXN_249;
+   wire XLXN_250;
+   wire XLXN_251;
+   wire Cout_1_DUMMY;
+   
+   assign Cout_1 = Cout_1_DUMMY;
+   full_adder_MUSER_PC_circuit  XLXI_1 (.A(A[0]), 
+                                       .B(B[0]), 
+                                       .Cin(Cin), 
+                                       .Cout(XLXN_238), 
+                                       .S(S[0]));
+   full_adder_MUSER_PC_circuit  XLXI_2 (.A(A[1]), 
+                                       .B(B[1]), 
+                                       .Cin(XLXN_238), 
+                                       .Cout(XLXN_239), 
+                                       .S(S[1]));
+   full_adder_MUSER_PC_circuit  XLXI_8 (.A(A[2]), 
+                                       .B(B[2]), 
+                                       .Cin(XLXN_239), 
+                                       .Cout(XLXN_240), 
+                                       .S(S[2]));
+   full_adder_MUSER_PC_circuit  XLXI_9 (.A(A[3]), 
+                                       .B(B[3]), 
+                                       .Cin(XLXN_240), 
+                                       .Cout(XLXN_241), 
+                                       .S(S[3]));
+   full_adder_MUSER_PC_circuit  XLXI_12 (.A(A[4]), 
+                                        .B(B[4]), 
+                                        .Cin(XLXN_241), 
+                                        .Cout(XLXN_242), 
+                                        .S(S[4]));
+   full_adder_MUSER_PC_circuit  XLXI_13 (.A(A[5]), 
+                                        .B(B[5]), 
+                                        .Cin(XLXN_242), 
+                                        .Cout(XLXN_243), 
+                                        .S(S[5]));
+   full_adder_MUSER_PC_circuit  XLXI_14 (.A(A[6]), 
+                                        .B(B[6]), 
+                                        .Cin(XLXN_243), 
+                                        .Cout(XLXN_244), 
+                                        .S(S[6]));
+   full_adder_MUSER_PC_circuit  XLXI_15 (.A(A[7]), 
+                                        .B(B[7]), 
+                                        .Cin(XLXN_244), 
+                                        .Cout(XLXN_245), 
+                                        .S(S[7]));
+   full_adder_MUSER_PC_circuit  XLXI_16 (.A(A[8]), 
+                                        .B(B[8]), 
+                                        .Cin(XLXN_245), 
+                                        .Cout(XLXN_246), 
+                                        .S(S[8]));
+   full_adder_MUSER_PC_circuit  XLXI_17 (.A(A[9]), 
+                                        .B(B[9]), 
+                                        .Cin(XLXN_246), 
+                                        .Cout(XLXN_247), 
+                                        .S(S[9]));
+   full_adder_MUSER_PC_circuit  XLXI_18 (.A(A[10]), 
+                                        .B(B[10]), 
+                                        .Cin(XLXN_247), 
+                                        .Cout(XLXN_248), 
+                                        .S(S[10]));
+   full_adder_MUSER_PC_circuit  XLXI_19 (.A(A[11]), 
+                                        .B(B[11]), 
+                                        .Cin(XLXN_248), 
+                                        .Cout(XLXN_249), 
+                                        .S(S[11]));
+   full_adder_MUSER_PC_circuit  XLXI_20 (.A(A[12]), 
+                                        .B(B[12]), 
+                                        .Cin(XLXN_249), 
+                                        .Cout(XLXN_250), 
+                                        .S(S[12]));
+   full_adder_MUSER_PC_circuit  XLXI_21 (.A(A[13]), 
+                                        .B(B[13]), 
+                                        .Cin(XLXN_250), 
+                                        .Cout(XLXN_251), 
+                                        .S(S[13]));
+   full_adder_MUSER_PC_circuit  XLXI_22 (.A(A[14]), 
+                                        .B(B[14]), 
+                                        .Cin(XLXN_251), 
+                                        .Cout(Cout_1_DUMMY), 
+                                        .S(S[14]));
+   full_adder_MUSER_PC_circuit  XLXI_23 (.A(A[15]), 
+                                        .B(B[15]), 
+                                        .Cin(Cout_1_DUMMY), 
+                                        .Cout(Cout), 
+                                        .S(S[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module two_comple_adder_16bit_MUSER_PC_circuit(A, 
+                                               B, 
+                                               C, 
+                                               Cout, 
+                                               Cout_1, 
+                                               Y);
+
+    input [15:0] A;
+    input [15:0] B;
+    input C;
+   output Cout;
+   output Cout_1;
+   output [15:0] Y;
+   
+   wire [15:0] XLXN_5;
+   
+   adder_16_bit_MUSER_PC_circuit  XLXI_29 (.A(A[15:0]), 
+                                          .B(XLXN_5[15:0]), 
+                                          .Cin(C), 
+                                          .Cout(Cout), 
+                                          .Cout_1(Cout_1), 
+                                          .S(Y[15:0]));
+   XOR16_1_MUSER_PC_circuit  XLXI_30 (.A(B[15:0]), 
+                                     .B(C), 
+                                     .Y(XLXN_5[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module multiplexer_2_to_1_MUSER_PC_circuit(I0, 
+                                           I1, 
+                                           S, 
+                                           Y);
+
+    input I0;
+    input I1;
+    input S;
+   output Y;
+   
+   wire XLXN_1;
+   wire XLXN_6;
+   wire XLXN_7;
+   
+   AND2  XLXI_1 (.I0(I0), 
+                .I1(XLXN_1), 
+                .O(XLXN_7));
+   AND2  XLXI_2 (.I0(I1), 
+                .I1(S), 
+                .O(XLXN_6));
+   INV  XLXI_3 (.I(S), 
+               .O(XLXN_1));
+   OR2  XLXI_4 (.I0(XLXN_6), 
+               .I1(XLXN_7), 
+               .O(Y));
+endmodule
+`timescale 1ns / 1ps
+
+module multiplexer_2_to_1_16_bit_MUSER_PC_circuit(I0, 
+                                                  I1, 
+                                                  S, 
+                                                  Y);
+
+    input [15:0] I0;
+    input [15:0] I1;
+    input S;
+   output [15:0] Y;
+   
+   
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_1 (.I0(I0[15]), 
+                                               .I1(I1[15]), 
+                                               .S(S), 
+                                               .Y(Y[15]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_2 (.I0(I0[14]), 
+                                               .I1(I1[14]), 
+                                               .S(S), 
+                                               .Y(Y[14]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_3 (.I0(I0[13]), 
+                                               .I1(I1[13]), 
+                                               .S(S), 
+                                               .Y(Y[13]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_4 (.I0(I0[12]), 
+                                               .I1(I1[12]), 
+                                               .S(S), 
+                                               .Y(Y[12]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_9 (.I0(I0[11]), 
+                                               .I1(I1[11]), 
+                                               .S(S), 
+                                               .Y(Y[11]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_10 (.I0(I0[10]), 
+                                                .I1(I1[10]), 
+                                                .S(S), 
+                                                .Y(Y[10]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_11 (.I0(I0[9]), 
+                                                .I1(I1[9]), 
+                                                .S(S), 
+                                                .Y(Y[9]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_12 (.I0(I0[8]), 
+                                                .I1(I1[8]), 
+                                                .S(S), 
+                                                .Y(Y[8]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_13 (.I0(I0[7]), 
+                                                .I1(I1[7]), 
+                                                .S(S), 
+                                                .Y(Y[7]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_14 (.I0(I0[6]), 
+                                                .I1(I1[6]), 
+                                                .S(S), 
+                                                .Y(Y[6]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_15 (.I0(I0[5]), 
+                                                .I1(I1[5]), 
+                                                .S(S), 
+                                                .Y(Y[5]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_16 (.I0(I0[4]), 
+                                                .I1(I1[4]), 
+                                                .S(S), 
+                                                .Y(Y[4]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_17 (.I0(I0[3]), 
+                                                .I1(I1[3]), 
+                                                .S(S), 
+                                                .Y(Y[3]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_18 (.I0(I0[2]), 
+                                                .I1(I1[2]), 
+                                                .S(S), 
+                                                .Y(Y[2]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_19 (.I0(I0[1]), 
+                                                .I1(I1[1]), 
+                                                .S(S), 
+                                                .Y(Y[1]));
+   multiplexer_2_to_1_MUSER_PC_circuit  XLXI_20 (.I0(I0[0]), 
+                                                .I1(I1[0]), 
+                                                .S(S), 
+                                                .Y(Y[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module sign_extend_8_16_MUSER_PC_circuit(imm, 
+                                         Q);
+
+    input [7:0] imm;
+   output [15:0] Q;
+   
+   
+   BUF  XLXI_1_0 (.I(imm[7]), 
+                 .O(Q[7]));
+   BUF  XLXI_1_1 (.I(imm[6]), 
+                 .O(Q[6]));
+   BUF  XLXI_1_2 (.I(imm[5]), 
+                 .O(Q[5]));
+   BUF  XLXI_1_3 (.I(imm[4]), 
+                 .O(Q[4]));
+   BUF  XLXI_1_4 (.I(imm[3]), 
+                 .O(Q[3]));
+   BUF  XLXI_1_5 (.I(imm[2]), 
+                 .O(Q[2]));
+   BUF  XLXI_1_6 (.I(imm[1]), 
+                 .O(Q[1]));
+   BUF  XLXI_1_7 (.I(imm[0]), 
+                 .O(Q[0]));
+   BUF  XLXI_2 (.I(imm[7]), 
+               .O(Q[8]));
+   BUF  XLXI_3 (.I(imm[7]), 
+               .O(Q[9]));
+   BUF  XLXI_4 (.I(imm[7]), 
+               .O(Q[10]));
+   BUF  XLXI_5 (.I(imm[7]), 
+               .O(Q[11]));
+   BUF  XLXI_6 (.I(imm[7]), 
+               .O(Q[12]));
+   BUF  XLXI_7 (.I(imm[7]), 
+               .O(Q[13]));
+   BUF  XLXI_8 (.I(imm[7]), 
+               .O(Q[14]));
+   BUF  XLXI_9 (.I(imm[7]), 
+               .O(Q[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module PC_circuit(BRANCH, 
+                  clk, 
+                  clr, 
+                  disp8, 
+                  flag_label_PC, 
+                  flag_Rd_PC, 
+                  flag_Rm_PC, 
+                  JMP, 
+                  label11, 
+                  Rd, 
+                  Rm, 
+                  Q);
+
+    input BRANCH;
+    input clk;
+    input clr;
+    input [7:0] disp8;
+    input flag_label_PC;
+    input flag_Rd_PC;
+    input flag_Rm_PC;
+    input JMP;
+    input [10:0] label11;
+    input [15:0] Rd;
+    input [15:0] Rm;
+   output [15:0] Q;
+   
+   wire [15:0] I0;
+   wire [15:0] label_PC;
+   wire [15:0] XLXN_4;
+   wire XLXN_5;
+   wire [15:0] XLXN_12;
+   wire [15:0] XLXN_15;
+   wire XLXN_20;
+   wire [15:0] XLXN_22;
+   wire XLXN_45;
+   wire [1:15] XLXN_46;
+   wire [15:0] XLXN_51;
+   wire [15:0] XLXN_52;
+   wire [15:0] XLXN_53;
+   wire [15:0] XLXN_62;
+   wire [15:0] XLXN_70;
+   wire [15:0] XLXN_71;
+   wire [15:0] XLXN_72;
+   wire [15:0] Q_DUMMY;
+   
+   assign Q[15:0] = Q_DUMMY[15:0];
+   (* HU_SET = "XLXI_1_22" *) 
+   FD16CE_HXILINX_PC_circuit  XLXI_1 (.C(clk), 
+                                     .CE(XLXN_5), 
+                                     .CLR(clr), 
+                                     .D(XLXN_15[15:0]), 
+                                     .Q(Q_DUMMY[15:0]));
+   VCC  XLXI_2 (.P(XLXN_5));
+   multiplexer_2_to_1_16_bit_MUSER_PC_circuit  XLXI_7 (.I0(XLXN_12[15:0]), 
+                                                      .I1(XLXN_62[15:0]), 
+                                                      .S(JMP), 
+                                                      .Y(XLXN_15[15:0]));
+   multiplexer_2_to_1_16_bit_MUSER_PC_circuit  XLXI_12 (.I0(I0[15:0]), 
+                                                       .I1(XLXN_4[15:0]), 
+                                                       .S(BRANCH), 
+                                                       .Y(XLXN_22[15:0]));
+   GND  XLXI_18 (.G(XLXN_20));
+   sign_extend_8_16_MUSER_PC_circuit  XLXI_19 (.imm(disp8[7:0]), 
+                                              .Q(XLXN_4[15:0]));
+   BUF  XLXI_20_1 (.I(XLXN_46[15]), 
+                  .O(I0[1]));
+   BUF  XLXI_20_2 (.I(XLXN_46[14]), 
+                  .O(I0[2]));
+   BUF  XLXI_20_3 (.I(XLXN_46[13]), 
+                  .O(I0[3]));
+   BUF  XLXI_20_4 (.I(XLXN_46[12]), 
+                  .O(I0[4]));
+   BUF  XLXI_20_5 (.I(XLXN_46[11]), 
+                  .O(I0[5]));
+   BUF  XLXI_20_6 (.I(XLXN_46[10]), 
+                  .O(I0[6]));
+   BUF  XLXI_20_7 (.I(XLXN_46[9]), 
+                  .O(I0[7]));
+   BUF  XLXI_20_8 (.I(XLXN_46[8]), 
+                  .O(I0[8]));
+   BUF  XLXI_20_9 (.I(XLXN_46[7]), 
+                  .O(I0[9]));
+   BUF  XLXI_20_10 (.I(XLXN_46[6]), 
+                   .O(I0[10]));
+   BUF  XLXI_20_11 (.I(XLXN_46[5]), 
+                   .O(I0[11]));
+   BUF  XLXI_20_12 (.I(XLXN_46[4]), 
+                   .O(I0[12]));
+   BUF  XLXI_20_13 (.I(XLXN_46[3]), 
+                   .O(I0[13]));
+   BUF  XLXI_20_14 (.I(XLXN_46[2]), 
+                   .O(I0[14]));
+   BUF  XLXI_20_15 (.I(XLXN_46[1]), 
+                   .O(I0[15]));
+   BUF  XLXI_21 (.I(XLXN_45), 
+                .O(I0[0]));
+   VCC  XLXI_22 (.P(XLXN_45));
+   GND  XLXI_23_1 (.G(XLXN_46[15]));
+   GND  XLXI_23_2 (.G(XLXN_46[14]));
+   GND  XLXI_23_3 (.G(XLXN_46[13]));
+   GND  XLXI_23_4 (.G(XLXN_46[12]));
+   GND  XLXI_23_5 (.G(XLXN_46[11]));
+   GND  XLXI_23_6 (.G(XLXN_46[10]));
+   GND  XLXI_23_7 (.G(XLXN_46[9]));
+   GND  XLXI_23_8 (.G(XLXN_46[8]));
+   GND  XLXI_23_9 (.G(XLXN_46[7]));
+   GND  XLXI_23_10 (.G(XLXN_46[6]));
+   GND  XLXI_23_11 (.G(XLXN_46[5]));
+   GND  XLXI_23_12 (.G(XLXN_46[4]));
+   GND  XLXI_23_13 (.G(XLXN_46[3]));
+   GND  XLXI_23_14 (.G(XLXN_46[2]));
+   GND  XLXI_23_15 (.G(XLXN_46[1]));
+   BUF  XLXI_24_11 (.I(Q_DUMMY[11]), 
+                   .O(label_PC[11]));
+   BUF  XLXI_24_12 (.I(Q_DUMMY[12]), 
+                   .O(label_PC[12]));
+   BUF  XLXI_24_13 (.I(Q_DUMMY[13]), 
+                   .O(label_PC[13]));
+   BUF  XLXI_24_14 (.I(Q_DUMMY[14]), 
+                   .O(label_PC[14]));
+   BUF  XLXI_24_15 (.I(Q_DUMMY[15]), 
+                   .O(label_PC[15]));
+   BUF  XLXI_25_0 (.I(label11[0]), 
+                  .O(label_PC[0]));
+   BUF  XLXI_25_1 (.I(label11[1]), 
+                  .O(label_PC[1]));
+   BUF  XLXI_25_2 (.I(label11[2]), 
+                  .O(label_PC[2]));
+   BUF  XLXI_25_3 (.I(label11[3]), 
+                  .O(label_PC[3]));
+   BUF  XLXI_25_4 (.I(label11[4]), 
+                  .O(label_PC[4]));
+   BUF  XLXI_25_5 (.I(label11[5]), 
+                  .O(label_PC[5]));
+   BUF  XLXI_25_6 (.I(label11[6]), 
+                  .O(label_PC[6]));
+   BUF  XLXI_25_7 (.I(label11[7]), 
+                  .O(label_PC[7]));
+   BUF  XLXI_25_8 (.I(label11[8]), 
+                  .O(label_PC[8]));
+   BUF  XLXI_25_9 (.I(label11[9]), 
+                  .O(label_PC[9]));
+   BUF  XLXI_25_10 (.I(label11[10]), 
+                   .O(label_PC[10]));
+   multiplexer_2_to_1_16_bit_MUSER_PC_circuit  XLXI_29 (.I0(XLXN_70[15:0]), 
+                                                       .I1(Rd[15:0]), 
+                                                       .S(flag_Rd_PC), 
+                                                       .Y(XLXN_51[15:0]));
+   multiplexer_2_to_1_16_bit_MUSER_PC_circuit  XLXI_30 (.I0(XLXN_71[15:0]), 
+                                                       .I1(label_PC[15:0]), 
+                                                       .S(flag_label_PC), 
+                                                       .Y(XLXN_52[15:0]));
+   multiplexer_2_to_1_16_bit_MUSER_PC_circuit  XLXI_33 (.I0(XLXN_72[15:0]), 
+                                                       .I1(Rm[15:0]), 
+                                                       .S(flag_Rm_PC), 
+                                                       .Y(XLXN_53[15:0]));
+   OR3  XLXI_34_0 (.I0(XLXN_53[0]), 
+                  .I1(XLXN_52[0]), 
+                  .I2(XLXN_51[0]), 
+                  .O(XLXN_62[0]));
+   OR3  XLXI_34_1 (.I0(XLXN_53[1]), 
+                  .I1(XLXN_52[1]), 
+                  .I2(XLXN_51[1]), 
+                  .O(XLXN_62[1]));
+   OR3  XLXI_34_2 (.I0(XLXN_53[2]), 
+                  .I1(XLXN_52[2]), 
+                  .I2(XLXN_51[2]), 
+                  .O(XLXN_62[2]));
+   OR3  XLXI_34_3 (.I0(XLXN_53[3]), 
+                  .I1(XLXN_52[3]), 
+                  .I2(XLXN_51[3]), 
+                  .O(XLXN_62[3]));
+   OR3  XLXI_34_4 (.I0(XLXN_53[4]), 
+                  .I1(XLXN_52[4]), 
+                  .I2(XLXN_51[4]), 
+                  .O(XLXN_62[4]));
+   OR3  XLXI_34_5 (.I0(XLXN_53[5]), 
+                  .I1(XLXN_52[5]), 
+                  .I2(XLXN_51[5]), 
+                  .O(XLXN_62[5]));
+   OR3  XLXI_34_6 (.I0(XLXN_53[6]), 
+                  .I1(XLXN_52[6]), 
+                  .I2(XLXN_51[6]), 
+                  .O(XLXN_62[6]));
+   OR3  XLXI_34_7 (.I0(XLXN_53[7]), 
+                  .I1(XLXN_52[7]), 
+                  .I2(XLXN_51[7]), 
+                  .O(XLXN_62[7]));
+   OR3  XLXI_34_8 (.I0(XLXN_53[8]), 
+                  .I1(XLXN_52[8]), 
+                  .I2(XLXN_51[8]), 
+                  .O(XLXN_62[8]));
+   OR3  XLXI_34_9 (.I0(XLXN_53[9]), 
+                  .I1(XLXN_52[9]), 
+                  .I2(XLXN_51[9]), 
+                  .O(XLXN_62[9]));
+   OR3  XLXI_34_10 (.I0(XLXN_53[10]), 
+                   .I1(XLXN_52[10]), 
+                   .I2(XLXN_51[10]), 
+                   .O(XLXN_62[10]));
+   OR3  XLXI_34_11 (.I0(XLXN_53[11]), 
+                   .I1(XLXN_52[11]), 
+                   .I2(XLXN_51[11]), 
+                   .O(XLXN_62[11]));
+   OR3  XLXI_34_12 (.I0(XLXN_53[12]), 
+                   .I1(XLXN_52[12]), 
+                   .I2(XLXN_51[12]), 
+                   .O(XLXN_62[12]));
+   OR3  XLXI_34_13 (.I0(XLXN_53[13]), 
+                   .I1(XLXN_52[13]), 
+                   .I2(XLXN_51[13]), 
+                   .O(XLXN_62[13]));
+   OR3  XLXI_34_14 (.I0(XLXN_53[14]), 
+                   .I1(XLXN_52[14]), 
+                   .I2(XLXN_51[14]), 
+                   .O(XLXN_62[14]));
+   OR3  XLXI_34_15 (.I0(XLXN_53[15]), 
+                   .I1(XLXN_52[15]), 
+                   .I2(XLXN_51[15]), 
+                   .O(XLXN_62[15]));
+   GND  XLXI_41_0 (.G(XLXN_71[0]));
+   GND  XLXI_41_1 (.G(XLXN_71[1]));
+   GND  XLXI_41_2 (.G(XLXN_71[2]));
+   GND  XLXI_41_3 (.G(XLXN_71[3]));
+   GND  XLXI_41_4 (.G(XLXN_71[4]));
+   GND  XLXI_41_5 (.G(XLXN_71[5]));
+   GND  XLXI_41_6 (.G(XLXN_71[6]));
+   GND  XLXI_41_7 (.G(XLXN_71[7]));
+   GND  XLXI_41_8 (.G(XLXN_71[8]));
+   GND  XLXI_41_9 (.G(XLXN_71[9]));
+   GND  XLXI_41_10 (.G(XLXN_71[10]));
+   GND  XLXI_41_11 (.G(XLXN_71[11]));
+   GND  XLXI_41_12 (.G(XLXN_71[12]));
+   GND  XLXI_41_13 (.G(XLXN_71[13]));
+   GND  XLXI_41_14 (.G(XLXN_71[14]));
+   GND  XLXI_41_15 (.G(XLXN_71[15]));
+   GND  XLXI_42_0 (.G(XLXN_72[0]));
+   GND  XLXI_42_1 (.G(XLXN_72[1]));
+   GND  XLXI_42_2 (.G(XLXN_72[2]));
+   GND  XLXI_42_3 (.G(XLXN_72[3]));
+   GND  XLXI_42_4 (.G(XLXN_72[4]));
+   GND  XLXI_42_5 (.G(XLXN_72[5]));
+   GND  XLXI_42_6 (.G(XLXN_72[6]));
+   GND  XLXI_42_7 (.G(XLXN_72[7]));
+   GND  XLXI_42_8 (.G(XLXN_72[8]));
+   GND  XLXI_42_9 (.G(XLXN_72[9]));
+   GND  XLXI_42_10 (.G(XLXN_72[10]));
+   GND  XLXI_42_11 (.G(XLXN_72[11]));
+   GND  XLXI_42_12 (.G(XLXN_72[12]));
+   GND  XLXI_42_13 (.G(XLXN_72[13]));
+   GND  XLXI_42_14 (.G(XLXN_72[14]));
+   GND  XLXI_42_15 (.G(XLXN_72[15]));
+   GND  XLXI_43_0 (.G(XLXN_70[0]));
+   GND  XLXI_43_1 (.G(XLXN_70[1]));
+   GND  XLXI_43_2 (.G(XLXN_70[2]));
+   GND  XLXI_43_3 (.G(XLXN_70[3]));
+   GND  XLXI_43_4 (.G(XLXN_70[4]));
+   GND  XLXI_43_5 (.G(XLXN_70[5]));
+   GND  XLXI_43_6 (.G(XLXN_70[6]));
+   GND  XLXI_43_7 (.G(XLXN_70[7]));
+   GND  XLXI_43_8 (.G(XLXN_70[8]));
+   GND  XLXI_43_9 (.G(XLXN_70[9]));
+   GND  XLXI_43_10 (.G(XLXN_70[10]));
+   GND  XLXI_43_11 (.G(XLXN_70[11]));
+   GND  XLXI_43_12 (.G(XLXN_70[12]));
+   GND  XLXI_43_13 (.G(XLXN_70[13]));
+   GND  XLXI_43_14 (.G(XLXN_70[14]));
+   GND  XLXI_43_15 (.G(XLXN_70[15]));
+   two_comple_adder_16bit_MUSER_PC_circuit  XLXI_44 (.A(Q_DUMMY[15:0]), 
+                                                    .B(XLXN_22[15:0]), 
+                                                    .C(XLXN_20), 
+                                                    .Cout(), 
+                                                    .Cout_1(), 
+                                                    .Y(XLXN_12[15:0]));
+endmodule

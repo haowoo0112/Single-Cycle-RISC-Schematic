@@ -3,7 +3,8 @@
 `timescale 1ns / 1ps
 
 module Datapath_Module_Datapath_Module_sch_tb();
-
+	parameter clk_period = 20;
+	parameter delay_factor = 2;
 // Inputs
    reg clk;
    reg flag_HLT;
@@ -83,6 +84,61 @@ module Datapath_Module_Datapath_Module_sch_tb();
 	always
 		#5 clk = ~clk;
 	initial begin
+		reset_mode();
+		#10;
+		test_LHI();
+		
+		
+		#30;
+		flag_HLT = 1'b1;
+		
+		test_normal = 1'b1;
+		ext_instr_addr = 16'd0;
+		ext_instr_we = 1'b1;
+		ext_instr_data = 0;
+		ext_data_addr = 0;
+		ext_data_data = 0;
+		ext_data_write_en = 0;
+		#10;
+		$finish;
+   end
+	
+	task test_LHI;
+	begin
+		flag_HLT = 1'b1;
+		write_instr_mem(16'h0, 16'b0000_0000_0000_0001);
+		write_data_mem(16'h0, 16'b0000_0000_0000_0011);
+		#10;
+		test_normal = 1'b0;
+		flag_mem_RF = 1'b1;
+	
+	end
+	endtask
+	
+	task write_data_mem;
+	input [15:0] addr, data;
+	begin
+		@(posedge clk) #(clk_period/delay_factor) begin
+			test_normal = 1'b1;
+			ext_data_write_en = 1'b1; ext_data_addr = addr;
+			ext_data_data = data;
+		end
+	end
+	endtask
+	
+	task write_instr_mem;
+	input [15:0] addr, data;
+	begin
+		@(posedge clk) #(clk_period/delay_factor) begin
+			test_normal = 1'b1;
+			ext_instr_we = 1'b1; ext_instr_addr = addr;
+			ext_instr_data = data;
+		end
+	end
+	endtask
+	
+	task reset_mode;
+	begin
 		clk = 0;
 		flag_HLT = 0;
 		clr = 0;
@@ -91,6 +147,7 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		ext_instr_addr = 0;
 		ext_instr_we = 0;
 		ext_instr_data = 0;
+		
 		ext_data_addr = 0;
 		ext_data_data = 0;
 		ext_data_write_en = 0;
@@ -116,16 +173,6 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		LHI = 0;
 		LLI = 0;
 		RF_write_en = 0;
-		#10;
-		
-		flag_HLT = 1'b1;
-		
-		test_normal = 1'b1;
-		ext_instr_addr = 16'd0;
-		ext_instr_we = 1'b1;
-		ext_instr_data = 0;
-		ext_data_addr = 0;
-		ext_data_data = 0;
-		ext_data_write_en = 0;
-   end
+	end
+	endtask
 endmodule

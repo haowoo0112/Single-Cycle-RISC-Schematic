@@ -10,71 +10,39 @@
         <signal name="Write_En" />
         <signal name="clk" />
         <signal name="D(15:0)" />
-        <signal name="D(0)">
-        </signal>
-        <signal name="D(1)">
-        </signal>
-        <signal name="D(2)">
-        </signal>
-        <signal name="D(3)">
-        </signal>
-        <signal name="D(4)">
-        </signal>
-        <signal name="D(5)">
-        </signal>
-        <signal name="D(6)">
-        </signal>
-        <signal name="D(7)">
-        </signal>
-        <signal name="D(8)">
-        </signal>
-        <signal name="D(9)">
-        </signal>
-        <signal name="D(10)">
-        </signal>
-        <signal name="D(11)">
-        </signal>
-        <signal name="D(12)">
-        </signal>
-        <signal name="D(13)">
-        </signal>
-        <signal name="D(14)">
-        </signal>
+        <signal name="D(0)" />
+        <signal name="D(1)" />
+        <signal name="D(2)" />
+        <signal name="D(3)" />
+        <signal name="D(4)" />
+        <signal name="D(5)" />
+        <signal name="D(6)" />
+        <signal name="D(7)" />
+        <signal name="D(8)" />
+        <signal name="D(9)" />
+        <signal name="D(10)" />
+        <signal name="D(11)" />
+        <signal name="D(12)" />
+        <signal name="D(13)" />
+        <signal name="D(14)" />
         <signal name="O(15:0)" />
-        <signal name="O(0)">
-        </signal>
-        <signal name="O(1)">
-        </signal>
-        <signal name="O(2)">
-        </signal>
-        <signal name="O(3)">
-        </signal>
-        <signal name="O(4)">
-        </signal>
-        <signal name="O(5)">
-        </signal>
-        <signal name="O(6)">
-        </signal>
-        <signal name="O(7)">
-        </signal>
-        <signal name="O(8)">
-        </signal>
-        <signal name="O(9)">
-        </signal>
-        <signal name="O(10)">
-        </signal>
-        <signal name="O(11)">
-        </signal>
-        <signal name="O(12)">
-        </signal>
-        <signal name="O(13)">
-        </signal>
-        <signal name="O(14)">
-        </signal>
-        <signal name="D(15)">
-        </signal>
-        <signal name="O(15)">
-        </signal>
+        <signal name="O(0)" />
+        <signal name="O(1)" />
+        <signal name="O(2)" />
+        <signal name="O(3)" />
+        <signal name="O(4)" />
+        <signal name="O(5)" />
+        <signal name="O(6)" />
+        <signal name="O(7)" />
+        <signal name="O(8)" />
+        <signal name="O(9)" />
+        <signal name="O(10)" />
+        <signal name="O(11)" />
+        <signal name="O(12)" />
+        <signal name="O(13)" />
+        <signal name="O(14)" />
+        <signal name="D(15)" />
+        <signal name="O(15)" />
         <port polarity="Input" name="Addr(7:0)" />
         <port polarity="Input" name="Write_En" />
         <port polarity="Input" name="clk" />
@@ -643,7 +611,21 @@
             <wire x2="368" y1="784" y2="784" x1="288" />
         </branch>
         <branch name="O(15:0)">
-            <wire x2="560" y1="112" y2="592" x1="560" />
+            <wire x2="560" y1="112" y2="128" x1="560" />
+            <wire x2="560" y1="128" y2="160" x1="560" />
+            <wire x2="560" y1="160" y2="192" x1="560" />
+            <wire x2="560" y1="192" y2="224" x1="560" />
+            <wire x2="560" y1="224" y2="256" x1="560" />
+            <wire x2="560" y1="256" y2="288" x1="560" />
+            <wire x2="560" y1="288" y2="320" x1="560" />
+            <wire x2="560" y1="320" y2="352" x1="560" />
+            <wire x2="560" y1="352" y2="384" x1="560" />
+            <wire x2="560" y1="384" y2="416" x1="560" />
+            <wire x2="560" y1="416" y2="448" x1="560" />
+            <wire x2="560" y1="448" y2="480" x1="560" />
+            <wire x2="560" y1="480" y2="512" x1="560" />
+            <wire x2="560" y1="512" y2="544" x1="560" />
+            <wire x2="560" y1="544" y2="592" x1="560" />
             <wire x2="560" y1="592" y2="624" x1="560" />
         </branch>
         <bustap x2="656" y1="128" y2="128" x1="560" />
