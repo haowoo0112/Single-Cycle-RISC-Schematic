@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : D_flip_flop_16_bit.vf
-// /___/   /\     Timestamp : 09/23/2022 16:49:20
+// /___/   /\     Timestamp : 10/18/2022 17:00:15
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -18,151 +18,99 @@
 //    This verilog netlist is translated from an ECS schematic.It can be 
 //    synthesized and simulated, but it should not be modified. 
 //
-`timescale  100 ps / 10 ps
-
-module M2_1_HXILINX_D_flip_flop_16_bit (O, D0, D1, S0);
-    
-
-   output O;
-
-   input  D0;
-   input  D1;
-   input  S0;
-
-   reg O;
-
-   always @ ( D0 or D1 or S0)
-   begin
-      case(S0)
-      1'b0 : O <= D0;
-      1'b1 : O <= D1;
-      endcase
-   end
-    
-endmodule
-`timescale 1ns / 1ps
-
-module D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit(clk, 
-                                                  D, 
-                                                  LOAD, 
-                                                  Q);
-
-    input clk;
-    input D;
-    input LOAD;
-   output Q;
-   
-   wire XLXN_3;
-   wire XLXN_5;
-   wire XLXN_6;
-   wire XLXN_7;
-   wire XLXN_8;
-   wire XLXN_11;
-   wire XLXN_15;
-   wire Q_DUMMY;
-   
-   assign Q = Q_DUMMY;
-   (* HU_SET = "XLXI_1_19" *) 
-   M2_1_HXILINX_D_flip_flop_16_bit  XLXI_1 (.D0(XLXN_15), 
-                                           .D1(XLXN_5), 
-                                           .S0(clk), 
-                                           .O(XLXN_3));
-   (* HU_SET = "XLXI_2_20" *) 
-   M2_1_HXILINX_D_flip_flop_16_bit  XLXI_2 (.D0(XLXN_8), 
-                                           .D1(XLXN_6), 
-                                           .S0(XLXN_11), 
-                                           .O(XLXN_7));
-   INV  XLXI_3 (.I(XLXN_3), 
-               .O(XLXN_8));
-   INV  XLXI_4 (.I(XLXN_8), 
-               .O(XLXN_5));
-   INV  XLXI_5 (.I(clk), 
-               .O(XLXN_11));
-   INV  XLXI_6 (.I(Q_DUMMY), 
-               .O(XLXN_6));
-   INV  XLXI_7 (.I(XLXN_7), 
-               .O(Q_DUMMY));
-   (* HU_SET = "XLXI_8_21" *) 
-   M2_1_HXILINX_D_flip_flop_16_bit  XLXI_8 (.D0(Q_DUMMY), 
-                                           .D1(D), 
-                                           .S0(LOAD), 
-                                           .O(XLXN_15));
-endmodule
 `timescale 1ns / 1ps
 
 module D_flip_flop_16_bit(clk, 
+                          clr, 
                           D, 
                           LOAD, 
                           Q);
 
     input clk;
+    input clr;
     input [15:0] D;
     input LOAD;
    output [15:0] Q;
    
    
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_22 (.clk(clk), 
-                                                       .D(D[15]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[15]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_23 (.clk(clk), 
-                                                       .D(D[14]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[14]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_24 (.clk(clk), 
-                                                       .D(D[13]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[13]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_25 (.clk(clk), 
-                                                       .D(D[12]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[12]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_26 (.clk(clk), 
-                                                       .D(D[11]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[11]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_27 (.clk(clk), 
-                                                       .D(D[10]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[10]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_28 (.clk(clk), 
-                                                       .D(D[9]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[9]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_29 (.clk(clk), 
-                                                       .D(D[8]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[8]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_30 (.clk(clk), 
-                                                       .D(D[0]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[0]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_31 (.clk(clk), 
-                                                       .D(D[1]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[1]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_32 (.clk(clk), 
-                                                       .D(D[2]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[2]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_33 (.clk(clk), 
-                                                       .D(D[3]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[3]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_34 (.clk(clk), 
-                                                       .D(D[4]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[4]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_35 (.clk(clk), 
-                                                       .D(D[5]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[5]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_36 (.clk(clk), 
-                                                       .D(D[6]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[6]));
-   D_flip_flop_1_bit_MUSER_D_flip_flop_16_bit  XLXI_37 (.clk(clk), 
-                                                       .D(D[7]), 
-                                                       .LOAD(LOAD), 
-                                                       .Q(Q[7]));
+   FDCE #( .INIT(1'b0) ) XLXI_40 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[15]), 
+                 .Q(Q[15]));
+   FDCE #( .INIT(1'b0) ) XLXI_41 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[14]), 
+                 .Q(Q[14]));
+   FDCE #( .INIT(1'b0) ) XLXI_42 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[13]), 
+                 .Q(Q[13]));
+   FDCE #( .INIT(1'b0) ) XLXI_43 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[12]), 
+                 .Q(Q[12]));
+   FDCE #( .INIT(1'b0) ) XLXI_44 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[11]), 
+                 .Q(Q[11]));
+   FDCE #( .INIT(1'b0) ) XLXI_45 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[10]), 
+                 .Q(Q[10]));
+   FDCE #( .INIT(1'b0) ) XLXI_46 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[9]), 
+                 .Q(Q[9]));
+   FDCE #( .INIT(1'b0) ) XLXI_47 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[8]), 
+                 .Q(Q[8]));
+   FDCE #( .INIT(1'b0) ) XLXI_48 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[0]), 
+                 .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) XLXI_49 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[1]), 
+                 .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) XLXI_50 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[2]), 
+                 .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) XLXI_51 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[3]), 
+                 .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) XLXI_52 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[4]), 
+                 .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) XLXI_53 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[5]), 
+                 .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) XLXI_54 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[6]), 
+                 .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) XLXI_55 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[7]), 
+                 .Q(Q[7]));
 endmodule

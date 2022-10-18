@@ -23,7 +23,6 @@
         <signal name="Pre_C" />
         <signal name="Src_ALU_B" />
         <signal name="XLXN_45(5:15)" />
-        <signal name="imm5(4:0)" />
         <signal name="V" />
         <signal name="XLXN_46(15:0)" />
         <signal name="XLXN_47(15:0)" />
@@ -32,6 +31,14 @@
         <signal name="ADC" />
         <signal name="SUB" />
         <signal name="SBB" />
+        <signal name="imm5(4:0)" />
+        <signal name="XLXN_50(0:4)" />
+        <signal name="XLXN_51(0:4)" />
+        <signal name="XLXN_52(0:4)" />
+        <signal name="XLXN_53(0:4)" />
+        <signal name="XLXN_54(0:4)" />
+        <signal name="XLXN_55(0:4)" />
+        <signal name="clr" />
         <port polarity="Output" name="Y(15:0)" />
         <port polarity="Output" name="Z" />
         <port polarity="Output" name="N" />
@@ -44,30 +51,32 @@
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="Pre_C" />
         <port polarity="Input" name="Src_ALU_B" />
-        <port polarity="Input" name="imm5(4:0)" />
         <port polarity="Output" name="V" />
         <port polarity="Output" name="OutA(15:0)" />
         <port polarity="Output" name="OutB(15:0)" />
         <port polarity="Input" name="ADC" />
         <port polarity="Input" name="SUB" />
         <port polarity="Input" name="SBB" />
+        <port polarity="Input" name="imm5(4:0)" />
+        <port polarity="Input" name="clr" />
         <blockdef name="register_file_16_bit">
-            <timestamp>2022-9-12T2:42:50</timestamp>
-            <rect width="352" x="64" y="-384" height="384" />
+            <timestamp>2022-10-18T9:20:20</timestamp>
+            <rect width="352" x="64" y="-448" height="448" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="480" y1="-416" y2="-416" x1="416" />
+            <rect width="64" x="416" y="-428" height="24" />
             <line x2="480" y1="-352" y2="-352" x1="416" />
             <rect width="64" x="416" y="-364" height="24" />
-            <line x2="480" y1="-288" y2="-288" x1="416" />
-            <rect width="64" x="416" y="-300" height="24" />
+            <line x2="0" y1="-416" y2="-416" x1="64" />
+            <rect width="64" x="0" y="-428" height="24" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
             <rect width="64" x="0" y="-364" height="24" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <rect width="64" x="0" y="-236" height="24" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <rect width="64" x="0" y="-300" height="24" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
-            <rect width="64" x="0" y="-172" height="24" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <rect width="64" x="0" y="-236" height="24" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="multiplexer_2_to_1_16_bit">
             <timestamp>2022-9-23T5:1:34</timestamp>
@@ -115,16 +124,6 @@
             <line x2="384" y1="-160" y2="-160" x1="320" />
             <line x2="384" y1="-96" y2="-96" x1="320" />
         </blockdef>
-        <block symbolname="register_file_16_bit" name="XLXI_1">
-            <blockpin signalname="clk" name="clk" />
-            <blockpin signalname="XLXN_46(15:0)" name="OutA(15:0)" />
-            <blockpin signalname="XLXN_47(15:0)" name="OutB(15:0)" />
-            <blockpin signalname="Read_Addr_A(2:0)" name="Read_Addr_A(2:0)" />
-            <blockpin signalname="Read_Addr_B(2:0)" name="Read_Addr_B(2:0)" />
-            <blockpin signalname="Write_Addr(2:0)" name="Write_Addr(2:0)" />
-            <blockpin signalname="Write_Data(15:0)" name="Write_Data(15:0)" />
-            <blockpin signalname="Write_En" name="Write_En" />
-        </block>
         <block symbolname="multiplexer_2_to_1_16_bit" name="XLXI_2">
             <blockpin signalname="XLXN_47(15:0)" name="I0(15:0)" />
             <blockpin signalname="imm(15:0)" name="I1(15:0)" />
@@ -137,10 +136,6 @@
         </block>
         <block symbolname="gnd" name="XLXI_32(5:15)">
             <blockpin signalname="XLXN_45(5:15)" name="G" />
-        </block>
-        <block symbolname="buf" name="XLXI_33(0:4)">
-            <blockpin signalname="imm5(4:0)" name="I" />
-            <blockpin signalname="imm(4:0)" name="O" />
         </block>
         <block symbolname="buf" name="XLXI_35(15:0)">
             <blockpin signalname="XLXN_47(15:0)" name="I" />
@@ -163,10 +158,23 @@
             <blockpin signalname="C" name="C" />
             <blockpin signalname="V" name="V" />
         </block>
+        <block symbolname="buf" name="XLXI_33(0:4)">
+            <blockpin signalname="imm5(4:0)" name="I" />
+            <blockpin signalname="imm(4:0)" name="O" />
+        </block>
+        <block symbolname="register_file_16_bit" name="XLXI_1">
+            <blockpin signalname="clk" name="clk" />
+            <blockpin signalname="clr" name="clr" />
+            <blockpin signalname="XLXN_46(15:0)" name="OutA(15:0)" />
+            <blockpin signalname="XLXN_47(15:0)" name="OutB(15:0)" />
+            <blockpin signalname="Read_Addr_A(2:0)" name="Read_Addr_A(2:0)" />
+            <blockpin signalname="Read_Addr_B(2:0)" name="Read_Addr_B(2:0)" />
+            <blockpin signalname="Write_Addr(2:0)" name="Write_Addr(2:0)" />
+            <blockpin signalname="Write_Data(15:0)" name="Write_Data(15:0)" />
+            <blockpin signalname="Write_En" name="Write_En" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
-        <instance x="560" y="1312" name="XLXI_1" orien="R0">
-        </instance>
         <instance x="1312" y="1184" name="XLXI_2" orien="R0">
         </instance>
         <branch name="XLXN_3(15:0)">
@@ -179,17 +187,10 @@
         </branch>
         <bustap x2="1152" y1="1184" y2="1184" x1="1248" />
         <bustap x2="1152" y1="1296" y2="1296" x1="1248" />
-        <branch name="imm(15:5)">
-            <wire x2="1136" y1="1520" y2="1520" x1="1056" />
-            <wire x2="1152" y1="1184" y2="1184" x1="1088" />
-            <wire x2="1088" y1="1184" y2="1200" x1="1088" />
-            <wire x2="1136" y1="1200" y2="1200" x1="1088" />
-            <wire x2="1136" y1="1200" y2="1520" x1="1136" />
-        </branch>
         <branch name="imm(4:0)">
-            <wire x2="1088" y1="1392" y2="1392" x1="1056" />
+            <wire x2="1088" y1="1440" y2="1440" x1="1056" />
+            <wire x2="1088" y1="1296" y2="1440" x1="1088" />
             <wire x2="1152" y1="1296" y2="1296" x1="1088" />
-            <wire x2="1088" y1="1296" y2="1392" x1="1088" />
         </branch>
         <branch name="Y(15:0)">
             <wire x2="2464" y1="960" y2="960" x1="2336" />
@@ -244,11 +245,6 @@
             <wire x2="832" y1="1520" y2="1552" x1="832" />
         </branch>
         <instance x="768" y="1680" name="XLXI_32(5:15)" orien="R0" />
-        <instance x="832" y="1424" name="XLXI_33(0:4)" orien="R0" />
-        <branch name="imm5(4:0)">
-            <wire x2="832" y1="1392" y2="1392" x1="800" />
-        </branch>
-        <iomarker fontsize="28" x="800" y="1392" name="imm5(4:0)" orien="R180" />
         <branch name="V">
             <wire x2="2464" y1="1216" y2="1216" x1="2336" />
         </branch>
@@ -291,5 +287,25 @@
         <iomarker fontsize="28" x="1920" y="1280" name="SBB" orien="R180" />
         <instance x="1952" y="1312" name="XLXI_38" orien="R0">
         </instance>
+        <branch name="imm(15:5)">
+            <wire x2="1136" y1="1520" y2="1520" x1="1056" />
+            <wire x2="1152" y1="1184" y2="1184" x1="1088" />
+            <wire x2="1088" y1="1184" y2="1200" x1="1088" />
+            <wire x2="1136" y1="1200" y2="1200" x1="1088" />
+            <wire x2="1136" y1="1200" y2="1296" x1="1136" />
+            <wire x2="1136" y1="1296" y2="1520" x1="1136" />
+        </branch>
+        <branch name="imm5(4:0)">
+            <wire x2="816" y1="1440" y2="1440" x1="784" />
+            <wire x2="832" y1="1440" y2="1440" x1="816" />
+        </branch>
+        <instance x="832" y="1472" name="XLXI_33(0:4)" orien="R0" />
+        <iomarker fontsize="28" x="784" y="1440" name="imm5(4:0)" orien="R180" />
+        <instance x="560" y="1376" name="XLXI_1" orien="R0">
+        </instance>
+        <branch name="clr">
+            <wire x2="560" y1="1344" y2="1344" x1="528" />
+        </branch>
+        <iomarker fontsize="28" x="528" y="1344" name="clr" orien="R180" />
     </sheet>
 </drawing>

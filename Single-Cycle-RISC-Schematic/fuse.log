@@ -1,33 +1,32 @@
-Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe -prj C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module_Datapath_Module_sch_tb_beh.prj work.Datapath_Module_Datapath_Module_sch_tb work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe -prj C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module_Datapath_Module_sch_tb_beh.prj work.Datapath_Module_Datapath_Module_sch_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/full_adder.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/XOR16_1.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_1_bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/adder_16_bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1_16_bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_16_bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/decoder_3_to_8_en.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/two_comple_adder_16bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/sign_extend_8_16.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/register_file_16_bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1_16_bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU_CC.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RF_plus_ALU.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RAM_256x16.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1_3bit.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/AND16_1.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module.vf" into library work
-Analyzing Verilog file "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_Datapath_Module.v" into library work
-Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/full_adder.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/XOR16_1.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/adder_16_bit.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_8_to_1_16_bit.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_16_bit.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/decoder_3_to_8_en.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/two_comple_adder_16bit.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/sign_extend_8_16.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/register_file_16_bit.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1_16_bit.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU_CC.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RF_plus_ALU.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RAM_256x16.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/multiplexer_2_to_1_3bit.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/D_flip_flop_1_bit.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/AND16_1.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module.vf" into library work
+Analyzing Verilog file "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_Datapath_Module.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_Datapath_Module.v" Line 50: Port OutR is not connected to this instance
 Completed static elaboration
 Compiling module RAM256X1S
 Compiling module RAM_256x16_MUSER_Datapath_Module
@@ -53,10 +52,11 @@ Compiling module M2_1_HXILINX_Datapath_Module
 Compiling module D_flip_flop_1_bit_MUSER_Datapath...
 Compiling module AND4
 Compiling module decoder_3_to_8_en_MUSER_Datapath...
-Compiling module D_flip_flop_16_bit_MUSER_Datapat...
 Compiling module OR8_HXILINX_Datapath_Module
 Compiling module multiplexer_8_to_1_MUSER_Datapat...
 Compiling module multiplexer_8_to_1_16_bit_MUSER_...
+Compiling module FDCE
+Compiling module D_flip_flop_16_bit_MUSER_Datapat...
 Compiling module register_file_16_bit_MUSER_Datap...
 Compiling module NOR16_HXILINX_Datapath_Module
 Compiling module ALU_MUSER_Datapath_Module
@@ -68,8 +68,8 @@ Compiling module Datapath_Module
 Compiling module Datapath_Module_Datapath_Module_...
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 18 sub-compilation(s) to finish...
-Compiled 38 Verilog Units
-Built simulation executable C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe
-Fuse Memory Usage: 31816 KB
-Fuse CPU Usage: 1562 ms
+Waiting for 24 sub-compilation(s) to finish...
+Compiled 39 Verilog Units
+Built simulation executable C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe
+Fuse Memory Usage: 31756 KB
+Fuse CPU Usage: 671 ms

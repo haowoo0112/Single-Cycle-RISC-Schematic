@@ -1,4 +1,4 @@
-// Verilog test fixture created from schematic C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\register_file_16_bit.sch - Sun Sep 11 11:13:12 2022
+// Verilog test fixture created from schematic C:\Users\ib701\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\register_file_16_bit.sch - Tue Oct 18 17:11:02 2022
 
 `timescale 1ns / 1ps
 
@@ -11,6 +11,7 @@ module register_file_16_bit_register_file_16_bit_sch_tb();
    reg [2:0] Read_Addr_A;
    reg [2:0] Read_Addr_B;
    reg [15:0] Write_Data;
+   reg clr;
 
 // Output
    wire [15:0] OutA;
@@ -27,7 +28,8 @@ module register_file_16_bit_register_file_16_bit_sch_tb();
 		.Read_Addr_B(Read_Addr_B), 
 		.OutA(OutA), 
 		.OutB(OutB), 
-		.Write_Data(Write_Data)
+		.Write_Data(Write_Data), 
+		.clr(clr)
    );
 // Initialize Inputs
    always
@@ -38,6 +40,9 @@ module register_file_16_bit_register_file_16_bit_sch_tb();
 		Write_Data[15:0] = 0;
 		Read_Addr_A[2:0] = 0;
 		Read_Addr_B[2:0] = 0;
+		clr = 1;
+		#150;
+		clr = 0;
 		
 		Write_Addr[2:0] = 0;
 		Write_Data[15:0] = 16'h12;
@@ -71,21 +76,21 @@ module register_file_16_bit_register_file_16_bit_sch_tb();
 		
 		Write_Addr[2:0] = 6;
 		Write_Data[15:0] = 16'hDE;
-		Write_En = 0;
+		Write_En = 1;
 		#10;
 		
 		Write_Addr[2:0] = 7;
 		Write_Data[15:0] = 16'hF0;
-		Write_En = 0;
+		Write_En = 1;
 		#10;
 		
-		for(x = 0 ; x < 8 ; x = x + 1)begin
+		for(x = 1 ; x < 8 ; x = x + 1)begin
 			Read_Addr_A[2:0] = x;
-			#5;
+			#10;
 		end
 		for(x = 0 ; x < 8 ; x = x + 1)begin
 			Read_Addr_B[2:0] = x;
-			#5;
+			#10;
 		end
 		$finish;
 	end

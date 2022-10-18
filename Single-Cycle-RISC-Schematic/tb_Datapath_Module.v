@@ -81,7 +81,8 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		.RF_write_en(RF_write_en), 
 		.LHI(LHI), 
 		.LLI(LLI),
-		.flag_OutR(flag_OutR)
+		.flag_OutR(flag_OutR),
+		.OutR(OutR)
    );
 // Initialize Inputs
 	always begin
@@ -94,46 +95,93 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		ext_instr_data, mem_instr_out, OutR ) ;
 	initial begin
 		reset_mode();
+		
 		flag_HLT = 1'b1;
-		#100;
-		test_LHI();
+		#160;
+		//test_LHI();
+		//test_LLI();
+		test_LDR();
 		
 		
 		#30;
 		$finish;
    end
 	
-	task test_LHI;
+	task test_LDR;
 	begin
-		
-		write_instr_mem(16'h0, 16'b00011_001_000_00000);
-		write_instr_mem(16'h1, 16'b11100_000_001_000_00);
-		write_instr_mem(16'h2, 16'b00001_001_01010110);
+		write_instr_mem(16'h0, 16'b00011_001_000_00000);//LDR
+		write_instr_mem(16'h1, 16'b11100_000_001_000_00);//Out
+		write_data_mem(16'h0, 16'h1234);
 		#20;
 		ext_instr_we = 1'b0;
 		test_normal = 1'b0;
 		clr = 1;
+		#10;
+		clr = 0;//LDR
+		Src_ALU_B = 1'b1;
+		flag_mem_RF = 1'b1;
+		RF_write_en = 1'b1;
+		#10;
+		Src_ALU_B = 1'b0;//out
+		flag_mem_RF = 1'b0;
+		RF_write_en = 1'b0;
+		flag_OutR = 1'b1;
 		#20;
-		clr = 0;
-		#60;
-//		write_instr_mem(16'h2, 16'b00001_001_01010110);
-//		write_instr_mem(16'h3, 16'b11100_000_001_000_00);
-//		write_data_mem(16'h0, 16'h1234);
-//		#10;
-//		clr = 1;
-//		#10;
-//		clr = 0;
-//		test_normal = 1'b0;
-//		Src_ALU_B = 1'b1;
-//		flag_mem_RF = 1'b1;
-//		RF_write_en = 1'b1;
-//		#10;
-//		Src_ALU_B = 1'b0;
-//		flag_mem_RF = 1'b0;
-//		RF_write_en = 1'b0;
-//		flag_OutR = 1'b1;
-		
+	end
+	endtask
 	
+	task test_LLI;
+	begin
+		write_instr_mem(16'h0, 16'b00001_001_01010110);//LLI
+		write_instr_mem(16'h1, 16'b11100_000_001_000_00);//Out
+		#20;
+		ext_instr_we = 1'b0;
+		test_normal = 1'b0;
+		clr = 1;
+		#10;
+		clr = 0;//LLI
+		LLI = 1'b1;
+		RF_write_en = 1'b1;
+		#10;
+		LLI = 1'b0;//out
+		RF_write_en = 1'b0;
+		flag_OutR = 1'b1;
+		#20;
+	end
+	endtask
+	
+	task test_LHI;
+	begin
+		write_instr_mem(16'h0, 16'b00011_001_000_00000);//LDR
+		write_instr_mem(16'h1, 16'b11100_000_001_000_00);//Out
+		write_instr_mem(16'h2, 16'b00001_001_01010110);//LHI
+		write_instr_mem(16'h3, 16'b11100_000_001_000_00);//Out
+		write_data_mem(16'h0, 16'h1234);
+		#20;
+		ext_instr_we = 1'b0;
+		test_normal = 1'b0;
+		clr = 1;
+		#10;
+		clr = 0;//LDR
+		Src_ALU_B = 1'b1;
+		flag_mem_RF = 1'b1;
+		RF_write_en = 1'b1;
+		#10;
+		Src_ALU_B = 1'b0;//out
+		flag_mem_RF = 1'b0;
+		RF_write_en = 1'b0;
+		flag_OutR = 1'b1;
+		#20;
+		LHI = 1'b1;//LHI
+		flag_OutR = 1'b0;
+		RF_write_en = 1'b1;
+		Src_Read_B = 1'b1;
+		#20;
+		LHI = 1'b0;//out
+		RF_write_en = 1'b0;
+		Src_Read_B = 0;
+		flag_OutR = 1'b1;
+		#20;
 	end
 	endtask
 	
@@ -144,14 +192,13 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		ext_data_write_en = 1'b1; 
 		ext_data_addr = addr;
 		ext_data_data = data;
-		#10;
+		#20;
 	end
 	endtask
 	
 	task write_instr_mem;
 	input [15:0] addr, data;
 	begin
-		
 		test_normal = 1'b1;
 		ext_instr_we = 1'b1; 
 		ext_instr_addr = addr;

@@ -1,4 +1,4 @@
-// Verilog test fixture created from schematic C:\Users\ib701\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.sch - Mon Oct 03 15:27:20 2022
+// Verilog test fixture created from schematic C:\Users\ib701\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\RF_plus_ALU.sch - Tue Oct 18 19:53:13 2022
 
 `timescale 1ns / 1ps
 
@@ -13,10 +13,11 @@ module RF_plus_ALU_RF_plus_ALU_sch_tb();
    reg clk;
    reg Pre_C;
    reg Src_ALU_B;
-   reg [4:0] imm5;
    reg ADC;
    reg SUB;
    reg SBB;
+   reg [4:0] imm5;
+   reg clr;
 
 // Output
    wire [15:0] Y;
@@ -43,15 +44,17 @@ module RF_plus_ALU_RF_plus_ALU_sch_tb();
 		.clk(clk), 
 		.Pre_C(Pre_C), 
 		.Src_ALU_B(Src_ALU_B), 
-		.imm5(imm5), 
 		.V(V), 
 		.OutA(OutA), 
 		.OutB(OutB), 
 		.ADC(ADC), 
 		.SUB(SUB), 
-		.SBB(SBB)
+		.SBB(SBB), 
+		.imm5(imm5), 
+		.clr(clr)
    );
-	always
+// Initialize Inputs
+   always
 		#5 clk = ~clk;
 // Initialize Inputs
 	initial begin
@@ -61,6 +64,7 @@ module RF_plus_ALU_RF_plus_ALU_sch_tb();
 		Write_Addr = 0;
 		Write_En = 0;
 		clk = 0;
+		clr = 1;
 		Pre_C = 0;
 		Src_ALU_B = 0;
 		imm5 = 0;

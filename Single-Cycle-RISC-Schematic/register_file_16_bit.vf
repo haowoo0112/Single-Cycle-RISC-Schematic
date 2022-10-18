@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : register_file_16_bit.vf
-// /___/   /\     Timestamp : 09/23/2022 16:49:24
+// /___/   /\     Timestamp : 10/18/2022 17:12:03
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -37,27 +37,101 @@ module OR8_HXILINX_register_file_16_bit (O, I0, I1, I2, I3, I4, I5, I6, I7);
 assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7);
 
 endmodule
-`timescale  100 ps / 10 ps
+`timescale 1ns / 1ps
 
-module M2_1_HXILINX_register_file_16_bit (O, D0, D1, S0);
-    
+module D_flip_flop_16_bit_MUSER_register_file_16_bit(clk, 
+                                                     clr, 
+                                                     D, 
+                                                     LOAD, 
+                                                     Q);
 
-   output O;
-
-   input  D0;
-   input  D1;
-   input  S0;
-
-   reg O;
-
-   always @ ( D0 or D1 or S0)
-   begin
-      case(S0)
-      1'b0 : O <= D0;
-      1'b1 : O <= D1;
-      endcase
-   end
-    
+    input clk;
+    input clr;
+    input [15:0] D;
+    input LOAD;
+   output [15:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) XLXI_40 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[15]), 
+                 .Q(Q[15]));
+   FDCE #( .INIT(1'b0) ) XLXI_41 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[14]), 
+                 .Q(Q[14]));
+   FDCE #( .INIT(1'b0) ) XLXI_42 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[13]), 
+                 .Q(Q[13]));
+   FDCE #( .INIT(1'b0) ) XLXI_43 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[12]), 
+                 .Q(Q[12]));
+   FDCE #( .INIT(1'b0) ) XLXI_44 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[11]), 
+                 .Q(Q[11]));
+   FDCE #( .INIT(1'b0) ) XLXI_45 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[10]), 
+                 .Q(Q[10]));
+   FDCE #( .INIT(1'b0) ) XLXI_46 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[9]), 
+                 .Q(Q[9]));
+   FDCE #( .INIT(1'b0) ) XLXI_47 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[8]), 
+                 .Q(Q[8]));
+   FDCE #( .INIT(1'b0) ) XLXI_48 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[0]), 
+                 .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) XLXI_49 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[1]), 
+                 .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) XLXI_50 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[2]), 
+                 .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) XLXI_51 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[3]), 
+                 .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) XLXI_52 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[4]), 
+                 .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) XLXI_53 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[5]), 
+                 .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) XLXI_54 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[6]), 
+                 .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) XLXI_55 (.C(clk), 
+                 .CE(LOAD), 
+                 .CLR(clr), 
+                 .D(D[7]), 
+                 .Q(Q[7]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -172,7 +246,7 @@ module multiplexer_8_to_1_MUSER_register_file_16_bit(I0,
                  .I2(S1), 
                  .I3(S2), 
                  .O(XLXN_78));
-   (* HU_SET = "XLXI_38_23" *) 
+   (* HU_SET = "XLXI_38_0" *) 
    OR8_HXILINX_register_file_16_bit  XLXI_38 (.I0(XLXN_78), 
                                              .I1(XLXN_88), 
                                              .I2(XLXN_62), 
@@ -407,132 +481,6 @@ module multiplexer_8_to_1_16_bit_MUSER_register_file_16_bit(I0,
 endmodule
 `timescale 1ns / 1ps
 
-module D_flip_flop_1_bit_MUSER_register_file_16_bit(clk, 
-                                                    D, 
-                                                    LOAD, 
-                                                    Q);
-
-    input clk;
-    input D;
-    input LOAD;
-   output Q;
-   
-   wire XLXN_3;
-   wire XLXN_5;
-   wire XLXN_6;
-   wire XLXN_7;
-   wire XLXN_8;
-   wire XLXN_11;
-   wire XLXN_15;
-   wire Q_DUMMY;
-   
-   assign Q = Q_DUMMY;
-   (* HU_SET = "XLXI_1_24" *) 
-   M2_1_HXILINX_register_file_16_bit  XLXI_1 (.D0(XLXN_15), 
-                                             .D1(XLXN_5), 
-                                             .S0(clk), 
-                                             .O(XLXN_3));
-   (* HU_SET = "XLXI_2_25" *) 
-   M2_1_HXILINX_register_file_16_bit  XLXI_2 (.D0(XLXN_8), 
-                                             .D1(XLXN_6), 
-                                             .S0(XLXN_11), 
-                                             .O(XLXN_7));
-   INV  XLXI_3 (.I(XLXN_3), 
-               .O(XLXN_8));
-   INV  XLXI_4 (.I(XLXN_8), 
-               .O(XLXN_5));
-   INV  XLXI_5 (.I(clk), 
-               .O(XLXN_11));
-   INV  XLXI_6 (.I(Q_DUMMY), 
-               .O(XLXN_6));
-   INV  XLXI_7 (.I(XLXN_7), 
-               .O(Q_DUMMY));
-   (* HU_SET = "XLXI_8_26" *) 
-   M2_1_HXILINX_register_file_16_bit  XLXI_8 (.D0(Q_DUMMY), 
-                                             .D1(D), 
-                                             .S0(LOAD), 
-                                             .O(XLXN_15));
-endmodule
-`timescale 1ns / 1ps
-
-module D_flip_flop_16_bit_MUSER_register_file_16_bit(clk, 
-                                                     D, 
-                                                     LOAD, 
-                                                     Q);
-
-    input clk;
-    input [15:0] D;
-    input LOAD;
-   output [15:0] Q;
-   
-   
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_22 (.clk(clk), 
-                                                         .D(D[15]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[15]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_23 (.clk(clk), 
-                                                         .D(D[14]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[14]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_24 (.clk(clk), 
-                                                         .D(D[13]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[13]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_25 (.clk(clk), 
-                                                         .D(D[12]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[12]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_26 (.clk(clk), 
-                                                         .D(D[11]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[11]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_27 (.clk(clk), 
-                                                         .D(D[10]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[10]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_28 (.clk(clk), 
-                                                         .D(D[9]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[9]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_29 (.clk(clk), 
-                                                         .D(D[8]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[8]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_30 (.clk(clk), 
-                                                         .D(D[0]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[0]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_31 (.clk(clk), 
-                                                         .D(D[1]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[1]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_32 (.clk(clk), 
-                                                         .D(D[2]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[2]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_33 (.clk(clk), 
-                                                         .D(D[3]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[3]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_34 (.clk(clk), 
-                                                         .D(D[4]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[4]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_35 (.clk(clk), 
-                                                         .D(D[5]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[5]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_36 (.clk(clk), 
-                                                         .D(D[6]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[6]));
-   D_flip_flop_1_bit_MUSER_register_file_16_bit  XLXI_37 (.clk(clk), 
-                                                         .D(D[7]), 
-                                                         .LOAD(LOAD), 
-                                                         .Q(Q[7]));
-endmodule
-`timescale 1ns / 1ps
-
 module decoder_3_to_8_en_MUSER_register_file_16_bit(en, 
                                                     x0, 
                                                     x1, 
@@ -640,6 +588,7 @@ endmodule
 `timescale 1ns / 1ps
 
 module register_file_16_bit(clk, 
+                            clr, 
                             Read_Addr_A, 
                             Read_Addr_B, 
                             Write_Addr, 
@@ -649,6 +598,7 @@ module register_file_16_bit(clk,
                             OutB);
 
     input clk;
+    input clr;
     input [2:0] Read_Addr_A;
     input [2:0] Read_Addr_B;
     input [2:0] Write_Addr;
@@ -665,31 +615,27 @@ module register_file_16_bit(clk,
    wire [15:0] I5;
    wire [15:0] I6;
    wire [15:0] I7;
-   wire XLXN_32;
-   wire XLXN_33;
-   wire XLXN_34;
-   wire XLXN_37;
-   wire XLXN_38;
-   wire XLXN_39;
-   wire XLXN_40;
-   wire XLXN_43;
+   wire XLXN_101;
+   wire XLXN_102;
+   wire XLXN_103;
+   wire XLXN_104;
+   wire XLXN_105;
+   wire XLXN_107;
+   wire XLXN_109;
+   wire XLXN_111;
    
    decoder_3_to_8_en_MUSER_register_file_16_bit  XLXI_1 (.en(Write_En), 
                                                         .x0(Write_Addr[0]), 
                                                         .x1(Write_Addr[1]), 
                                                         .x2(Write_Addr[2]), 
-                                                        .Y0(XLXN_37), 
-                                                        .Y1(XLXN_38), 
-                                                        .Y2(XLXN_39), 
-                                                        .Y3(XLXN_40), 
-                                                        .Y4(XLXN_34), 
-                                                        .Y5(XLXN_33), 
-                                                        .Y6(XLXN_32), 
-                                                        .Y7(XLXN_43));
-   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_2 (.clk(clk), 
-                                                         .D(Write_Data[15:0]), 
-                                                         .LOAD(XLXN_43), 
-                                                         .Q(I7[15:0]));
+                                                        .Y0(XLXN_111), 
+                                                        .Y1(XLXN_109), 
+                                                        .Y2(XLXN_107), 
+                                                        .Y3(XLXN_105), 
+                                                        .Y4(XLXN_104), 
+                                                        .Y5(XLXN_103), 
+                                                        .Y6(XLXN_102), 
+                                                        .Y7(XLXN_101));
    multiplexer_8_to_1_16_bit_MUSER_register_file_16_bit  XLXI_10 
          (.I0(I0[15:0]), 
                                                                  .I1(I1[15:0]), 
@@ -707,34 +653,6 @@ module register_file_16_bit(clk,
          .S2(Read_Addr_A[2]), 
                                                                  
          .Y(OutA[15:0]));
-   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_13 (.clk(clk), 
-                                                          .D(Write_Data[15:0]), 
-                                                          .LOAD(XLXN_32), 
-                                                          .Q(I6[15:0]));
-   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_14 (.clk(clk), 
-                                                          .D(Write_Data[15:0]), 
-                                                          .LOAD(XLXN_33), 
-                                                          .Q(I5[15:0]));
-   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_15 (.clk(clk), 
-                                                          .D(Write_Data[15:0]), 
-                                                          .LOAD(XLXN_34), 
-                                                          .Q(I4[15:0]));
-   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_16 (.clk(clk), 
-                                                          .D(Write_Data[15:0]), 
-                                                          .LOAD(XLXN_40), 
-                                                          .Q(I3[15:0]));
-   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_17 (.clk(clk), 
-                                                          .D(Write_Data[15:0]), 
-                                                          .LOAD(XLXN_39), 
-                                                          .Q(I2[15:0]));
-   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_18 (.clk(clk), 
-                                                          .D(Write_Data[15:0]), 
-                                                          .LOAD(XLXN_38), 
-                                                          .Q(I1[15:0]));
-   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_19 (.clk(clk), 
-                                                          .D(Write_Data[15:0]), 
-                                                          .LOAD(XLXN_37), 
-                                                          .Q(I0[15:0]));
    multiplexer_8_to_1_16_bit_MUSER_register_file_16_bit  XLXI_21 
          (.I0(I0[15:0]), 
                                                                  .I1(I1[15:0]), 
@@ -752,4 +670,44 @@ module register_file_16_bit(clk,
          .S2(Read_Addr_B[2]), 
                                                                  
          .Y(OutB[15:0]));
+   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_22 (.clk(clk), 
+                                                          .clr(clr), 
+                                                          .D(Write_Data[15:0]), 
+                                                          .LOAD(XLXN_101), 
+                                                          .Q(I7[15:0]));
+   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_29 (.clk(clk), 
+                                                          .clr(clr), 
+                                                          .D(Write_Data[15:0]), 
+                                                          .LOAD(XLXN_102), 
+                                                          .Q(I6[15:0]));
+   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_32 (.clk(clk), 
+                                                          .clr(clr), 
+                                                          .D(Write_Data[15:0]), 
+                                                          .LOAD(XLXN_103), 
+                                                          .Q(I5[15:0]));
+   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_33 (.clk(clk), 
+                                                          .clr(clr), 
+                                                          .D(Write_Data[15:0]), 
+                                                          .LOAD(XLXN_104), 
+                                                          .Q(I4[15:0]));
+   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_34 (.clk(clk), 
+                                                          .clr(clr), 
+                                                          .D(Write_Data[15:0]), 
+                                                          .LOAD(XLXN_105), 
+                                                          .Q(I3[15:0]));
+   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_35 (.clk(clk), 
+                                                          .clr(clr), 
+                                                          .D(Write_Data[15:0]), 
+                                                          .LOAD(XLXN_107), 
+                                                          .Q(I2[15:0]));
+   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_36 (.clk(clk), 
+                                                          .clr(clr), 
+                                                          .D(Write_Data[15:0]), 
+                                                          .LOAD(XLXN_109), 
+                                                          .Q(I1[15:0]));
+   D_flip_flop_16_bit_MUSER_register_file_16_bit  XLXI_37 (.clk(clk), 
+                                                          .clr(clr), 
+                                                          .D(Write_Data[15:0]), 
+                                                          .LOAD(XLXN_111), 
+                                                          .Q(I0[15:0]));
 endmodule
