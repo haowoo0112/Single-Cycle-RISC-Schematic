@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ALU_CC.vf
-// /___/   /\     Timestamp : 10/05/2022 12:17:08
+// /___/   /\     Timestamp : 10/17/2022 23:46:55
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU_CC.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU_CC.sch
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU_CC.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU_CC.sch
 //Design Name: ALU_CC
 //Device: virtex6
 //Purpose:
@@ -335,7 +335,7 @@ module ALU_CC(A,
    wire [15:0] Y_DUMMY;
    
    assign Y[15:0] = Y_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_0" *) 
+   (* HU_SET = "XLXI_1_58" *) 
    NOR16_HXILINX_ALU_CC  XLXI_1 (.I0(Y_DUMMY[0]), 
                                 .I1(Y_DUMMY[1]), 
                                 .I2(Y_DUMMY[2]), 

@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : PC_circuit.vf
-// /___/   /\     Timestamp : 10/17/2022 16:11:17
+// /___/   /\     Timestamp : 10/17/2022 23:46:34
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.sch
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.sch
 //Design Name: PC_circuit
 //Device: virtex6
 //Purpose:
@@ -474,7 +474,7 @@ module PC_circuit(BRANCH,
    wire [15:0] Q_DUMMY;
    
    assign Q[15:0] = Q_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_22" *) 
+   (* HU_SET = "XLXI_1_51" *) 
    FD16CE_HXILINX_PC_circuit  XLXI_1 (.C(clk), 
                                      .CE(XLXN_5), 
                                      .CLR(clr), 

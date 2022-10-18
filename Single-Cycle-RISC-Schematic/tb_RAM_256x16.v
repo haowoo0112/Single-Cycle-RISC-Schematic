@@ -28,9 +28,11 @@ module RAM_256x16_RAM_256x16_sch_tb();
 		#5 clk = ~clk;
    initial begin
 		Addr = 0;
-		Write_En = 1;
+		
 		clk = 0;
 		D = 0;
+		#5;
+		Write_En = 1;
 		Addr = 8'h12;
 		D = 16'h1234;
 		#10;

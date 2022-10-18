@@ -34,6 +34,7 @@ module Datapath_Module_Datapath_Module_sch_tb();
    reg RF_write_en;
    reg LHI;
    reg LLI;
+	reg flag_OutR;
 
 // Output
    wire [15:0] mem_instr_out;
@@ -41,6 +42,7 @@ module Datapath_Module_Datapath_Module_sch_tb();
    wire Pre_V;
    wire Pre_Z;
    wire Pre_N;
+	wire [15:0] OutR;
 
 // Bidirs
 
@@ -78,39 +80,59 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		.flag_PC_RF(flag_PC_RF), 
 		.RF_write_en(RF_write_en), 
 		.LHI(LHI), 
-		.LLI(LLI)
+		.LLI(LLI),
+		.flag_OutR(flag_OutR)
    );
 // Initialize Inputs
-	always
-		#5 clk = ~clk;
+	always begin
+		#(clk_period/2) clk <= 1'b0;
+		#(clk_period/2) clk <= 1'b1;
+	end
+	initial
+		$monitor ( $realtime , "ns %h %h %h %h %h %h %h %h \n" ,
+		clk, clr, ext_instr_we, test_normal, ext_instr_addr,
+		ext_instr_data, mem_instr_out, OutR ) ;
 	initial begin
 		reset_mode();
-		#10;
+		flag_HLT = 1'b1;
+		#100;
 		test_LHI();
 		
 		
 		#30;
-		flag_HLT = 1'b1;
-		
-		test_normal = 1'b1;
-		ext_instr_addr = 16'd0;
-		ext_instr_we = 1'b1;
-		ext_instr_data = 0;
-		ext_data_addr = 0;
-		ext_data_data = 0;
-		ext_data_write_en = 0;
-		#10;
 		$finish;
    end
 	
 	task test_LHI;
 	begin
-		flag_HLT = 1'b1;
-		write_instr_mem(16'h0, 16'b0000_0000_0000_0001);
-		write_data_mem(16'h0, 16'b0000_0000_0000_0011);
-		#10;
+		
+		write_instr_mem(16'h0, 16'b00011_001_000_00000);
+		write_instr_mem(16'h1, 16'b11100_000_001_000_00);
+		write_instr_mem(16'h2, 16'b00001_001_01010110);
+		#20;
+		ext_instr_we = 1'b0;
 		test_normal = 1'b0;
-		flag_mem_RF = 1'b1;
+		clr = 1;
+		#20;
+		clr = 0;
+		#60;
+//		write_instr_mem(16'h2, 16'b00001_001_01010110);
+//		write_instr_mem(16'h3, 16'b11100_000_001_000_00);
+//		write_data_mem(16'h0, 16'h1234);
+//		#10;
+//		clr = 1;
+//		#10;
+//		clr = 0;
+//		test_normal = 1'b0;
+//		Src_ALU_B = 1'b1;
+//		flag_mem_RF = 1'b1;
+//		RF_write_en = 1'b1;
+//		#10;
+//		Src_ALU_B = 1'b0;
+//		flag_mem_RF = 1'b0;
+//		RF_write_en = 1'b0;
+//		flag_OutR = 1'b1;
+		
 	
 	end
 	endtask
@@ -118,32 +140,33 @@ module Datapath_Module_Datapath_Module_sch_tb();
 	task write_data_mem;
 	input [15:0] addr, data;
 	begin
-		@(posedge clk) #(clk_period/delay_factor) begin
-			test_normal = 1'b1;
-			ext_data_write_en = 1'b1; ext_data_addr = addr;
-			ext_data_data = data;
-		end
+		test_normal = 1'b1;
+		ext_data_write_en = 1'b1; 
+		ext_data_addr = addr;
+		ext_data_data = data;
+		#10;
 	end
 	endtask
 	
 	task write_instr_mem;
 	input [15:0] addr, data;
 	begin
-		@(posedge clk) #(clk_period/delay_factor) begin
-			test_normal = 1'b1;
-			ext_instr_we = 1'b1; ext_instr_addr = addr;
-			ext_instr_data = data;
-		end
+		
+		test_normal = 1'b1;
+		ext_instr_we = 1'b1; 
+		ext_instr_addr = addr;
+		ext_instr_data = data;
+		#20;
 	end
 	endtask
 	
 	task reset_mode;
-	begin
-		clk = 0;
+	begin	
+		
 		flag_HLT = 0;
 		clr = 0;
 		
-		test_normal = 0;
+		test_normal = 1'b1;
 		ext_instr_addr = 0;
 		ext_instr_we = 0;
 		ext_instr_data = 0;

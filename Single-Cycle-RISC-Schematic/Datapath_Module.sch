@@ -88,6 +88,8 @@
         <signal name="XLXN_215(15:0)" />
         <signal name="XLXN_216(15:0)" />
         <signal name="XLXN_217(15:0)" />
+        <signal name="flag_OutR" />
+        <signal name="OutR(15:0)" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="flag_HLT" />
         <port polarity="Input" name="test_normal" />
@@ -121,6 +123,8 @@
         <port polarity="Input" name="RF_write_en" />
         <port polarity="Input" name="LHI" />
         <port polarity="Input" name="LLI" />
+        <port polarity="Input" name="flag_OutR" />
+        <port polarity="Output" name="OutR(15:0)" />
         <blockdef name="RAM_256x16">
             <timestamp>2022-9-11T13:45:39</timestamp>
             <rect width="256" x="64" y="-256" height="256" />
@@ -281,6 +285,16 @@
             <line x2="48" y1="-272" y2="-272" x1="112" />
             <line x2="48" y1="-64" y2="-176" x1="48" />
             <line x2="48" y1="-272" y2="-384" x1="48" />
+        </blockdef>
+        <blockdef name="D_flip_flop_16_bit">
+            <timestamp>2022-9-11T2:51:10</timestamp>
+            <rect width="256" x="64" y="-192" height="192" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <rect width="64" x="0" y="-172" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+            <rect width="64" x="320" y="-172" height="24" />
         </blockdef>
         <block symbolname="and2" name="XLXI_8">
             <blockpin signalname="flag_HLT" name="I0" />
@@ -487,6 +501,12 @@
             <blockpin signalname="XLXN_211(15:0)" name="I4" />
             <blockpin signalname="XLXN_210(15:0)" name="I5" />
             <blockpin signalname="RF_write_data(15:0)" name="O" />
+        </block>
+        <block symbolname="D_flip_flop_16_bit" name="XLXI_110">
+            <blockpin signalname="clk_and_HLT" name="clk" />
+            <blockpin signalname="OutA(15:0)" name="D(15:0)" />
+            <blockpin signalname="flag_OutR" name="LOAD" />
+            <blockpin signalname="OutR(15:0)" name="Q(15:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="5440" height="3520">
@@ -1063,5 +1083,23 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1760" y="1488" type="branch" />
             <wire x2="1760" y1="1488" y2="1488" x1="1728" />
         </branch>
+        <instance x="2064" y="1056" name="XLXI_110" orien="R0">
+        </instance>
+        <branch name="OutA(15:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2000" y="896" type="branch" />
+            <wire x2="2064" y1="896" y2="896" x1="2000" />
+        </branch>
+        <branch name="clk_and_HLT">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2000" y="960" type="branch" />
+            <wire x2="2064" y1="960" y2="960" x1="2000" />
+        </branch>
+        <branch name="flag_OutR">
+            <wire x2="2064" y1="1024" y2="1024" x1="2000" />
+        </branch>
+        <branch name="OutR(15:0)">
+            <wire x2="2480" y1="896" y2="896" x1="2448" />
+        </branch>
+        <iomarker fontsize="28" x="2000" y="1024" name="flag_OutR" orien="R180" />
+        <iomarker fontsize="28" x="2480" y="896" name="OutR(15:0)" orien="R0" />
     </sheet>
 </drawing>

@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : RF_plus_ALU.vf
-// /___/   /\     Timestamp : 10/17/2022 16:11:21
+// /___/   /\     Timestamp : 10/17/2022 23:46:51
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RF_plus_ALU.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RF_plus_ALU.sch
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RF_plus_ALU.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/RF_plus_ALU.sch
 //Design Name: RF_plus_ALU
 //Device: virtex6
 //Purpose:
@@ -376,7 +376,7 @@ module ALU_CC_MUSER_RF_plus_ALU(A,
    wire [15:0] Y_DUMMY;
    
    assign Y[15:0] = Y_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_23" *) 
+   (* HU_SET = "XLXI_1_53" *) 
    NOR16_HXILINX_RF_plus_ALU  XLXI_1 (.I0(Y_DUMMY[0]), 
                                      .I1(Y_DUMMY[1]), 
                                      .I2(Y_DUMMY[2]), 
@@ -631,7 +631,7 @@ module multiplexer_8_to_1_MUSER_RF_plus_ALU(I0,
                  .I2(S1), 
                  .I3(S2), 
                  .O(XLXN_78));
-   (* HU_SET = "XLXI_38_24" *) 
+   (* HU_SET = "XLXI_38_54" *) 
    OR8_HXILINX_RF_plus_ALU  XLXI_38 (.I0(XLXN_78), 
                                     .I1(XLXN_88), 
                                     .I2(XLXN_62), 
@@ -886,12 +886,12 @@ module D_flip_flop_1_bit_MUSER_RF_plus_ALU(clk,
    wire Q_DUMMY;
    
    assign Q = Q_DUMMY;
-   (* HU_SET = "XLXI_1_25" *) 
+   (* HU_SET = "XLXI_1_55" *) 
    M2_1_HXILINX_RF_plus_ALU  XLXI_1 (.D0(XLXN_15), 
                                     .D1(XLXN_5), 
                                     .S0(clk), 
                                     .O(XLXN_3));
-   (* HU_SET = "XLXI_2_26" *) 
+   (* HU_SET = "XLXI_2_56" *) 
    M2_1_HXILINX_RF_plus_ALU  XLXI_2 (.D0(XLXN_8), 
                                     .D1(XLXN_6), 
                                     .S0(XLXN_11), 
@@ -906,7 +906,7 @@ module D_flip_flop_1_bit_MUSER_RF_plus_ALU(clk,
                .O(XLXN_6));
    INV  XLXI_7 (.I(XLXN_7), 
                .O(Q_DUMMY));
-   (* HU_SET = "XLXI_8_27" *) 
+   (* HU_SET = "XLXI_8_57" *) 
    M2_1_HXILINX_RF_plus_ALU  XLXI_8 (.D0(Q_DUMMY), 
                                     .D1(D), 
                                     .S0(LOAD), 

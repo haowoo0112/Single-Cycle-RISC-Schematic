@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : comple_adder_16bit_CC.vf
-// /___/   /\     Timestamp : 10/03/2022 12:09:36
+// /___/   /\     Timestamp : 10/17/2022 23:46:36
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/comple_adder_16bit_CC.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/comple_adder_16bit_CC.sch
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/comple_adder_16bit_CC.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/comple_adder_16bit_CC.sch
 //Design Name: comple_adder_16bit_CC
 //Device: virtex6
 //Purpose:
@@ -255,15 +255,15 @@ module adder_16_bit_MUSER_comple_adder_16bit_CC(A,
 endmodule
 `timescale 1ns / 1ps
 
-module two_comple_adder_16bit_MUSER_comple_adder_16bit_CC(A, 
-                                                          ADC, 
-                                                          B, 
-                                                          C, 
-                                                          SBB, 
-                                                          SUB, 
-                                                          Cout, 
-                                                          Cout_1, 
-                                                          Y);
+module ALU_MUSER_comple_adder_16bit_CC(A, 
+                                       ADC, 
+                                       B, 
+                                       C, 
+                                       SBB, 
+                                       SUB, 
+                                       Cout, 
+                                       Cout_1, 
+                                       Y);
 
     input [15:0] A;
     input ADC;
@@ -279,7 +279,7 @@ module two_comple_adder_16bit_MUSER_comple_adder_16bit_CC(A,
    wire [15:0] XLXN_5;
    wire XLXN_6;
    wire XLXN_8;
-   wire XLXN_11;
+   wire XLXN_15;
    
    adder_16_bit_MUSER_comple_adder_16bit_CC  XLXI_29 (.A(A[15:0]), 
                                                      .B(XLXN_5[15:0]), 
@@ -290,7 +290,7 @@ module two_comple_adder_16bit_MUSER_comple_adder_16bit_CC(A,
    XOR16_1_MUSER_comple_adder_16bit_CC  XLXI_30 (.A(B[15:0]), 
                                                 .B(XLXN_2), 
                                                 .Y(XLXN_5[15:0]));
-   OR3  XLXI_32 (.I0(XLXN_11), 
+   OR3  XLXI_32 (.I0(XLXN_15), 
                 .I1(XLXN_8), 
                 .I2(SUB), 
                 .O(XLXN_6));
@@ -299,7 +299,7 @@ module two_comple_adder_16bit_MUSER_comple_adder_16bit_CC(A,
                  .O(XLXN_8));
    AND2  XLXI_34 (.I0(C), 
                  .I1(ADC), 
-                 .O(XLXN_11));
+                 .O(XLXN_15));
    OR2  XLXI_35 (.I0(SUB), 
                 .I1(SBB), 
                 .O(XLXN_2));
@@ -335,7 +335,7 @@ module comple_adder_16bit_CC(A,
    wire [15:0] Y_DUMMY;
    
    assign Y[15:0] = Y_DUMMY[15:0];
-   (* HU_SET = "XLXI_2_0" *) 
+   (* HU_SET = "XLXI_2_52" *) 
    NOR16_HXILINX_comple_adder_16bit_CC  XLXI_2 (.I0(Y_DUMMY[0]), 
                                                .I1(Y_DUMMY[1]), 
                                                .I2(Y_DUMMY[2]), 
@@ -361,14 +361,13 @@ module comple_adder_16bit_CC(A,
                 .O(C));
    BUF  XLXI_6 (.I(Y_DUMMY[15]), 
                .O(N));
-   two_comple_adder_16bit_MUSER_comple_adder_16bit_CC  XLXI_7 (.A(A[15:0]), 
-                                                              .ADC(ADC), 
-                                                              .B(B[15:0]), 
-                                                              .C(Pre_C), 
-                                                              .SBB(SBB), 
-                                                              .SUB(SUB), 
-                                                              .Cout(XLXN_33), 
-                                                              .Cout_1(XLXN_25), 
-                                                              
-         .Y(Y_DUMMY[15:0]));
+   ALU_MUSER_comple_adder_16bit_CC  XLXI_8 (.A(A[15:0]), 
+                                           .ADC(ADC), 
+                                           .B(B[15:0]), 
+                                           .C(Pre_C), 
+                                           .SBB(SBB), 
+                                           .SUB(SUB), 
+                                           .Cout(XLXN_33), 
+                                           .Cout_1(XLXN_25), 
+                                           .Y(Y_DUMMY[15:0]));
 endmodule

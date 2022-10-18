@@ -21,11 +21,11 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module.vf";
+static const char *ng0 = "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module.vf";
 
 
 
-static void Cont_527_0(char *t0)
+static void Cont_605_0(char *t0)
 {
     char t3[8];
     char *t1;
@@ -60,7 +60,7 @@ LAB0:    t1 = (t0 + 4288U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(527, ng0);
+LAB2:    xsi_set_current_line(605, ng0);
     t2 = (t0 + 3128U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -104,7 +104,7 @@ LAB1:    return;
 
 extern void work_m_00000000001749003034_0757755432_init()
 {
-	static char *pe[] = {(void *)Cont_527_0};
+	static char *pe[] = {(void *)Cont_605_0};
 	xsi_register_didat("work_m_00000000001749003034_0757755432", "isim/Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe.sim/work/m_00000000001749003034_0757755432.didat");
 	xsi_register_executes(pe);
 }

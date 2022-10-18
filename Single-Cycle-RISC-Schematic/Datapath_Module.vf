@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Datapath_Module.vf
-// /___/   /\     Timestamp : 10/17/2022 16:11:14
+// /___/   /\     Timestamp : 10/17/2022 23:46:27
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module.sch
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module.sch
 //Design Name: Datapath_Module
 //Device: virtex6
 //Purpose:
@@ -129,6 +129,132 @@ module M2_1_HXILINX_Datapath_Module (O, D0, D1, S0);
 endmodule
 `timescale 1ns / 1ps
 
+module D_flip_flop_1_bit_MUSER_Datapath_Module(clk, 
+                                               D, 
+                                               LOAD, 
+                                               Q);
+
+    input clk;
+    input D;
+    input LOAD;
+   output Q;
+   
+   wire XLXN_3;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_11;
+   wire XLXN_15;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   (* HU_SET = "XLXI_1_29" *) 
+   M2_1_HXILINX_Datapath_Module  XLXI_1 (.D0(XLXN_15), 
+                                        .D1(XLXN_5), 
+                                        .S0(clk), 
+                                        .O(XLXN_3));
+   (* HU_SET = "XLXI_2_30" *) 
+   M2_1_HXILINX_Datapath_Module  XLXI_2 (.D0(XLXN_8), 
+                                        .D1(XLXN_6), 
+                                        .S0(XLXN_11), 
+                                        .O(XLXN_7));
+   INV  XLXI_3 (.I(XLXN_3), 
+               .O(XLXN_8));
+   INV  XLXI_4 (.I(XLXN_8), 
+               .O(XLXN_5));
+   INV  XLXI_5 (.I(clk), 
+               .O(XLXN_11));
+   INV  XLXI_6 (.I(Q_DUMMY), 
+               .O(XLXN_6));
+   INV  XLXI_7 (.I(XLXN_7), 
+               .O(Q_DUMMY));
+   (* HU_SET = "XLXI_8_31" *) 
+   M2_1_HXILINX_Datapath_Module  XLXI_8 (.D0(Q_DUMMY), 
+                                        .D1(D), 
+                                        .S0(LOAD), 
+                                        .O(XLXN_15));
+endmodule
+`timescale 1ns / 1ps
+
+module D_flip_flop_16_bit_MUSER_Datapath_Module(clk, 
+                                                D, 
+                                                LOAD, 
+                                                Q);
+
+    input clk;
+    input [15:0] D;
+    input LOAD;
+   output [15:0] Q;
+   
+   
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_22 (.clk(clk), 
+                                                    .D(D[15]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[15]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_23 (.clk(clk), 
+                                                    .D(D[14]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[14]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_24 (.clk(clk), 
+                                                    .D(D[13]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[13]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_25 (.clk(clk), 
+                                                    .D(D[12]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[12]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_26 (.clk(clk), 
+                                                    .D(D[11]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[11]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_27 (.clk(clk), 
+                                                    .D(D[10]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[10]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_28 (.clk(clk), 
+                                                    .D(D[9]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[9]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_29 (.clk(clk), 
+                                                    .D(D[8]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[8]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_30 (.clk(clk), 
+                                                    .D(D[0]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[0]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_31 (.clk(clk), 
+                                                    .D(D[1]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[1]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_32 (.clk(clk), 
+                                                    .D(D[2]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[2]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_33 (.clk(clk), 
+                                                    .D(D[3]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[3]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_34 (.clk(clk), 
+                                                    .D(D[4]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[4]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_35 (.clk(clk), 
+                                                    .D(D[5]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[5]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_36 (.clk(clk), 
+                                                    .D(D[6]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[6]));
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_37 (.clk(clk), 
+                                                    .D(D[7]), 
+                                                    .LOAD(LOAD), 
+                                                    .Q(Q[7]));
+endmodule
+`timescale 1ns / 1ps
+
 module AND16_1_MUSER_Datapath_Module(A, 
                                      B, 
                                      Y);
@@ -186,54 +312,6 @@ module AND16_1_MUSER_Datapath_Module(A,
    AND2  XLXI_16 (.I0(B), 
                  .I1(A[0]), 
                  .O(Y[0]));
-endmodule
-`timescale 1ns / 1ps
-
-module D_flip_flop_1_bit_MUSER_Datapath_Module(clk, 
-                                               D, 
-                                               LOAD, 
-                                               Q);
-
-    input clk;
-    input D;
-    input LOAD;
-   output Q;
-   
-   wire XLXN_3;
-   wire XLXN_5;
-   wire XLXN_6;
-   wire XLXN_7;
-   wire XLXN_8;
-   wire XLXN_11;
-   wire XLXN_15;
-   wire Q_DUMMY;
-   
-   assign Q = Q_DUMMY;
-   (* HU_SET = "XLXI_1_0" *) 
-   M2_1_HXILINX_Datapath_Module  XLXI_1 (.D0(XLXN_15), 
-                                        .D1(XLXN_5), 
-                                        .S0(clk), 
-                                        .O(XLXN_3));
-   (* HU_SET = "XLXI_2_1" *) 
-   M2_1_HXILINX_Datapath_Module  XLXI_2 (.D0(XLXN_8), 
-                                        .D1(XLXN_6), 
-                                        .S0(XLXN_11), 
-                                        .O(XLXN_7));
-   INV  XLXI_3 (.I(XLXN_3), 
-               .O(XLXN_8));
-   INV  XLXI_4 (.I(XLXN_8), 
-               .O(XLXN_5));
-   INV  XLXI_5 (.I(clk), 
-               .O(XLXN_11));
-   INV  XLXI_6 (.I(Q_DUMMY), 
-               .O(XLXN_6));
-   INV  XLXI_7 (.I(XLXN_7), 
-               .O(Q_DUMMY));
-   (* HU_SET = "XLXI_8_2" *) 
-   M2_1_HXILINX_Datapath_Module  XLXI_8 (.D0(Q_DUMMY), 
-                                        .D1(D), 
-                                        .S0(LOAD), 
-                                        .O(XLXN_15));
 endmodule
 `timescale 1ns / 1ps
 
@@ -525,7 +603,7 @@ module ALU_CC_MUSER_Datapath_Module(A,
    wire [15:0] Y_DUMMY;
    
    assign Y[15:0] = Y_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_3" *) 
+   (* HU_SET = "XLXI_1_32" *) 
    NOR16_HXILINX_Datapath_Module  XLXI_1 (.I0(Y_DUMMY[0]), 
                                          .I1(Y_DUMMY[1]), 
                                          .I2(Y_DUMMY[2]), 
@@ -780,7 +858,7 @@ module multiplexer_8_to_1_MUSER_Datapath_Module(I0,
                  .I2(S1), 
                  .I3(S2), 
                  .O(XLXN_78));
-   (* HU_SET = "XLXI_38_4" *) 
+   (* HU_SET = "XLXI_38_33" *) 
    OR8_HXILINX_Datapath_Module  XLXI_38 (.I0(XLXN_78), 
                                         .I1(XLXN_88), 
                                         .I2(XLXN_62), 
@@ -1012,84 +1090,6 @@ module multiplexer_8_to_1_16_bit_MUSER_Datapath_Module(I0,
                                                      .S1(S1), 
                                                      .S2(S2), 
                                                      .Y(Y[0]));
-endmodule
-`timescale 1ns / 1ps
-
-module D_flip_flop_16_bit_MUSER_Datapath_Module(clk, 
-                                                D, 
-                                                LOAD, 
-                                                Q);
-
-    input clk;
-    input [15:0] D;
-    input LOAD;
-   output [15:0] Q;
-   
-   
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_22 (.clk(clk), 
-                                                    .D(D[15]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[15]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_23 (.clk(clk), 
-                                                    .D(D[14]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[14]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_24 (.clk(clk), 
-                                                    .D(D[13]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[13]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_25 (.clk(clk), 
-                                                    .D(D[12]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[12]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_26 (.clk(clk), 
-                                                    .D(D[11]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[11]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_27 (.clk(clk), 
-                                                    .D(D[10]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[10]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_28 (.clk(clk), 
-                                                    .D(D[9]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[9]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_29 (.clk(clk), 
-                                                    .D(D[8]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[8]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_30 (.clk(clk), 
-                                                    .D(D[0]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[0]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_31 (.clk(clk), 
-                                                    .D(D[1]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[1]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_32 (.clk(clk), 
-                                                    .D(D[2]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[2]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_33 (.clk(clk), 
-                                                    .D(D[3]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[3]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_34 (.clk(clk), 
-                                                    .D(D[4]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[4]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_35 (.clk(clk), 
-                                                    .D(D[5]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[5]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_36 (.clk(clk), 
-                                                    .D(D[6]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[6]));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_37 (.clk(clk), 
-                                                    .D(D[7]), 
-                                                    .LOAD(LOAD), 
-                                                    .Q(Q[7]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -1796,7 +1796,7 @@ module PC_circuit_MUSER_Datapath_Module(BRANCH,
    wire [15:0] Q_DUMMY;
    
    assign Q[15:0] = Q_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_5" *) 
+   (* HU_SET = "XLXI_1_34" *) 
    FD16CE_HXILINX_Datapath_Module  XLXI_1 (.C(clk), 
                                           .CE(XLXN_5), 
                                           .CLR(clr), 
@@ -2046,6 +2046,7 @@ module Datapath_Module(ADC,
                        flag_HLT, 
                        flag_label_PC, 
                        flag_mem_RF, 
+                       flag_OutR, 
                        flag_PC_RF, 
                        flag_Rd_PC, 
                        flag_Rm_PC, 
@@ -2060,6 +2061,7 @@ module Datapath_Module(ADC,
                        SUB, 
                        test_normal, 
                        mem_instr_out, 
+                       OutR, 
                        Pre_C, 
                        Pre_N, 
                        Pre_V, 
@@ -2080,6 +2082,7 @@ module Datapath_Module(ADC,
     input flag_HLT;
     input flag_label_PC;
     input flag_mem_RF;
+    input flag_OutR;
     input flag_PC_RF;
     input flag_Rd_PC;
     input flag_Rm_PC;
@@ -2094,6 +2097,7 @@ module Datapath_Module(ADC,
     input SUB;
     input test_normal;
    output [15:0] mem_instr_out;
+   output [15:0] OutR;
    output Pre_C;
    output Pre_N;
    output Pre_V;
@@ -2403,7 +2407,7 @@ module Datapath_Module(ADC,
    GND  XLXI_108_5 (.G(XLXN_208[5]));
    GND  XLXI_108_6 (.G(XLXN_208[6]));
    GND  XLXI_108_7 (.G(XLXN_208[7]));
-   (* HU_SET = "XLXI_109_0_21" *) 
+   (* HU_SET = "XLXI_109_0_50" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_0 (.I0(XLXN_217[0]), 
                                            .I1(XLXN_216[0]), 
                                            .I2(XLXN_215[0]), 
@@ -2411,7 +2415,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[0]), 
                                            .I5(XLXN_210[0]), 
                                            .O(RF_write_data[0]));
-   (* HU_SET = "XLXI_109_1_20" *) 
+   (* HU_SET = "XLXI_109_1_49" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_1 (.I0(XLXN_217[1]), 
                                            .I1(XLXN_216[1]), 
                                            .I2(XLXN_215[1]), 
@@ -2419,7 +2423,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[1]), 
                                            .I5(XLXN_210[1]), 
                                            .O(RF_write_data[1]));
-   (* HU_SET = "XLXI_109_2_19" *) 
+   (* HU_SET = "XLXI_109_2_48" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_2 (.I0(XLXN_217[2]), 
                                            .I1(XLXN_216[2]), 
                                            .I2(XLXN_215[2]), 
@@ -2427,7 +2431,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[2]), 
                                            .I5(XLXN_210[2]), 
                                            .O(RF_write_data[2]));
-   (* HU_SET = "XLXI_109_3_18" *) 
+   (* HU_SET = "XLXI_109_3_47" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_3 (.I0(XLXN_217[3]), 
                                            .I1(XLXN_216[3]), 
                                            .I2(XLXN_215[3]), 
@@ -2435,7 +2439,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[3]), 
                                            .I5(XLXN_210[3]), 
                                            .O(RF_write_data[3]));
-   (* HU_SET = "XLXI_109_4_17" *) 
+   (* HU_SET = "XLXI_109_4_46" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_4 (.I0(XLXN_217[4]), 
                                            .I1(XLXN_216[4]), 
                                            .I2(XLXN_215[4]), 
@@ -2443,7 +2447,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[4]), 
                                            .I5(XLXN_210[4]), 
                                            .O(RF_write_data[4]));
-   (* HU_SET = "XLXI_109_5_16" *) 
+   (* HU_SET = "XLXI_109_5_45" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_5 (.I0(XLXN_217[5]), 
                                            .I1(XLXN_216[5]), 
                                            .I2(XLXN_215[5]), 
@@ -2451,7 +2455,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[5]), 
                                            .I5(XLXN_210[5]), 
                                            .O(RF_write_data[5]));
-   (* HU_SET = "XLXI_109_6_15" *) 
+   (* HU_SET = "XLXI_109_6_44" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_6 (.I0(XLXN_217[6]), 
                                            .I1(XLXN_216[6]), 
                                            .I2(XLXN_215[6]), 
@@ -2459,7 +2463,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[6]), 
                                            .I5(XLXN_210[6]), 
                                            .O(RF_write_data[6]));
-   (* HU_SET = "XLXI_109_7_14" *) 
+   (* HU_SET = "XLXI_109_7_43" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_7 (.I0(XLXN_217[7]), 
                                            .I1(XLXN_216[7]), 
                                            .I2(XLXN_215[7]), 
@@ -2467,7 +2471,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[7]), 
                                            .I5(XLXN_210[7]), 
                                            .O(RF_write_data[7]));
-   (* HU_SET = "XLXI_109_8_13" *) 
+   (* HU_SET = "XLXI_109_8_42" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_8 (.I0(XLXN_217[8]), 
                                            .I1(XLXN_216[8]), 
                                            .I2(XLXN_215[8]), 
@@ -2475,7 +2479,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[8]), 
                                            .I5(XLXN_210[8]), 
                                            .O(RF_write_data[8]));
-   (* HU_SET = "XLXI_109_9_12" *) 
+   (* HU_SET = "XLXI_109_9_41" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_9 (.I0(XLXN_217[9]), 
                                            .I1(XLXN_216[9]), 
                                            .I2(XLXN_215[9]), 
@@ -2483,7 +2487,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[9]), 
                                            .I5(XLXN_210[9]), 
                                            .O(RF_write_data[9]));
-   (* HU_SET = "XLXI_109_10_11" *) 
+   (* HU_SET = "XLXI_109_10_40" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_10 (.I0(XLXN_217[10]), 
                                             .I1(XLXN_216[10]), 
                                             .I2(XLXN_215[10]), 
@@ -2491,7 +2495,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[10]), 
                                             .I5(XLXN_210[10]), 
                                             .O(RF_write_data[10]));
-   (* HU_SET = "XLXI_109_11_10" *) 
+   (* HU_SET = "XLXI_109_11_39" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_11 (.I0(XLXN_217[11]), 
                                             .I1(XLXN_216[11]), 
                                             .I2(XLXN_215[11]), 
@@ -2499,7 +2503,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[11]), 
                                             .I5(XLXN_210[11]), 
                                             .O(RF_write_data[11]));
-   (* HU_SET = "XLXI_109_12_9" *) 
+   (* HU_SET = "XLXI_109_12_38" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_12 (.I0(XLXN_217[12]), 
                                             .I1(XLXN_216[12]), 
                                             .I2(XLXN_215[12]), 
@@ -2507,7 +2511,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[12]), 
                                             .I5(XLXN_210[12]), 
                                             .O(RF_write_data[12]));
-   (* HU_SET = "XLXI_109_13_8" *) 
+   (* HU_SET = "XLXI_109_13_37" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_13 (.I0(XLXN_217[13]), 
                                             .I1(XLXN_216[13]), 
                                             .I2(XLXN_215[13]), 
@@ -2515,7 +2519,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[13]), 
                                             .I5(XLXN_210[13]), 
                                             .O(RF_write_data[13]));
-   (* HU_SET = "XLXI_109_14_7" *) 
+   (* HU_SET = "XLXI_109_14_36" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_14 (.I0(XLXN_217[14]), 
                                             .I1(XLXN_216[14]), 
                                             .I2(XLXN_215[14]), 
@@ -2523,7 +2527,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[14]), 
                                             .I5(XLXN_210[14]), 
                                             .O(RF_write_data[14]));
-   (* HU_SET = "XLXI_109_15_6" *) 
+   (* HU_SET = "XLXI_109_15_35" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_15 (.I0(XLXN_217[15]), 
                                             .I1(XLXN_216[15]), 
                                             .I2(XLXN_215[15]), 
@@ -2531,4 +2535,8 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[15]), 
                                             .I5(XLXN_210[15]), 
                                             .O(RF_write_data[15]));
+   D_flip_flop_16_bit_MUSER_Datapath_Module  XLXI_110 (.clk(clk_and_HLT), 
+                                                      .D(OutA[15:0]), 
+                                                      .LOAD(flag_OutR), 
+                                                      .Q(OutR[15:0]));
 endmodule

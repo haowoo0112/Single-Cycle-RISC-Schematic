@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\ib701\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module_Datapath_Module_sch_tb_isim_beh.wdb 
+Running: C:\Users\USER\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module_Datapath_Module_sch_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,4 +11,68 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 65 ns : File "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_Datapath_Module.v" Line 103
+0ns x 0 0 1 0000 0000 0000 zzzz 
+
+10ns 0 0 0 1 0000 0000 0000 zzzz 
+
+20ns 1 0 0 1 0000 0000 0000 zzzz 
+
+30ns 0 0 0 1 0000 0000 0000 zzzz 
+
+40ns 1 0 0 1 0000 0000 0000 zzzz 
+
+50ns 0 0 0 1 0000 0000 0000 zzzz 
+
+60ns 1 0 0 1 0000 0000 0000 zzzz 
+
+70ns 0 0 0 1 0000 0000 0000 zzzz 
+
+80ns 1 0 0 1 0000 0000 0000 zzzz 
+
+90ns 0 0 0 1 0000 0000 0000 zzzz 
+
+100ns 1 0 1 1 0000 1900 0000 zzzz 
+
+100.1ns 1 0 1 1 0000 1900 1900 zzzz 
+
+110ns 0 0 1 1 0000 1900 1900 zzzz 
+
+120ns 1 0 1 1 0001 e020 0000 zzzz 
+
+120.1ns 1 0 1 1 0001 e020 e020 zzzz 
+
+130ns 0 0 1 1 0001 e020 e020 zzzz 
+
+140ns 1 0 1 1 0002 0956 0000 zzzz 
+
+140.1ns 1 0 1 1 0002 0956 0956 zzzz 
+
+150ns 0 0 1 1 0002 0956 0956 zzzz 
+
+160ns 1 0 1 1 0002 0956 0956 zzzz 
+
+170ns 0 0 1 1 0002 0956 0956 zzzz 
+
+180ns 1 1 0 0 0002 0956 1900 zzzz 
+
+190ns 0 1 0 0 0002 0956 1900 zzzz 
+
+200ns 1 0 0 0 0002 0956 e020 zzzz 
+
+210ns 0 0 0 0 0002 0956 e020 zzzz 
+
+220ns 1 0 0 0 0002 0956 0956 zzzz 
+
+230ns 0 0 0 0 0002 0956 0956 zzzz 
+
+240ns 1 0 0 0 0002 0956 0000 zzzz 
+
+250ns 0 0 0 0 0002 0956 0000 zzzz 
+
+260ns 1 0 0 0 0002 0956 0000 zzzz 
+
+270ns 0 0 0 0 0002 0956 0000 zzzz 
+
+280ns 1 0 0 0 0002 0956 0000 zzzz 
+
+Stopped at time : 290 ns : File "C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_Datapath_Module.v" Line 103
