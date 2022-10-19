@@ -6,7 +6,7 @@ MODULE Datapath_Module
 	SUBMODULE RF_plus_ALU
 		INSTANCE XLXI_59
 	SUBMODULE PC_circuit
-		INSTANCE XLXI_4
+		INSTANCE XLXI_117
 	SUBMODULE multiplexer_2_to_1_16_bit
 		INSTANCE XLXI_20
 	SUBMODULE multiplexer_2_to_1_16_bit

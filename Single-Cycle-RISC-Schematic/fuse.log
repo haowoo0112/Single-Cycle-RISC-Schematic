@@ -30,26 +30,16 @@ Starting static elaboration
 Completed static elaboration
 Compiling module RAM256X1S
 Compiling module RAM_256x16_MUSER_Datapath_Module
-Compiling module FD16CE_HXILINX_Datapath_Module
-Compiling module VCC
 Compiling module AND2
 Compiling module INV
 Compiling module OR2
 Compiling module multiplexer_2_to_1_MUSER_Datapat...
 Compiling module multiplexer_2_to_1_16_bit_MUSER_...
-Compiling module GND
 Compiling module BUF
-Compiling module sign_extend_8_16_MUSER_Datapath_...
-Compiling module OR3
-Compiling module XOR2
-Compiling module full_adder_MUSER_Datapath_Module
-Compiling module adder_16_bit_MUSER_Datapath_Modu...
-Compiling module XOR16_1_MUSER_Datapath_Module
-Compiling module two_comple_adder_16bit_MUSER_Dat...
-Compiling module PC_circuit_MUSER_Datapath_Module
 Compiling module multiplexer_2_to_1_3bit_MUSER_Da...
 Compiling module M2_1_HXILINX_Datapath_Module
 Compiling module D_flip_flop_1_bit_MUSER_Datapath...
+Compiling module VCC
 Compiling module AND4
 Compiling module decoder_3_to_8_en_MUSER_Datapath...
 Compiling module OR8_HXILINX_Datapath_Module
@@ -58,18 +48,28 @@ Compiling module multiplexer_8_to_1_16_bit_MUSER_...
 Compiling module FDCE
 Compiling module D_flip_flop_16_bit_MUSER_Datapat...
 Compiling module register_file_16_bit_MUSER_Datap...
+Compiling module GND
 Compiling module NOR16_HXILINX_Datapath_Module
+Compiling module XOR2
+Compiling module full_adder_MUSER_Datapath_Module
+Compiling module adder_16_bit_MUSER_Datapath_Modu...
+Compiling module XOR16_1_MUSER_Datapath_Module
+Compiling module OR3
 Compiling module ALU_MUSER_Datapath_Module
 Compiling module ALU_CC_MUSER_Datapath_Module
 Compiling module RF_plus_ALU_MUSER_Datapath_Modul...
 Compiling module AND16_1_MUSER_Datapath_Module
 Compiling module OR6_HXILINX_Datapath_Module
+Compiling module FD16CE_HXILINX_Datapath_Module
+Compiling module sign_extend_8_16_MUSER_Datapath_...
+Compiling module two_comple_adder_16bit_MUSER_Dat...
+Compiling module PC_circuit_MUSER_Datapath_Module
 Compiling module Datapath_Module
 Compiling module Datapath_Module_Datapath_Module_...
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 22 sub-compilation(s) to finish...
+Waiting for 24 sub-compilation(s) to finish...
 Compiled 39 Verilog Units
 Built simulation executable C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe
-Fuse Memory Usage: 32968 KB
-Fuse CPU Usage: 734 ms
+Fuse Memory Usage: 33404 KB
+Fuse CPU Usage: 796 ms

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="PC_circuit">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2022-10-5T4:47:47</timestamp>
+    <timestamp>2022-10-19T11:40:29</timestamp>
     <pin polarity="Input" x="0" y="-288" name="Rd(15:0)" />
     <pin polarity="Input" x="0" y="-352" name="flag_Rd_PC" />
     <pin polarity="Input" x="0" y="-608" name="flag_label_PC" />

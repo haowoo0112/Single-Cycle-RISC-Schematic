@@ -87,14 +87,12 @@
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>tb_Datapath_Module.v</SelectedItem>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >7</ScrollbarPosition>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000b8000000010001000100000000000000000000000064ffffffff000000810000000000000001000000b80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>tb_Datapath_Module.v</CurrentItem>
+      <CurrentItem>Datapath_Module.sch</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -110,7 +108,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -130,7 +128,7 @@
          <ClosedNode>/D_flip_flop_1_bit_D_flip_flop_1_bit_sch_tb C:|Users|USER|Desktop|Single-Cycle-RISC-Schematic|Single-Cycle-RISC-Schematic|tb_D_flip_flop_1_bit.v</ClosedNode>
          <ClosedNode>/D_flip_flop_1_bit_D_flip_flop_1_bit_sch_tb C:|Users|ib701|Desktop|Single-Cycle-RISC-Schematic|Single-Cycle-RISC-Schematic|tb_D_flip_flop_1_bit.v</ClosedNode>
          <ClosedNode>/Datapath_Module_Datapath_Module_sch_tb C:|Users|ib701|Desktop|Single-Cycle-RISC-Schematic|Single-Cycle-RISC-Schematic|tb_Datapath_Module.v/UUT - Datapath_Module</ClosedNode>
-         <ClosedNode>/PC_circuit_PC_circuit_sch_tb C:|Users|ib701|Desktop|Single-Cycle-RISC-Schematic|Single-Cycle-RISC-Schematic|tb_PC_circuit.v</ClosedNode>
+         <ClosedNode>/PC_circuit_PC_circuit_sch_tb C:|Users|ib701|Desktop|Single-Cycle-RISC-Schematic|Single-Cycle-RISC-Schematic|tb_PC_circuit.v/UUT - PC_circuit</ClosedNode>
          <ClosedNode>/RAM_256x16_RAM_256x16_sch_tb C:|Users|ib701|Desktop|Single-Cycle-RISC-Schematic|Single-Cycle-RISC-Schematic|tb_RAM_256x16.v</ClosedNode>
          <ClosedNode>/RF_plus_ALU_RF_plus_ALU_sch_tb C:|Users|ib701|Desktop|Single-Cycle-RISC-Schematic|Single-Cycle-RISC-Schematic|tb_RF_plus_ALU.v</ClosedNode>
          <ClosedNode>/XOR16_1_XOR16_1_sch_tb C:|Users|ib701|Desktop|Single-Cycle-RISC-Schematic|Single-Cycle-RISC-Schematic|tb_XOR16_1.v</ClosedNode>
@@ -163,14 +161,12 @@
          <ClosedNode>/two_comple_adder_16bit_two_comple_adder_16bit_sch_tb C:|Users|ib701|Desktop|Single-Cycle-RISC-Schematic|Single-Cycle-RISC-Schematic|tb_two_comple_adder_16bit.v</ClosedNode>
          <ClosedNode>/two_complement_adder_16_bit C:|Users|USER|Desktop|Single-Cycle-RISC-Schematic|Single-Cycle-RISC-Schematic|two_complement_adder_16_bit.sch</ClosedNode>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>UUT - Datapath_Module (C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module.sch)</SelectedItem>
-      </SelectedItems>
+      <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000243000000020000000000000000000000000200000064ffffffff000000810000000300000002000002430000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>UUT - Datapath_Module (C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module.sch)</CurrentItem>
+      <CurrentItem>UUT - PC_circuit (C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -178,13 +174,13 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -195,7 +191,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -205,13 +201,13 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="ManualCompile" >
       <ClosedNodes>

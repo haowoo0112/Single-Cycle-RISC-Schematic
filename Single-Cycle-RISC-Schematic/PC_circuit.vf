@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : PC_circuit.vf
-// /___/   /\     Timestamp : 10/17/2022 23:46:34
+// /___/   /\     Timestamp : 10/19/2022 19:41:01
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.sch
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/PC_circuit.sch
 //Design Name: PC_circuit
 //Device: virtex6
 //Purpose:
@@ -459,7 +459,6 @@ module PC_circuit(BRANCH,
    wire [15:0] XLXN_4;
    wire XLXN_5;
    wire [15:0] XLXN_12;
-   wire [15:0] XLXN_15;
    wire XLXN_20;
    wire [15:0] XLXN_22;
    wire XLXN_45;
@@ -471,20 +470,24 @@ module PC_circuit(BRANCH,
    wire [15:0] XLXN_70;
    wire [15:0] XLXN_71;
    wire [15:0] XLXN_72;
+   wire [15:0] XLXN_74;
+   wire [15:0] XLXN_77;
+   wire XLXN_79;
+   wire XLXN_80;
    wire [15:0] Q_DUMMY;
    
    assign Q[15:0] = Q_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_51" *) 
+   (* HU_SET = "XLXI_1_0" *) 
    FD16CE_HXILINX_PC_circuit  XLXI_1 (.C(clk), 
                                      .CE(XLXN_5), 
                                      .CLR(clr), 
-                                     .D(XLXN_15[15:0]), 
+                                     .D(XLXN_77[15:0]), 
                                      .Q(Q_DUMMY[15:0]));
    VCC  XLXI_2 (.P(XLXN_5));
    multiplexer_2_to_1_16_bit_MUSER_PC_circuit  XLXI_7 (.I0(XLXN_12[15:0]), 
                                                       .I1(XLXN_62[15:0]), 
                                                       .S(JMP), 
-                                                      .Y(XLXN_15[15:0]));
+                                                      .Y(XLXN_74[15:0]));
    multiplexer_2_to_1_16_bit_MUSER_PC_circuit  XLXI_12 (.I0(I0[15:0]), 
                                                        .I1(XLXN_4[15:0]), 
                                                        .S(BRANCH), 
@@ -702,4 +705,13 @@ module PC_circuit(BRANCH,
                                                     .Cout(), 
                                                     .Cout_1(), 
                                                     .Y(XLXN_12[15:0]));
+   (* HU_SET = "XLXI_45_1" *) 
+   FD16CE_HXILINX_PC_circuit  XLXI_45 (.C(XLXN_79), 
+                                      .CE(XLXN_80), 
+                                      .CLR(clr), 
+                                      .D(XLXN_74[15:0]), 
+                                      .Q(XLXN_77[15:0]));
+   VCC  XLXI_46 (.P(XLXN_80));
+   INV  XLXI_47 (.I(clk), 
+                .O(XLXN_79));
 endmodule

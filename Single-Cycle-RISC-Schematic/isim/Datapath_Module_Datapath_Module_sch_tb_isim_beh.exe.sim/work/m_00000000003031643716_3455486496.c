@@ -25,7 +25,7 @@ static const char *ng0 = "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Sin
 
 
 
-static void Cont_2179_0(char *t0)
+static void Cont_2191_0(char *t0)
 {
     char t3[8];
     char *t1;
@@ -60,7 +60,7 @@ LAB0:    t1 = (t0 + 14208U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(2179, ng0);
+LAB2:    xsi_set_current_line(2191, ng0);
     t2 = (t0 + 13048U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -101,7 +101,7 @@ LAB2:    xsi_set_current_line(2179, ng0);
 LAB1:    return;
 }
 
-static void Cont_2180_1(char *t0)
+static void Cont_2192_1(char *t0)
 {
     char *t1;
     char *t2;
@@ -127,7 +127,7 @@ LAB0:    t1 = (t0 + 14456U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(2180, ng0);
+LAB2:    xsi_set_current_line(2192, ng0);
     t2 = (t0 + 12888U);
     t3 = *((char **)t2);
     t2 = (t0 + 14936);
@@ -156,9 +156,9 @@ LAB1:    return;
 }
 
 
-extern void work_m_00000000003271770559_3455486496_init()
+extern void work_m_00000000003031643716_3455486496_init()
 {
-	static char *pe[] = {(void *)Cont_2179_0,(void *)Cont_2180_1};
-	xsi_register_didat("work_m_00000000003271770559_3455486496", "isim/Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe.sim/work/m_00000000003271770559_3455486496.didat");
+	static char *pe[] = {(void *)Cont_2191_0,(void *)Cont_2192_1};
+	xsi_register_didat("work_m_00000000003031643716_3455486496", "isim/Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe.sim/work/m_00000000003031643716_3455486496.didat");
 	xsi_register_executes(pe);
 }

@@ -173,7 +173,7 @@
             <line x2="496" y1="-416" y2="-416" x1="432" />
         </blockdef>
         <blockdef name="PC_circuit">
-            <timestamp>2022-10-5T4:47:50</timestamp>
+            <timestamp>2022-10-19T11:40:34</timestamp>
             <rect width="256" x="64" y="-704" height="704" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <rect width="64" x="0" y="-300" height="24" />
@@ -347,20 +347,6 @@
         <block symbolname="buf" name="XLXI_40(2:0)">
             <blockpin signalname="mem_instr_out(4:2)" name="I" />
             <blockpin signalname="Rn(2:0)" name="O" />
-        </block>
-        <block symbolname="PC_circuit" name="XLXI_4">
-            <blockpin signalname="OutB(15:0)" name="Rd(15:0)" />
-            <blockpin signalname="flag_Rd_PC" name="flag_Rd_PC" />
-            <blockpin signalname="flag_label_PC" name="flag_label_PC" />
-            <blockpin signalname="label11(10:0)" name="label11(10:0)" />
-            <blockpin signalname="OutA(15:0)" name="Rm(15:0)" />
-            <blockpin signalname="flag_Rm_PC" name="flag_Rm_PC" />
-            <blockpin signalname="disp8(7:0)" name="disp8(7:0)" />
-            <blockpin signalname="JMP" name="JMP" />
-            <blockpin signalname="BRANCH" name="BRANCH" />
-            <blockpin signalname="clk_and_HLT" name="clk" />
-            <blockpin signalname="clr" name="clr" />
-            <blockpin signalname="PC_out(15:0)" name="Q(15:0)" />
         </block>
         <block symbolname="multiplexer_2_to_1_3bit" name="XLXI_46">
             <blockpin signalname="Rn(2:0)" name="I0(2:0)" />
@@ -536,6 +522,20 @@
             <blockpin signalname="clk_and_HLT" name="I" />
             <blockpin signalname="XLXN_227" name="O" />
         </block>
+        <block symbolname="PC_circuit" name="XLXI_117">
+            <blockpin signalname="OutB(15:0)" name="Rd(15:0)" />
+            <blockpin signalname="flag_Rd_PC" name="flag_Rd_PC" />
+            <blockpin signalname="flag_label_PC" name="flag_label_PC" />
+            <blockpin signalname="label11(10:0)" name="label11(10:0)" />
+            <blockpin signalname="OutA(15:0)" name="Rm(15:0)" />
+            <blockpin signalname="flag_Rm_PC" name="flag_Rm_PC" />
+            <blockpin signalname="disp8(7:0)" name="disp8(7:0)" />
+            <blockpin signalname="JMP" name="JMP" />
+            <blockpin signalname="BRANCH" name="BRANCH" />
+            <blockpin signalname="clk_and_HLT" name="clk" />
+            <blockpin signalname="clr" name="clr" />
+            <blockpin signalname="PC_out(15:0)" name="Q(15:0)" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="5440" height="3520">
         <branch name="clk">
@@ -640,8 +640,6 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="3264" y="896" type="branch" />
             <wire x2="3264" y1="896" y2="896" x1="3232" />
         </branch>
-        <instance x="1360" y="832" name="XLXI_4" orien="R0">
-        </instance>
         <branch name="disp8(7:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1328" y="672" type="branch" />
             <wire x2="1360" y1="672" y2="672" x1="1328" />
@@ -1144,5 +1142,7 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2320" y="2208" type="branch" />
             <wire x2="2352" y1="2208" y2="2208" x1="2320" />
         </branch>
+        <instance x="1360" y="832" name="XLXI_117" orien="R0">
+        </instance>
     </sheet>
 </drawing>

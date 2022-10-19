@@ -25,7 +25,7 @@ static const char *ng0 = "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Sin
 
 
 
-static void Cont_1829_0(char *t0)
+static void Cont_564_0(char *t0)
 {
     char t3[8];
     char *t1;
@@ -53,15 +53,15 @@ static void Cont_1829_0(char *t0)
     unsigned int t24;
     char *t25;
 
-LAB0:    t1 = (t0 + 6848U);
+LAB0:    t1 = (t0 + 7328U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(1829, ng0);
-    t2 = (t0 + 5688U);
+LAB2:    xsi_set_current_line(564, ng0);
+    t2 = (t0 + 6168U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
     t2 = (t3 + 4);
@@ -76,7 +76,7 @@ LAB2:    xsi_set_current_line(1829, ng0);
     *((unsigned int *)t3) = (t10 & 65535U);
     t11 = *((unsigned int *)t2);
     *((unsigned int *)t2) = (t11 & 65535U);
-    t12 = (t0 + 7248);
+    t12 = (t0 + 7728);
     t13 = (t12 + 56U);
     t14 = *((char **)t13);
     t15 = (t14 + 56U);
@@ -95,16 +95,16 @@ LAB2:    xsi_set_current_line(1829, ng0);
     t24 = *((unsigned int *)t22);
     *((unsigned int *)t22) = (t24 | t18);
     xsi_driver_vfirst_trans(t12, 0, 15);
-    t25 = (t0 + 7168);
+    t25 = (t0 + 7648);
     *((int *)t25) = 1;
 
 LAB1:    return;
 }
 
 
-extern void work_m_00000000004075935059_2719052493_init()
+extern void work_m_00000000003472952730_2719052493_init()
 {
-	static char *pe[] = {(void *)Cont_1829_0};
-	xsi_register_didat("work_m_00000000004075935059_2719052493", "isim/Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe.sim/work/m_00000000004075935059_2719052493.didat");
+	static char *pe[] = {(void *)Cont_564_0};
+	xsi_register_didat("work_m_00000000003472952730_2719052493", "isim/Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe.sim/work/m_00000000003472952730_2719052493.didat");
 	xsi_register_executes(pe);
 }
