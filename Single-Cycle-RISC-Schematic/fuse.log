@@ -68,8 +68,8 @@ Compiling module Datapath_Module
 Compiling module Datapath_Module_Datapath_Module_...
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 12 sub-compilation(s) to finish...
+Waiting for 22 sub-compilation(s) to finish...
 Compiled 39 Verilog Units
 Built simulation executable C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe
-Fuse Memory Usage: 33648 KB
+Fuse Memory Usage: 33700 KB
 Fuse CPU Usage: 780 ms
