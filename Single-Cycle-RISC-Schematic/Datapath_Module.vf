@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Datapath_Module.vf
-// /___/   /\     Timestamp : 10/18/2022 20:50:13
+// /___/   /\     Timestamp : 10/19/2022 17:10:24
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -2171,6 +2171,7 @@ module Datapath_Module(ADC,
    wire [15:0] XLXN_217;
    wire XLXN_220;
    wire XLXN_226;
+   wire XLXN_227;
    wire Z;
    wire Pre_C_DUMMY;
    wire [15:0] mem_instr_out_DUMMY;
@@ -2183,7 +2184,7 @@ module Datapath_Module(ADC,
                                             .Write_En(ext_instr_we), 
                                             .O(mem_instr_out_DUMMY[15:0]));
    RAM_256x16_MUSER_Datapath_Module  XLXI_2 (.Addr(data_addr[7:0]), 
-                                            .clk(clk_and_HLT), 
+                                            .clk(XLXN_227), 
                                             .D(data_data[15:0]), 
                                             .Write_En(mem_data_en), 
                                             .O(mem_data_out[15:0]));
@@ -2578,4 +2579,6 @@ module Datapath_Module(ADC,
                  .O(XLXN_220));
    INV  XLXI_115 (.I(clk_and_HLT), 
                  .O(XLXN_226));
+   INV  XLXI_116 (.I(clk_and_HLT), 
+                 .O(XLXN_227));
 endmodule

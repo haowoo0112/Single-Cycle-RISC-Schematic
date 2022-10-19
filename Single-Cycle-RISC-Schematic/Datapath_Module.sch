@@ -92,6 +92,7 @@
         <signal name="XLXN_220" />
         <signal name="OutR(15:0)" />
         <signal name="XLXN_226" />
+        <signal name="XLXN_227" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="flag_HLT" />
         <port polarity="Input" name="test_normal" />
@@ -387,7 +388,7 @@
         </block>
         <block symbolname="RAM_256x16" name="XLXI_2">
             <blockpin signalname="data_addr(7:0)" name="Addr(7:0)" />
-            <blockpin signalname="clk_and_HLT" name="clk" />
+            <blockpin signalname="XLXN_227" name="clk" />
             <blockpin signalname="data_data(15:0)" name="D(15:0)" />
             <blockpin signalname="mem_data_out(15:0)" name="O(15:0)" />
             <blockpin signalname="mem_data_en" name="Write_En" />
@@ -530,6 +531,10 @@
         <block symbolname="inv" name="XLXI_115">
             <blockpin signalname="clk_and_HLT" name="I" />
             <blockpin signalname="XLXN_226" name="O" />
+        </block>
+        <block symbolname="inv" name="XLXI_116">
+            <blockpin signalname="clk_and_HLT" name="I" />
+            <blockpin signalname="XLXN_227" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="5440" height="3520">
@@ -702,10 +707,6 @@
         </instance>
         <instance x="2592" y="2368" name="XLXI_2" orien="R0">
         </instance>
-        <branch name="clk_and_HLT">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2512" y="2208" type="branch" />
-            <wire x2="2592" y1="2208" y2="2208" x1="2512" />
-        </branch>
         <instance x="2576" y="1888" name="XLXI_53" orien="R0">
         </instance>
         <branch name="ALU_result(15:0)">
@@ -1134,6 +1135,14 @@
         <branch name="clk_and_HLT">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1728" y="960" type="branch" />
             <wire x2="1808" y1="960" y2="960" x1="1728" />
+        </branch>
+        <instance x="2352" y="2240" name="XLXI_116" orien="R0" />
+        <branch name="XLXN_227">
+            <wire x2="2592" y1="2208" y2="2208" x1="2576" />
+        </branch>
+        <branch name="clk_and_HLT">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2320" y="2208" type="branch" />
+            <wire x2="2352" y1="2208" y2="2208" x1="2320" />
         </branch>
     </sheet>
 </drawing>

@@ -100,12 +100,46 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		#160;
 		//test_LHI();
 		//test_LLI();
-		test_LDR();
-		
+		//test_LDR();
+		test_STR();
+		//test_ADD();
 		
 		#30;
 		$finish;
-   end
+	end
+
+ 	task test_ADD;
+	begin
+   	
+	end
+	endtask
+	
+	task test_STR;
+	begin
+		write_instr_mem(16'h0, 16'b00011_001_000_00000);//LDR
+		write_instr_mem(16'h1, 16'b11100_000_001_000_00);//Out
+		write_instr_mem(16'h2, 16'b00101_001_000_00001);//STR
+		write_instr_mem(16'h3, 16'b00011_010_000_00001);//LDR
+		write_instr_mem(16'h4, 16'b11100_000_010_000_00);//Out
+		write_data_mem(16'h0, 16'h1234);
+		#20;
+		ext_instr_we = 1'b0;
+		test_normal = 1'b0;
+		clr = 1;
+		#10;
+		clr = 0;
+		instr_LDR();
+		#10;
+		instr_OutR();
+		#20;
+		instr_STR();
+		#20;
+		instr_LDR();
+		#20;
+		instr_OutR();
+		#20;
+	end
+	endtask
 	
 	task test_LDR;
 	begin
@@ -117,15 +151,10 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		test_normal = 1'b0;
 		clr = 1;
 		#10;
-		clr = 0;//LDR
-		Src_ALU_B = 1'b1;
-		flag_mem_RF = 1'b1;
-		RF_write_en = 1'b1;
+		clr = 0;
+		instr_LDR();
 		#10;
-		Src_ALU_B = 1'b0;//out
-		flag_mem_RF = 1'b0;
-		RF_write_en = 1'b0;
-		flag_OutR = 1'b1;
+		instr_OutR();
 		#20;
 	end
 	endtask
@@ -139,13 +168,10 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		test_normal = 1'b0;
 		clr = 1;
 		#10;
-		clr = 0;//LLI
-		LLI = 1'b1;
-		RF_write_en = 1'b1;
+		clr = 0;
+		instr_LLI();
 		#10;
-		LLI = 1'b0;//out
-		RF_write_en = 1'b0;
-		flag_OutR = 1'b1;
+		instr_OutR();
 		#20;
 	end
 	endtask
@@ -162,25 +188,14 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		test_normal = 1'b0;
 		clr = 1;
 		#10;
-		clr = 0;//LDR
-		Src_ALU_B = 1'b1;
-		flag_mem_RF = 1'b1;
-		RF_write_en = 1'b1;
+		clr = 0;
+		instr_LDR();
 		#10;
-		Src_ALU_B = 1'b0;//out
-		flag_mem_RF = 1'b0;
-		RF_write_en = 1'b0;
-		flag_OutR = 1'b1;
+		instr_OutR();
 		#20;
-		LHI = 1'b1;//LHI
-		flag_OutR = 1'b0;
-		RF_write_en = 1'b1;
-		Src_Read_B = 1'b1;
+		instr_LHI();
 		#20;
-		LHI = 1'b0;//out
-		RF_write_en = 1'b0;
-		Src_Read_B = 0;
-		flag_OutR = 1'b1;
+		instr_OutR();
 		#20;
 	end
 	endtask
@@ -245,4 +260,185 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		RF_write_en = 0;
 	end
 	endtask
+
+	task instr_LHI;
+	begin
+		flag_HLT = 1'b1;
+		
+		test_normal = 1'b0;
+		data_write_en = 0;
+		
+		flag_label_PC = 0;
+		flag_Rm_PC = 0;
+		flag_Rd_PC = 0;
+		BRANCH = 0;
+		
+		ADC = 0;
+		SUB = 0;
+		SBB = 0;
+		JMP = 0;
+		Src_ALU_B = 0;
+		Src_Read_B = 1'b1;
+		
+		flag_mem_RF = 0;
+		flag_ALU_RF = 0;
+		flag_Rm_RF = 0;
+		flag_PC_RF = 0;
+		LHI = 1'b1;
+		LLI = 0;
+		RF_write_en = 1'b1;
+		flag_OutR = 0;
+	end
+	endtask
+
+	task instr_LLI;
+	begin
+		flag_HLT = 1'b1;
+		
+		test_normal = 1'b0;
+		data_write_en = 0;
+		
+		flag_label_PC = 0;
+		flag_Rm_PC = 0;
+		flag_Rd_PC = 0;
+		BRANCH = 0;
+		
+		ADC = 0;
+		SUB = 0;
+		SBB = 0;
+		JMP = 0;
+		Src_ALU_B = 0;
+		Src_Read_B = 1'b0;
+		
+		flag_mem_RF = 0;
+		flag_ALU_RF = 0;
+		flag_Rm_RF = 0;
+		flag_PC_RF = 0;
+		LHI = 1'b0;
+		LLI = 1'b1;
+		RF_write_en = 1'b0;
+		flag_OutR = 0;
+	end
+	endtask
+
+	task instr_LDR;
+	begin
+		flag_HLT = 1'b1;
+		
+		test_normal = 1'b0;
+		data_write_en = 0;
+		
+		flag_label_PC = 0;
+		flag_Rm_PC = 0;
+		flag_Rd_PC = 0;
+		BRANCH = 0;
+		
+		ADC = 0;
+		SUB = 0;
+		SBB = 0;
+		JMP = 0;
+		Src_ALU_B = 1'b1;
+		Src_Read_B = 1'b0;
+		
+		flag_mem_RF = 1;
+		flag_ALU_RF = 0;
+		flag_Rm_RF = 0;
+		flag_PC_RF = 0;
+		LHI = 1'b0;
+		LLI = 1'b0;
+		RF_write_en = 1'b1;
+		flag_OutR = 0;
+	end
+	endtask
+
+	task instr_OutR;
+	begin
+		flag_HLT = 1'b1;
+		
+		test_normal = 1'b0;
+		data_write_en = 0;
+		
+		flag_label_PC = 0;
+		flag_Rm_PC = 0;
+		flag_Rd_PC = 0;
+		BRANCH = 0;
+		
+		ADC = 0;
+		SUB = 0;
+		SBB = 0;
+		JMP = 0;
+		Src_ALU_B = 0;
+		Src_Read_B = 0;
+		
+		flag_mem_RF = 0;
+		flag_ALU_RF = 0;
+		flag_Rm_RF = 0;
+		flag_PC_RF = 0;
+		LHI = 0;
+		LLI = 0;
+		RF_write_en = 0;
+		flag_OutR = 1;
+	end
+	endtask
+
+	task instr_STR;
+	begin
+		flag_HLT = 1'b1;
+		
+		test_normal = 1'b0;
+		data_write_en = 1;
+		
+		flag_label_PC = 0;
+		flag_Rm_PC = 0;
+		flag_Rd_PC = 0;
+		BRANCH = 0;
+		
+		ADC = 0;
+		SUB = 0;
+		SBB = 0;
+		JMP = 0;
+		Src_ALU_B = 1;
+		Src_Read_B = 1;
+		
+		flag_mem_RF = 0;
+		flag_ALU_RF = 0;
+		flag_Rm_RF = 0;
+		flag_PC_RF = 0;
+		LHI = 0;
+		LLI = 0;
+		RF_write_en = 0;
+		flag_OutR = 0;
+	end
+	endtask
+
+	task instr_ADD;
+	begin
+		flag_HLT = 1'b1;
+		
+		test_normal = 1'b0;
+		data_write_en = 0;
+		
+		flag_label_PC = 0;
+		flag_Rm_PC = 0;
+		flag_Rd_PC = 0;
+		BRANCH = 0;
+		
+		ADC = 0;
+		SUB = 0;
+		SBB = 0;
+		JMP = 0;
+		Src_ALU_B = 0;
+		Src_Read_B = 0;
+		
+		flag_mem_RF = 0;
+		flag_ALU_RF = 1;
+		flag_Rm_RF = 0;
+		flag_PC_RF = 0;
+		LHI = 0;
+		LLI = 0;
+		RF_write_en = 1;
+		flag_OutR = 0;
+	end
+	endtask
+	
 endmodule
