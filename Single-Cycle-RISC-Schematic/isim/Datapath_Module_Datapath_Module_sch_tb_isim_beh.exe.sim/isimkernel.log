@@ -2,28 +2,9 @@ Command line:
    Datapath_Module_Datapath_Module_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49616
+     -socket  49719
 
-Wed Oct 19 18:18:00 2022
+Wed Oct 19 18:42:40 2022
 
 
- Elaboration Time: 0.09375 sec
-
- Current Memory Usage: 5182.76 Meg
-
- Total Signals          : 9431
- Total Nets             : 2399
- Total Signal Drivers   : 2415
- Total Blocks           : 2356
- Total Primitive Blocks : 2097
- Total Processes        : 3072
- Total Traceable Variables  : 418
- Total Scalar Nets and Variables : 19396
-Total Line Count : 2413
-
- Total Simulation Time: 0.125 sec
-
- Current Memory Usage: 5182.76 Meg
-
-Wed Oct 19 18:18:18 2022
-
+ Elaboration Time: 0.140625 sec

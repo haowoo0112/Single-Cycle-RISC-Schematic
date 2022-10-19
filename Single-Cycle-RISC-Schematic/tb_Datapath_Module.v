@@ -101,8 +101,8 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		//test_LHI();
 		//test_LLI();
 		//test_LDR();
-		test_STR();
-		//test_ADD();
+		//test_STR();
+		test_ADD();
 		
 		#30;
 		$finish;
@@ -110,7 +110,32 @@ module Datapath_Module_Datapath_Module_sch_tb();
 
  	task test_ADD;
 	begin
-   	
+   	write_instr_mem(16'h0, 16'b00011_001_000_00000);//LDR
+		write_instr_mem(16'h1, 16'b11100_000_001_000_00);//Out
+		write_instr_mem(16'h2, 16'b00011_010_000_00001);//LDR
+		write_instr_mem(16'h3, 16'b11100_000_010_000_00);//Out
+		write_instr_mem(16'h4, 16'b00000_011_001_010_00);//ADD
+		write_instr_mem(16'h5, 16'b11100_000_011_000_00);//Out
+		write_data_mem(16'h0, 16'h1234);
+		write_data_mem(16'h1, 16'h4321);
+		#20;
+		ext_instr_we = 1'b0;
+		test_normal = 1'b0;
+		clr = 1;
+		#10;
+		clr = 0;
+		instr_LDR();
+		#10;
+		instr_OutR();
+		#20;
+		instr_LDR();
+		#20;
+		instr_OutR();
+		#20;
+		instr_ADD();
+		#20;
+		instr_OutR();
+		#20;
 	end
 	endtask
 	
