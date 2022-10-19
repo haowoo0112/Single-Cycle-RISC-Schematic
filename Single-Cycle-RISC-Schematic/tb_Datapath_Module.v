@@ -109,11 +109,30 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		//test_BRANCH();
 		//test_JMP();
 		//test_JAL1();
-		test_JAL2();
+		//test_JAL2();
+		test_JR();
 		
 		#30;
 		$finish;
 	end
+
+	task test_JR;
+	begin
+		write_instr_mem(16'h0, 16'b00011_001_000_00000);//LDR
+		write_instr_mem(16'h1, 16'b10011_001_00000000);//JR
+		write_data_mem(16'h0, 16'h0012);
+		#20;
+		ext_instr_we = 1'b0;
+		test_normal = 1'b0;
+		clr = 1;
+		#10;
+		clr = 0;
+		instr_LDR();
+		#10;
+		instr_JR();
+		#20;
+	end
+	endtask
 
 	task test_JAL2;
 	begin
@@ -842,6 +861,36 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		LHI = 0;
 		LLI = 0;
 		RF_write_en = 1;
+		flag_OutR = 0;
+	end
+	endtask
+
+	task instr_JR;
+	begin
+		flag_HLT = 1'b1;
+		
+		test_normal = 1'b0;
+		data_write_en = 0;
+		
+		flag_label_PC = 0;
+		flag_Rm_PC = 0;
+		flag_Rd_PC = 1;
+		BRANCH = 0;
+		
+		ADC = 0;
+		SUB = 0;
+		SBB = 0;
+		JMP = 1;
+		Src_ALU_B = 0;
+		Src_Read_B = 1;
+		
+		flag_mem_RF = 0;
+		flag_ALU_RF = 0;
+		flag_Rm_RF = 0;
+		flag_PC_RF = 0;
+		LHI = 0;
+		LLI = 0;
+		RF_write_en = 0;
 		flag_OutR = 0;
 	end
 	endtask
