@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Datapath_Module.vf
-// /___/   /\     Timestamp : 10/19/2022 19:43:04
+// /___/   /\     Timestamp : 10/19/2022 19:56:24
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -562,7 +562,7 @@ module PC_circuit_MUSER_Datapath_Module(BRANCH,
    wire [15:0] Q_DUMMY;
    
    assign Q[15:0] = Q_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_0" *) 
+   (* HU_SET = "XLXI_1_25" *) 
    FD16CE_HXILINX_Datapath_Module  XLXI_1 (.C(clk), 
                                           .CE(XLXN_5), 
                                           .CLR(clr), 
@@ -794,7 +794,7 @@ module PC_circuit_MUSER_Datapath_Module(BRANCH,
                                                          .Cout(), 
                                                          .Cout_1(), 
                                                          .Y(XLXN_12[15:0]));
-   (* HU_SET = "XLXI_45_1" *) 
+   (* HU_SET = "XLXI_45_26" *) 
    FD16CE_HXILINX_Datapath_Module  XLXI_45 (.C(XLXN_79), 
                                            .CE(XLXN_80), 
                                            .CLR(clr), 
@@ -1013,7 +1013,7 @@ module multiplexer_8_to_1_MUSER_Datapath_Module(I0,
                  .I2(S1), 
                  .I3(S2), 
                  .O(XLXN_78));
-   (* HU_SET = "XLXI_38_2" *) 
+   (* HU_SET = "XLXI_38_27" *) 
    OR8_HXILINX_Datapath_Module  XLXI_38 (.I0(XLXN_78), 
                                         .I1(XLXN_88), 
                                         .I2(XLXN_62), 
@@ -1556,7 +1556,7 @@ module ALU_CC_MUSER_Datapath_Module(A,
    wire [15:0] Y_DUMMY;
    
    assign Y[15:0] = Y_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_3" *) 
+   (* HU_SET = "XLXI_1_28" *) 
    NOR16_HXILINX_Datapath_Module  XLXI_1 (.I0(Y_DUMMY[0]), 
                                          .I1(Y_DUMMY[1]), 
                                          .I2(Y_DUMMY[2]), 
@@ -1860,12 +1860,12 @@ module D_flip_flop_1_bit_MUSER_Datapath_Module(clk,
    wire Q_DUMMY;
    
    assign Q = Q_DUMMY;
-   (* HU_SET = "XLXI_1_4" *) 
+   (* HU_SET = "XLXI_1_29" *) 
    M2_1_HXILINX_Datapath_Module  XLXI_1 (.D0(XLXN_15), 
                                         .D1(XLXN_5), 
                                         .S0(clk), 
                                         .O(XLXN_3));
-   (* HU_SET = "XLXI_2_5" *) 
+   (* HU_SET = "XLXI_2_30" *) 
    M2_1_HXILINX_Datapath_Module  XLXI_2 (.D0(XLXN_8), 
                                         .D1(XLXN_6), 
                                         .S0(XLXN_11), 
@@ -1880,7 +1880,7 @@ module D_flip_flop_1_bit_MUSER_Datapath_Module(clk,
                .O(XLXN_6));
    INV  XLXI_7 (.I(XLXN_7), 
                .O(Q_DUMMY));
-   (* HU_SET = "XLXI_8_6" *) 
+   (* HU_SET = "XLXI_8_31" *) 
    M2_1_HXILINX_Datapath_Module  XLXI_8 (.D0(Q_DUMMY), 
                                         .D1(D), 
                                         .S0(LOAD), 
@@ -2442,7 +2442,7 @@ module Datapath_Module(ADC,
    GND  XLXI_108_5 (.G(XLXN_208[5]));
    GND  XLXI_108_6 (.G(XLXN_208[6]));
    GND  XLXI_108_7 (.G(XLXN_208[7]));
-   (* HU_SET = "XLXI_109_0_22" *) 
+   (* HU_SET = "XLXI_109_0_47" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_0 (.I0(XLXN_217[0]), 
                                            .I1(XLXN_216[0]), 
                                            .I2(XLXN_215[0]), 
@@ -2450,7 +2450,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[0]), 
                                            .I5(XLXN_210[0]), 
                                            .O(RF_write_data[0]));
-   (* HU_SET = "XLXI_109_1_21" *) 
+   (* HU_SET = "XLXI_109_1_46" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_1 (.I0(XLXN_217[1]), 
                                            .I1(XLXN_216[1]), 
                                            .I2(XLXN_215[1]), 
@@ -2458,7 +2458,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[1]), 
                                            .I5(XLXN_210[1]), 
                                            .O(RF_write_data[1]));
-   (* HU_SET = "XLXI_109_2_20" *) 
+   (* HU_SET = "XLXI_109_2_45" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_2 (.I0(XLXN_217[2]), 
                                            .I1(XLXN_216[2]), 
                                            .I2(XLXN_215[2]), 
@@ -2466,7 +2466,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[2]), 
                                            .I5(XLXN_210[2]), 
                                            .O(RF_write_data[2]));
-   (* HU_SET = "XLXI_109_3_19" *) 
+   (* HU_SET = "XLXI_109_3_44" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_3 (.I0(XLXN_217[3]), 
                                            .I1(XLXN_216[3]), 
                                            .I2(XLXN_215[3]), 
@@ -2474,7 +2474,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[3]), 
                                            .I5(XLXN_210[3]), 
                                            .O(RF_write_data[3]));
-   (* HU_SET = "XLXI_109_4_18" *) 
+   (* HU_SET = "XLXI_109_4_43" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_4 (.I0(XLXN_217[4]), 
                                            .I1(XLXN_216[4]), 
                                            .I2(XLXN_215[4]), 
@@ -2482,7 +2482,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[4]), 
                                            .I5(XLXN_210[4]), 
                                            .O(RF_write_data[4]));
-   (* HU_SET = "XLXI_109_5_17" *) 
+   (* HU_SET = "XLXI_109_5_42" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_5 (.I0(XLXN_217[5]), 
                                            .I1(XLXN_216[5]), 
                                            .I2(XLXN_215[5]), 
@@ -2490,7 +2490,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[5]), 
                                            .I5(XLXN_210[5]), 
                                            .O(RF_write_data[5]));
-   (* HU_SET = "XLXI_109_6_16" *) 
+   (* HU_SET = "XLXI_109_6_41" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_6 (.I0(XLXN_217[6]), 
                                            .I1(XLXN_216[6]), 
                                            .I2(XLXN_215[6]), 
@@ -2498,7 +2498,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[6]), 
                                            .I5(XLXN_210[6]), 
                                            .O(RF_write_data[6]));
-   (* HU_SET = "XLXI_109_7_15" *) 
+   (* HU_SET = "XLXI_109_7_40" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_7 (.I0(XLXN_217[7]), 
                                            .I1(XLXN_216[7]), 
                                            .I2(XLXN_215[7]), 
@@ -2506,7 +2506,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[7]), 
                                            .I5(XLXN_210[7]), 
                                            .O(RF_write_data[7]));
-   (* HU_SET = "XLXI_109_8_14" *) 
+   (* HU_SET = "XLXI_109_8_39" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_8 (.I0(XLXN_217[8]), 
                                            .I1(XLXN_216[8]), 
                                            .I2(XLXN_215[8]), 
@@ -2514,7 +2514,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[8]), 
                                            .I5(XLXN_210[8]), 
                                            .O(RF_write_data[8]));
-   (* HU_SET = "XLXI_109_9_13" *) 
+   (* HU_SET = "XLXI_109_9_38" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_9 (.I0(XLXN_217[9]), 
                                            .I1(XLXN_216[9]), 
                                            .I2(XLXN_215[9]), 
@@ -2522,7 +2522,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[9]), 
                                            .I5(XLXN_210[9]), 
                                            .O(RF_write_data[9]));
-   (* HU_SET = "XLXI_109_10_12" *) 
+   (* HU_SET = "XLXI_109_10_37" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_10 (.I0(XLXN_217[10]), 
                                             .I1(XLXN_216[10]), 
                                             .I2(XLXN_215[10]), 
@@ -2530,7 +2530,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[10]), 
                                             .I5(XLXN_210[10]), 
                                             .O(RF_write_data[10]));
-   (* HU_SET = "XLXI_109_11_11" *) 
+   (* HU_SET = "XLXI_109_11_36" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_11 (.I0(XLXN_217[11]), 
                                             .I1(XLXN_216[11]), 
                                             .I2(XLXN_215[11]), 
@@ -2538,7 +2538,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[11]), 
                                             .I5(XLXN_210[11]), 
                                             .O(RF_write_data[11]));
-   (* HU_SET = "XLXI_109_12_10" *) 
+   (* HU_SET = "XLXI_109_12_35" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_12 (.I0(XLXN_217[12]), 
                                             .I1(XLXN_216[12]), 
                                             .I2(XLXN_215[12]), 
@@ -2546,7 +2546,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[12]), 
                                             .I5(XLXN_210[12]), 
                                             .O(RF_write_data[12]));
-   (* HU_SET = "XLXI_109_13_9" *) 
+   (* HU_SET = "XLXI_109_13_34" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_13 (.I0(XLXN_217[13]), 
                                             .I1(XLXN_216[13]), 
                                             .I2(XLXN_215[13]), 
@@ -2554,7 +2554,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[13]), 
                                             .I5(XLXN_210[13]), 
                                             .O(RF_write_data[13]));
-   (* HU_SET = "XLXI_109_14_8" *) 
+   (* HU_SET = "XLXI_109_14_33" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_14 (.I0(XLXN_217[14]), 
                                             .I1(XLXN_216[14]), 
                                             .I2(XLXN_215[14]), 
@@ -2562,7 +2562,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[14]), 
                                             .I5(XLXN_210[14]), 
                                             .O(RF_write_data[14]));
-   (* HU_SET = "XLXI_109_15_7" *) 
+   (* HU_SET = "XLXI_109_15_32" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_15 (.I0(XLXN_217[15]), 
                                             .I1(XLXN_216[15]), 
                                             .I2(XLXN_215[15]), 

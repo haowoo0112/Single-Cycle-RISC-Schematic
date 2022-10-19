@@ -40,6 +40,7 @@
         <signal name="Rd(15:0)" />
         <signal name="Rm(15:0)" />
         <signal name="XLXN_74(15:0)" />
+        <signal name="XLXN_75(15:0)" />
         <signal name="XLXN_77(15:0)" />
         <signal name="XLXN_79" />
         <signal name="XLXN_80" />
