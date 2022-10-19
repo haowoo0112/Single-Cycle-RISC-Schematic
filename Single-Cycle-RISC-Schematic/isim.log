@@ -55,11 +55,11 @@ Finished circuit initialization process.
 
 190ns 0 0 1 1 0001 e020 e020 0000 
 
-200ns 1 0 1 1 0002 3a27 0000 0000 
+200ns 1 0 1 1 0002 4227 0000 0000 
 
-200.1ns 1 0 1 1 0002 3a27 3a27 0000 
+200.1ns 1 0 1 1 0002 4227 4227 0000 
 
-210ns 0 0 1 1 0002 3a27 3a27 0000 
+210ns 0 0 1 1 0002 4227 4227 0000 
 
 220ns 1 0 1 1 0003 e040 0000 0000 
 
@@ -85,22 +85,22 @@ Finished circuit initialization process.
 
 310.1ns 0 0 0 0 0003 e040 e020 1234 
 
-320ns 1 0 0 0 0003 e040 3a27 1234 
+320ns 1 0 0 0 0003 e040 4227 1234 
 
-330ns 0 0 0 0 0003 e040 3a27 1234 
+330ns 0 0 0 0 0003 e040 4227 1234 
 
 340ns 1 0 0 0 0003 e040 e040 1234 
 
 350ns 0 0 0 0 0003 e040 e040 1234 
 
-350.1ns 0 0 0 0 0003 e040 e040 123b 
+350.1ns 0 0 0 0 0003 e040 e040 122d 
 
-360ns 1 0 0 0 0003 e040 0000 123b 
+360ns 1 0 0 0 0003 e040 0000 122d 
 
-370ns 0 0 0 0 0003 e040 0000 123b 
+370ns 0 0 0 0 0003 e040 0000 122d 
 
 370.1ns 0 0 0 0 0003 e040 0000 0000 
 
 380ns 1 0 0 0 0003 e040 0000 0000 
 
-Stopped at time : 390 ns : File "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_Datapath_Module.v" Line 110
+Stopped at time : 390 ns : File "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_Datapath_Module.v" Line 111

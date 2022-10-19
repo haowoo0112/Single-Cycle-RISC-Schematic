@@ -104,11 +104,36 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		//test_STR();
 		//test_ADD();
 		//test_SUB();
-		test_ADDI();
+		//test_ADDI();
+		test_SUBI();
 		
 		#30;
 		$finish;
 	end
+
+	task test_SUBI;
+	begin
+		write_instr_mem(16'h0, 16'b00011_001_000_00000);//LDR
+		write_instr_mem(16'h1, 16'b11100_000_001_000_00);//Out
+		write_instr_mem(16'h2, 16'b01000_010_001_00111);//SUBI
+		write_instr_mem(16'h3, 16'b11100_000_010_000_00);//Out
+		write_data_mem(16'h0, 16'h1234);
+		#20;
+		ext_instr_we = 1'b0;
+		test_normal = 1'b0;
+		clr = 1;
+		#10;
+		clr = 0;
+		instr_LDR();
+		#10;
+		instr_OutR();
+		#20;
+		instr_SUBI();
+		#20;
+		instr_OutR();
+		#20;
+	end
+	endtask
 
 	task test_ADDI;
 	begin
@@ -567,6 +592,36 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		
 		ADC = 0;
 		SUB = 0;
+		SBB = 0;
+		JMP = 0;
+		Src_ALU_B = 1;
+		Src_Read_B = 0;
+		
+		flag_mem_RF = 0;
+		flag_ALU_RF = 1;
+		flag_Rm_RF = 0;
+		flag_PC_RF = 0;
+		LHI = 0;
+		LLI = 0;
+		RF_write_en = 1;
+		flag_OutR = 0;
+	end
+	endtask
+
+	task instr_SUBI;
+	begin
+		flag_HLT = 1'b1;
+		
+		test_normal = 1'b0;
+		data_write_en = 0;
+		
+		flag_label_PC = 0;
+		flag_Rm_PC = 0;
+		flag_Rd_PC = 0;
+		BRANCH = 0;
+		
+		ADC = 0;
+		SUB = 1;
 		SBB = 0;
 		JMP = 0;
 		Src_ALU_B = 1;
