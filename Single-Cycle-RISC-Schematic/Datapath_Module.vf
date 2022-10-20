@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Datapath_Module.vf
-// /___/   /\     Timestamp : 10/19/2022 19:56:24
+// /___/   /\     Timestamp : 10/20/2022 16:00:20
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -126,6 +126,214 @@ module M2_1_HXILINX_Datapath_Module (O, D0, D1, S0);
       endcase
    end
     
+endmodule
+`timescale 1ns / 1ps
+
+module D_flip_flop_1_bit_MUSER_Datapath_Module(clk, 
+                                               D, 
+                                               LOAD, 
+                                               Q);
+
+    input clk;
+    input D;
+    input LOAD;
+   output Q;
+   
+   wire XLXN_3;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_11;
+   wire XLXN_15;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   M2_1_HXILINX_Datapath_Module  XLXI_1 (.D0(XLXN_15), 
+                                        .D1(XLXN_5), 
+                                        .S0(clk), 
+                                        .O(XLXN_3));
+   (* HU_SET = "XLXI_2_1" *) 
+   M2_1_HXILINX_Datapath_Module  XLXI_2 (.D0(XLXN_8), 
+                                        .D1(XLXN_6), 
+                                        .S0(XLXN_11), 
+                                        .O(XLXN_7));
+   INV  XLXI_3 (.I(XLXN_3), 
+               .O(XLXN_8));
+   INV  XLXI_4 (.I(XLXN_8), 
+               .O(XLXN_5));
+   INV  XLXI_5 (.I(clk), 
+               .O(XLXN_11));
+   INV  XLXI_6 (.I(Q_DUMMY), 
+               .O(XLXN_6));
+   INV  XLXI_7 (.I(XLXN_7), 
+               .O(Q_DUMMY));
+   (* HU_SET = "XLXI_8_2" *) 
+   M2_1_HXILINX_Datapath_Module  XLXI_8 (.D0(Q_DUMMY), 
+                                        .D1(D), 
+                                        .S0(LOAD), 
+                                        .O(XLXN_15));
+endmodule
+`timescale 1ns / 1ps
+
+module RAM_256x16_MUSER_Datapath_Module(Addr, 
+                                        clk, 
+                                        D, 
+                                        Write_En, 
+                                        O);
+
+    input [7:0] Addr;
+    input clk;
+    input [15:0] D;
+    input Write_En;
+   output [15:0] O;
+   
+   
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_67 (.A(Addr[7:0]), 
+                      .D(D[15]), 
+                      .WCLK(clk), 
+                      .WE(Write_En), 
+                      .O(O[15]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_97 (.A(Addr[7:0]), 
+                      .D(D[14]), 
+                      .WCLK(clk), 
+                      .WE(Write_En), 
+                      .O(O[14]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_98 (.A(Addr[7:0]), 
+                      .D(D[13]), 
+                      .WCLK(clk), 
+                      .WE(Write_En), 
+                      .O(O[13]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_99 (.A(Addr[7:0]), 
+                      .D(D[12]), 
+                      .WCLK(clk), 
+                      .WE(Write_En), 
+                      .O(O[12]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_100 (.A(Addr[7:0]), 
+                       .D(D[11]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[11]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_101 (.A(Addr[7:0]), 
+                       .D(D[10]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[10]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_102 (.A(Addr[7:0]), 
+                       .D(D[9]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[9]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_103 (.A(Addr[7:0]), 
+                       .D(D[8]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[8]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_112 (.A(Addr[7:0]), 
+                       .D(D[7]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[7]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_113 (.A(Addr[7:0]), 
+                       .D(D[6]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[6]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_114 (.A(Addr[7:0]), 
+                       .D(D[5]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[5]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_115 (.A(Addr[7:0]), 
+                       .D(D[4]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[4]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_116 (.A(Addr[7:0]), 
+                       .D(D[3]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[3]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_117 (.A(Addr[7:0]), 
+                       .D(D[2]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[2]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_118 (.A(Addr[7:0]), 
+                       .D(D[1]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[1]));
+   RAM256X1S #( 
+         
+         
+         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
+         ) XLXI_119 (.A(Addr[7:0]), 
+                       .D(D[0]), 
+                       .WCLK(clk), 
+                       .WE(Write_En), 
+                       .O(O[0]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -562,7 +770,7 @@ module PC_circuit_MUSER_Datapath_Module(BRANCH,
    wire [15:0] Q_DUMMY;
    
    assign Q[15:0] = Q_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_25" *) 
+   (* HU_SET = "XLXI_1_3" *) 
    FD16CE_HXILINX_Datapath_Module  XLXI_1 (.C(clk), 
                                           .CE(XLXN_5), 
                                           .CLR(clr), 
@@ -794,7 +1002,7 @@ module PC_circuit_MUSER_Datapath_Module(BRANCH,
                                                          .Cout(), 
                                                          .Cout_1(), 
                                                          .Y(XLXN_12[15:0]));
-   (* HU_SET = "XLXI_45_26" *) 
+   (* HU_SET = "XLXI_45_4" *) 
    FD16CE_HXILINX_Datapath_Module  XLXI_45 (.C(XLXN_79), 
                                            .CE(XLXN_80), 
                                            .CLR(clr), 
@@ -1013,7 +1221,7 @@ module multiplexer_8_to_1_MUSER_Datapath_Module(I0,
                  .I2(S1), 
                  .I3(S2), 
                  .O(XLXN_78));
-   (* HU_SET = "XLXI_38_27" *) 
+   (* HU_SET = "XLXI_38_5" *) 
    OR8_HXILINX_Datapath_Module  XLXI_38 (.I0(XLXN_78), 
                                         .I1(XLXN_88), 
                                         .I2(XLXN_62), 
@@ -1556,7 +1764,7 @@ module ALU_CC_MUSER_Datapath_Module(A,
    wire [15:0] Y_DUMMY;
    
    assign Y[15:0] = Y_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_28" *) 
+   (* HU_SET = "XLXI_1_6" *) 
    NOR16_HXILINX_Datapath_Module  XLXI_1 (.I0(Y_DUMMY[0]), 
                                          .I1(Y_DUMMY[1]), 
                                          .I2(Y_DUMMY[2]), 
@@ -1840,214 +2048,6 @@ module AND16_1_MUSER_Datapath_Module(A,
 endmodule
 `timescale 1ns / 1ps
 
-module D_flip_flop_1_bit_MUSER_Datapath_Module(clk, 
-                                               D, 
-                                               LOAD, 
-                                               Q);
-
-    input clk;
-    input D;
-    input LOAD;
-   output Q;
-   
-   wire XLXN_3;
-   wire XLXN_5;
-   wire XLXN_6;
-   wire XLXN_7;
-   wire XLXN_8;
-   wire XLXN_11;
-   wire XLXN_15;
-   wire Q_DUMMY;
-   
-   assign Q = Q_DUMMY;
-   (* HU_SET = "XLXI_1_29" *) 
-   M2_1_HXILINX_Datapath_Module  XLXI_1 (.D0(XLXN_15), 
-                                        .D1(XLXN_5), 
-                                        .S0(clk), 
-                                        .O(XLXN_3));
-   (* HU_SET = "XLXI_2_30" *) 
-   M2_1_HXILINX_Datapath_Module  XLXI_2 (.D0(XLXN_8), 
-                                        .D1(XLXN_6), 
-                                        .S0(XLXN_11), 
-                                        .O(XLXN_7));
-   INV  XLXI_3 (.I(XLXN_3), 
-               .O(XLXN_8));
-   INV  XLXI_4 (.I(XLXN_8), 
-               .O(XLXN_5));
-   INV  XLXI_5 (.I(clk), 
-               .O(XLXN_11));
-   INV  XLXI_6 (.I(Q_DUMMY), 
-               .O(XLXN_6));
-   INV  XLXI_7 (.I(XLXN_7), 
-               .O(Q_DUMMY));
-   (* HU_SET = "XLXI_8_31" *) 
-   M2_1_HXILINX_Datapath_Module  XLXI_8 (.D0(Q_DUMMY), 
-                                        .D1(D), 
-                                        .S0(LOAD), 
-                                        .O(XLXN_15));
-endmodule
-`timescale 1ns / 1ps
-
-module RAM_256x16_MUSER_Datapath_Module(Addr, 
-                                        clk, 
-                                        D, 
-                                        Write_En, 
-                                        O);
-
-    input [7:0] Addr;
-    input clk;
-    input [15:0] D;
-    input Write_En;
-   output [15:0] O;
-   
-   
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_67 (.A(Addr[7:0]), 
-                      .D(D[15]), 
-                      .WCLK(clk), 
-                      .WE(Write_En), 
-                      .O(O[15]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_97 (.A(Addr[7:0]), 
-                      .D(D[14]), 
-                      .WCLK(clk), 
-                      .WE(Write_En), 
-                      .O(O[14]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_98 (.A(Addr[7:0]), 
-                      .D(D[13]), 
-                      .WCLK(clk), 
-                      .WE(Write_En), 
-                      .O(O[13]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_99 (.A(Addr[7:0]), 
-                      .D(D[12]), 
-                      .WCLK(clk), 
-                      .WE(Write_En), 
-                      .O(O[12]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_100 (.A(Addr[7:0]), 
-                       .D(D[11]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[11]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_101 (.A(Addr[7:0]), 
-                       .D(D[10]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[10]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_102 (.A(Addr[7:0]), 
-                       .D(D[9]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[9]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_103 (.A(Addr[7:0]), 
-                       .D(D[8]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[8]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_112 (.A(Addr[7:0]), 
-                       .D(D[7]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[7]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_113 (.A(Addr[7:0]), 
-                       .D(D[6]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[6]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_114 (.A(Addr[7:0]), 
-                       .D(D[5]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[5]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_115 (.A(Addr[7:0]), 
-                       .D(D[4]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[4]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_116 (.A(Addr[7:0]), 
-                       .D(D[3]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[3]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_117 (.A(Addr[7:0]), 
-                       .D(D[2]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[2]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_118 (.A(Addr[7:0]), 
-                       .D(D[1]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[1]));
-   RAM256X1S #( 
-         
-         
-         .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000) 
-         ) XLXI_119 (.A(Addr[7:0]), 
-                       .D(D[0]), 
-                       .WCLK(clk), 
-                       .WE(Write_En), 
-                       .O(O[0]));
-endmodule
-`timescale 1ns / 1ps
-
 module multiplexer_2_to_1_3bit_MUSER_Datapath_Module(I0, 
                                                      I1, 
                                                      S, 
@@ -2184,6 +2184,11 @@ module Datapath_Module(ADC,
    wire XLXN_220;
    wire XLXN_226;
    wire XLXN_227;
+   wire XLXN_231;
+   wire XLXN_232;
+   wire XLXN_233;
+   wire XLXN_234;
+   wire XLXN_266;
    wire Z;
    wire Pre_C_DUMMY;
    wire [15:0] mem_instr_out_DUMMY;
@@ -2191,7 +2196,7 @@ module Datapath_Module(ADC,
    assign mem_instr_out[15:0] = mem_instr_out_DUMMY[15:0];
    assign Pre_C = Pre_C_DUMMY;
    RAM_256x16_MUSER_Datapath_Module  XLXI_1 (.Addr(instr_addr[7:0]), 
-                                            .clk(clk_and_HLT), 
+                                            .clk(XLXN_266), 
                                             .D(ext_instr_data[15:0]), 
                                             .Write_En(ext_instr_we), 
                                             .O(mem_instr_out_DUMMY[15:0]));
@@ -2280,7 +2285,7 @@ module Datapath_Module(ADC,
                                                      .I1(ext_data_write_en), 
                                                      .S(test_normal), 
                                                      .Y(mem_data_en));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_55 (.clk(clk_and_HLT), 
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_55 (.clk(XLXN_231), 
                                                     .D(C), 
                                                     .LOAD(XLXN_92), 
                                                     .Q(Pre_C_DUMMY));
@@ -2305,15 +2310,15 @@ module Datapath_Module(ADC,
                                               .V(V), 
                                               .Y(ALU_result[15:0]), 
                                               .Z(Z));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_64 (.clk(clk_and_HLT), 
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_64 (.clk(XLXN_232), 
                                                     .D(V), 
                                                     .LOAD(XLXN_112), 
                                                     .Q(Pre_V));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_65 (.clk(clk_and_HLT), 
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_65 (.clk(XLXN_233), 
                                                     .D(Z), 
                                                     .LOAD(XLXN_120), 
                                                     .Q(Pre_Z));
-   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_66 (.clk(clk_and_HLT), 
+   D_flip_flop_1_bit_MUSER_Datapath_Module  XLXI_66 (.clk(XLXN_234), 
                                                     .D(N), 
                                                     .LOAD(XLXN_124), 
                                                     .Q(Pre_N));
@@ -2442,7 +2447,7 @@ module Datapath_Module(ADC,
    GND  XLXI_108_5 (.G(XLXN_208[5]));
    GND  XLXI_108_6 (.G(XLXN_208[6]));
    GND  XLXI_108_7 (.G(XLXN_208[7]));
-   (* HU_SET = "XLXI_109_0_47" *) 
+   (* HU_SET = "XLXI_109_0_22" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_0 (.I0(XLXN_217[0]), 
                                            .I1(XLXN_216[0]), 
                                            .I2(XLXN_215[0]), 
@@ -2450,7 +2455,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[0]), 
                                            .I5(XLXN_210[0]), 
                                            .O(RF_write_data[0]));
-   (* HU_SET = "XLXI_109_1_46" *) 
+   (* HU_SET = "XLXI_109_1_21" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_1 (.I0(XLXN_217[1]), 
                                            .I1(XLXN_216[1]), 
                                            .I2(XLXN_215[1]), 
@@ -2458,7 +2463,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[1]), 
                                            .I5(XLXN_210[1]), 
                                            .O(RF_write_data[1]));
-   (* HU_SET = "XLXI_109_2_45" *) 
+   (* HU_SET = "XLXI_109_2_20" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_2 (.I0(XLXN_217[2]), 
                                            .I1(XLXN_216[2]), 
                                            .I2(XLXN_215[2]), 
@@ -2466,7 +2471,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[2]), 
                                            .I5(XLXN_210[2]), 
                                            .O(RF_write_data[2]));
-   (* HU_SET = "XLXI_109_3_44" *) 
+   (* HU_SET = "XLXI_109_3_19" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_3 (.I0(XLXN_217[3]), 
                                            .I1(XLXN_216[3]), 
                                            .I2(XLXN_215[3]), 
@@ -2474,7 +2479,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[3]), 
                                            .I5(XLXN_210[3]), 
                                            .O(RF_write_data[3]));
-   (* HU_SET = "XLXI_109_4_43" *) 
+   (* HU_SET = "XLXI_109_4_18" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_4 (.I0(XLXN_217[4]), 
                                            .I1(XLXN_216[4]), 
                                            .I2(XLXN_215[4]), 
@@ -2482,7 +2487,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[4]), 
                                            .I5(XLXN_210[4]), 
                                            .O(RF_write_data[4]));
-   (* HU_SET = "XLXI_109_5_42" *) 
+   (* HU_SET = "XLXI_109_5_17" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_5 (.I0(XLXN_217[5]), 
                                            .I1(XLXN_216[5]), 
                                            .I2(XLXN_215[5]), 
@@ -2490,7 +2495,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[5]), 
                                            .I5(XLXN_210[5]), 
                                            .O(RF_write_data[5]));
-   (* HU_SET = "XLXI_109_6_41" *) 
+   (* HU_SET = "XLXI_109_6_16" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_6 (.I0(XLXN_217[6]), 
                                            .I1(XLXN_216[6]), 
                                            .I2(XLXN_215[6]), 
@@ -2498,7 +2503,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[6]), 
                                            .I5(XLXN_210[6]), 
                                            .O(RF_write_data[6]));
-   (* HU_SET = "XLXI_109_7_40" *) 
+   (* HU_SET = "XLXI_109_7_15" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_7 (.I0(XLXN_217[7]), 
                                            .I1(XLXN_216[7]), 
                                            .I2(XLXN_215[7]), 
@@ -2506,7 +2511,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[7]), 
                                            .I5(XLXN_210[7]), 
                                            .O(RF_write_data[7]));
-   (* HU_SET = "XLXI_109_8_39" *) 
+   (* HU_SET = "XLXI_109_8_14" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_8 (.I0(XLXN_217[8]), 
                                            .I1(XLXN_216[8]), 
                                            .I2(XLXN_215[8]), 
@@ -2514,7 +2519,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[8]), 
                                            .I5(XLXN_210[8]), 
                                            .O(RF_write_data[8]));
-   (* HU_SET = "XLXI_109_9_38" *) 
+   (* HU_SET = "XLXI_109_9_13" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_9 (.I0(XLXN_217[9]), 
                                            .I1(XLXN_216[9]), 
                                            .I2(XLXN_215[9]), 
@@ -2522,7 +2527,7 @@ module Datapath_Module(ADC,
                                            .I4(XLXN_211[9]), 
                                            .I5(XLXN_210[9]), 
                                            .O(RF_write_data[9]));
-   (* HU_SET = "XLXI_109_10_37" *) 
+   (* HU_SET = "XLXI_109_10_12" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_10 (.I0(XLXN_217[10]), 
                                             .I1(XLXN_216[10]), 
                                             .I2(XLXN_215[10]), 
@@ -2530,7 +2535,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[10]), 
                                             .I5(XLXN_210[10]), 
                                             .O(RF_write_data[10]));
-   (* HU_SET = "XLXI_109_11_36" *) 
+   (* HU_SET = "XLXI_109_11_11" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_11 (.I0(XLXN_217[11]), 
                                             .I1(XLXN_216[11]), 
                                             .I2(XLXN_215[11]), 
@@ -2538,7 +2543,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[11]), 
                                             .I5(XLXN_210[11]), 
                                             .O(RF_write_data[11]));
-   (* HU_SET = "XLXI_109_12_35" *) 
+   (* HU_SET = "XLXI_109_12_10" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_12 (.I0(XLXN_217[12]), 
                                             .I1(XLXN_216[12]), 
                                             .I2(XLXN_215[12]), 
@@ -2546,7 +2551,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[12]), 
                                             .I5(XLXN_210[12]), 
                                             .O(RF_write_data[12]));
-   (* HU_SET = "XLXI_109_13_34" *) 
+   (* HU_SET = "XLXI_109_13_9" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_13 (.I0(XLXN_217[13]), 
                                             .I1(XLXN_216[13]), 
                                             .I2(XLXN_215[13]), 
@@ -2554,7 +2559,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[13]), 
                                             .I5(XLXN_210[13]), 
                                             .O(RF_write_data[13]));
-   (* HU_SET = "XLXI_109_14_33" *) 
+   (* HU_SET = "XLXI_109_14_8" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_14 (.I0(XLXN_217[14]), 
                                             .I1(XLXN_216[14]), 
                                             .I2(XLXN_215[14]), 
@@ -2562,7 +2567,7 @@ module Datapath_Module(ADC,
                                             .I4(XLXN_211[14]), 
                                             .I5(XLXN_210[14]), 
                                             .O(RF_write_data[14]));
-   (* HU_SET = "XLXI_109_15_32" *) 
+   (* HU_SET = "XLXI_109_15_7" *) 
    OR6_HXILINX_Datapath_Module  XLXI_109_15 (.I0(XLXN_217[15]), 
                                             .I1(XLXN_216[15]), 
                                             .I2(XLXN_215[15]), 
@@ -2593,4 +2598,14 @@ module Datapath_Module(ADC,
                                               .Rd(OutB[15:0]), 
                                               .Rm(OutA[15:0]), 
                                               .Q(PC_out[15:0]));
+   INV  XLXI_118 (.I(clk_and_HLT), 
+                 .O(XLXN_231));
+   INV  XLXI_119 (.I(clk_and_HLT), 
+                 .O(XLXN_232));
+   INV  XLXI_121 (.I(clk_and_HLT), 
+                 .O(XLXN_233));
+   INV  XLXI_122 (.I(clk_and_HLT), 
+                 .O(XLXN_234));
+   INV  XLXI_123 (.I(clk_and_HLT), 
+                 .O(XLXN_266));
 endmodule

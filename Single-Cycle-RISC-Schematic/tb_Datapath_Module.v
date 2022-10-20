@@ -100,7 +100,7 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		#160;
 		//test_LHI();
 		//test_LLI();
-		//test_LDR();
+		test_LDR();
 		//test_STR();
 		//test_ADD();
 		//test_SUB();
@@ -111,7 +111,7 @@ module Datapath_Module_Datapath_Module_sch_tb();
 		//test_JAL1();
 		//test_JAL2();
 		//test_JR();
-		test_HLT();
+		//test_HLT();
 		
 		#30;
 		$finish;

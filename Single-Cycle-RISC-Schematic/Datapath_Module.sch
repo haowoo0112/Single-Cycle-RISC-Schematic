@@ -90,15 +90,14 @@
         <signal name="Pre_Z" />
         <signal name="Pre_N" />
         <signal name="XLXN_124" />
-        <signal name="XLXN_262" />
         <signal name="XLXN_92" />
-        <signal name="XLXN_264" />
         <signal name="XLXN_112" />
         <signal name="XLXN_120" />
         <signal name="XLXN_231" />
         <signal name="XLXN_232" />
         <signal name="XLXN_233" />
         <signal name="XLXN_234" />
+        <signal name="XLXN_266" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="flag_HLT" />
         <port polarity="Input" name="test_normal" />
@@ -329,7 +328,7 @@
         </block>
         <block symbolname="RAM_256x16" name="XLXI_1">
             <blockpin signalname="instr_addr(7:0)" name="Addr(7:0)" />
-            <blockpin signalname="clk_and_HLT" name="clk" />
+            <blockpin signalname="XLXN_266" name="clk" />
             <blockpin signalname="ext_instr_data(15:0)" name="D(15:0)" />
             <blockpin signalname="mem_instr_out(15:0)" name="O(15:0)" />
             <blockpin signalname="ext_instr_we" name="Write_En" />
@@ -557,6 +556,10 @@
             <blockpin signalname="C" name="D" />
             <blockpin signalname="XLXN_92" name="LOAD" />
             <blockpin signalname="Pre_C" name="Q" />
+        </block>
+        <block symbolname="inv" name="XLXI_123">
+            <blockpin signalname="clk_and_HLT" name="I" />
+            <blockpin signalname="XLXN_266" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="5440" height="3520">
@@ -1046,10 +1049,6 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="912" y="1424" type="branch" />
             <wire x2="976" y1="1424" y2="1424" x1="912" />
         </branch>
-        <branch name="clk_and_HLT">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2304" y="464" type="branch" />
-            <wire x2="2336" y1="464" y2="464" x1="2304" />
-        </branch>
         <branch name="OutR(15:0)">
             <wire x2="2480" y1="896" y2="896" x1="2448" />
         </branch>
@@ -1189,6 +1188,15 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1296" y="2592" type="branch" />
             <wire x2="1168" y1="2592" y2="2592" x1="1136" />
             <wire x2="1296" y1="2592" y2="2592" x1="1168" />
+        </branch>
+        <branch name="XLXN_266">
+            <wire x2="2336" y1="464" y2="464" x1="2304" />
+        </branch>
+        <instance x="2080" y="496" name="XLXI_123" orien="R0" />
+        <branch name="clk_and_HLT">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2032" y="464" type="branch" />
+            <wire x2="2048" y1="464" y2="464" x1="2032" />
+            <wire x2="2080" y1="464" y2="464" x1="2048" />
         </branch>
     </sheet>
 </drawing>

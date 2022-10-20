@@ -1,0 +1,5 @@
+MODULE Single_Cycle_RISC
+	SUBMODULE Instruction_Decode
+		INSTANCE XLXI_1
+	SUBMODULE Datapath_Module
+		INSTANCE XLXI_2
