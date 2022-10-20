@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="Datapath_Module">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2022-10-20T2:46:23</timestamp>
+    <timestamp>2022-10-20T3:2:17</timestamp>
     <pin polarity="Input" x="0" y="-1824" name="clk" />
     <pin polarity="Input" x="0" y="-1760" name="clr" />
     <pin polarity="Input" x="0" y="-1696" name="test_normal" />
@@ -31,15 +31,15 @@
     <pin polarity="Input" x="0" y="-160" name="LLI" />
     <pin polarity="Input" x="0" y="-96" name="RF_write_en" />
     <pin polarity="Input" x="0" y="-32" name="flag_OutR" />
-    <pin polarity="Output" x="448" y="-1824" name="mem_instr_out(15:0)" />
-    <pin polarity="Output" x="448" y="-1760" name="OutR(15:0)" />
-    <pin polarity="Output" x="448" y="-1696" name="Pre_C" />
-    <pin polarity="Output" x="448" y="-1632" name="Pre_V" />
-    <pin polarity="Output" x="448" y="-1568" name="Pre_Z" />
-    <pin polarity="Output" x="448" y="-1504" name="Pre_N" />
+    <pin polarity="Output" x="464" y="-1824" name="mem_instr_out(15:0)" />
+    <pin polarity="Output" x="464" y="-1760" name="OutR(15:0)" />
+    <pin polarity="Output" x="464" y="-1696" name="Pre_C" />
+    <pin polarity="Output" x="464" y="-1632" name="Pre_V" />
+    <pin polarity="Output" x="464" y="-1568" name="Pre_Z" />
+    <pin polarity="Output" x="464" y="-1504" name="Pre_N" />
     <graph>
-        <rect width="320" x="64" y="-1856" height="1856" />
-        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="224" y="-1864" type="symbol" />
+        <rect width="336" x="64" y="-1856" height="1856" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="232" y="-1864" type="symbol" />
         <line x2="0" y1="-1824" y2="-1824" x1="64" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1824" type="pin clk" />
         <line x2="0" y1="-1760" y2="-1760" x1="64" />
@@ -102,19 +102,19 @@
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin RF_write_en" />
         <line x2="0" y1="-32" y2="-32" x1="64" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin flag_OutR" />
-        <line x2="448" y1="-1824" y2="-1824" x1="384" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-1824" type="pin mem_instr_out(15:0)" />
-        <rect width="64" x="384" y="-1836" height="24" />
-        <line x2="448" y1="-1760" y2="-1760" x1="384" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-1760" type="pin OutR(15:0)" />
-        <rect width="64" x="384" y="-1772" height="24" />
-        <line x2="448" y1="-1696" y2="-1696" x1="384" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-1696" type="pin Pre_C" />
-        <line x2="448" y1="-1632" y2="-1632" x1="384" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-1632" type="pin Pre_V" />
-        <line x2="448" y1="-1568" y2="-1568" x1="384" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-1568" type="pin Pre_Z" />
-        <line x2="448" y1="-1504" y2="-1504" x1="384" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-1504" type="pin Pre_N" />
+        <line x2="464" y1="-1824" y2="-1824" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-1824" type="pin mem_instr_out(15:0)" />
+        <rect width="64" x="400" y="-1836" height="24" />
+        <line x2="464" y1="-1760" y2="-1760" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-1760" type="pin OutR(15:0)" />
+        <rect width="64" x="400" y="-1772" height="24" />
+        <line x2="464" y1="-1696" y2="-1696" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-1696" type="pin Pre_C" />
+        <line x2="464" y1="-1632" y2="-1632" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-1632" type="pin Pre_V" />
+        <line x2="464" y1="-1568" y2="-1568" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-1568" type="pin Pre_Z" />
+        <line x2="464" y1="-1504" y2="-1504" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-1504" type="pin Pre_N" />
     </graph>
 </symbol>
