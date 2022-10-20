@@ -79,8 +79,8 @@ Compiling module Single_Cycle_RISC
 Compiling module Single_Cycle_RISC_Single_Cycle_R...
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 27 sub-compilation(s) to finish...
+Waiting for 26 sub-compilation(s) to finish...
 Compiled 48 Verilog Units
 Built simulation executable C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_isim_beh.exe
-Fuse Memory Usage: 33148 KB
-Fuse CPU Usage: 858 ms
+Fuse Memory Usage: 33172 KB
+Fuse CPU Usage: 749 ms

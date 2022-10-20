@@ -58,7 +58,8 @@ module Single_Cycle_RISC_Single_Cycle_RISC_sch_tb();
 		ext_data_data = 0;
 		#20;
 		//example();
-		Find_the_minimum_and_maximum();
+		//Find_the_minimum_and_maximum();
+		add_two_numbers();
 		#20;
 		ext_instr_we = 1'b0;
 		ext_data_we = 1'b0; 
@@ -70,9 +71,23 @@ module Single_Cycle_RISC_Single_Cycle_RISC_sch_tb();
 		$finish ;
    end
 	
-	initial begin 
-		#100000 $finish;
+
+	task add_two_numbers;
+	begin
+		write_data_mem(16'h0,16'h47 ) ; // data
+		write_data_mem(16'h1,16'h89 ) ; // data 
+		write_instr_mem(16'h0,16'b00011_001_000_00000 ) ; // LDR R1,R0,#0
+		write_instr_mem(16'h1,16'b11100_000_001_000_00 ) ; // OUT R1 
+		write_instr_mem(16'h2,16'b00011_010_000_00001 ) ; // LDR R2,R0,#1
+		write_instr_mem(16'h3,16'b11100_000_010_000_00 ) ; // OUT R2 
+		write_instr_mem(16'h4,16'b00000_011_010_001_00 ) ; // ADD R3,R1,R2
+		write_instr_mem(16'h5,16'b11100_000_011_000_00 ) ; // OUT R3
+		write_instr_mem(16'h6,16'b00101_011_000_00010 ) ; // STR R3,R0,#2
+		write_instr_mem(16'h7,16'b00011_100_000_00010 ) ; // LDR R4,R0,#2
+		write_instr_mem(16'h8,16'b11100_000_100_000_00 ) ; // OUT R4
+		write_instr_mem(16'h9,16'b1110_0000_0000_0001 ) ; // HLT
 	end
+	endtask
 
    task Find_the_minimum_and_maximum;
    begin
