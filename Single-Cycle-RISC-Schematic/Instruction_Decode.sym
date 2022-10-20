@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="Instruction_Decode">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2022-10-20T6:7:47</timestamp>
+    <pin polarity="Input" x="0" y="-1248" name="Instruction(15:0)" />
+    <pin polarity="Input" x="0" y="-1184" name="C" />
+    <pin polarity="Input" x="0" y="-1120" name="Z" />
+    <pin polarity="Output" x="464" y="-1248" name="flag_HLT" />
+    <pin polarity="Output" x="464" y="-1184" name="data_write_en" />
+    <pin polarity="Output" x="464" y="-1120" name="flag_label_PC" />
+    <pin polarity="Output" x="464" y="-1056" name="flag_Rm_PC" />
+    <pin polarity="Output" x="464" y="-992" name="flag_Rd_PC" />
+    <pin polarity="Output" x="464" y="-928" name="BRANCH" />
+    <pin polarity="Output" x="464" y="-864" name="ADC" />
+    <pin polarity="Output" x="464" y="-800" name="SUB" />
+    <pin polarity="Output" x="464" y="-736" name="SBB" />
+    <pin polarity="Output" x="464" y="-672" name="JMP" />
+    <pin polarity="Output" x="464" y="-608" name="Src_ALU_B" />
+    <pin polarity="Output" x="464" y="-544" name="Src_Read_B" />
+    <pin polarity="Output" x="464" y="-480" name="flag_mem_RF" />
+    <pin polarity="Output" x="464" y="-416" name="flag_ALU_RF" />
+    <pin polarity="Output" x="464" y="-352" name="flag_Rm_RF" />
+    <pin polarity="Output" x="464" y="-288" name="flag_PC_RF" />
+    <pin polarity="Output" x="464" y="-224" name="LHI" />
+    <pin polarity="Output" x="464" y="-160" name="LLI" />
+    <pin polarity="Output" x="464" y="-96" name="RF_write_en" />
+    <pin polarity="Output" x="464" y="-32" name="flag_OutR" />
+    <graph>
+        <rect width="336" x="64" y="-1280" height="1280" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="232" y="-1288" type="symbol" />
+        <line x2="0" y1="-1248" y2="-1248" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1248" type="pin Instruction(15:0)" />
+        <rect width="64" x="0" y="-1260" height="24" />
+        <line x2="0" y1="-1184" y2="-1184" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1184" type="pin C" />
+        <line x2="0" y1="-1120" y2="-1120" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1120" type="pin Z" />
+        <line x2="464" y1="-1248" y2="-1248" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-1248" type="pin flag_HLT" />
+        <line x2="464" y1="-1184" y2="-1184" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-1184" type="pin data_write_en" />
+        <line x2="464" y1="-1120" y2="-1120" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-1120" type="pin flag_label_PC" />
+        <line x2="464" y1="-1056" y2="-1056" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-1056" type="pin flag_Rm_PC" />
+        <line x2="464" y1="-992" y2="-992" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-992" type="pin flag_Rd_PC" />
+        <line x2="464" y1="-928" y2="-928" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-928" type="pin BRANCH" />
+        <line x2="464" y1="-864" y2="-864" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-864" type="pin ADC" />
+        <line x2="464" y1="-800" y2="-800" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-800" type="pin SUB" />
+        <line x2="464" y1="-736" y2="-736" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-736" type="pin SBB" />
+        <line x2="464" y1="-672" y2="-672" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-672" type="pin JMP" />
+        <line x2="464" y1="-608" y2="-608" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-608" type="pin Src_ALU_B" />
+        <line x2="464" y1="-544" y2="-544" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-544" type="pin Src_Read_B" />
+        <line x2="464" y1="-480" y2="-480" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-480" type="pin flag_mem_RF" />
+        <line x2="464" y1="-416" y2="-416" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-416" type="pin flag_ALU_RF" />
+        <line x2="464" y1="-352" y2="-352" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-352" type="pin flag_Rm_RF" />
+        <line x2="464" y1="-288" y2="-288" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-288" type="pin flag_PC_RF" />
+        <line x2="464" y1="-224" y2="-224" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-224" type="pin LHI" />
+        <line x2="464" y1="-160" y2="-160" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-160" type="pin LLI" />
+        <line x2="464" y1="-96" y2="-96" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-96" type="pin RF_write_en" />
+        <line x2="464" y1="-32" y2="-32" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-32" type="pin flag_OutR" />
+    </graph>
+</symbol>

@@ -1,0 +1,496 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Instruction_Decode.vf
+// /___/   /\     Timestamp : 10/20/2022 13:59:08
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Instruction_Decode.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Instruction_Decode.sch
+//Design Name: Instruction_Decode
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module OR12_HXILINX_Instruction_Decode (O, I0, I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+   input I8;
+   input I9;
+   input I10;
+   input I11;
+
+assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7 || I8 || I9 || I10 || I11 );
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module OR6_HXILINX_Instruction_Decode (O, I0, I1, I2, I3, I4, I5);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+
+assign O = (I0 || I1 || I2 || I3 || I4 || I5);
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module AND7_HXILINX_Instruction_Decode (O, I0, I1, I2, I3, I4, I5, I6);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+
+assign O = I0 && I1 && I2 && I3 && I4 && I5 && I6;
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module AND8_HXILINX_Instruction_Decode (O, I0, I1, I2, I3, I4, I5, I6, I7);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+
+assign O = I0 && I1 && I2 && I3 && I4 && I5 && I6 && I7;
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module AND9_HXILINX_Instruction_Decode (O, I0, I1, I2, I3, I4, I5, I6, I7, I8);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+   input I8;
+
+assign O = I0 && I1 && I2 && I3 && I4 && I5 && I6 && I7 && I8;
+
+endmodule
+`timescale 1ns / 1ps
+
+module Instruction_Decode(C, 
+                          Instruction, 
+                          Z, 
+                          ADC, 
+                          BRANCH, 
+                          data_write_en, 
+                          flag_ALU_RF, 
+                          flag_HLT, 
+                          flag_label_PC, 
+                          flag_mem_RF, 
+                          flag_OutR, 
+                          flag_PC_RF, 
+                          flag_Rd_PC, 
+                          flag_Rm_PC, 
+                          flag_Rm_RF, 
+                          JMP, 
+                          LHI, 
+                          LLI, 
+                          RF_write_en, 
+                          SBB, 
+                          Src_ALU_B, 
+                          Src_Read_B, 
+                          SUB);
+
+    input C;
+    input [15:0] Instruction;
+    input Z;
+   output ADC;
+   output BRANCH;
+   output data_write_en;
+   output flag_ALU_RF;
+   output flag_HLT;
+   output flag_label_PC;
+   output flag_mem_RF;
+   output flag_OutR;
+   output flag_PC_RF;
+   output flag_Rd_PC;
+   output flag_Rm_PC;
+   output flag_Rm_RF;
+   output JMP;
+   output LHI;
+   output LLI;
+   output RF_write_en;
+   output SBB;
+   output Src_ALU_B;
+   output Src_Read_B;
+   output SUB;
+   
+   wire C_bar;
+   wire [15:0] Instruction_bar;
+   wire op_ADC;
+   wire op_ADD;
+   wire op_ADDI;
+   wire op_B;
+   wire op_BCC;
+   wire op_BCS;
+   wire op_BEQ;
+   wire op_BNE;
+   wire op_CMP;
+   wire op_HLT;
+   wire op_JAL1;
+   wire op_JAL2;
+   wire op_JMP;
+   wire op_JR;
+   wire op_LDR;
+   wire op_LHI;
+   wire op_LLI;
+   wire op_MOV;
+   wire op_OutR;
+   wire op_SBB;
+   wire op_STR;
+   wire op_SUB;
+   wire op_SUBI;
+   wire XLXN_64;
+   wire XLXN_77;
+   wire XLXN_86;
+   wire XLXN_113;
+   wire Z_bar;
+   
+   INV  XLXI_1_0 (.I(Instruction[0]), 
+                 .O(Instruction_bar[0]));
+   INV  XLXI_1_1 (.I(Instruction[1]), 
+                 .O(Instruction_bar[1]));
+   INV  XLXI_1_2 (.I(Instruction[2]), 
+                 .O(Instruction_bar[2]));
+   INV  XLXI_1_3 (.I(Instruction[3]), 
+                 .O(Instruction_bar[3]));
+   INV  XLXI_1_4 (.I(Instruction[4]), 
+                 .O(Instruction_bar[4]));
+   INV  XLXI_1_5 (.I(Instruction[5]), 
+                 .O(Instruction_bar[5]));
+   INV  XLXI_1_6 (.I(Instruction[6]), 
+                 .O(Instruction_bar[6]));
+   INV  XLXI_1_7 (.I(Instruction[7]), 
+                 .O(Instruction_bar[7]));
+   INV  XLXI_1_8 (.I(Instruction[8]), 
+                 .O(Instruction_bar[8]));
+   INV  XLXI_1_9 (.I(Instruction[9]), 
+                 .O(Instruction_bar[9]));
+   INV  XLXI_1_10 (.I(Instruction[10]), 
+                  .O(Instruction_bar[10]));
+   INV  XLXI_1_11 (.I(Instruction[11]), 
+                  .O(Instruction_bar[11]));
+   INV  XLXI_1_12 (.I(Instruction[12]), 
+                  .O(Instruction_bar[12]));
+   INV  XLXI_1_13 (.I(Instruction[13]), 
+                  .O(Instruction_bar[13]));
+   INV  XLXI_1_14 (.I(Instruction[14]), 
+                  .O(Instruction_bar[14]));
+   INV  XLXI_1_15 (.I(Instruction[15]), 
+                  .O(Instruction_bar[15]));
+   AND5  XLXI_2 (.I0(Instruction[11]), 
+                .I1(Instruction_bar[12]), 
+                .I2(Instruction_bar[13]), 
+                .I3(Instruction_bar[14]), 
+                .I4(Instruction_bar[15]), 
+                .O(op_LHI));
+   AND5  XLXI_3 (.I0(Instruction_bar[11]), 
+                .I1(Instruction[12]), 
+                .I2(Instruction_bar[13]), 
+                .I3(Instruction_bar[14]), 
+                .I4(Instruction_bar[15]), 
+                .O(op_LLI));
+   AND5  XLXI_4 (.I0(Instruction[11]), 
+                .I1(Instruction[12]), 
+                .I2(Instruction_bar[13]), 
+                .I3(Instruction_bar[14]), 
+                .I4(Instruction_bar[15]), 
+                .O(op_LDR));
+   AND5  XLXI_5 (.I0(Instruction[11]), 
+                .I1(Instruction_bar[12]), 
+                .I2(Instruction[13]), 
+                .I3(Instruction_bar[14]), 
+                .I4(Instruction_bar[15]), 
+                .O(op_STR));
+   AND5  XLXI_8 (.I0(Instruction_bar[11]), 
+                .I1(Instruction_bar[12]), 
+                .I2(Instruction_bar[13]), 
+                .I3(Instruction_bar[14]), 
+                .I4(Instruction_bar[15]), 
+                .O(XLXN_64));
+   AND3  XLXI_9 (.I0(Instruction_bar[0]), 
+                .I1(Instruction_bar[1]), 
+                .I2(XLXN_64), 
+                .O(op_ADD));
+   AND5  XLXI_15 (.I0(Instruction_bar[11]), 
+                 .I1(Instruction_bar[12]), 
+                 .I2(Instruction_bar[13]), 
+                 .I3(Instruction_bar[14]), 
+                 .I4(Instruction_bar[15]), 
+                 .O(XLXN_77));
+   AND3  XLXI_16 (.I0(Instruction[0]), 
+                 .I1(Instruction_bar[1]), 
+                 .I2(XLXN_77), 
+                 .O(op_ADC));
+   AND5  XLXI_17 (.I0(Instruction_bar[11]), 
+                 .I1(Instruction_bar[12]), 
+                 .I2(Instruction_bar[13]), 
+                 .I3(Instruction_bar[14]), 
+                 .I4(Instruction_bar[15]), 
+                 .O(XLXN_86));
+   AND3  XLXI_18 (.I0(Instruction_bar[0]), 
+                 .I1(Instruction[1]), 
+                 .I2(XLXN_86), 
+                 .O(op_SUB));
+   AND5  XLXI_23 (.I0(Instruction_bar[11]), 
+                 .I1(Instruction_bar[12]), 
+                 .I2(Instruction_bar[13]), 
+                 .I3(Instruction_bar[14]), 
+                 .I4(Instruction_bar[15]), 
+                 .O(XLXN_113));
+   AND3  XLXI_24 (.I0(Instruction[0]), 
+                 .I1(Instruction[1]), 
+                 .I2(XLXN_113), 
+                 .O(op_SBB));
+   (* HU_SET = "XLXI_26_0" *) 
+   AND7_HXILINX_Instruction_Decode  XLXI_26 (.I0(Instruction[0]), 
+                                            .I1(Instruction_bar[1]), 
+                                            .I2(Instruction_bar[11]), 
+                                            .I3(Instruction[12]), 
+                                            .I4(Instruction[13]), 
+                                            .I5(Instruction_bar[14]), 
+                                            .I6(Instruction_bar[15]), 
+                                            .O(op_CMP));
+   AND5  XLXI_27 (.I0(Instruction[11]), 
+                 .I1(Instruction[12]), 
+                 .I2(Instruction[13]), 
+                 .I3(Instruction_bar[14]), 
+                 .I4(Instruction_bar[15]), 
+                 .O(op_ADDI));
+   AND5  XLXI_28 (.I0(Instruction_bar[11]), 
+                 .I1(Instruction_bar[12]), 
+                 .I2(Instruction_bar[13]), 
+                 .I3(Instruction[14]), 
+                 .I4(Instruction_bar[15]), 
+                 .O(op_SUBI));
+   AND5  XLXI_29 (.I0(Instruction[11]), 
+                 .I1(Instruction[12]), 
+                 .I2(Instruction_bar[13]), 
+                 .I3(Instruction[14]), 
+                 .I4(Instruction_bar[15]), 
+                 .O(op_MOV));
+   INV  XLXI_30 (.I(C), 
+                .O(C_bar));
+   INV  XLXI_31 (.I(Z), 
+                .O(Z_bar));
+   (* HU_SET = "XLXI_37_1" *) 
+   AND9_HXILINX_Instruction_Decode  XLXI_37 (.I0(C_bar), 
+                                            .I1(Instruction[8]), 
+                                            .I2(Instruction[9]), 
+                                            .I3(Instruction_bar[10]), 
+                                            .I4(Instruction_bar[11]), 
+                                            .I5(Instruction_bar[12]), 
+                                            .I6(Instruction_bar[13]), 
+                                            .I7(Instruction[14]), 
+                                            .I8(Instruction[15]), 
+                                            .O(op_BCC));
+   (* HU_SET = "XLXI_39_2" *) 
+   AND9_HXILINX_Instruction_Decode  XLXI_39 (.I0(C), 
+                                            .I1(Instruction_bar[8]), 
+                                            .I2(Instruction[9]), 
+                                            .I3(Instruction_bar[10]), 
+                                            .I4(Instruction_bar[11]), 
+                                            .I5(Instruction_bar[12]), 
+                                            .I6(Instruction_bar[13]), 
+                                            .I7(Instruction[14]), 
+                                            .I8(Instruction[15]), 
+                                            .O(op_BCS));
+   (* HU_SET = "XLXI_41_3" *) 
+   AND9_HXILINX_Instruction_Decode  XLXI_41 (.I0(Z_bar), 
+                                            .I1(Instruction[8]), 
+                                            .I2(Instruction_bar[9]), 
+                                            .I3(Instruction_bar[10]), 
+                                            .I4(Instruction_bar[11]), 
+                                            .I5(Instruction_bar[12]), 
+                                            .I6(Instruction_bar[13]), 
+                                            .I7(Instruction[14]), 
+                                            .I8(Instruction[15]), 
+                                            .O(op_BNE));
+   (* HU_SET = "XLXI_45_4" *) 
+   AND9_HXILINX_Instruction_Decode  XLXI_45 (.I0(Z), 
+                                            .I1(Instruction_bar[8]), 
+                                            .I2(Instruction_bar[9]), 
+                                            .I3(Instruction_bar[10]), 
+                                            .I4(Instruction_bar[11]), 
+                                            .I5(Instruction_bar[12]), 
+                                            .I6(Instruction_bar[13]), 
+                                            .I7(Instruction[14]), 
+                                            .I8(Instruction[15]), 
+                                            .O(op_BEQ));
+   (* HU_SET = "XLXI_47_5" *) 
+   AND8_HXILINX_Instruction_Decode  XLXI_47 (.I0(Instruction_bar[8]), 
+                                            .I1(Instruction[9]), 
+                                            .I2(Instruction[10]), 
+                                            .I3(Instruction[11]), 
+                                            .I4(Instruction_bar[12]), 
+                                            .I5(Instruction_bar[13]), 
+                                            .I6(Instruction[14]), 
+                                            .I7(Instruction[15]), 
+                                            .O(op_B));
+   AND5  XLXI_48 (.I0(Instruction_bar[11]), 
+                 .I1(Instruction_bar[12]), 
+                 .I2(Instruction_bar[13]), 
+                 .I3(Instruction_bar[14]), 
+                 .I4(Instruction[15]), 
+                 .O(op_JMP));
+   AND5  XLXI_49 (.I0(Instruction[11]), 
+                 .I1(Instruction_bar[12]), 
+                 .I2(Instruction_bar[13]), 
+                 .I3(Instruction_bar[14]), 
+                 .I4(Instruction[15]), 
+                 .O(op_JAL1));
+   AND5  XLXI_50 (.I0(Instruction_bar[11]), 
+                 .I1(Instruction[12]), 
+                 .I2(Instruction_bar[13]), 
+                 .I3(Instruction_bar[14]), 
+                 .I4(Instruction[15]), 
+                 .O(op_JAL2));
+   AND5  XLXI_51 (.I0(Instruction[11]), 
+                 .I1(Instruction[12]), 
+                 .I2(Instruction_bar[13]), 
+                 .I3(Instruction_bar[14]), 
+                 .I4(Instruction[15]), 
+                 .O(op_JR));
+   (* HU_SET = "XLXI_53_6" *) 
+   AND7_HXILINX_Instruction_Decode  XLXI_53 (.I0(Instruction_bar[0]), 
+                                            .I1(Instruction_bar[1]), 
+                                            .I2(Instruction_bar[11]), 
+                                            .I3(Instruction_bar[12]), 
+                                            .I4(Instruction[13]), 
+                                            .I5(Instruction[14]), 
+                                            .I6(Instruction[15]), 
+                                            .O(op_OutR));
+   (* HU_SET = "XLXI_54_7" *) 
+   AND7_HXILINX_Instruction_Decode  XLXI_54 (.I0(Instruction[0]), 
+                                            .I1(Instruction_bar[1]), 
+                                            .I2(Instruction_bar[11]), 
+                                            .I3(Instruction_bar[12]), 
+                                            .I4(Instruction[13]), 
+                                            .I5(Instruction[14]), 
+                                            .I6(Instruction[15]), 
+                                            .O(op_HLT));
+   INV  XLXI_55 (.I(op_HLT), 
+                .O(flag_HLT));
+   BUF  XLXI_56 (.I(op_STR), 
+                .O(data_write_en));
+   BUF  XLXI_57 (.I(op_JMP), 
+                .O(flag_label_PC));
+   BUF  XLXI_58 (.I(op_JAL2), 
+                .O(flag_Rm_PC));
+   BUF  XLXI_59 (.I(op_JR), 
+                .O(flag_Rd_PC));
+   (* HU_SET = "XLXI_60_8" *) 
+   OR6_HXILINX_Instruction_Decode  XLXI_60 (.I0(op_JAL1), 
+                                           .I1(op_B), 
+                                           .I2(op_BEQ), 
+                                           .I3(op_BNE), 
+                                           .I4(op_BCS), 
+                                           .I5(op_BCC), 
+                                           .O(BRANCH));
+   BUF  XLXI_61 (.I(op_ADC), 
+                .O(ADC));
+   OR3  XLXI_62 (.I0(op_SUBI), 
+                .I1(op_CMP), 
+                .I2(op_SUB), 
+                .O(SUB));
+   BUF  XLXI_63 (.I(op_SBB), 
+                .O(SBB));
+   OR3  XLXI_64 (.I0(op_JR), 
+                .I1(op_JAL2), 
+                .I2(op_JMP), 
+                .O(JMP));
+   OR4  XLXI_65 (.I0(op_SUBI), 
+                .I1(op_ADDI), 
+                .I2(op_STR), 
+                .I3(op_LDR), 
+                .O(Src_ALU_B));
+   OR3  XLXI_66 (.I0(op_JR), 
+                .I1(op_STR), 
+                .I2(op_LHI), 
+                .O(Src_Read_B));
+   BUF  XLXI_67 (.I(op_LDR), 
+                .O(flag_mem_RF));
+   (* HU_SET = "XLXI_69_9" *) 
+   OR6_HXILINX_Instruction_Decode  XLXI_69 (.I0(op_SUBI), 
+                                           .I1(op_ADDI), 
+                                           .I2(op_SBB), 
+                                           .I3(op_SUB), 
+                                           .I4(op_ADC), 
+                                           .I5(op_ADD), 
+                                           .O(flag_ALU_RF));
+   BUF  XLXI_71 (.I(op_MOV), 
+                .O(flag_Rm_RF));
+   OR2  XLXI_72 (.I0(op_JAL2), 
+                .I1(op_JAL1), 
+                .O(flag_PC_RF));
+   (* HU_SET = "XLXI_73_10" *) 
+   OR12_HXILINX_Instruction_Decode  XLXI_73 (.I0(op_JAL2), 
+                                            .I1(op_JAL1), 
+                                            .I2(op_MOV), 
+                                            .I3(op_SUBI), 
+                                            .I4(op_ADDI), 
+                                            .I5(op_SBB), 
+                                            .I6(op_SUB), 
+                                            .I7(op_ADC), 
+                                            .I8(op_ADD), 
+                                            .I9(op_LDR), 
+                                            .I10(op_LLI), 
+                                            .I11(op_LHI), 
+                                            .O(RF_write_en));
+   BUF  XLXI_75 (.I(op_LHI), 
+                .O(LHI));
+   BUF  XLXI_76 (.I(op_LLI), 
+                .O(LLI));
+   BUF  XLXI_80 (.I(op_OutR), 
+                .O(flag_OutR));
+endmodule
