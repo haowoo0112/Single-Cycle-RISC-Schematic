@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Single_Cycle_RISC.vf
-// /___/   /\     Timestamp : 10/20/2022 16:07:18
+// /___/   /\     Timestamp : 10/20/2022 19:18:52
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -229,12 +229,12 @@ module D_flip_flop_1_bit_MUSER_Single_Cycle_RISC(clk,
    wire Q_DUMMY;
    
    assign Q = Q_DUMMY;
-   (* HU_SET = "XLXI_1_0" *) 
+   (* HU_SET = "XLXI_1_59" *) 
    M2_1_HXILINX_Single_Cycle_RISC  XLXI_1 (.D0(XLXN_15), 
                                           .D1(XLXN_5), 
                                           .S0(clk), 
                                           .O(XLXN_3));
-   (* HU_SET = "XLXI_2_1" *) 
+   (* HU_SET = "XLXI_2_60" *) 
    M2_1_HXILINX_Single_Cycle_RISC  XLXI_2 (.D0(XLXN_8), 
                                           .D1(XLXN_6), 
                                           .S0(XLXN_11), 
@@ -249,7 +249,7 @@ module D_flip_flop_1_bit_MUSER_Single_Cycle_RISC(clk,
                .O(XLXN_6));
    INV  XLXI_7 (.I(XLXN_7), 
                .O(Q_DUMMY));
-   (* HU_SET = "XLXI_8_2" *) 
+   (* HU_SET = "XLXI_8_61" *) 
    M2_1_HXILINX_Single_Cycle_RISC  XLXI_8 (.D0(Q_DUMMY), 
                                           .D1(D), 
                                           .S0(LOAD), 
@@ -850,7 +850,7 @@ module PC_circuit_MUSER_Single_Cycle_RISC(BRANCH,
    wire [15:0] Q_DUMMY;
    
    assign Q[15:0] = Q_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_3" *) 
+   (* HU_SET = "XLXI_1_62" *) 
    FD16CE_HXILINX_Single_Cycle_RISC  XLXI_1 (.C(clk), 
                                             .CE(XLXN_5), 
                                             .CLR(clr), 
@@ -1090,7 +1090,7 @@ module PC_circuit_MUSER_Single_Cycle_RISC(BRANCH,
                                                            .Cout(), 
                                                            .Cout_1(), 
                                                            .Y(XLXN_12[15:0]));
-   (* HU_SET = "XLXI_45_4" *) 
+   (* HU_SET = "XLXI_45_63" *) 
    FD16CE_HXILINX_Single_Cycle_RISC  XLXI_45 (.C(XLXN_79), 
                                              .CE(XLXN_80), 
                                              .CLR(clr), 
@@ -1309,7 +1309,7 @@ module multiplexer_8_to_1_MUSER_Single_Cycle_RISC(I0,
                  .I2(S1), 
                  .I3(S2), 
                  .O(XLXN_78));
-   (* HU_SET = "XLXI_38_5" *) 
+   (* HU_SET = "XLXI_38_64" *) 
    OR8_HXILINX_Single_Cycle_RISC  XLXI_38 (.I0(XLXN_78), 
                                           .I1(XLXN_88), 
                                           .I2(XLXN_62), 
@@ -1848,11 +1848,12 @@ module ALU_CC_MUSER_Single_Cycle_RISC(A,
    output Z;
    
    wire XLXN_22;
-   wire XLXN_33;
+   wire C_DUMMY;
    wire [15:0] Y_DUMMY;
    
+   assign C = C_DUMMY;
    assign Y[15:0] = Y_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_6" *) 
+   (* HU_SET = "XLXI_1_65" *) 
    NOR16_HXILINX_Single_Cycle_RISC  XLXI_1 (.I0(Y_DUMMY[0]), 
                                            .I1(Y_DUMMY[1]), 
                                            .I2(Y_DUMMY[2]), 
@@ -1871,11 +1872,8 @@ module ALU_CC_MUSER_Single_Cycle_RISC(A,
                                            .I15(Y_DUMMY[15]), 
                                            .O(Z));
    XOR2  XLXI_2 (.I0(XLXN_22), 
-                .I1(XLXN_33), 
+                .I1(C_DUMMY), 
                 .O(V));
-   XOR2  XLXI_3 (.I0(Pre_C), 
-                .I1(XLXN_33), 
-                .O(C));
    BUF  XLXI_6 (.I(Y_DUMMY[15]), 
                .O(N));
    ALU_MUSER_Single_Cycle_RISC  XLXI_8 (.A(A[15:0]), 
@@ -1884,7 +1882,7 @@ module ALU_CC_MUSER_Single_Cycle_RISC(A,
                                        .C(Pre_C), 
                                        .SBB(SBB), 
                                        .SUB(SUB), 
-                                       .Cout(XLXN_33), 
+                                       .Cout(C_DUMMY), 
                                        .Cout_1(XLXN_22), 
                                        .Y(Y_DUMMY[15:0]));
 endmodule
@@ -2539,7 +2537,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
    GND  XLXI_108_5 (.G(XLXN_208[5]));
    GND  XLXI_108_6 (.G(XLXN_208[6]));
    GND  XLXI_108_7 (.G(XLXN_208[7]));
-   (* HU_SET = "XLXI_109_0_22" *) 
+   (* HU_SET = "XLXI_109_0_81" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_0 (.I0(XLXN_217[0]), 
                                              .I1(XLXN_216[0]), 
                                              .I2(XLXN_215[0]), 
@@ -2547,7 +2545,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                              .I4(XLXN_211[0]), 
                                              .I5(XLXN_210[0]), 
                                              .O(RF_write_data[0]));
-   (* HU_SET = "XLXI_109_1_21" *) 
+   (* HU_SET = "XLXI_109_1_80" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_1 (.I0(XLXN_217[1]), 
                                              .I1(XLXN_216[1]), 
                                              .I2(XLXN_215[1]), 
@@ -2555,7 +2553,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                              .I4(XLXN_211[1]), 
                                              .I5(XLXN_210[1]), 
                                              .O(RF_write_data[1]));
-   (* HU_SET = "XLXI_109_2_20" *) 
+   (* HU_SET = "XLXI_109_2_79" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_2 (.I0(XLXN_217[2]), 
                                              .I1(XLXN_216[2]), 
                                              .I2(XLXN_215[2]), 
@@ -2563,7 +2561,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                              .I4(XLXN_211[2]), 
                                              .I5(XLXN_210[2]), 
                                              .O(RF_write_data[2]));
-   (* HU_SET = "XLXI_109_3_19" *) 
+   (* HU_SET = "XLXI_109_3_78" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_3 (.I0(XLXN_217[3]), 
                                              .I1(XLXN_216[3]), 
                                              .I2(XLXN_215[3]), 
@@ -2571,7 +2569,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                              .I4(XLXN_211[3]), 
                                              .I5(XLXN_210[3]), 
                                              .O(RF_write_data[3]));
-   (* HU_SET = "XLXI_109_4_18" *) 
+   (* HU_SET = "XLXI_109_4_77" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_4 (.I0(XLXN_217[4]), 
                                              .I1(XLXN_216[4]), 
                                              .I2(XLXN_215[4]), 
@@ -2579,7 +2577,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                              .I4(XLXN_211[4]), 
                                              .I5(XLXN_210[4]), 
                                              .O(RF_write_data[4]));
-   (* HU_SET = "XLXI_109_5_17" *) 
+   (* HU_SET = "XLXI_109_5_76" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_5 (.I0(XLXN_217[5]), 
                                              .I1(XLXN_216[5]), 
                                              .I2(XLXN_215[5]), 
@@ -2587,7 +2585,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                              .I4(XLXN_211[5]), 
                                              .I5(XLXN_210[5]), 
                                              .O(RF_write_data[5]));
-   (* HU_SET = "XLXI_109_6_16" *) 
+   (* HU_SET = "XLXI_109_6_75" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_6 (.I0(XLXN_217[6]), 
                                              .I1(XLXN_216[6]), 
                                              .I2(XLXN_215[6]), 
@@ -2595,7 +2593,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                              .I4(XLXN_211[6]), 
                                              .I5(XLXN_210[6]), 
                                              .O(RF_write_data[6]));
-   (* HU_SET = "XLXI_109_7_15" *) 
+   (* HU_SET = "XLXI_109_7_74" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_7 (.I0(XLXN_217[7]), 
                                              .I1(XLXN_216[7]), 
                                              .I2(XLXN_215[7]), 
@@ -2603,7 +2601,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                              .I4(XLXN_211[7]), 
                                              .I5(XLXN_210[7]), 
                                              .O(RF_write_data[7]));
-   (* HU_SET = "XLXI_109_8_14" *) 
+   (* HU_SET = "XLXI_109_8_73" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_8 (.I0(XLXN_217[8]), 
                                              .I1(XLXN_216[8]), 
                                              .I2(XLXN_215[8]), 
@@ -2611,7 +2609,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                              .I4(XLXN_211[8]), 
                                              .I5(XLXN_210[8]), 
                                              .O(RF_write_data[8]));
-   (* HU_SET = "XLXI_109_9_13" *) 
+   (* HU_SET = "XLXI_109_9_72" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_9 (.I0(XLXN_217[9]), 
                                              .I1(XLXN_216[9]), 
                                              .I2(XLXN_215[9]), 
@@ -2619,7 +2617,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                              .I4(XLXN_211[9]), 
                                              .I5(XLXN_210[9]), 
                                              .O(RF_write_data[9]));
-   (* HU_SET = "XLXI_109_10_12" *) 
+   (* HU_SET = "XLXI_109_10_71" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_10 (.I0(XLXN_217[10]), 
                                               .I1(XLXN_216[10]), 
                                               .I2(XLXN_215[10]), 
@@ -2627,7 +2625,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                               .I4(XLXN_211[10]), 
                                               .I5(XLXN_210[10]), 
                                               .O(RF_write_data[10]));
-   (* HU_SET = "XLXI_109_11_11" *) 
+   (* HU_SET = "XLXI_109_11_70" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_11 (.I0(XLXN_217[11]), 
                                               .I1(XLXN_216[11]), 
                                               .I2(XLXN_215[11]), 
@@ -2635,7 +2633,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                               .I4(XLXN_211[11]), 
                                               .I5(XLXN_210[11]), 
                                               .O(RF_write_data[11]));
-   (* HU_SET = "XLXI_109_12_10" *) 
+   (* HU_SET = "XLXI_109_12_69" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_12 (.I0(XLXN_217[12]), 
                                               .I1(XLXN_216[12]), 
                                               .I2(XLXN_215[12]), 
@@ -2643,7 +2641,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                               .I4(XLXN_211[12]), 
                                               .I5(XLXN_210[12]), 
                                               .O(RF_write_data[12]));
-   (* HU_SET = "XLXI_109_13_9" *) 
+   (* HU_SET = "XLXI_109_13_68" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_13 (.I0(XLXN_217[13]), 
                                               .I1(XLXN_216[13]), 
                                               .I2(XLXN_215[13]), 
@@ -2651,7 +2649,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                               .I4(XLXN_211[13]), 
                                               .I5(XLXN_210[13]), 
                                               .O(RF_write_data[13]));
-   (* HU_SET = "XLXI_109_14_8" *) 
+   (* HU_SET = "XLXI_109_14_67" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_14 (.I0(XLXN_217[14]), 
                                               .I1(XLXN_216[14]), 
                                               .I2(XLXN_215[14]), 
@@ -2659,7 +2657,7 @@ module Datapath_Module_MUSER_Single_Cycle_RISC(ADC,
                                               .I4(XLXN_211[14]), 
                                               .I5(XLXN_210[14]), 
                                               .O(RF_write_data[14]));
-   (* HU_SET = "XLXI_109_15_7" *) 
+   (* HU_SET = "XLXI_109_15_66" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_109_15 (.I0(XLXN_217[15]), 
                                               .I1(XLXN_216[15]), 
                                               .I2(XLXN_215[15]), 
@@ -2878,7 +2876,7 @@ module Instruction_Decode_MUSER_Single_Cycle_RISC(C,
                  .I1(Instruction[1]), 
                  .I2(XLXN_113), 
                  .O(op_SBB));
-   (* HU_SET = "XLXI_26_23" *) 
+   (* HU_SET = "XLXI_26_82" *) 
    AND7_HXILINX_Single_Cycle_RISC  XLXI_26 (.I0(Instruction[0]), 
                                            .I1(Instruction_bar[1]), 
                                            .I2(Instruction_bar[11]), 
@@ -2909,7 +2907,7 @@ module Instruction_Decode_MUSER_Single_Cycle_RISC(C,
                 .O(C_bar));
    INV  XLXI_31 (.I(Z), 
                 .O(Z_bar));
-   (* HU_SET = "XLXI_37_24" *) 
+   (* HU_SET = "XLXI_37_83" *) 
    AND9_HXILINX_Single_Cycle_RISC  XLXI_37 (.I0(C_bar), 
                                            .I1(Instruction[8]), 
                                            .I2(Instruction[9]), 
@@ -2920,7 +2918,7 @@ module Instruction_Decode_MUSER_Single_Cycle_RISC(C,
                                            .I7(Instruction[14]), 
                                            .I8(Instruction[15]), 
                                            .O(op_BCC));
-   (* HU_SET = "XLXI_39_25" *) 
+   (* HU_SET = "XLXI_39_84" *) 
    AND9_HXILINX_Single_Cycle_RISC  XLXI_39 (.I0(C), 
                                            .I1(Instruction_bar[8]), 
                                            .I2(Instruction[9]), 
@@ -2931,7 +2929,7 @@ module Instruction_Decode_MUSER_Single_Cycle_RISC(C,
                                            .I7(Instruction[14]), 
                                            .I8(Instruction[15]), 
                                            .O(op_BCS));
-   (* HU_SET = "XLXI_41_26" *) 
+   (* HU_SET = "XLXI_41_85" *) 
    AND9_HXILINX_Single_Cycle_RISC  XLXI_41 (.I0(Z_bar), 
                                            .I1(Instruction[8]), 
                                            .I2(Instruction_bar[9]), 
@@ -2942,7 +2940,7 @@ module Instruction_Decode_MUSER_Single_Cycle_RISC(C,
                                            .I7(Instruction[14]), 
                                            .I8(Instruction[15]), 
                                            .O(op_BNE));
-   (* HU_SET = "XLXI_45_27" *) 
+   (* HU_SET = "XLXI_45_86" *) 
    AND9_HXILINX_Single_Cycle_RISC  XLXI_45 (.I0(Z), 
                                            .I1(Instruction_bar[8]), 
                                            .I2(Instruction_bar[9]), 
@@ -2953,7 +2951,7 @@ module Instruction_Decode_MUSER_Single_Cycle_RISC(C,
                                            .I7(Instruction[14]), 
                                            .I8(Instruction[15]), 
                                            .O(op_BEQ));
-   (* HU_SET = "XLXI_47_28" *) 
+   (* HU_SET = "XLXI_47_87" *) 
    AND8_HXILINX_Single_Cycle_RISC  XLXI_47 (.I0(Instruction_bar[8]), 
                                            .I1(Instruction[9]), 
                                            .I2(Instruction[10]), 
@@ -2987,7 +2985,7 @@ module Instruction_Decode_MUSER_Single_Cycle_RISC(C,
                  .I3(Instruction_bar[14]), 
                  .I4(Instruction[15]), 
                  .O(op_JR));
-   (* HU_SET = "XLXI_53_29" *) 
+   (* HU_SET = "XLXI_53_88" *) 
    AND7_HXILINX_Single_Cycle_RISC  XLXI_53 (.I0(Instruction_bar[0]), 
                                            .I1(Instruction_bar[1]), 
                                            .I2(Instruction_bar[11]), 
@@ -2996,7 +2994,7 @@ module Instruction_Decode_MUSER_Single_Cycle_RISC(C,
                                            .I5(Instruction[14]), 
                                            .I6(Instruction[15]), 
                                            .O(op_OutR));
-   (* HU_SET = "XLXI_54_30" *) 
+   (* HU_SET = "XLXI_54_89" *) 
    AND7_HXILINX_Single_Cycle_RISC  XLXI_54 (.I0(Instruction[0]), 
                                            .I1(Instruction_bar[1]), 
                                            .I2(Instruction_bar[11]), 
@@ -3015,7 +3013,7 @@ module Instruction_Decode_MUSER_Single_Cycle_RISC(C,
                 .O(flag_Rm_PC));
    BUF  XLXI_59 (.I(op_JR), 
                 .O(flag_Rd_PC));
-   (* HU_SET = "XLXI_60_31" *) 
+   (* HU_SET = "XLXI_60_90" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_60 (.I0(op_JAL1), 
                                           .I1(op_B), 
                                           .I2(op_BEQ), 
@@ -3046,7 +3044,7 @@ module Instruction_Decode_MUSER_Single_Cycle_RISC(C,
                 .O(Src_Read_B));
    BUF  XLXI_67 (.I(op_LDR), 
                 .O(flag_mem_RF));
-   (* HU_SET = "XLXI_69_32" *) 
+   (* HU_SET = "XLXI_69_91" *) 
    OR6_HXILINX_Single_Cycle_RISC  XLXI_69 (.I0(op_SUBI), 
                                           .I1(op_ADDI), 
                                           .I2(op_SBB), 
@@ -3059,7 +3057,7 @@ module Instruction_Decode_MUSER_Single_Cycle_RISC(C,
    OR2  XLXI_72 (.I0(op_JAL2), 
                 .I1(op_JAL1), 
                 .O(flag_PC_RF));
-   (* HU_SET = "XLXI_73_33" *) 
+   (* HU_SET = "XLXI_73_92" *) 
    OR12_HXILINX_Single_Cycle_RISC  XLXI_73 (.I0(op_JAL2), 
                                            .I1(op_JAL1), 
                                            .I2(op_MOV), 
@@ -3128,8 +3126,8 @@ module Single_Cycle_RISC(clk,
    wire XLXN_16;
    wire XLXN_17;
    wire XLXN_18;
-   wire XLXN_19;
-   wire XLXN_20;
+   wire XLXN_22;
+   wire XLXN_23;
    wire [15:0] instruction_DUMMY;
    
    assign instruction[15:0] = instruction_DUMMY[15:0];
@@ -3144,7 +3142,7 @@ module Single_Cycle_RISC(clk,
                                                       .flag_HLT(flag_HLT), 
                                                       .flag_label_PC(XLXN_3), 
                                                       .flag_mem_RF(XLXN_13), 
-                                                      .flag_OutR(XLXN_20), 
+                                                      .flag_OutR(XLXN_23), 
                                                       .flag_PC_RF(XLXN_16), 
                                                       .flag_Rd_PC(XLXN_5), 
                                                       .flag_Rm_PC(XLXN_4), 
@@ -3152,7 +3150,7 @@ module Single_Cycle_RISC(clk,
                                                       .JMP(XLXN_10), 
                                                       .LHI(XLXN_17), 
                                                       .LLI(XLXN_18), 
-                                                      .RF_write_en(XLXN_19), 
+                                                      .RF_write_en(XLXN_22), 
                                                       .SBB(XLXN_9), 
                                                       .Src_ALU_B(XLXN_11), 
                                                       .Src_Read_B(XLXN_12), 
@@ -3177,7 +3175,7 @@ module Single_Cycle_RISC(clk,
                                                    .flag_HLT(flag_HLT), 
                                                    .flag_label_PC(XLXN_3), 
                                                    .flag_mem_RF(XLXN_13), 
-                                                   .flag_OutR(XLXN_20), 
+                                                   .flag_OutR(XLXN_23), 
                                                    .flag_PC_RF(XLXN_16), 
                                                    .flag_Rd_PC(XLXN_5), 
                                                    .flag_Rm_PC(XLXN_4), 
@@ -3185,7 +3183,7 @@ module Single_Cycle_RISC(clk,
                                                    .JMP(XLXN_10), 
                                                    .LHI(XLXN_17), 
                                                    .LLI(XLXN_18), 
-                                                   .RF_write_en(XLXN_19), 
+                                                   .RF_write_en(XLXN_22), 
                                                    .SBB(XLXN_9), 
                                                    .Src_ALU_B(XLXN_11), 
                                                    .Src_Read_B(XLXN_12), 

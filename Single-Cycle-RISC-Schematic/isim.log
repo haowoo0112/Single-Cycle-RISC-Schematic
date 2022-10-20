@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\ib701\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\ALU_CC_ALU_CC_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU_CC_ALU_CC_sch_tb_isim_beh.wdb 
+Running: C:\Users\ib701\Desktop\Single-Cycle-RISC-Schematic\Single-Cycle-RISC-Schematic\Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,4 +11,110 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 90 ns : File "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_ALU_CC.v" Line 111
+0ns 0 0 0 0 0000 0000 0 0000 0000 xxxx 0000 x
+
+20ns 1 0 1 0 0000 0000 1 0000 0047 0000 0000 1
+
+30ns 0 0 1 0 0000 0000 1 0000 0047 0000 0000 1
+
+40ns 1 0 1 0 0000 0000 1 0001 0089 0000 0000 1
+
+50ns 0 0 1 0 0000 0000 1 0001 0089 0000 0000 1
+
+60ns 1 0 1 1 0000 1900 1 0001 0089 0000 0000 1
+
+70ns 0 0 1 1 0000 1900 1 0001 0089 0000 0000 1
+
+70.1ns 0 0 1 1 0000 1900 1 0001 0089 1900 0000 1
+
+80ns 1 0 1 1 0001 e020 1 0001 0089 0000 0000 1
+
+90ns 0 0 1 1 0001 e020 1 0001 0089 0000 0000 1
+
+90.1ns 0 0 1 1 0001 e020 1 0001 0089 e020 0000 1
+
+100ns 1 0 1 1 0002 1a01 1 0001 0089 0000 0000 1
+
+110ns 0 0 1 1 0002 1a01 1 0001 0089 0000 0000 1
+
+110.1ns 0 0 1 1 0002 1a01 1 0001 0089 1a01 0000 1
+
+120ns 1 0 1 1 0003 e040 1 0001 0089 0000 0000 1
+
+130ns 0 0 1 1 0003 e040 1 0001 0089 0000 0000 1
+
+130.1ns 0 0 1 1 0003 e040 1 0001 0089 e040 0000 1
+
+140ns 1 0 1 1 0004 3045 1 0001 0089 0000 0000 1
+
+150ns 0 0 1 1 0004 3045 1 0001 0089 0000 0000 1
+
+150.1ns 0 0 1 1 0004 3045 1 0001 0089 3045 0000 1
+
+160ns 1 0 1 1 0005 c203 1 0001 0089 0000 0000 1
+
+170ns 0 0 1 1 0005 c203 1 0001 0089 0000 0000 1
+
+170.1ns 0 0 1 1 0005 c203 1 0001 0089 c203 0000 1
+
+180ns 1 0 1 1 0006 e020 1 0001 0089 0000 0000 1
+
+190ns 0 0 1 1 0006 e020 1 0001 0089 0000 0000 1
+
+190.1ns 0 0 1 1 0006 e020 1 0001 0089 e020 0000 1
+
+200ns 1 0 1 1 0007 e001 1 0001 0089 0000 0000 1
+
+210ns 0 0 1 1 0007 e001 1 0001 0089 0000 0000 1
+
+210.1ns 0 0 1 1 0007 e001 1 0001 0089 e001 0000 0
+
+220ns 1 0 1 1 0008 e040 1 0001 0089 0000 0000 1
+
+230ns 0 0 1 1 0008 e040 1 0001 0089 0000 0000 1
+
+230.1ns 0 0 1 1 0008 e040 1 0001 0089 e040 0000 1
+
+240ns 1 0 1 1 0009 e001 1 0001 0089 0000 0000 1
+
+250ns 0 0 1 1 0009 e001 1 0001 0089 0000 0000 1
+
+250.1ns 0 0 1 1 0009 e001 1 0001 0089 e001 0000 0
+
+260ns 1 0 1 1 0009 e001 1 0001 0089 e001 0000 0
+
+270ns 0 0 1 1 0009 e001 1 0001 0089 e001 0000 0
+
+280ns 1 1 0 0 0009 e001 0 0001 0089 1900 0000 1
+
+290ns 0 0 0 0 0009 e001 0 0001 0089 1900 0000 1
+
+300ns 1 0 0 0 0009 e001 0 0001 0089 e020 0000 1
+
+310ns 0 0 0 0 0009 e001 0 0001 0089 e020 0000 1
+
+310.1ns 0 0 0 0 0009 e001 0 0001 0089 e020 0047 1
+
+320ns 1 0 0 0 0009 e001 0 0001 0089 1a01 0047 1
+
+330ns 0 0 0 0 0009 e001 0 0001 0089 1a01 0047 1
+
+340ns 1 0 0 0 0009 e001 0 0001 0089 e040 0047 1
+
+350ns 0 0 0 0 0009 e001 0 0001 0089 e040 0047 1
+
+350.1ns 0 0 0 0 0009 e001 0 0001 0089 e040 0089 1
+
+360ns 1 0 0 0 0009 e001 0 0001 0089 3045 0089 1
+
+370ns 0 0 0 0 0009 e001 0 0001 0089 3045 0089 1
+
+380ns 1 0 0 0 0009 e001 0 0001 0089 c203 0089 1
+
+390ns 0 0 0 0 0009 e001 0 0001 0089 c203 0089 1
+
+400ns 1 0 0 0 0009 e001 0 0001 0089 e040 0089 1
+
+410ns 0 0 0 0 0009 e001 0 0001 0089 e040 0089 1
+
+Stopped at time : 420 ns : File "C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/tb_Single_Cycle_RISC.v" Line 70
