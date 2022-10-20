@@ -103,9 +103,7 @@
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="RF_plus_ALU_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RF_plus_ALU_xst.xrpt"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Single_Cycle_RISC.vf"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="XOR16_1.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="XOR16_1_XOR16_1_sch_tb_isim_beh.exe"/>
@@ -209,7 +207,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1666254863" xil_pn:in_ck="5113519128912115416" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1666254863">
+    <transform xil_pn:end_ts="1666259176" xil_pn:in_ck="5113519128912115416" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1666259176">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="tb_ALU.v"/>
@@ -238,11 +236,11 @@
       <outfile xil_pn:name="tb_sign_extend_8_16.v"/>
       <outfile xil_pn:name="tb_two_comple_adder_16bit.v"/>
     </transform>
-    <transform xil_pn:end_ts="1666254420" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6760918930184469245" xil_pn:start_ts="1666254420">
+    <transform xil_pn:end_ts="1666259178" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1173859361539541455" xil_pn:start_ts="1666259178">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1666254422" xil_pn:in_ck="-2990272363544645005" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8308607060667399661" xil_pn:start_ts="1666254420">
+    <transform xil_pn:end_ts="1666259183" xil_pn:in_ck="-2990272363544645005" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2843557370695435297" xil_pn:start_ts="1666259178">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vf"/>
@@ -274,7 +272,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1666254866" xil_pn:in_ck="7588700652919977465" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1666254866">
+    <transform xil_pn:end_ts="1666259183" xil_pn:in_ck="7588700652919977465" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1666259183">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vf"/>
@@ -328,20 +326,20 @@
       <outfile xil_pn:name="tb_two_comple_adder_16bit.v"/>
       <outfile xil_pn:name="two_comple_adder_16bit.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1666254870" xil_pn:in_ck="7588700652919977465" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7638027126199623957" xil_pn:start_ts="1666254866">
+    <transform xil_pn:end_ts="1666259186" xil_pn:in_ck="7588700652919977465" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2065799383406385069" xil_pn:start_ts="1666259183">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_beh.prj"/>
-      <outfile xil_pn:name="Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="ALU_CC_ALU_CC_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="ALU_CC_ALU_CC_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1666254870" xil_pn:in_ck="5430392339793426638" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4492856139651377128" xil_pn:start_ts="1666254870">
+    <transform xil_pn:end_ts="1666259186" xil_pn:in_ck="5430392339793426638" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8926811099533111056" xil_pn:start_ts="1666259186">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="ALU_CC_ALU_CC_sch_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>

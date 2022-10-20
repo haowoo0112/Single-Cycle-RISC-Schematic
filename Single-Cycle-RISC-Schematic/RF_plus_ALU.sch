@@ -32,12 +32,6 @@
         <signal name="SUB" />
         <signal name="SBB" />
         <signal name="imm5(4:0)" />
-        <signal name="XLXN_50(0:4)" />
-        <signal name="XLXN_51(0:4)" />
-        <signal name="XLXN_52(0:4)" />
-        <signal name="XLXN_53(0:4)" />
-        <signal name="XLXN_54(0:4)" />
-        <signal name="XLXN_55(0:4)" />
         <signal name="clr" />
         <port polarity="Output" name="Y(15:0)" />
         <port polarity="Output" name="Z" />
@@ -107,7 +101,7 @@
             <line x2="64" y1="-64" y2="0" x1="64" />
         </blockdef>
         <blockdef name="ALU_CC">
-            <timestamp>2022-10-5T4:20:58</timestamp>
+            <timestamp>2022-10-20T9:52:8</timestamp>
             <rect width="256" x="64" y="-384" height="384" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
             <rect width="64" x="0" y="-364" height="24" />

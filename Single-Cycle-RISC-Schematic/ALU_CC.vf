@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ALU_CC.vf
-// /___/   /\     Timestamp : 10/17/2022 23:46:55
+// /___/   /\     Timestamp : 10/20/2022 17:46:20
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU_CC.vf -w C:/Users/USER/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU_CC.sch
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU_CC.vf -w C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/ALU_CC.sch
 //Design Name: ALU_CC
 //Device: virtex6
 //Purpose:
@@ -331,11 +331,12 @@ module ALU_CC(A,
    output Z;
    
    wire XLXN_22;
-   wire XLXN_33;
+   wire C_DUMMY;
    wire [15:0] Y_DUMMY;
    
+   assign C = C_DUMMY;
    assign Y[15:0] = Y_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_58" *) 
+   (* HU_SET = "XLXI_1_0" *) 
    NOR16_HXILINX_ALU_CC  XLXI_1 (.I0(Y_DUMMY[0]), 
                                 .I1(Y_DUMMY[1]), 
                                 .I2(Y_DUMMY[2]), 
@@ -354,11 +355,8 @@ module ALU_CC(A,
                                 .I15(Y_DUMMY[15]), 
                                 .O(Z));
    XOR2  XLXI_2 (.I0(XLXN_22), 
-                .I1(XLXN_33), 
+                .I1(C_DUMMY), 
                 .O(V));
-   XOR2  XLXI_3 (.I0(Pre_C), 
-                .I1(XLXN_33), 
-                .O(C));
    BUF  XLXI_6 (.I(Y_DUMMY[15]), 
                .O(N));
    ALU_MUSER_ALU_CC  XLXI_8 (.A(A[15:0]), 
@@ -367,7 +365,7 @@ module ALU_CC(A,
                             .C(Pre_C), 
                             .SBB(SBB), 
                             .SUB(SUB), 
-                            .Cout(XLXN_33), 
+                            .Cout(C_DUMMY), 
                             .Cout_1(XLXN_22), 
                             .Y(Y_DUMMY[15:0]));
 endmodule

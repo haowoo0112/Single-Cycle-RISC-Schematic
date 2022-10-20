@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : RF_plus_ALU.vf
-// /___/   /\     Timestamp : 10/18/2022 17:27:17
+// /___/   /\     Timestamp : 10/20/2022 17:46:22
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -273,7 +273,7 @@ module multiplexer_8_to_1_MUSER_RF_plus_ALU(I0,
                  .I2(S1), 
                  .I3(S2), 
                  .O(XLXN_78));
-   (* HU_SET = "XLXI_38_0" *) 
+   (* HU_SET = "XLXI_38_1" *) 
    OR8_HXILINX_RF_plus_ALU  XLXI_38 (.I0(XLXN_78), 
                                     .I1(XLXN_88), 
                                     .I2(XLXN_62), 
@@ -1014,11 +1014,12 @@ module ALU_CC_MUSER_RF_plus_ALU(A,
    output Z;
    
    wire XLXN_22;
-   wire XLXN_33;
+   wire C_DUMMY;
    wire [15:0] Y_DUMMY;
    
+   assign C = C_DUMMY;
    assign Y[15:0] = Y_DUMMY[15:0];
-   (* HU_SET = "XLXI_1_1" *) 
+   (* HU_SET = "XLXI_1_2" *) 
    NOR16_HXILINX_RF_plus_ALU  XLXI_1 (.I0(Y_DUMMY[0]), 
                                      .I1(Y_DUMMY[1]), 
                                      .I2(Y_DUMMY[2]), 
@@ -1037,11 +1038,8 @@ module ALU_CC_MUSER_RF_plus_ALU(A,
                                      .I15(Y_DUMMY[15]), 
                                      .O(Z));
    XOR2  XLXI_2 (.I0(XLXN_22), 
-                .I1(XLXN_33), 
+                .I1(C_DUMMY), 
                 .O(V));
-   XOR2  XLXI_3 (.I0(Pre_C), 
-                .I1(XLXN_33), 
-                .O(C));
    BUF  XLXI_6 (.I(Y_DUMMY[15]), 
                .O(N));
    ALU_MUSER_RF_plus_ALU  XLXI_8 (.A(A[15:0]), 
@@ -1050,7 +1048,7 @@ module ALU_CC_MUSER_RF_plus_ALU(A,
                                  .C(Pre_C), 
                                  .SBB(SBB), 
                                  .SUB(SUB), 
-                                 .Cout(XLXN_33), 
+                                 .Cout(C_DUMMY), 
                                  .Cout_1(XLXN_22), 
                                  .Y(Y_DUMMY[15:0]));
 endmodule

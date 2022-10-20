@@ -131,13 +131,8 @@
         </block>
         <block symbolname="xor2" name="XLXI_2">
             <blockpin signalname="XLXN_22" name="I0" />
-            <blockpin signalname="XLXN_33" name="I1" />
+            <blockpin signalname="C" name="I1" />
             <blockpin signalname="V" name="O" />
-        </block>
-        <block symbolname="xor2" name="XLXI_3">
-            <blockpin signalname="Pre_C" name="I0" />
-            <blockpin signalname="XLXN_33" name="I1" />
-            <blockpin signalname="C" name="O" />
         </block>
         <block symbolname="buf" name="XLXI_6">
             <blockpin signalname="Y(15)" name="I" />
@@ -151,7 +146,7 @@
             <blockpin signalname="SUB" name="SUB" />
             <blockpin signalname="SBB" name="SBB" />
             <blockpin signalname="Y(15:0)" name="Y(15:0)" />
-            <blockpin signalname="XLXN_33" name="Cout" />
+            <blockpin signalname="C" name="Cout" />
             <blockpin signalname="XLXN_22" name="Cout_1" />
         </block>
     </netlist>
@@ -245,19 +240,13 @@
             <wire x2="1936" y1="1568" y2="1568" x1="1904" />
         </branch>
         <instance x="1648" y="1664" name="XLXI_2" orien="R0" />
-        <instance x="1680" y="1520" name="XLXI_3" orien="R0" />
-        <branch name="Pre_C">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1648" y="1456" type="branch" />
-            <wire x2="1680" y1="1456" y2="1456" x1="1648" />
-        </branch>
         <branch name="C">
-            <wire x2="1968" y1="1424" y2="1424" x1="1936" />
-        </branch>
-        <branch name="XLXN_33">
             <wire x2="1616" y1="1392" y2="1392" x1="1536" />
-            <wire x2="1680" y1="1392" y2="1392" x1="1616" />
             <wire x2="1616" y1="1392" y2="1536" x1="1616" />
             <wire x2="1648" y1="1536" y2="1536" x1="1616" />
+            <wire x2="1936" y1="1392" y2="1392" x1="1616" />
+            <wire x2="1936" y1="1392" y2="1424" x1="1936" />
+            <wire x2="1968" y1="1424" y2="1424" x1="1936" />
         </branch>
         <instance x="1408" y="880" name="XLXI_6" orien="R0" />
         <branch name="Y(15)">

@@ -77,6 +77,14 @@ module ALU_CC_ALU_CC_sch_tb();
 		SBB = 0;
 		#10;
 		
+		A = 16'h2345;
+		B = 16'h1234;
+		Pre_C = 0;
+		ADC = 1'b0;
+		SUB = 1'b1;
+		SBB = 0;
+		#10;
+		
 		A = 16'h1234;
 		B = 16'h2345;
 		Pre_C = 1'b1;

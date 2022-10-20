@@ -24,8 +24,6 @@
         <signal name="XLXN_16" />
         <signal name="XLXN_17" />
         <signal name="XLXN_18" />
-        <signal name="XLXN_19" />
-        <signal name="XLXN_20" />
         <signal name="instruction(15:0)" />
         <signal name="clk" />
         <signal name="clr" />
@@ -40,6 +38,8 @@
         <signal name="pre_C" />
         <signal name="pre_Z" />
         <signal name="done" />
+        <signal name="XLXN_22" />
+        <signal name="XLXN_23" />
         <port polarity="Output" name="instruction(15:0)" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="clr" />
@@ -81,7 +81,7 @@
             <line x2="464" y1="-32" y2="-32" x1="400" />
         </blockdef>
         <blockdef name="Datapath_Module">
-            <timestamp>2022-10-20T8:6:41</timestamp>
+            <timestamp>2022-10-20T10:2:45</timestamp>
             <rect width="336" x="64" y="-1856" height="1856" />
             <line x2="0" y1="-1824" y2="-1824" x1="64" />
             <line x2="0" y1="-1760" y2="-1760" x1="64" />
@@ -108,9 +108,9 @@
             <line x2="0" y1="-672" y2="-672" x1="64" />
             <line x2="0" y1="-608" y2="-608" x1="64" />
             <line x2="0" y1="-544" y2="-544" x1="64" />
+            <line x2="0" y1="-480" y2="-480" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="0" y1="-480" y2="-480" x1="64" />
             <line x2="0" y1="-416" y2="-416" x1="64" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
@@ -155,8 +155,8 @@
             <blockpin signalname="XLXN_16" name="flag_PC_RF" />
             <blockpin signalname="XLXN_17" name="LHI" />
             <blockpin signalname="XLXN_18" name="LLI" />
-            <blockpin signalname="XLXN_19" name="RF_write_en" />
-            <blockpin signalname="XLXN_20" name="flag_OutR" />
+            <blockpin signalname="XLXN_22" name="RF_write_en" />
+            <blockpin signalname="XLXN_23" name="flag_OutR" />
         </block>
         <block symbolname="Datapath_Module" name="XLXI_2">
             <blockpin signalname="clk" name="clk" />
@@ -180,9 +180,9 @@
             <blockpin signalname="XLXN_10" name="JMP" />
             <blockpin signalname="XLXN_11" name="Src_ALU_B" />
             <blockpin signalname="XLXN_12" name="Src_Read_B" />
-            <blockpin signalname="XLXN_19" name="RF_write_en" />
-            <blockpin signalname="XLXN_20" name="flag_OutR" />
             <blockpin signalname="XLXN_13" name="flag_mem_RF" />
+            <blockpin signalname="XLXN_23" name="flag_OutR" />
+            <blockpin signalname="XLXN_22" name="RF_write_en" />
             <blockpin signalname="XLXN_14" name="flag_ALU_RF" />
             <blockpin signalname="XLXN_15" name="flag_Rm_RF" />
             <blockpin signalname="XLXN_16" name="flag_PC_RF" />
@@ -260,12 +260,6 @@
         <branch name="XLXN_18">
             <wire x2="1776" y1="2080" y2="2080" x1="1600" />
         </branch>
-        <branch name="XLXN_19">
-            <wire x2="1776" y1="2144" y2="2144" x1="1600" />
-        </branch>
-        <branch name="XLXN_20">
-            <wire x2="1776" y1="2208" y2="2208" x1="1600" />
-        </branch>
         <instance x="1136" y="2240" name="XLXI_1" orien="R0">
         </instance>
         <branch name="instruction(15:0)">
@@ -341,5 +335,17 @@
         </branch>
         <iomarker fontsize="28" x="2640" y="1040" name="done" orien="R0" />
         <iomarker fontsize="28" x="2320" y="416" name="instruction(15:0)" orien="R0" />
+        <branch name="XLXN_22">
+            <wire x2="1680" y1="2144" y2="2144" x1="1600" />
+            <wire x2="1680" y1="2144" y2="2208" x1="1680" />
+            <wire x2="1776" y1="2208" y2="2208" x1="1680" />
+        </branch>
+        <branch name="XLXN_23">
+            <wire x2="1664" y1="2208" y2="2208" x1="1600" />
+            <wire x2="1664" y1="2208" y2="2272" x1="1664" />
+            <wire x2="1760" y1="2272" y2="2272" x1="1664" />
+            <wire x2="1760" y1="2144" y2="2272" x1="1760" />
+            <wire x2="1776" y1="2144" y2="2144" x1="1760" />
+        </branch>
     </sheet>
 </drawing>

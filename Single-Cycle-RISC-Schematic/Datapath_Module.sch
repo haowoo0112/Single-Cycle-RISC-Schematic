@@ -146,22 +146,22 @@
             <line x2="0" y1="-96" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="RF_plus_ALU">
-            <timestamp>2022-10-18T9:26:16</timestamp>
+            <timestamp>2022-10-20T9:55:45</timestamp>
             <rect width="368" x="64" y="-832" height="832" />
             <line x2="0" y1="-800" y2="-800" x1="64" />
             <rect width="64" x="0" y="-812" height="24" />
             <line x2="0" y1="-736" y2="-736" x1="64" />
             <rect width="64" x="0" y="-748" height="24" />
+            <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-672" y2="-672" x1="64" />
             <rect width="64" x="0" y="-684" height="24" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <line x2="0" y1="-416" y2="-416" x1="64" />
             <line x2="0" y1="-608" y2="-608" x1="64" />
             <rect width="64" x="0" y="-620" height="24" />
             <line x2="0" y1="-544" y2="-544" x1="64" />
-            <line x2="0" y1="-480" y2="-480" x1="64" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="0" y1="-416" y2="-416" x1="64" />
+            <line x2="0" y1="-480" y2="-480" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
@@ -453,14 +453,14 @@
         <block symbolname="RF_plus_ALU" name="XLXI_59">
             <blockpin signalname="Rm(2:0)" name="Read_Addr_A(2:0)" />
             <blockpin signalname="Read_Addr_B(2:0)" name="Read_Addr_B(2:0)" />
+            <blockpin signalname="Pre_C" name="Pre_C" />
             <blockpin signalname="RF_write_data(15:0)" name="Write_Data(15:0)" />
+            <blockpin signalname="ADC" name="ADC" />
+            <blockpin signalname="Src_ALU_B" name="Src_ALU_B" />
             <blockpin signalname="Rd(2:0)" name="Write_Addr(2:0)" />
             <blockpin signalname="RF_write_en" name="Write_En" />
-            <blockpin signalname="XLXN_220" name="clk" />
-            <blockpin signalname="Pre_C" name="Pre_C" />
-            <blockpin signalname="ADC" name="ADC" />
             <blockpin signalname="SUB" name="SUB" />
-            <blockpin signalname="Src_ALU_B" name="Src_ALU_B" />
+            <blockpin signalname="XLXN_220" name="clk" />
             <blockpin signalname="SBB" name="SBB" />
             <blockpin signalname="clr" name="clr" />
             <blockpin signalname="imm5(4:0)" name="imm5(4:0)" />
