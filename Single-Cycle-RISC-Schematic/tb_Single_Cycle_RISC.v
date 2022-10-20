@@ -59,7 +59,8 @@ module Single_Cycle_RISC_Single_Cycle_RISC_sch_tb();
 		#20;
 		//example();
 		//Find_the_minimum_and_maximum();
-		add_two_numbers();
+		//add_two_numbers();
+		add_ten_numbers_in_consecutive_memory_location();
 		#20;
 		ext_instr_we = 1'b0;
 		ext_data_we = 1'b0; 
@@ -71,6 +72,23 @@ module Single_Cycle_RISC_Single_Cycle_RISC_sch_tb();
 		$finish ;
    end
 	
+	task add_ten_numbers_in_consecutive_memory_location;
+	begin
+		write_data_mem(16'h0,16'h12 ) ; // data
+		write_data_mem(16'h1,16'h34 ) ; // data 
+		write_data_mem(16'h2,16'h56 ) ; // data
+		write_data_mem(16'h3,16'h78 ) ; // data 
+		write_data_mem(16'h4,16'h9A ) ; // data
+		write_data_mem(16'h5,16'hBC ) ; // data 
+		write_data_mem(16'h6,16'hDE ) ; // data
+		write_data_mem(16'h7,16'hF0 ) ; // data 
+		write_data_mem(16'h8,16'h13 ) ; // data
+		write_data_mem(16'h9,16'h24 ) ; // data 
+		write_instr_mem(16'h0,16'b00010_001_00001010 ) ; // LLI R1,#10
+		
+		
+	end
+	endtask
 
 	task add_two_numbers;
 	begin
