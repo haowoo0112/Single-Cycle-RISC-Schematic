@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-10-20T17:44:05</DateModified>
+  <DateModified>2022-10-21T11:54:48</DateModified>
   <ModuleName>Single_Cycle_RISC</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic/iseconfig/Single_Cycle_RISC.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/ib701/Desktop/Single-Cycle-RISC-Schematic/Single-Cycle-RISC-Schematic\</ImplementationReportsDirectory>
   <DateInitialized>2022-10-20T17:44:05</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

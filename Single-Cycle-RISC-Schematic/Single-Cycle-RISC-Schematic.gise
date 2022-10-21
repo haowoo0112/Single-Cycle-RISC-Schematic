@@ -207,7 +207,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1666270055" xil_pn:in_ck="5113519128912115416" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1666270055">
+    <transform xil_pn:end_ts="1666325478" xil_pn:in_ck="5113519128912115416" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1666325478">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="tb_ALU.v"/>
@@ -272,7 +272,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1666270057" xil_pn:in_ck="7588700652919977465" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1666270057">
+    <transform xil_pn:end_ts="1666325488" xil_pn:in_ck="7588700652919977465" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1666325488">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vf"/>
@@ -326,7 +326,7 @@
       <outfile xil_pn:name="tb_two_comple_adder_16bit.v"/>
       <outfile xil_pn:name="two_comple_adder_16bit.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1666270061" xil_pn:in_ck="7588700652919977465" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7638027126199623957" xil_pn:start_ts="1666270057">
+    <transform xil_pn:end_ts="1666325494" xil_pn:in_ck="7588700652919977465" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7638027126199623957" xil_pn:start_ts="1666325488">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_beh.prj"/>
@@ -336,7 +336,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1666270061" xil_pn:in_ck="5430392339793426638" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4492856139651377128" xil_pn:start_ts="1666270061">
+    <transform xil_pn:end_ts="1666325495" xil_pn:in_ck="5430392339793426638" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4492856139651377128" xil_pn:start_ts="1666325494">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Single_Cycle_RISC_Single_Cycle_RISC_sch_tb_isim_beh.wdb"/>

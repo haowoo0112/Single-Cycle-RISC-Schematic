@@ -84,9 +84,19 @@ module Single_Cycle_RISC_Single_Cycle_RISC_sch_tb();
 		write_data_mem(16'h7,16'hF0 ) ; // data 
 		write_data_mem(16'h8,16'h13 ) ; // data
 		write_data_mem(16'h9,16'h24 ) ; // data 
-		write_instr_mem(16'h0,16'b00010_001_00001010 ) ; // LLI R1,#10
 		
-		
+		write_instr_mem(16'h0,16'b11100_000_000_000_00); //OUT R0 (00H)
+		write_instr_mem(16'h1,16'b00010_001_00001010); //LLI R1,0AH
+		write_instr_mem(16'h2,16'b11100_000_001_000_00); //OUT R1 (0AH)
+		/*(3)Add ten numbers in consecutive memory locations*/
+		write_instr_mem(16'h3,16'b00011_011_00000000); //LDR R3,R0,#0
+		write_instr_mem(16'h4,16'b00000_100_100_011_00); //ADD R4,R4,R3
+		write_instr_mem(16'h5,16'b11100_000_100_000_00); //OUT R4
+		write_instr_mem(16'h6,16'b00111_000_000_00001); //ADDI R0,R0,#1
+		write_instr_mem(16'h7,16'b01000_001_001_00001); //SUBI R1,R1,#1
+		write_instr_mem(16'h8,16'b1100_0001_1111_1011); //BNE if R1 != 0
+		write_instr_mem(16'h9,16'b1110_0000_0000_0001 ) ; // HLT
+
 	end
 	endtask
 
