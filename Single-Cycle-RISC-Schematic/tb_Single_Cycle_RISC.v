@@ -60,7 +60,8 @@ module Single_Cycle_RISC_Single_Cycle_RISC_sch_tb();
 		//example();
 		//Find_the_minimum_and_maximum();
 		//add_two_numbers();
-		add_ten_numbers_in_consecutive_memory_location();
+		//add_ten_numbers_in_consecutive_memory_location();
+		move_a_memory_block_from_one_place_to_another();
 		#20;
 		ext_instr_we = 1'b0;
 		ext_data_we = 1'b0; 
@@ -71,6 +72,47 @@ module Single_Cycle_RISC_Single_Cycle_RISC_sch_tb();
 		wait(!done);
 		$finish ;
    end
+
+   task move_a_memory_block_from_one_place_to_another;
+   begin
+   	write_data_mem(16'h0,16'h12 ) ; // data
+		write_data_mem(16'h1,16'h34 ) ; // data 
+		write_data_mem(16'h2,16'h56 ) ; // data
+		write_data_mem(16'h3,16'h78 ) ; // data 
+		write_data_mem(16'h4,16'h9A ) ; // data
+		write_data_mem(16'h5,16'hBC ) ; // data 
+		write_data_mem(16'h6,16'hDE ) ; // data
+		write_data_mem(16'h7,16'hF0 ) ; // data 
+		write_data_mem(16'h8,16'h13 ) ; // data
+		write_data_mem(16'h9,16'h24 ) ; // data 
+   	/* (4)Mov a memory block of N words from one place to another.*/
+		write_instr_mem(16'h0,16'b11100_000_000_000_00); //OUT R0 (00H) 
+		write_instr_mem(16'h1,16'b00010_010_00100101); //LLI R2,25H
+		write_instr_mem(16'h2,16'b11100_000_010_000_00); //OUT R2 (25H)
+		write_instr_mem(16'h3,16'b00010_001_00001010); //LLI R1,0AH
+		write_instr_mem(16'h4,16'b11100_000_001_000_00); //OUT R1 (0AH)
+		write_instr_mem(16'h5,16'b00011_110_000_00000); //LDR R6,R0,#0
+		write_instr_mem(16'h6,16'b11100_000_110_000_00); //OUT R6
+		write_instr_mem(16'h7,16'b00101_110_010_00000); //STR Mem[R2+#0]<- R6
+		write_instr_mem(16'h8,16'b00111_000_000_00001); //ADDI R0,R0,#1
+		write_instr_mem(16'h9,16'b00111_010_010_00001); //ADDI R2,R2,#1
+		write_instr_mem(16'hA,16'b01000_001_001_00001); //SUBI R1,R1,#1
+		write_instr_mem(16'hB,16'b1100_0000_00000010); //BEQ if R1 == 0
+		//PC <- PC + 2
+		write_instr_mem(16'hC,16'b10000_000_0000_0101); //JMP PC[10:0]<-10h
+		write_instr_mem(16'hD,16'b00010_010_00100101); //LLI R2,25H
+		write_instr_mem(16'hE,16'b11100_000_010_000_00); //OUT R2 (25H)
+		write_instr_mem(16'hF,16'b00010_001_00001010); //LLI R1,0AH
+		write_instr_mem(16'h10,16'b11100_000_00100000); //OUT R1 (0AH)
+		write_instr_mem(16'h11,16'b00011_011_010_00000); //LDR R3,R2,#0
+		write_instr_mem(16'h12,16'b11100_000_011_000_00); //OUT R3
+		write_instr_mem(16'h13,16'b00111_010_010_00001); //ADDI R2,R2,#1
+		write_instr_mem(16'h14,16'b01000_001_001_00001); //SUBI R1,R1,#1
+		write_instr_mem(16'h15,16'b1100_0001_11111100); //BNE if R1 != 0
+		//PC <- PC-4
+		write_instr_mem(16'h16,16'b1110_0000_0000_0001); //HLT
+   end
+   endtask
 	
 	task add_ten_numbers_in_consecutive_memory_location;
 	begin
