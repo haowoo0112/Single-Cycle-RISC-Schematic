@@ -38,8 +38,8 @@
         <signal name="pre_C" />
         <signal name="pre_Z" />
         <signal name="done" />
-        <signal name="XLXN_22" />
-        <signal name="XLXN_23" />
+        <signal name="XLXN_24" />
+        <signal name="XLXN_25" />
         <port polarity="Output" name="instruction(15:0)" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="clr" />
@@ -53,7 +53,7 @@
         <port polarity="Output" name="OutR(15:0)" />
         <port polarity="Output" name="done" />
         <blockdef name="Instruction_Decode">
-            <timestamp>2022-10-20T6:7:50</timestamp>
+            <timestamp>2022-10-21T5:22:25</timestamp>
             <rect width="336" x="64" y="-1280" height="1280" />
             <line x2="0" y1="-1248" y2="-1248" x1="64" />
             <rect width="64" x="0" y="-1260" height="24" />
@@ -77,8 +77,8 @@
             <line x2="464" y1="-288" y2="-288" x1="400" />
             <line x2="464" y1="-224" y2="-224" x1="400" />
             <line x2="464" y1="-160" y2="-160" x1="400" />
-            <line x2="464" y1="-96" y2="-96" x1="400" />
             <line x2="464" y1="-32" y2="-32" x1="400" />
+            <line x2="464" y1="-96" y2="-96" x1="400" />
         </blockdef>
         <blockdef name="Datapath_Module">
             <timestamp>2022-10-20T10:2:45</timestamp>
@@ -155,8 +155,8 @@
             <blockpin signalname="XLXN_16" name="flag_PC_RF" />
             <blockpin signalname="XLXN_17" name="LHI" />
             <blockpin signalname="XLXN_18" name="LLI" />
-            <blockpin signalname="XLXN_22" name="RF_write_en" />
-            <blockpin signalname="XLXN_23" name="flag_OutR" />
+            <blockpin signalname="XLXN_25" name="RF_write_en" />
+            <blockpin signalname="XLXN_24" name="flag_OutR" />
         </block>
         <block symbolname="Datapath_Module" name="XLXI_2">
             <blockpin signalname="clk" name="clk" />
@@ -181,8 +181,8 @@
             <blockpin signalname="XLXN_11" name="Src_ALU_B" />
             <blockpin signalname="XLXN_12" name="Src_Read_B" />
             <blockpin signalname="XLXN_13" name="flag_mem_RF" />
-            <blockpin signalname="XLXN_23" name="flag_OutR" />
-            <blockpin signalname="XLXN_22" name="RF_write_en" />
+            <blockpin signalname="XLXN_24" name="flag_OutR" />
+            <blockpin signalname="XLXN_25" name="RF_write_en" />
             <blockpin signalname="XLXN_14" name="flag_ALU_RF" />
             <blockpin signalname="XLXN_15" name="flag_Rm_RF" />
             <blockpin signalname="XLXN_16" name="flag_PC_RF" />
@@ -335,17 +335,11 @@
         </branch>
         <iomarker fontsize="28" x="2640" y="1040" name="done" orien="R0" />
         <iomarker fontsize="28" x="2320" y="416" name="instruction(15:0)" orien="R0" />
-        <branch name="XLXN_22">
-            <wire x2="1680" y1="2144" y2="2144" x1="1600" />
-            <wire x2="1680" y1="2144" y2="2208" x1="1680" />
-            <wire x2="1776" y1="2208" y2="2208" x1="1680" />
+        <branch name="XLXN_24">
+            <wire x2="1776" y1="2144" y2="2144" x1="1600" />
         </branch>
-        <branch name="XLXN_23">
-            <wire x2="1664" y1="2208" y2="2208" x1="1600" />
-            <wire x2="1664" y1="2208" y2="2272" x1="1664" />
-            <wire x2="1760" y1="2272" y2="2272" x1="1664" />
-            <wire x2="1760" y1="2144" y2="2272" x1="1760" />
-            <wire x2="1776" y1="2144" y2="2144" x1="1760" />
+        <branch name="XLXN_25">
+            <wire x2="1776" y1="2208" y2="2208" x1="1600" />
         </branch>
     </sheet>
 </drawing>

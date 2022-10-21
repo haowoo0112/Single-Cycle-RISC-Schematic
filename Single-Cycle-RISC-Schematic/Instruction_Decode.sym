@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="Instruction_Decode">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2022-10-20T6:7:47</timestamp>
+    <timestamp>2022-10-21T5:22:21</timestamp>
     <pin polarity="Input" x="0" y="-1248" name="Instruction(15:0)" />
     <pin polarity="Input" x="0" y="-1184" name="C" />
     <pin polarity="Input" x="0" y="-1120" name="Z" />
@@ -23,8 +23,8 @@
     <pin polarity="Output" x="464" y="-288" name="flag_PC_RF" />
     <pin polarity="Output" x="464" y="-224" name="LHI" />
     <pin polarity="Output" x="464" y="-160" name="LLI" />
-    <pin polarity="Output" x="464" y="-96" name="RF_write_en" />
-    <pin polarity="Output" x="464" y="-32" name="flag_OutR" />
+    <pin polarity="Output" x="464" y="-32" name="RF_write_en" />
+    <pin polarity="Output" x="464" y="-96" name="flag_OutR" />
     <graph>
         <rect width="336" x="64" y="-1280" height="1280" />
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="232" y="-1288" type="symbol" />
@@ -71,9 +71,9 @@
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-224" type="pin LHI" />
         <line x2="464" y1="-160" y2="-160" x1="400" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-160" type="pin LLI" />
-        <line x2="464" y1="-96" y2="-96" x1="400" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-96" type="pin RF_write_en" />
         <line x2="464" y1="-32" y2="-32" x1="400" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-32" type="pin flag_OutR" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-32" type="pin RF_write_en" />
+        <line x2="464" y1="-96" y2="-96" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-96" type="pin flag_OutR" />
     </graph>
 </symbol>
